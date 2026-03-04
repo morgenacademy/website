@@ -237,6 +237,33 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 @media(max-width:1280px){.lg4{grid-template-columns:repeat(2,1fr)}.sgrid{grid-template-columns:repeat(2,1fr)}.speaker-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:1024px){nav{padding:1.2rem 2rem}.sd,.sl,.sm,.trust-section,.da-hero{padding:4rem 2rem}.hero{padding:8rem 2rem 4rem}.pgrid,.trgst,.lbintro,.book-grid,.da-grid{grid-template-columns:1fr;gap:3rem}.trgrid{grid-template-columns:1fr}.wgrid{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr 1fr}.cta-btns{flex-direction:column;align-items:center}.hstats{flex-wrap:wrap;gap:2rem}.speaker-grid{grid-template-columns:1fr}.da-card-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.nav-links{display:none}.lg4,.sgrid,.speaker-grid{grid-template-columns:1fr}.wgrid,.trgrid{grid-template-columns:1fr}.ft{grid-template-columns:1fr}.tnums{grid-template-columns:1fr 1fr}}
+/* MOBILE MENU */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;cursor:pointer;border:none;background:none;padding:.5rem;z-index:210;flex-shrink:0}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--white);transition:transform .3s,opacity .3s,width .3s;border-radius:1px}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;width:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(10,10,26,.97);z-index:195;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;backdrop-filter:blur(16px)}
+.mob-menu.open{display:flex}
+.mob-menu a,.mob-menu button{font-family:var(--fu);font-size:1.4rem;font-weight:600;color:var(--lgrey);text-decoration:none;transition:color .2s;cursor:pointer;border:none;background:none;padding:0;line-height:1}
+.mob-menu a:hover,.mob-menu button:hover{color:var(--white)}
+.mob-menu .mob-cta{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff !important;padding:.75rem 2rem;border-radius:3px;font-size:1rem !important;margin-top:.8rem}
+.mob-divider{width:30px;height:1.5px;background:rgba(255,255,255,.12);margin:.5rem 0}
+@media(max-width:640px){.hamburger{display:flex}}
+/* SCROLL INDICATOR */
+.scroll-hint{position:absolute;bottom:2rem;left:4rem;display:flex;align-items:center;gap:.8rem;opacity:0;animation:fi 1s 2s forwards;z-index:2}
+.scroll-hint-label{font-family:var(--fu);font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+.scroll-line{width:36px;height:1px;background:linear-gradient(90deg,var(--pink),transparent);position:relative;overflow:hidden}
+.scroll-line::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,var(--white),transparent);animation:shimmer 2.5s ease-in-out infinite}
+@keyframes shimmer{0%{left:-100%}100%{left:200%}}
+/* POPULAR BADGE */
+.lcard{position:relative}
+.popular-badge{position:absolute;top:-1px;right:1.5rem;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;font-family:var(--fu);font-size:.52rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.28rem .75rem;border-radius:0 0 4px 4px;box-shadow:0 4px 12px rgba(200,80,216,.4)}
+/* LIVE DOT */
+.live-dot{width:6px;height:6px;background:#2dd4a0;border-radius:50%;display:inline-block;flex-shrink:0;animation:pulse 2s infinite}
+/* FOCUS STATES */
+*:focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:2px}
+button:focus-visible,a:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
 </style>
 </head>
 <body>
@@ -258,6 +285,17 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   </div>
 </div>
 
+<div class="mob-menu" id="mobMenu" aria-hidden="true">
+  <button onclick="closeMobMenu();nav('home','aanbod')">Wat we doen</button>
+  <div class="mob-divider"></div>
+  <button onclick="closeMobMenu();nav('academy')">Academy</button>
+  <button onclick="closeMobMenu();nav('technology')">Technology</button>
+  <button onclick="closeMobMenu();nav('consultancy')">Consultancy</button>
+  <button onclick="closeMobMenu();nav('assistenten')">Assistenten</button>
+  <button onclick="closeMobMenu();nav('company')">Company</button>
+  <div class="mob-divider"></div>
+  <button class="mob-cta" onclick="closeMobMenu();nav('home','contact')">Gratis kennismaking</button>
+</div>
 <nav id="mainNav">
   <button class="logo-btn" onclick="nav('home')">MORGEN<em>.</em></button>
   <ul class="nav-links">
@@ -269,13 +307,16 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <li><a onclick="nav('company')" data-page="company">Company</a></li>
     <li><a onclick="nav('home','contact')" class="btn-nav">Gratis kennismaking</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMobMenu()" aria-label="Menu openen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 <div class="page active" id="page-home">
 <header class="hero">
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
   <div class="hgrid"></div>
   <div class="hi">
-    <p class="eyebrow">AI-trainingen &#183; Digitale oplossingen &#183; Begeleiding &#183; Thought leadership</p>
+    <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>AI-trainingen &#183; Digitale oplossingen &#183; Begeleiding &#183; Thought leadership</p>
     <h1 class="h1">WAT DOET<br>JOUW BEDRIJF<br><span class="pk">MORGEN?</span></h1>
     <p class="hbody">De meeste MKB-ondernemers weten dat er iets moet veranderen. Maar er is geen tijd, geen plan en onduidelijk wie het oppakt. Morgen helpt van die vraag naar een concreet antwoord. Met trainingen, digitale oplossingen, begeleiding en thought leadership.</p>
     <div class="hctas">
@@ -288,6 +329,10 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <div><div class="hsn">850<em>+</em></div><div class="hsl">Medewerkers getraind in AI en digitale tools</div></div>
       <div><div class="hsn">6<em>mnd</em></div><div class="hsl">Gemiddelde tijd tot eerste resultaten</div></div>
     </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span class="scroll-hint-label">Scroll</span>
   </div>
 </header>
 <div class="ticker"><div class="ticker-t"><span>AI-trainingen voor teams</span><span class="ts">&#10022;</span><span>Digitale oplossingen op maat</span><span class="ts">&#10022;</span><span>Procesautomatisering MKB</span><span class="ts">&#10022;</span><span>Begeleiding bij digitale strategie</span><span class="ts">&#10022;</span><span>AI compliant &#183; EU AI Act</span><span class="ts">&#10022;</span><span>Keynotes en boek over digitalisering</span><span class="ts">&#10022;</span><span>AI-trainingen voor teams</span><span class="ts">&#10022;</span><span>Digitale oplossingen op maat</span><span class="ts">&#10022;</span><span>Procesautomatisering MKB</span><span class="ts">&#10022;</span><span>Begeleiding bij digitale strategie</span><span class="ts">&#10022;</span><span>AI compliant &#183; EU AI Act</span><span class="ts">&#10022;</span><span>Keynotes en boek over digitalisering</span><span class="ts">&#10022;</span></div></div><div class="logo-band">
@@ -342,6 +387,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   </div>
   <div class="lg4 reveal">
     <article class="lcard">
+      <div class="popular-badge">Meest gekozen</div>
       <div class="lcard-label">Morgen Academy</div>
       <div class="licon ib"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
       <h3 class="lname">AI-trainingen voor teams</h3>
@@ -1274,7 +1320,26 @@ initReveal();
 
 document.addEventListener('click',e=>{
   if(e.target.id==='training-popup')closeTrainingPopup();
+  if(e.target.id==='mobMenu')closeMobMenu();
 });
+
+function toggleMobMenu(){
+  const ham=document.getElementById('hamburger');
+  const mob=document.getElementById('mobMenu');
+  const isOpen=mob.classList.toggle('open');
+  ham.classList.toggle('open');
+  ham.setAttribute('aria-expanded',isOpen);
+  mob.setAttribute('aria-hidden',!isOpen);
+  document.body.style.overflow=isOpen?'hidden':'';
+}
+function closeMobMenu(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('hamburger').setAttribute('aria-expanded','false');
+  const mob=document.getElementById('mobMenu');
+  mob.classList.remove('open');
+  mob.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
 </script>
 
 </body>
