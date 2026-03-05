@@ -25,7 +25,7 @@ nav.scrolled{background:rgba(10,10,26,.96);backdrop-filter:blur(18px);border-bot
 .btn-nav:hover{background:#a028b8 !important}
 .page{display:none}.page.active{display:block}
 .sd{padding:6rem 4rem;background:var(--navy)}.sl{padding:6rem 4rem;background:var(--white)}.sm{padding:6rem 4rem;background:var(--nmd)}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:10rem 4rem 5rem;position:relative;overflow:hidden}
+.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:flex-end;padding:8rem 4rem 4rem;position:relative;overflow:hidden}
 .orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
 .o1{width:560px;height:560px;background:radial-gradient(circle,#c850d8,#7c35c9 55%,transparent);top:-120px;right:-80px;opacity:.5;animation:fl1 9s ease-in-out infinite}
 .o2{width:400px;height:400px;background:radial-gradient(circle,#2552c9,#7c35c9 60%,transparent);bottom:60px;right:180px;opacity:.45;animation:fl2 11s ease-in-out infinite}
@@ -277,10 +277,10 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   <div class="hi">
     <p class="eyebrow">AI-trainingen &#183; Digitale oplossingen &#183; Begeleiding &#183; Thought leadership</p>
     <h1 class="h1">WAT DOET<br>JOUW BEDRIJF<br><span class="pk">MORGEN?</span></h1>
-    <p class="hbody">De meeste MKB-ondernemers weten dat er iets moet veranderen. Maar er is geen tijd, geen plan en onduidelijk wie het oppakt. Morgen helpt van die vraag naar een concreet antwoord. Met trainingen, digitale oplossingen, begeleiding en thought leadership.</p>
+    <p class="hbody">Morgen helpt MKB-organisaties groeien met AI-trainingen, digitale oplossingen en strategische begeleiding. Van eerste stap tot volledige implementatie.</p>
     <div class="hctas">
-      <button class="btn-p" onclick="nav('home','aanbod')">Bekijk wat Morgen doet &#x2192;</button>
-      <button class="btn-g" onclick="scrollToId('herkenning')">Herken je dit? &#x2193;</button>
+      <button class="btn-p" onclick="scrollToId('contact')">Plan gratis kennismakingsgesprek &#x2192;</button>
+      <button class="btn-g" onclick="nav('home','aanbod')">Bekijk ons aanbod &#x2193;</button>
     </div>
     <div class="hstats">
       <div><div class="hsn">9.8<em>/10</em></div><div class="hsl">Gemiddelde trainings&shy;beoordeling</div></div>
@@ -314,23 +314,6 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 <img src="data:image/png;base64,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" alt="klantlogo" class="clogo">
   </div>
 </div>
-<section class="sd" id="herkenning">
-  <div class="pgrid reveal">
-    <div>
-      <div class="slabel">Herken je dit?</div>
-      <h2 class="ptitle">Hard werken. Het kan slimmer.</h2>
-      <p class="pbody">Ergens in de organisatie worden offertes handmatig overgetypt. Rapportages elke week opnieuw in Excel. Klantvragen beantwoord door iemand die eigenlijk iets anders zou moeten doen. Niet omdat het team het verkeerd doet, maar omdat rollen en verantwoordelijkheden in de organisatie nu eenmaal zo gegroeid zijn.</p>
-      <p class="pbody">Tegelijkertijd is AI en automatisering overal. Maar wie pakt dat op? Er is geen tijd, geen plan, soms geen idee waar te beginnen. Dus gebeurt er niets, terwijl concurrenten bewegen.</p>
-      <div class="callout">Digitalisering is geen IT-project. Het is een bedrijfsbeslissing. En die begint niet met een systeem, maar met de vraag: wat doet jouw bedrijf morgen?</div>
-    </div>
-    <div class="scards">
-      <div class="sc"><div class="scn">3u</div><div class="scd">Gemiddeld tijdverlies per medewerker per dag aan automatiseerbaar werk</div></div>
-      <div class="sc"><div class="scn">2&#215;</div><div class="scd">Sneller groeien organisaties die actief automatiseren versus organisaties die afwachten</div></div>
-      <div class="sc"><div class="scn">68%</div><div class="scd">Van MKB-medewerkers voelt zich niet voorbereid op AI in het dagelijkse werk</div></div>
-      <div class="sc"><div class="scn">&#8364;40k</div><div class="scd">Gemiddelde jaarlijkse kostenpost van niet-geautomatiseerde processen bij 25+ medewerkers</div></div>
-    </div>
-  </div>
-</section>
 
 <section class="sl" id="aanbod">
   <div class="lbintro reveal">
@@ -346,8 +329,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <div class="licon ib"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
       <h3 class="lname">AI-trainingen voor teams</h3>
       <div class="ltag">Workshop &#183; Leerpad &#183; Online &#183; Incompany</div>
-      <p class="ldesc">Veel teams gebruiken AI als een slimme zoekmachine, maar er is zoveel meer potentieel. Van losse workshop tot volledig incompany leerpad. Online beschikbaar voor individuele medewerkers. Opgezet conform de EU AI Act.</p>
-      <div class="lfor"><div class="lfor-t">Past het beste als...</div><div class="lfor-v">...het team niet weet wat AI echt kan betekenen voor het dagelijkse werk, of als HR een structureel leerplan wil.</div></div>
+      <p class="ldesc">Van losse workshop tot volledig incompany leerpad. Online beschikbaar. Opgezet conform de EU AI Act.</p>
       <button class="llink ll-b" onclick="nav('academy')">Bekijk het trainingsaanbod &#x2192;</button>
     </article>
     <article class="lcard">
@@ -355,8 +337,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <div class="licon ip"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
       <h3 class="lname">Digitale oplossingen bouwen</h3>
       <div class="ltag">Maatwerk &#183; AI-workflows &#183; Automatisering</div>
-      <p class="ldesc">Morgen Technology bouwt de digitale oplossingen die een organisatie slimmer maken. Van AI-workflows en procesautomatisering tot complete systemen. Altijd op maat, altijd vertrekkend vanuit de bedrijfsprocessen, niet vanuit tools.</p>
-      <div class="lfor"><div class="lfor-t">Past het beste als...</div><div class="lfor-v">...processen geautomatiseerd moeten worden maar intern de kennis of capaciteit ontbreekt.</div></div>
+      <p class="ldesc">AI-workflows, procesautomatisering en systeemkoppelingen. Op maat gebouwd, vertrekkend vanuit de bedrijfsprocessen.</p>
       <button class="llink ll-p" onclick="nav('technology')">Bekijk wat we bouwen &#x2192;</button>
     </article>
     <article class="lcard">
@@ -364,8 +345,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <div class="licon ik"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg></div>
       <h3 class="lname">Begeleiding bij digitalisering</h3>
       <div class="ltag">Strategie &#183; Uitvoering &#183; Veranderkunde</div>
-      <p class="ldesc">Van digitale audit tot implementatie en borging. Morgen werkt naast het bestaande team, met kennis van veranderkunde. Digitalisering is niet alleen techniek, het is ook mensen meenemen. Dat is precies waar Morgen sterk in is.</p>
-      <div class="lfor"><div class="lfor-t">Past het beste als...</div><div class="lfor-v">...er geen plan of interne trekker is, of als een plan klaarligt maar niemand het uitvoert.</div></div>
+      <p class="ldesc">Van digitale audit tot implementatie en borging. Met kennis van veranderkunde. Techniek én mensen tegelijk.</p>
       <button class="llink ll-k" onclick="nav('consultancy')">Bekijk onze aanpak &#x2192;</button>
     </article>
     <article class="lcard">
@@ -373,50 +353,12 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <div class="licon ig"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></div>
       <h3 class="lname">Boek en keynotes over AI</h3>
       <div class="ltag">Keynote &#183; Boek &#183; Thought leadership</div>
-      <p class="ldesc">Morgen geeft inspirerende keynotes over AI en digitalisering voor congressen en bedrijfsevents, en publiceerde een boek over dit thema. Drie sprekers, drie invalshoeken, directe toepasbaarheid.</p>
-      <div class="lfor"><div class="lfor-t">Past het beste als...</div><div class="lfor-v">...een keynote nodig is voor een event, of als het team geïnspireerd wil worden door het boek.</div></div>
+      <p class="ldesc">Inspirerende keynotes over AI voor congressen en bedrijfsevents. Plus een praktisch boek over digitalisering.</p>
       <button class="llink ll-g" onclick="nav('company')">Ontdek Morgen Company &#x2192;</button>
     </article>
   </div>
 </section>
 
-<section class="sm" id="werkwijze">
-  <div class="reveal">
-    <div class="slabel">Werkwijze</div>
-    <h2 class="stitle">VAN VRAAG NAAR<br>RESULTAAT<br><span style="color:var(--pink)">IN 4 STAPPEN.</span></h2>
-  </div>
-  <div class="wgrid reveal">
-    <div class="wstep"><div class="wnum">01</div><div class="wtitle">In kaart brengen</div><p class="wbody">We starten met een gratis gesprek van 45 minuten. Luisteren, de juiste vragen stellen en direct de grootste kansen benoemen. Geen verplichtingen.</p></div>
-    <div class="wstep"><div class="wnum">02</div><div class="wtitle">Het plan</div><p class="wbody">Een helder actieplan in gewone taal: wat doen we, in welke volgorde, wat kost het en wat levert het op. Geen rapport dat in een la verdwijnt.</p></div>
-    <div class="wstep"><div class="wnum">03</div><div class="wtitle">Naast het team werken</div><p class="wbody">We werken in de organisatie, niet ernaast. Met kennis van veranderkunde en technologie. Digitalisering slaagt alleen als mensen het omarmen, niet alleen als de tools kloppen.</p></div>
-    <div class="wstep"><div class="wnum">04</div><div class="wtitle">De kennis blijft</div><p class="wbody">Het doel: dat Morgen voor de dagelijkse uitvoering niet meer nodig is. Kennis, werkwijze en systemen blijven in de organisatie verankerd.</p></div>
-  </div>
-</section>
-
-<section class="sl" id="trainingen">
-  <div class="reveal">
-    <div class="slabel dk">Morgen Academy</div>
-    <h2 class="stitle" style="color:var(--black)">LOSSE WORKSHOP<br>OF VOLLEDIG<br><span style="color:var(--purple)">LEERPAD.</span></h2>
-    <p style="font-family:var(--fb);color:#5a5878;max-width:55ch;margin-top:1.2rem;font-size:.95rem;line-height:1.8">Veel teams gebruiken AI als een slimme zoekmachine. Vragen stellen, antwoorden krijgen. Maar er is zoveel meer mogelijk. De trainingen van Morgen Academy laten zien hoe AI echt werk uit handen neemt.</p>
-  </div>
-  <div class="trgrid reveal">
-    <div class="tcard" onclick="openTrainingPopup()" style="cursor:pointer;border-color:rgba(200,80,216,.3)">
-      <span class="tlev tl-s">Module 1 &#183; Online &#183; Direct beschikbaar</span>
-      <div class="ttitle">Bespaar 1 dag per week met AI</div>
-      <p class="tdesc">De basistraining. Ontdek hoe AI concreet tijd bespaart in het dagelijkse werk. Geen technische uitleg, maar directe toepasbaarheid. Individueel online te volgen of incompany te boeken.</p>
-      <div class="tmeta"><span>&#8987; 1 dag</span><span>&#128101; Online &amp; incompany</span></div>
-      <div style="margin-top:1rem;font-family:var(--fu);font-size:.75rem;font-weight:700;color:var(--purple);display:flex;align-items:center;gap:.3rem">Direct kopen &#x2192;</div>
-    </div>
-    <div class="tcard"><span class="tlev tl-s">Module 2</span><div class="ttitle">Slimmer werken met AI-tools die er al zijn</div><p class="tdesc">Microsoft Copilot, ChatGPT en meer. Het team heeft de tools al. Na deze training halen medewerkers er structureel meer uit dan alleen antwoorden op vragen.</p><div class="tmeta"><span>&#8987; 2 dagen</span><span>&#128101; Incompany</span></div></div>
-    <div class="tcard"><span class="tlev tl-a">Module 3</span><div class="ttitle">Welke processen kunnen geautomatiseerd worden?</div><p class="tdesc">Voor managers en teamleiders. De eigen processen doorgelicht op automatiseringspotentieel. Concrete actiepunten, geen abstracte methodiek.</p><div class="tmeta"><span>&#8987; 2 dagen</span><span>&#128101; Incompany &amp; online</span></div></div>
-    <div class="tcard"><span class="tlev tl-a">Module 4</span><div class="ttitle">Digitale strategie voor directeuren</div><p class="tdesc">Een digitale agenda voor de komende drie jaar. Voor bestuurders die zelf regie willen over de digitaliseringskoers en niet afhankelijk willen zijn van externen.</p><div class="tmeta"><span>&#8987; 3 dagen</span><span>&#128101; Incompany</span></div></div>
-    <div class="tcard"><span class="tlev tl-e">Module 5</span><div class="ttitle">Bouw de eerste AI-workflow: automatiseren zonder te programmeren</div><p class="tdesc">Voor de power users. Werkende automatiseringen bouwen zonder programmeerkennis. Vertrek met een eerste werkende workflow voor de eigen organisatie.</p><div class="tmeta"><span>&#8987; 3 dagen</span><span>&#128101; Online &amp; incompany</span></div></div>
-    <div class="tcard"><span class="tlev tl-e">Volledig traject</span><div class="ttitle">Van bewustwording tot implementatie</div><p class="tdesc">Academy en Consultancy gecombineerd. Analyseren, trainen, begeleiden en borgen over zes tot twaalf maanden. Voor organisaties die echt doorpakken.</p><div class="tmeta"><span>&#8987; Op maat</span><span>&#128101; Incompany</span></div></div>
-  </div>
-  <div style="text-align:center;margin-top:2.5rem" class="reveal">
-    <button class="btn-p" style="display:inline-flex" onclick="nav('academy')">Bekijk het volledige trainingsaanbod &#x2192;</button>
-  </div>
-</section>
 
 <section class="sd" id="situaties">
   <div class="reveal" style="text-align:center">
