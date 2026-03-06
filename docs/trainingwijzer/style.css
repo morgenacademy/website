@@ -1,0 +1,932 @@
+/* ── Trainingwijzer Widget – scoped to .trainingwijzer-wrapper ── */
+
+/* ── Custom Properties ── */
+.trainingwijzer-wrapper {
+  --tw-purple: #5B2D8E;
+  --tw-purple-light: #9B6FCF;
+  --tw-purple-pale: rgba(91, 45, 142, 0.15);
+  --tw-orange: #d8fe56;
+  --tw-orange-light: rgba(216, 254, 86, 0.2);
+  --tw-green: #2ECC71;
+  --tw-dark: #1A1A2E;
+  --tw-white: #FFFFFF;
+  --tw-bg-dark: #0C0818;
+  --tw-text-primary: #F0ECF5;
+  --tw-text-secondary: #C4B5D8;
+  --tw-text-muted: #7A6B8E;
+  --tw-radius: 20px;
+  --tw-radius-lg: 28px;
+  --tw-glass-bg: rgba(255, 255, 255, 0.08);
+  --tw-glass-bg-strong: rgba(255, 255, 255, 0.12);
+  --tw-glass-bg-hover: rgba(255, 255, 255, 0.15);
+  --tw-glass-border: rgba(255, 255, 255, 0.15);
+  --tw-glass-border-hover: rgba(255, 255, 255, 0.28);
+  --tw-glass-highlight: rgba(255, 255, 255, 0.2);
+  --tw-glass-blur: blur(40px) saturate(200%);
+  --tw-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --tw-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.4);
+  --tw-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Wrapper – replaces body/html ── */
+.trainingwijzer-wrapper {
+  font-family: 'Barlow', sans-serif;
+  color: var(--tw-text-primary);
+  background: var(--tw-bg-dark);
+  overflow-x: hidden;
+  position: relative;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
+.trainingwijzer-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% -10%, rgba(91, 45, 142, 0.55) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 70%, rgba(123, 77, 174, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse 45% 35% at 15% 65%, rgba(155, 111, 207, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 30% 30% at 70% 30%, rgba(216, 254, 86, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 35% 25% at 25% 20%, rgba(216, 254, 86, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 16px;
+}
+
+/* ── App Container ── */
+.trainingwijzer-wrapper #trainingwijzer-app {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Reset scoped ── */
+.trainingwijzer-wrapper *,
+.trainingwijzer-wrapper *::before,
+.trainingwijzer-wrapper *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Transitions ── */
+.trainingwijzer-wrapper #trainingwijzer-app.slide-out-left {
+  animation: tw-slideOutLeft 0.25s ease-in forwards;
+}
+.trainingwijzer-wrapper #trainingwijzer-app.slide-out-right {
+  animation: tw-slideOutRight 0.25s ease-in forwards;
+}
+.trainingwijzer-wrapper #trainingwijzer-app.slide-in-right {
+  animation: tw-slideInRight 0.35s ease-out forwards;
+}
+.trainingwijzer-wrapper #trainingwijzer-app.slide-in-left {
+  animation: tw-slideInLeft 0.35s ease-out forwards;
+}
+
+@keyframes tw-slideOutLeft {
+  to { opacity: 0; transform: translateX(-40px); }
+}
+@keyframes tw-slideOutRight {
+  to { opacity: 0; transform: translateX(40px); }
+}
+@keyframes tw-slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes tw-slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Glass Panel Mixin (via class) ── */
+.trainingwijzer-wrapper .glass-panel {
+  background: var(--tw-glass-bg);
+  backdrop-filter: var(--tw-glass-blur);
+  -webkit-backdrop-filter: var(--tw-glass-blur);
+  border: 1px solid var(--tw-glass-border);
+  border-radius: var(--tw-radius-lg);
+  box-shadow:
+    var(--tw-shadow),
+    inset 0 1px 0 var(--tw-glass-highlight);
+}
+
+/* ── Screen Base ── */
+.trainingwijzer-wrapper .screen {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ── Welcome Screen ── */
+.trainingwijzer-wrapper .welcome-screen {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.trainingwijzer-wrapper .welcome-badge {
+  display: inline-block;
+  background: var(--tw-glass-bg-strong);
+  backdrop-filter: var(--tw-glass-blur);
+  -webkit-backdrop-filter: var(--tw-glass-blur);
+  border: 1px solid var(--tw-glass-border);
+  box-shadow: inset 0 1px 0 var(--tw-glass-highlight);
+  color: var(--tw-text-secondary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 10px 24px;
+  border-radius: 100px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.trainingwijzer-wrapper .welcome-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--tw-white);
+  margin-top: 16px;
+}
+
+.trainingwijzer-wrapper .welcome-title .highlight {
+  background: linear-gradient(135deg, var(--tw-orange), #e8ff8a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.trainingwijzer-wrapper .welcome-subtitle {
+  font-size: 1.125rem;
+  color: var(--tw-text-secondary);
+  max-width: 480px;
+  margin: 16px auto 0;
+  line-height: 1.6;
+}
+
+.trainingwijzer-wrapper .welcome-note {
+  font-size: 0.875rem;
+  color: var(--tw-text-muted);
+  margin-top: 8px;
+}
+
+/* Route Preview (welcome) */
+.trainingwijzer-wrapper .welcome-visual {
+  margin-top: 8px;
+}
+
+.trainingwijzer-wrapper .route-preview {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  justify-content: center;
+}
+
+.trainingwijzer-wrapper .route-stop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.trainingwijzer-wrapper .route-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: var(--tw-transition);
+}
+
+.trainingwijzer-wrapper .route-stop.active .route-dot {
+  background: var(--tw-orange);
+  border-color: var(--tw-orange);
+  box-shadow: 0 0 20px rgba(216, 254, 86, 0.5);
+}
+
+.trainingwijzer-wrapper .route-connector {
+  width: 60px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.12);
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform: translateX(8px);
+}
+
+.trainingwijzer-wrapper .route-stop-label {
+  font-size: 0.75rem;
+  color: var(--tw-text-muted);
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.trainingwijzer-wrapper .route-stop.active .route-stop-label {
+  color: var(--tw-orange);
+  font-weight: 600;
+}
+
+/* ── Buttons ── */
+.trainingwijzer-wrapper .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--tw-radius);
+  cursor: pointer;
+  transition: var(--tw-transition);
+  text-decoration: none;
+}
+
+.trainingwijzer-wrapper .btn-primary {
+  background: linear-gradient(135deg, var(--tw-orange), #b8e040);
+  color: #1A1A2E;
+  padding: 14px 32px;
+  box-shadow:
+    0 4px 24px rgba(216, 254, 86, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.trainingwijzer-wrapper .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 36px rgba(216, 254, 86, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.trainingwijzer-wrapper .btn-large {
+  font-size: 1.125rem;
+  padding: 18px 40px;
+  border-radius: var(--tw-radius-lg);
+}
+
+.trainingwijzer-wrapper .btn-secondary {
+  background: var(--tw-glass-bg-strong);
+  backdrop-filter: var(--tw-glass-blur);
+  -webkit-backdrop-filter: var(--tw-glass-blur);
+  color: var(--tw-text-primary);
+  padding: 14px 32px;
+  border: 1px solid var(--tw-glass-border);
+  box-shadow: inset 0 1px 0 var(--tw-glass-highlight);
+}
+
+.trainingwijzer-wrapper .btn-secondary:hover {
+  background: var(--tw-glass-bg-hover);
+  border-color: var(--tw-glass-border-hover);
+}
+
+/* ── Question Screen ── */
+.trainingwijzer-wrapper .question-screen {
+  background: var(--tw-glass-bg);
+  backdrop-filter: var(--tw-glass-blur);
+  -webkit-backdrop-filter: var(--tw-glass-blur);
+  border: 1px solid var(--tw-glass-border);
+  border-radius: var(--tw-radius-lg);
+  box-shadow:
+    var(--tw-shadow),
+    inset 0 1px 0 var(--tw-glass-highlight);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.trainingwijzer-wrapper .question-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.trainingwijzer-wrapper .tw-back-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.125rem;
+  color: var(--tw-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--tw-transition);
+  flex-shrink: 0;
+}
+
+.trainingwijzer-wrapper .tw-back-btn:hover {
+  border-color: var(--tw-glass-border-hover);
+  background: var(--tw-glass-bg-hover);
+  color: var(--tw-white);
+}
+
+.trainingwijzer-wrapper .progress-container {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.trainingwijzer-wrapper .progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--tw-orange), #e8ff8a);
+  border-radius: 100px;
+  transition: width 0.4s ease;
+  box-shadow: 0 0 12px rgba(216, 254, 86, 0.3);
+}
+
+.trainingwijzer-wrapper .progress-text {
+  font-size: 0.875rem;
+  color: var(--tw-text-muted);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.trainingwijzer-wrapper .question-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.trainingwijzer-wrapper .question-text {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--tw-white);
+}
+
+/* ── Option Cards ── */
+.trainingwijzer-wrapper .options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trainingwijzer-wrapper .option-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--tw-radius);
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: var(--tw-transition);
+  text-align: left;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1rem;
+  color: var(--tw-text-primary);
+  width: 100%;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.trainingwijzer-wrapper .option-card:hover {
+  border-color: var(--tw-glass-border-hover);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.trainingwijzer-wrapper .option-card:active {
+  transform: translateY(0);
+}
+
+.trainingwijzer-wrapper .option-card.selected {
+  border-color: var(--tw-purple-light);
+  background: rgba(155, 111, 207, 0.2);
+  box-shadow:
+    0 0 20px rgba(155, 111, 207, 0.15),
+    inset 0 1px 0 rgba(155, 111, 207, 0.3);
+}
+
+.trainingwijzer-wrapper .option-label {
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.trainingwijzer-wrapper .options-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.trainingwijzer-wrapper .options-two .option-card {
+  justify-content: center;
+  text-align: center;
+  padding: 28px 24px;
+}
+
+/* ── Result Screen ── */
+.trainingwijzer-wrapper .result-screen {
+  max-width: 960px;
+}
+
+.trainingwijzer-wrapper .result-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.trainingwijzer-wrapper .result-label {
+  display: inline-block;
+  background: var(--tw-glass-bg-strong);
+  backdrop-filter: var(--tw-glass-blur);
+  -webkit-backdrop-filter: var(--tw-glass-blur);
+  border: 1px solid var(--tw-glass-border);
+  box-shadow: inset 0 1px 0 var(--tw-glass-highlight);
+  color: var(--tw-text-secondary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 8px 20px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.trainingwijzer-wrapper .result-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--tw-white), var(--tw-text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+
+.trainingwijzer-wrapper .result-description {
+  font-size: 1.125rem;
+  color: var(--tw-text-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.trainingwijzer-wrapper .result-rationale {
+  margin: 0 0 32px;
+  padding: 0 4px;
+}
+
+.trainingwijzer-wrapper .result-rationale p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--tw-text-secondary);
+  margin: 0;
+}
+
+.trainingwijzer-wrapper .result-body {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+  margin-bottom: 40px;
+  align-items: stretch;
+}
+
+.trainingwijzer-wrapper .result-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.trainingwijzer-wrapper .result-main .training-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Training Card ── */
+.trainingwijzer-wrapper .training-card {
+  background: var(--tw-glass-bg-strong);
+  backdrop-filter: var(--tw-glass-blur);
+  -webkit-backdrop-filter: var(--tw-glass-blur);
+  border: 1px solid var(--tw-glass-border);
+  border-radius: var(--tw-radius-lg);
+  padding: 32px;
+  box-shadow:
+    var(--tw-shadow),
+    inset 0 1px 0 var(--tw-glass-highlight);
+}
+
+.trainingwijzer-wrapper .training-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.trainingwijzer-wrapper .training-duration {
+  background: rgba(216, 254, 86, 0.15);
+  border: 1px solid rgba(216, 254, 86, 0.25);
+  color: var(--tw-orange);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 4px 14px;
+  border-radius: 100px;
+}
+
+.trainingwijzer-wrapper .training-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--tw-white);
+  margin: 0;
+}
+
+.trainingwijzer-wrapper .training-bullets {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trainingwijzer-wrapper .training-bullets li {
+  position: relative;
+  padding-left: 24px;
+  line-height: 1.5;
+  color: var(--tw-text-secondary);
+}
+
+.trainingwijzer-wrapper .training-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tw-purple-light);
+  box-shadow: 0 0 8px rgba(155, 111, 207, 0.4);
+}
+
+.trainingwijzer-wrapper .training-cta {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.trainingwijzer-wrapper .training-cta .btn {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  font-size: 0.9375rem;
+  padding: 12px 20px;
+}
+
+.trainingwijzer-wrapper .team-note,
+.trainingwijzer-wrapper .follow-up-note {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(155, 111, 207, 0.1);
+  border: 1px solid rgba(155, 111, 207, 0.2);
+  border-radius: var(--tw-radius);
+  font-size: 0.9375rem;
+  color: var(--tw-text-secondary);
+  line-height: 1.5;
+  box-shadow: inset 0 1px 0 rgba(155, 111, 207, 0.15);
+}
+
+/* ── Follow-up Paths ── */
+.trainingwijzer-wrapper .follow-up-paths {
+  margin-bottom: 40px;
+}
+
+.trainingwijzer-wrapper .follow-up-intro {
+  font-weight: 600;
+  color: var(--tw-text-secondary);
+  margin-bottom: 12px;
+}
+
+.trainingwijzer-wrapper .follow-up-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.trainingwijzer-wrapper .follow-up-card {
+  background: var(--tw-glass-bg);
+  backdrop-filter: var(--tw-glass-blur);
+  -webkit-backdrop-filter: var(--tw-glass-blur);
+  border: 1px solid var(--tw-glass-border);
+  border-radius: var(--tw-radius);
+  padding: 16px;
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: var(--tw-transition);
+}
+
+.trainingwijzer-wrapper .follow-up-card:hover {
+  background: var(--tw-glass-bg-hover);
+  border-color: var(--tw-glass-border-hover);
+}
+
+.trainingwijzer-wrapper .follow-up-card-title {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--tw-orange);
+  margin-bottom: 4px;
+}
+
+.trainingwijzer-wrapper .follow-up-card-desc {
+  font-size: 0.8125rem;
+  color: var(--tw-text-secondary);
+  line-height: 1.4;
+}
+
+/* ── Groeiladder ── */
+.trainingwijzer-wrapper .result-ladder {
+  display: flex;
+  flex-direction: column;
+}
+
+.trainingwijzer-wrapper .result-ladder .groeiladder {
+  flex: 1;
+}
+
+.trainingwijzer-wrapper .groeiladder {
+  background: var(--tw-glass-bg-strong);
+  backdrop-filter: var(--tw-glass-blur);
+  -webkit-backdrop-filter: var(--tw-glass-blur);
+  border: 1px solid var(--tw-glass-border);
+  border-radius: var(--tw-radius-lg);
+  padding: 28px 24px;
+  box-shadow:
+    var(--tw-shadow),
+    inset 0 1px 0 var(--tw-glass-highlight);
+}
+
+.trainingwijzer-wrapper .ladder-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--tw-white);
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.trainingwijzer-wrapper .ladder-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.trainingwijzer-wrapper .ladder-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  opacity: 0;
+  animation: tw-fadeInStep 0.4s ease forwards;
+  animation-delay: var(--anim-delay, 0s);
+}
+
+@keyframes tw-fadeInStep {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Marker column (dot + line) ── */
+.trainingwijzer-wrapper .ladder-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 36px;
+}
+
+.trainingwijzer-wrapper .ladder-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  flex-shrink: 0;
+  transition: var(--tw-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trainingwijzer-wrapper .ladder-num {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: var(--tw-text-muted);
+  line-height: 1;
+}
+
+.trainingwijzer-wrapper .ladder-line {
+  width: 3px;
+  height: 100%;
+  min-height: 28px;
+  background: rgba(255, 255, 255, 0.06);
+  transition: var(--tw-transition);
+  border-radius: 2px;
+  flex: 1;
+}
+
+/* ── Route states ── */
+.trainingwijzer-wrapper .on-route .ladder-dot {
+  background: rgba(155, 111, 207, 0.15);
+  border-color: rgba(155, 111, 207, 0.5);
+}
+
+.trainingwijzer-wrapper .on-route .ladder-num {
+  color: var(--tw-text-primary);
+}
+
+.trainingwijzer-wrapper .on-route .ladder-line {
+  background: linear-gradient(180deg, var(--tw-purple-light), rgba(155, 111, 207, 0.3));
+  width: 3px;
+  box-shadow: 0 0 8px rgba(155, 111, 207, 0.2);
+}
+
+/* "Jij staat hier" marker */
+.trainingwijzer-wrapper .level-from .ladder-dot {
+  background: var(--tw-orange);
+  border-color: var(--tw-orange);
+  box-shadow: 0 0 20px rgba(216, 254, 86, 0.45);
+  width: 40px;
+  height: 40px;
+}
+
+.trainingwijzer-wrapper .level-from .ladder-num {
+  color: #1A1A2E;
+  font-size: 0.9375rem;
+}
+
+/* "Hier brengen we je" marker */
+.trainingwijzer-wrapper .level-to .ladder-dot {
+  background: var(--tw-purple-light);
+  border-color: var(--tw-purple-light);
+  box-shadow: 0 0 20px rgba(155, 111, 207, 0.5);
+  width: 40px;
+  height: 40px;
+  animation: tw-pulse 2s infinite;
+}
+
+.trainingwijzer-wrapper .level-to .ladder-num {
+  color: var(--tw-white);
+  font-size: 0.9375rem;
+}
+
+/* In-between route steps */
+.trainingwijzer-wrapper .level-between .ladder-dot {
+  background: rgba(155, 111, 207, 0.2);
+  border-color: rgba(155, 111, 207, 0.45);
+  border-style: dashed;
+}
+
+@keyframes tw-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(155, 111, 207, 0.5); }
+  50% { box-shadow: 0 0 32px rgba(155, 111, 207, 0.7); }
+}
+
+/* ── Content column ── */
+.trainingwijzer-wrapper .ladder-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 20px;
+  padding-top: 6px;
+  min-height: 56px;
+}
+
+.trainingwijzer-wrapper .ladder-label-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.trainingwijzer-wrapper .ladder-label {
+  font-size: 0.875rem;
+  color: var(--tw-text-muted);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.trainingwijzer-wrapper .on-route .ladder-label {
+  color: var(--tw-white);
+  font-weight: 700;
+}
+
+.trainingwijzer-wrapper .level-from .ladder-label,
+.trainingwijzer-wrapper .level-to .ladder-label {
+  font-size: 0.9375rem;
+}
+
+.trainingwijzer-wrapper .ladder-desc {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.25);
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.trainingwijzer-wrapper .on-route .ladder-desc {
+  color: var(--tw-text-muted);
+}
+
+.trainingwijzer-wrapper .ladder-badge {
+  background: rgba(155, 111, 207, 0.2);
+  border: 1px solid rgba(155, 111, 207, 0.3);
+  color: var(--tw-purple-light);
+  font-size: 0.625rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 100px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.trainingwijzer-wrapper .ladder-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 4px;
+  letter-spacing: 0.01em;
+}
+
+.trainingwijzer-wrapper .ladder-tag-from {
+  color: var(--tw-orange);
+}
+
+.trainingwijzer-wrapper .ladder-tag-to {
+  color: var(--tw-purple-light);
+}
+
+/* ── CTA ── */
+.trainingwijzer-wrapper .result-cta-centered {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.trainingwijzer-wrapper .restart-link {
+  display: block;
+  margin: 32px auto 0;
+  background: none;
+  border: none;
+  color: var(--tw-text-muted);
+  font-size: 0.875rem;
+  cursor: pointer;
+  font-family: 'Barlow', sans-serif;
+  text-decoration: underline;
+  transition: var(--tw-transition);
+}
+
+.trainingwijzer-wrapper .restart-link:hover {
+  color: var(--tw-text-secondary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .trainingwijzer-wrapper #trainingwijzer-app {
+    padding: 16px;
+    align-items: flex-start;
+    padding-top: 32px;
+  }
+
+  .trainingwijzer-wrapper .welcome-title {
+    font-size: 2rem;
+  }
+
+  .trainingwijzer-wrapper .question-screen {
+    padding: 20px;
+  }
+
+  .trainingwijzer-wrapper .options-two {
+    grid-template-columns: 1fr;
+  }
+
+  .trainingwijzer-wrapper .result-body {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .trainingwijzer-wrapper .result-ladder {
+    order: -1;
+  }
+
+  .trainingwijzer-wrapper .follow-up-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .trainingwijzer-wrapper .training-cta {
+    flex-direction: column;
+  }
+
+  .trainingwijzer-wrapper .training-cta .btn {
+    width: 100%;
+  }
+}

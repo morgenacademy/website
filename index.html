@@ -7,7 +7,7 @@
 <meta name="description" content="Morgen helpt MKB-organisaties groeien met AI-trainingen, digitale oplossingen, strategische begeleiding en thought leadership.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Arimo:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Arimo:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{--fd:'Barlow Condensed',sans-serif;--fu:'Plus Jakarta Sans',sans-serif;--fb:'Arimo',Arial,sans-serif;--navy:#0e0e30;--nmd:#15153e;--nlt:#1c1c52;--white:#f2f0ff;--pink:#c850d8;--purple:#7c35c9;--blue:#2552c9;--green:#1a9e72;--grey:#8a88b8;--lgrey:#c0bdde;--black:#0a0a1a}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
@@ -238,6 +238,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 @media(max-width:1024px){nav{padding:1.2rem 2rem}.sd,.sl,.sm,.trust-section,.da-hero{padding:4rem 2rem}.hero{padding:8rem 2rem 4rem}.pgrid,.trgst,.lbintro,.book-grid,.da-grid{grid-template-columns:1fr;gap:3rem}.trgrid{grid-template-columns:1fr}.wgrid{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr 1fr}.cta-btns{flex-direction:column;align-items:center}.hstats{flex-wrap:wrap;gap:2rem}.speaker-grid{grid-template-columns:1fr}.da-card-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.nav-links{display:none}.lg4,.sgrid,.speaker-grid{grid-template-columns:1fr}.wgrid,.trgrid{grid-template-columns:1fr}.ft{grid-template-columns:1fr}.tnums{grid-template-columns:1fr 1fr}}
 </style>
+<link rel="stylesheet" href="/docs/trainingwijzer/style.css">
 </head>
 <body>
 <div class="cur" id="cur"></div>
@@ -537,6 +538,11 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <div class="tcard"><span class="tlev tl-a">Module 4</span><div class="ttitle">Digitale strategie voor directeuren</div><p class="tdesc">Een digitale agenda voor de komende drie jaar. Voor bestuurders die zelf regie willen over de digitaliseringskoers van de organisatie.</p><div class="tmeta"><span>&#8987; 3 dagen</span><span>&#128101; Incompany</span></div></div>
     <div class="tcard"><span class="tlev tl-e">Module 5</span><div class="ttitle">Bouw de eerste AI-workflow: automatiseren zonder te programmeren</div><p class="tdesc">Voor de power users in het team. Werkende automatiseringen en systeemkoppelingen bouwen zonder programmeerkennis.</p><div class="tmeta"><span>&#8987; 3 dagen</span><span>&#128101; Online &amp; incompany</span></div></div>
     <div class="tcard"><span class="tlev tl-e">Volledig leerpad</span><div class="ttitle">Van bewustwording tot implementatie</div><p class="tdesc">Alle modules als incompany traject van zes tot twaalf maanden, inclusief begeleiding vanuit Morgen Consultancy. Voor organisaties die echt doorpakken.</p><div class="tmeta"><span>&#8987; Op maat</span><span>&#128101; Incompany</span></div></div>
+  </div>
+</section>
+<section style="padding:0">
+  <div class="trainingwijzer-wrapper">
+    <div id="trainingwijzer-app"></div>
   </div>
 </section>
 <section class="sm">
@@ -1219,5 +1225,6 @@ document.addEventListener('click',e=>{
 });
 </script>
 
+<script type="module" src="/docs/trainingwijzer/main.js"></script>
 </body>
 </html>
