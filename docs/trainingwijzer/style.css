@@ -170,6 +170,10 @@
   line-height: 1.6;
 }
 
+.trainingwijzer-wrapper .welcome-content .btn-primary {
+  margin-top: 2rem;
+}
+
 .trainingwijzer-wrapper .welcome-note {
   font-size: 0.875rem;
   color: var(--tw-text-muted);
@@ -184,7 +188,7 @@
 .trainingwijzer-wrapper .route-preview {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 32px;
   justify-content: center;
 }
 
@@ -211,7 +215,7 @@
 }
 
 .trainingwijzer-wrapper .route-connector {
-  width: 60px;
+  width: 90px;
   height: 2px;
   background: rgba(255, 255, 255, 0.12);
   position: absolute;
