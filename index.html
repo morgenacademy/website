@@ -33,7 +33,7 @@ nav.scrolled{background:rgba(10,10,26,.96);backdrop-filter:blur(18px);border-bot
 .hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:70px 70px;mask-image:radial-gradient(ellipse 85% 85% at 50% 50%,black 20%,transparent 100%)}
 .hi{position:relative;z-index:2}
 .eyebrow{font-family:var(--fu);font-size:.76rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);display:flex;align-items:center;gap:.8rem;margin-bottom:1.6rem;opacity:0;animation:up .7s .3s forwards}
-.eyebrow::before{content:'';width:26px;height:1.5px;background:var(--pink)}
+.eyebrow::before{display:none}
 .h1{font-family:var(--fd);font-weight:900;font-size:clamp(4rem,9vw,10rem);line-height:.87;letter-spacing:.02em;text-transform:uppercase;margin-bottom:2rem;opacity:0;animation:up .8s .5s forwards}
 .h1 .pk{color:var(--pink)}
 .hbody{font-family:var(--fb);font-size:1.05rem;line-height:1.75;color:var(--lgrey);max-width:50ch;margin-bottom:2.5rem;opacity:0;animation:up .8s .75s forwards}
@@ -62,7 +62,7 @@ nav.scrolled{background:rgba(10,10,26,.96);backdrop-filter:blur(18px);border-bot
 @keyframes logoScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 /* SHARED */
 .slabel{font-family:var(--fu);font-size:.63rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
-.slabel::before{content:'';width:22px;height:1.5px;background:var(--pink)}
+.slabel::before{display:none}
 .slabel.dk{color:var(--purple)}.slabel.dk::before{background:var(--purple)}
 .stitle{font-family:var(--fd);font-weight:900;font-size:clamp(2.8rem,5.5vw,5.5rem);line-height:.9;letter-spacing:.03em;text-transform:uppercase}
 .reveal{opacity:1;transform:none;transition:opacity .8s ease,transform .8s ease}
@@ -209,6 +209,68 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 .da-cn{font-family:var(--fu);font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:.6rem}
 .da-ct{font-family:var(--fu);font-size:.93rem;font-weight:700;color:var(--white);margin-bottom:.5rem;line-height:1.35}
 .da-cd{font-family:var(--fb);font-size:.82rem;color:var(--lgrey);line-height:1.65}
+.agents-overview{padding:6rem 4rem;background:linear-gradient(145deg,#121243,var(--nmd) 60%,#1a0f46)}
+.agents-head{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem}
+.agents-head-copy{max-width:62ch}
+.agents-head-cta{flex-shrink:0;padding-top:.6rem;display:flex;flex-direction:column;gap:.7rem;align-items:flex-end}
+.agents-head-cta .btn-p,.agents-head-cta .btn-o{width:252px;justify-content:center}
+.agents-lead{font-family:var(--fb);color:var(--lgrey);max-width:62ch;margin-top:1.2rem;font-size:.95rem;line-height:1.8}
+.agent-show-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+.agent-show-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:1.6rem;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .22s,border-color .22s,box-shadow .22s}
+.agent-show-card:hover{transform:translateY(-4px);border-color:rgba(200,80,216,.55);box-shadow:0 24px 60px rgba(10,10,26,.5)}
+.agent-show-avatar-wrap{width:172px;height:172px;border-radius:50%;padding:3px;background:linear-gradient(135deg,var(--pink),var(--purple));margin-bottom:1rem;flex-shrink:0}
+.agent-show-avatar{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center;border:3px solid rgba(14,14,48,.95);background:#fff}
+.agent-show-name{font-family:var(--fd);font-weight:900;font-size:2rem;letter-spacing:.03em;text-transform:uppercase;line-height:1;color:#fff}
+.agent-show-role{font-family:var(--fu);font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#bdb9df;margin:.4rem 0 .9rem}
+.agent-show-bio{font-family:var(--fb);font-size:.84rem;line-height:1.7;color:var(--lgrey);margin-bottom:1.2rem;flex-grow:1}
+.agent-show-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:.35rem;margin-bottom:1.2rem}
+.agent-show-tag{font-family:var(--fu);font-size:.56rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#f0defa;background:rgba(200,80,216,.18);border:1px solid rgba(200,80,216,.35);border-radius:2px;padding:.24rem .5rem}
+.agent-show-link{font-family:var(--fu);font-size:.81rem;font-weight:700;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--pink),var(--purple));padding:.62rem 1rem;border-radius:4px;transition:opacity .2s,transform .2s}
+.agent-show-link:hover{opacity:.88;transform:translateY(-2px)}
+.da-form-wrap{background:rgba(0,0,0,.28);border:1px solid rgba(200,80,216,.28);border-radius:10px;padding:2rem}
+.da-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.da-field{display:flex;flex-direction:column;gap:.45rem}
+.da-field label{font-family:var(--fu);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c9c5e8}
+.da-field input,.da-field textarea{width:100%;font-family:var(--fb);font-size:.92rem;color:#fff;background:rgba(12,12,34,.76);border:1px solid rgba(255,255,255,.16);border-radius:6px;padding:.8rem .9rem;outline:none}
+.da-field textarea{min-height:120px;resize:vertical}
+.da-field input:focus,.da-field textarea:focus{border-color:rgba(200,80,216,.7)}
+.da-field-full{grid-column:1/-1}
+/* AI ORGANISATIE */
+.org-map{display:flex;flex-direction:column;align-items:center}
+.org-line{width:2px;height:40px;background:rgba(255,255,255,.18)}
+.org-node{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1rem 1.1rem;text-align:center}
+.org-node.primary{background:linear-gradient(145deg,#1a0b43,#26105d);border-color:rgba(200,80,216,.45)}
+.org-node-avatar{width:78px;height:78px;border-radius:50%;padding:3px;background:linear-gradient(135deg,var(--pink),var(--purple));margin:0 auto .7rem}
+.org-node-avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2px solid rgba(14,14,48,.94)}
+.org-node-name{font-family:var(--fd);font-size:1.3rem;letter-spacing:.04em;text-transform:uppercase;color:#fff;line-height:1}
+.org-node-role{font-family:var(--fu);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#cbc7ea;margin-top:.5rem}
+.org-node-badge{display:inline-block;margin-top:.6rem;padding:.22rem .55rem;font-family:var(--fu);font-size:.56rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;color:#fff;background:rgba(200,80,216,.4);border:1px solid rgba(200,80,216,.55)}
+.org-managers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;width:100%;max-width:980px}
+.org-managers .org-node{padding:1.1rem}
+.org-managers .org-node-avatar{width:70px;height:70px}
+.org-departments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;width:100%;margin-top:2rem}
+.org-dept{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;overflow:hidden}
+.org-dept-head{padding:1rem;background:linear-gradient(145deg,#1b1150,#2d1570)}
+.org-dept-top{display:flex;gap:.55rem;align-items:flex-start}
+.org-dept-icon{font-size:1.45rem;line-height:1}
+.org-dept-title{font-family:var(--fu);font-weight:700;font-size:.86rem;line-height:1.35;color:#fff}
+.org-dept-count{font-family:var(--fu);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:#d9d4f3;margin-top:.55rem}
+.org-dept-body{padding:1rem;display:flex;flex-direction:column;gap:.55rem}
+.org-member{display:flex;gap:.6rem;align-items:center;background:rgba(12,12,34,.55);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:.55rem .6rem}
+.org-member{text-decoration:none}
+.org-member:hover{border-color:rgba(200,80,216,.5)}
+.org-member img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.22)}
+.org-member-name{font-family:var(--fu);font-size:.8rem;font-weight:700;color:#fff;line-height:1.2}
+.org-member-role{font-family:var(--fb);font-size:.72rem;color:#cbc7ea;line-height:1.35}
+.org-member-badge{display:inline-block;margin-top:.2rem;padding:.16rem .4rem;font-family:var(--fu);font-size:.52rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;color:#f5e8ff;background:rgba(200,80,216,.22);border:1px solid rgba(200,80,216,.35)}
+.org-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.org-stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:1rem;text-align:center}
+.org-stat-n{font-family:var(--fd);font-size:2.4rem;line-height:1;color:#fff}
+.org-stat-l{font-family:var(--fu);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:#d4d0f1;margin-top:.35rem}
+.org-lead{background:linear-gradient(145deg,#1a0b43,#26105d);border:1px solid rgba(200,80,216,.35);border-radius:8px;padding:2rem}
+.org-lead h4{font-family:var(--fu);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#cfcbee;margin-bottom:.7rem}
+.org-lead p{font-family:var(--fb);font-size:.93rem;line-height:1.75;color:#fff}
+.org-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.2rem}
 /* BACK BTN */
 .back-btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fu);font-size:.8rem;font-weight:600;color:var(--lgrey);cursor:pointer;border:none;background:none;margin-bottom:2rem;transition:color .2s;padding:0}
 .back-btn:hover{color:var(--white)}
@@ -235,8 +297,8 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 @keyframes fl2{0%,100%{transform:translateY(0)}50%{transform:translateY(22px)}}
 @keyframes fl3{0%,100%{transform:translateX(0)}50%{transform:translateX(-18px)}}
 @media(max-width:1280px){.lg4{grid-template-columns:repeat(2,1fr)}.sgrid{grid-template-columns:repeat(2,1fr)}.speaker-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:1024px){nav{padding:1.2rem 2rem}.sd,.sl,.sm,.trust-section,.da-hero{padding:4rem 2rem}.hero{padding:8rem 2rem 4rem}.pgrid,.trgst,.lbintro,.book-grid,.da-grid{grid-template-columns:1fr;gap:3rem}.trgrid{grid-template-columns:1fr}.wgrid{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr 1fr}.cta-btns{flex-direction:column;align-items:center}.hstats{flex-wrap:wrap;gap:2rem}.speaker-grid{grid-template-columns:1fr}.da-card-grid{grid-template-columns:1fr}}
-@media(max-width:640px){.nav-links{display:none}.lg4,.sgrid,.speaker-grid{grid-template-columns:1fr}.wgrid,.trgrid{grid-template-columns:1fr}.ft{grid-template-columns:1fr}.tnums{grid-template-columns:1fr 1fr}}
+@media(max-width:1024px){nav{padding:1.2rem 2rem}.sd,.sl,.sm,.trust-section,.da-hero,.agents-overview{padding:4rem 2rem}.hero{padding:8rem 2rem 4rem}.pgrid,.trgst,.lbintro,.book-grid,.da-grid,.da-form-grid{grid-template-columns:1fr;gap:3rem}.trgrid{grid-template-columns:1fr}.wgrid{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr 1fr}.cta-btns{flex-direction:column;align-items:center}.hstats{flex-wrap:wrap;gap:2rem}.speaker-grid{grid-template-columns:1fr}.da-card-grid{grid-template-columns:1fr}.agent-show-grid{grid-template-columns:1fr 1fr}.agents-head{flex-direction:column}.agents-head-copy{max-width:none}.agents-head-cta{padding-top:0;align-items:flex-start}.org-managers,.org-departments,.org-stats{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.nav-links{display:none}.lg4,.sgrid,.speaker-grid,.agent-show-grid,.org-managers,.org-departments,.org-stats{grid-template-columns:1fr}.wgrid,.trgrid{grid-template-columns:1fr}.ft{grid-template-columns:1fr}.tnums{grid-template-columns:1fr 1fr}.da-form-wrap{padding:1.2rem}.agents-head-cta .btn-p,.agents-head-cta .btn-o{width:100%}}
 </style>
 <link rel="stylesheet" href="/docs/trainingwijzer/style.css">
 </head>
@@ -254,7 +316,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <span>Conform de EU AI Act</span>
       <span>Bewijs van deelname na afronding</span>
     </div>
-    <a href="PLUGANDPAY_URL_HIER" class="popup-btn" target="_blank" rel="noopener">Direct kopen &#x2192;</a>
+    <a href="PLUGANDPAY_URL_HIER" class="popup-btn" target="_blank" rel="noopener">Direct kopen</a>
     <p class="popup-note">Vragen? Mail naar <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
   </div>
 </div>
@@ -280,7 +342,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <h1 class="h1">WAT DOET<br>JOUW BEDRIJF<br><span class="pk">MORGEN?</span></h1>
     <p class="hbody">Morgen helpt MKB-organisaties groeien met AI-trainingen, digitale oplossingen en strategische begeleiding. Van eerste stap tot volledige implementatie.</p>
     <div class="hctas">
-      <button class="btn-p" onclick="scrollToId('contact')">Plan gratis kennismakingsgesprek &#x2192;</button>
+      <button class="btn-p" onclick="scrollToId('contact')">Plan gratis kennismakingsgesprek</button>
       <button class="btn-g" onclick="nav('home','aanbod')">Bekijk ons aanbod &#x2193;</button>
     </div>
     <div class="hstats">
@@ -331,7 +393,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <h3 class="lname">AI-trainingen voor teams</h3>
       <div class="ltag">Workshop &#183; Leerpad &#183; Online &#183; Incompany</div>
       <p class="ldesc">Van losse workshop tot volledig incompany leerpad. Online beschikbaar. Opgezet conform de EU AI Act.</p>
-      <button class="llink ll-b" onclick="nav('academy')">Bekijk het trainingsaanbod &#x2192;</button>
+      <button class="llink ll-b" onclick="nav('academy')">Bekijk het trainingsaanbod</button>
     </article>
     <article class="lcard">
       <div class="lcard-label">Morgen Technology</div>
@@ -339,7 +401,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <h3 class="lname">Digitale oplossingen bouwen</h3>
       <div class="ltag">Maatwerk &#183; AI-workflows &#183; Automatisering</div>
       <p class="ldesc">AI-workflows, procesautomatisering en systeemkoppelingen. Op maat gebouwd, vertrekkend vanuit de bedrijfsprocessen.</p>
-      <button class="llink ll-p" onclick="nav('technology')">Bekijk wat we bouwen &#x2192;</button>
+      <button class="llink ll-p" onclick="nav('technology')">Bekijk wat we bouwen</button>
     </article>
     <article class="lcard">
       <div class="lcard-label">Morgen Consultancy</div>
@@ -347,7 +409,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <h3 class="lname">Begeleiding bij digitalisering</h3>
       <div class="ltag">Strategie &#183; Uitvoering &#183; Veranderkunde</div>
       <p class="ldesc">Van digitale audit tot implementatie en borging. Met kennis van veranderkunde. Techniek én mensen tegelijk.</p>
-      <button class="llink ll-k" onclick="nav('consultancy')">Bekijk onze aanpak &#x2192;</button>
+      <button class="llink ll-k" onclick="nav('consultancy')">Bekijk onze aanpak</button>
     </article>
     <article class="lcard">
       <div class="lcard-label">Morgen Company</div>
@@ -355,7 +417,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <h3 class="lname">Boek en keynotes over AI</h3>
       <div class="ltag">Keynote &#183; Boek &#183; Thought leadership</div>
       <p class="ldesc">Inspirerende keynotes over AI voor congressen en bedrijfsevents. Plus een praktisch boek over digitalisering.</p>
-      <button class="llink ll-g" onclick="nav('company')">Ontdek Morgen Company &#x2192;</button>
+      <button class="llink ll-g" onclick="nav('company')">Ontdek Morgen Company</button>
     </article>
   </div>
 </section>
@@ -375,7 +437,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
         <p class="ssub">Het potentieel is er. Maar niemand weet hoe het dagelijkse werk echt slimmer kan.</p>
       </div>
       <div class="sarrow"><svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 0v18M1 12l6 8 6-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="sres sr-p"><div class="srl srl-p">Stap vooruit</div><div class="srn">AI-training voor het team</div><div class="srs">Praktisch, direct toepasbaar, EU AI Act-conform</div><button class="slink slink-p" onclick="nav('academy')">Bekijk het trainingsaanbod &#x2192;</button></div>
+      <div class="sres sr-p"><div class="srl srl-p">Stap vooruit</div><div class="srn">AI-training voor het team</div><div class="srs">Praktisch, direct toepasbaar, EU AI Act-conform</div><button class="slink slink-p" onclick="nav('academy')">Bekijk het trainingsaanbod</button></div>
     </div>
     <div class="spath">
       <div class="sscen ss-b">
@@ -384,7 +446,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
         <p class="ssub">Herhaalbaar handmatig werk dat structureel tijd kost. Niemand pakt het op.</p>
       </div>
       <div class="sarrow"><svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 0v18M1 12l6 8 6-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="sres sr-b"><div class="srl srl-b">Stap vooruit</div><div class="srn">Digitale oplossingen op maat</div><div class="srs">Automatisering gebouwd op de eigen processen</div><button class="slink slink-b" onclick="nav('technology')">Bekijk wat we bouwen &#x2192;</button></div>
+      <div class="sres sr-b"><div class="srl srl-b">Stap vooruit</div><div class="srn">Digitale oplossingen op maat</div><div class="srs">Automatisering gebouwd op de eigen processen</div><button class="slink slink-b" onclick="nav('technology')">Bekijk wat we bouwen</button></div>
     </div>
     <div class="spath">
       <div class="sscen ss-k">
@@ -393,7 +455,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
         <p class="ssub">Er is geen plan, geen trekker en geen capaciteit om het intern op te pakken.</p>
       </div>
       <div class="sarrow"><svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 0v18M1 12l6 8 6-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="sres sr-k"><div class="srl srl-k">Stap vooruit</div><div class="srn">Strategische begeleiding</div><div class="srs">Van plan tot uitvoering, met veranderkunde</div><button class="slink slink-k" onclick="nav('consultancy')">Bekijk onze aanpak &#x2192;</button></div>
+      <div class="sres sr-k"><div class="srl srl-k">Stap vooruit</div><div class="srn">Strategische begeleiding</div><div class="srs">Van plan tot uitvoering, met veranderkunde</div><button class="slink slink-k" onclick="nav('consultancy')">Bekijk onze aanpak</button></div>
     </div>
     <div class="spath">
       <div class="sscen ss-g">
@@ -402,12 +464,12 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
         <p class="ssub">Geïnspireerd worden door Morgen? Door een keynote of het boek.</p>
       </div>
       <div class="sarrow"><svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 0v18M1 12l6 8 6-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="sres sr-g"><div class="srl srl-g">Stap vooruit</div><div class="srn">Keynote of boek over AI</div><div class="srs">Drie sprekers, drie invalshoeken, direct toepasbaar</div><button class="slink slink-g" onclick="nav('company','cp-keynote')">Bekijk de keynotes &#x2192;</button></div>
+      <div class="sres sr-g"><div class="srl srl-g">Stap vooruit</div><div class="srn">Keynote of boek over AI</div><div class="srs">Drie sprekers, drie invalshoeken, direct toepasbaar</div><button class="slink slink-g" onclick="nav('company','cp-keynote')">Bekijk de keynotes</button></div>
     </div>
   </div>
   <div style="text-align:center;margin-top:3rem" class="reveal">
     <p style="font-family:var(--fb);color:var(--grey);margin-bottom:1rem;font-size:.88rem">Meerdere situaties herkenbaar? Plan een gratis gesprek in en we kijken samen wat de beste eerste stap is.</p>
-    <button class="btn-p" onclick="scrollToId('contact')">Plan een gratis kennismakingsgesprek &#x2192;</button>
+    <button class="btn-p" onclick="scrollToId('contact')">Plan een gratis kennismakingsgesprek</button>
   </div>
 </section>
 <section class="trust-section">
@@ -491,7 +553,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <h1 class="h1">MEER DAN<br>VRAGEN<br><span class="pk">STELLEN.</span></h1>
     <p class="hbody">Veel teams gebruiken AI als een slimme zoekmachine. Maar er is zoveel meer potentieel. Morgen Academy laat zien hoe AI echt werk uit handen neemt. Individueel online of als incompany leerpad.</p>
     <div class="hctas">
-      <button class="btn-p" onclick="openTrainingPopup()">Online basistraining kopen &#x2192;</button>
+      <button class="btn-p" onclick="openTrainingPopup()">Online basistraining kopen</button>
       <button class="btn-g" onclick="scrollToId('ac-trainingen')">Alle trainingen bekijken &#x2193;</button>
     </div>
     <div class="hstats">
@@ -633,7 +695,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <h1 class="h1">MINDER<br>HANDWERK.<br><span class="pk">MEER RESULTAAT.</span></h1>
     <p class="hbody">Morgen Technology bouwt de digitale oplossingen die een organisatie slimmer maken. Altijd op maat. Altijd vertrekkend vanuit de bedrijfsprocessen, niet vanuit tools.</p>
     <div class="hctas">
-      <button class="btn-p" onclick="scrollToId('te-aanpak')">Bekijk wat we bouwen &#x2192;</button>
+      <button class="btn-p" onclick="scrollToId('te-aanpak')">Bekijk wat we bouwen</button>
       <button class="btn-g" onclick="scrollToId('te-contact')">Plan een kennismaking &#x2193;</button>
     </div>
   </div>
@@ -690,7 +752,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   <p class="cta-sub">Plan een gratis gesprek in. We analyseren samen welke processen het meeste opleveren als ze geautomatiseerd worden.</p>
   <div class="cta-btns">
     <a href="mailto:totmorgen@morgenacademy.nl" class="btn-w">Plan gratis procesanalyse</a>
-    <button class="btn-o" onclick="nav('assistenten')">Bekijk onze digitale assistenten &#x2192;</button>
+    <button class="btn-o" onclick="nav('assistenten')">Bekijk onze digitale assistenten</button>
   </div>
 </div></section>
 <footer>
@@ -747,7 +809,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <h1 class="h1">DIGITALISERING<br>SLAAGT NIET<br><span class="pk">MET TECH ALLEEN.</span></h1>
     <p class="hbody">Morgen Consultancy begeleidt de hele digitaliseringstransitie. Van strategie tot uitvoering, met kennis van veranderkunde. Techniek en mensen tegelijk.</p>
     <div class="hctas">
-      <button class="btn-p" onclick="scrollToId('co-aanpak')">Bekijk onze aanpak &#x2192;</button>
+      <button class="btn-p" onclick="scrollToId('co-aanpak')">Bekijk onze aanpak</button>
       <button class="btn-g" onclick="scrollToId('co-contact')">Gratis digitale scan &#x2193;</button>
     </div>
     <div class="hstats">
@@ -806,7 +868,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   <p class="cta-sub">Plan een gratis scan in. We brengen samen de situatie in kaart en benoemen direct de eerste concrete stap. Eerlijk en zonder verkoopverhaal.</p>
   <div class="cta-btns">
     <a href="mailto:totmorgen@morgenacademy.nl" class="btn-w">Plan gratis digitale scan</a>
-    <button class="btn-o" onclick="nav('assistenten')">Bekijk onze digitale assistenten &#x2192;</button>
+    <button class="btn-o" onclick="nav('assistenten')">Bekijk onze digitale assistenten</button>
   </div>
 </div></section>
 <footer>
@@ -863,12 +925,74 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <h1 class="h1" style="animation:none;opacity:1">EEN BEDRIJF<br>DAT ZICHZELF<br><span class="pk">RUNT.</span></h1>
     <p class="hbody" style="animation:none;opacity:1">We automatiseren onze eigen processen. Niet omdat we niet van klantcontact houden, maar juist om meer échte tijd over te hebben voor het werk dat er toe doet: het MKB helpen groeien.</p>
     <div class="hctas" style="animation:none;opacity:1">
-      <a href="https://morgenacademy.nl/assistenten-en-agents/" target="_blank" rel="noopener" class="btn-p">Bekijk alle digitale assistenten &#x2192;</a>
+      <button class="btn-p" onclick="scrollToId('agents-overzicht')">Bekijk alle digitale assistenten</button>
       <button class="btn-g" onclick="scrollToId('da-verhaal')">Lees het verhaal &#x2193;</button>
     </div>
   </div>
 </div>
 <div class="ticker"><div class="ticker-t"><span>Digitale assistenten</span><span class="ts">&#10022;</span><span>AI-agents</span><span class="ts">&#10022;</span><span>Eigen processen geautomatiseerd</span><span class="ts">&#10022;</span><span>Sociaal experiment</span><span class="ts">&#10022;</span><span>Schalen zonder personeel</span><span class="ts">&#10022;</span><span>Digitale assistenten</span><span class="ts">&#10022;</span><span>AI-agents</span><span class="ts">&#10022;</span><span>Eigen processen geautomatiseerd</span><span class="ts">&#10022;</span><span>Digitale assistenten</span><span class="ts">&#10022;</span><span>AI-agents</span><span class="ts">&#10022;</span><span>Eigen processen geautomatiseerd</span><span class="ts">&#10022;</span><span>Sociaal experiment</span><span class="ts">&#10022;</span><span>Schalen zonder personeel</span><span class="ts">&#10022;</span><span>Digitale assistenten</span><span class="ts">&#10022;</span><span>AI-agents</span><span class="ts">&#10022;</span><span>Eigen processen geautomatiseerd</span><span class="ts">&#10022;</span></div></div>
+
+<section class="agents-overview" id="agents-overzicht">
+  <div class="agents-head reveal">
+    <div class="agents-head-copy">
+      <div class="slabel">Assistenten Van Morgen</div>
+      <h2 class="stitle">ONZE<br><span style="color:var(--pink)">SHOWCASE</span><br>IN DE PRAKTIJK.</h2>
+      <p class="agents-lead">Hieronder staan de digitale assistenten die we gebouwd hebben voor onze eigen organisatie en voor klanten. Hiermee vullen we de originele assistentenpagina aan, zonder een aparte website-ervaring.</p>
+    </div>
+    <div class="agents-head-cta">
+      <button class="btn-p" onclick="scrollToId('da-aanvraag')">Vraag eigen assistent aan</button>
+      <button class="btn-o" onclick="nav('organisatie')">Onze AI organisatie</button>
+    </div>
+  </div>
+  <div class="agent-show-grid reveal" id="agent-grid"></div>
+</section>
+
+<section class="sd" id="da-aanvraag">
+  <div class="reveal" style="margin-bottom:2rem">
+    <div class="slabel">Vraag Eigen Assistent Aan</div>
+    <h2 class="ptitle">SAMEN BOUWEN WE<br>JOUW EIGEN<br><span style="color:var(--pink)">AI-ASSISTENT.</span></h2>
+    <p class="pbody" style="max-width:70ch">Vertel ons over je gewenste uitkomst, huidige proces en opdracht. Dan kijken we samen welke assistent het meeste oplevert voor jouw organisatie.</p>
+  </div>
+  <form class="da-form-wrap reveal" name="assistent-aanvraag" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/assistenten/?p=assistenten&a=da-aanvraag">
+    <input type="hidden" name="form-name" value="assistent-aanvraag">
+    <p style="display:none">
+      <label>Laat dit veld leeg: <input name="bot-field"></label>
+    </p>
+    <div class="da-form-grid">
+      <div class="da-field">
+        <label for="da-naam">Naam *</label>
+        <input id="da-naam" type="text" name="naam" required>
+      </div>
+      <div class="da-field">
+        <label for="da-email">E-mailadres *</label>
+        <input id="da-email" type="email" name="email" required>
+      </div>
+      <div class="da-field">
+        <label for="da-telefoon">Telefoonnummer *</label>
+        <input id="da-telefoon" type="tel" name="telefoon" required>
+      </div>
+      <div class="da-field">
+        <label for="da-bedrijf">Bedrijfsnaam</label>
+        <input id="da-bedrijf" type="text" name="bedrijf">
+      </div>
+      <div class="da-field da-field-full">
+        <label for="da-gewenst">Wat is de gewenste uitkomst? *</label>
+        <textarea id="da-gewenst" name="gewensteUitkomst" required></textarea>
+      </div>
+      <div class="da-field da-field-full">
+        <label for="da-opdracht">Wat is de opdracht? *</label>
+        <textarea id="da-opdracht" name="opdracht" required></textarea>
+      </div>
+      <div class="da-field da-field-full">
+        <label for="da-proces">Hoe ziet het huidige proces eruit? *</label>
+        <textarea id="da-proces" name="huidigProces" required></textarea>
+      </div>
+    </div>
+    <div style="margin-top:1.2rem;display:flex;justify-content:flex-end">
+      <button type="submit" class="btn-p">Verstuur aanvraag</button>
+    </div>
+  </form>
+</section>
 
 <section class="sd" id="da-verhaal">
   <div class="da-grid reveal">
@@ -880,7 +1004,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <p class="pbody">Alles wat we bouwen en leren, delen we. De digitale assistenten die we ontwikkelen, zijn beschikbaar als showcase en als startpunt voor de eigen organisatie.</p>
       <div class="callout">Dit is geen theorie. We zijn zelf het MKB-bedrijf dat digitaliseert en leren terwijl we doen. Wat werkt, bouwen we voor klanten. Wat niet werkt, leren we ook.</div>
       <div style="margin-top:2rem">
-        <a href="https://morgenacademy.nl/assistenten-en-agents/" target="_blank" rel="noopener" class="btn-p">Bekijk alle showcases op de website &#x2192;</a>
+        <button class="btn-p" onclick="scrollToId('agents-overzicht')">Bekijk alle showcases op de website</button>
       </div>
     </div>
     <div class="da-terminal">
@@ -910,7 +1034,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <div class="da-card"><div class="da-cn">Administratie</div><div class="da-ct">Offerte-generatie workflow</div><p class="da-cd">Vertaalt een gespreksverslag of briefing automatisch naar een gepersonaliseerde offerte, klaar voor review en verzending.</p></div>
   </div>
   <div style="text-align:center;margin-top:3rem" class="reveal">
-    <a href="https://morgenacademy.nl/assistenten-en-agents/" target="_blank" rel="noopener" class="btn-p" style="display:inline-flex">Alle digitale assistenten bekijken &#x2192;</a>
+    <button class="btn-p" onclick="scrollToId('agents-overzicht')" style="display:inline-flex">Alle digitale assistenten bekijken</button>
     <p style="font-family:var(--fb);font-size:.82rem;color:#8a88b8;margin-top:1rem">Of plan een gesprek om te ontdekken welke assistent het meeste oplevert voor de eigen organisatie.</p>
   </div>
 </section>
@@ -937,7 +1061,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   <p class="cta-sub">Plan een gesprek in. We kijken samen welk proces het meeste oplevert als het geautomatiseerd wordt, en of een bestaande assistent als startpunt kan dienen.</p>
   <div class="cta-btns">
     <a href="mailto:totmorgen@morgenacademy.nl" class="btn-w">Plan een gesprek</a>
-    <a href="https://morgenacademy.nl/assistenten-en-agents/" target="_blank" rel="noopener" class="btn-o">Bekijk alle showcases &#x2192;</a>
+    <button class="btn-o" onclick="scrollToId('agents-overzicht')">Bekijk alle showcases</button>
   </div>
 </div></section>
 <footer>
@@ -985,6 +1109,98 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 </footer>
 </div><!-- /page-assistenten -->
 
+<div class="page" id="page-organisatie">
+<header class="hero">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="hgrid"></div>
+  <div class="hi">
+    <button class="back-btn" onclick="nav('assistenten')">&#x2190; Terug naar assistenten</button>
+    <p class="eyebrow">Morgen Technology &#183; AI organisatie &#183; Digitale teams</p>
+    <h1 class="h1">ONZE<br>AI<br><span class="pk">ORGANISATIE.</span></h1>
+    <p class="hbody">Geen losse tools, maar een samenwerkend digitaal team. Elke assistent heeft een rol in het proces: van intake en sales tot operatie, content en opvolging.</p>
+    <div class="hctas">
+      <button class="btn-p" onclick="nav('assistenten')">Terug naar assistenten</button>
+      <button class="btn-g" onclick="scrollToId('org-structuur')">Bekijk de structuur &#x2193;</button>
+    </div>
+  </div>
+</header>
+<div class="ticker"><div class="ticker-t"><span>AI Organisatie</span><span class="ts">&#10022;</span><span>Sales &amp; intake</span><span class="ts">&#10022;</span><span>Operations &amp; planning</span><span class="ts">&#10022;</span><span>Marketing &amp; content</span><span class="ts">&#10022;</span><span>AI Organisatie</span><span class="ts">&#10022;</span></div></div>
+
+<section class="sd" id="org-structuur">
+  <div class="reveal" style="margin-bottom:2rem">
+    <div class="slabel">Structuur</div>
+    <h2 class="ptitle">VAN LEAD TOT OPLEVERING<br>IN &#201;&#201;N DIGITALE KETEN.</h2>
+    <p class="pbody" style="max-width:70ch">Dit is hoe de assistenten als team samenwerken. Niet als gimmick, maar als vaste operationele laag onder de organisatie.</p>
+  </div>
+  <div class="org-map reveal">
+    <div class="org-node primary" id="org-executive"></div>
+    <div class="org-line"></div>
+    <div class="org-managers" id="org-managers"></div>
+    <div class="org-line"></div>
+    <div class="org-departments" id="org-departments"></div>
+    <div class="org-stats">
+      <div class="org-stat"><div class="org-stat-n">17</div><div class="org-stat-l">AI Assistenten</div></div>
+      <div class="org-stat"><div class="org-stat-n">5</div><div class="org-stat-l">Departementen</div></div>
+      <div class="org-stat"><div class="org-stat-n">24/7</div><div class="org-stat-l">Beschikbaarheid</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sl">
+  <div class="org-lead reveal">
+    <h4>Wat dit oplevert</h4>
+    <p>Een organisatie die sneller leert, consistenter levert en minder afhankelijk is van losse handmatige stappen. Zo ontstaat schaalbaarheid zonder kwaliteitsverlies.</p>
+    <div class="org-actions">
+      <button class="btn-p" onclick="nav('assistenten','da-aanvraag')">Vraag eigen assistent aan</button>
+      <button class="btn-o" onclick="nav('assistenten')">Bekijk alle assistenten</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft">
+    <div>
+      <button class="logo-btn" onclick="nav('home')">MORGEN<em>.</em></button>
+      <p class="fbrand">AI-trainingen, digitale oplossingen, strategische begeleiding en thought leadership voor het MKB.</p>
+      <div class="fsoc">
+        <a href="https://www.linkedin.com/company/morgenacademy/" target="_blank" aria-label="LinkedIn" title="LinkedIn Morgen Academy">LI</a>
+        <a href="https://www.instagram.com/morgenacademy/" target="_blank" aria-label="Instagram" title="Instagram Morgen Academy">IG</a>
+        <a href="https://www.youtube.com/@OptinexYT1NL" target="_blank" aria-label="YouTube" title="YouTube OptiNex YT1 NL">YT</a>
+      </div>
+    </div>
+    <div>
+      <div class="fcol-t">Academy</div>
+      <ul class="flinks">
+        <li><a onclick="navTraining()">Online basistraining kopen</a></li>
+        <li><a onclick="nav('academy')">AI-trainingen voor teams</a></li>
+        <li><a onclick="nav('academy')">Incompany leerpad</a></li>
+        <li><a onclick="nav('academy')">EU AI Act conform</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcol-t">Technology &amp; Consultancy</div>
+      <ul class="flinks">
+        <li><a onclick="nav('technology')">Digitale oplossingen</a></li>
+        <li><a onclick="nav('technology')">Procesautomatisering</a></li>
+        <li><a onclick="nav('consultancy')">Digitale strategie</a></li>
+        <li><a onclick="nav('assistenten')">Digitale assistenten</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcol-t">Company &amp; Info</div>
+      <ul class="flinks">
+        <li><a onclick="nav('company','cp-keynote')">Keynote boeken</a></li>
+        <li><a onclick="nav('company','cp-boek')">Boek bestellen</a></li>
+        <li><a href="mailto:totmorgen@morgenacademy.nl">totmorgen@morgenacademy.nl</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fb-bar">
+    <p>&#169; 2025 Morgen Academy. Alle rechten voorbehouden.</p>
+    <div class="fbl"><a href="#">Privacybeleid</a><a href="#">Cookieverklaring</a><a href="#">Algemene voorwaarden</a></div>
+  </div>
+</footer>
+</div><!-- /page-organisatie -->
+
 <div class="page" id="page-company">
 <header class="hero">
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="hgrid"></div>
@@ -994,7 +1210,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <h1 class="h1">INSPIRATIE<br>DIE SCHUURT<br><span class="pk">EN BEKLIJFT.</span></h1>
     <p class="hbody">Drie sprekers. Drie perspectieven op AI. Van slimmer werken tot menselijkheid in een digitale wereld. Praktisch, energiek en direct toepasbaar. Morgen geeft keynotes en publiceerde een boek over dit thema.</p>
     <div class="hctas">
-      <button class="btn-p" onclick="scrollToId('cp-keynote')">Keynote boeken &#x2192;</button>
+      <button class="btn-p" onclick="scrollToId('cp-keynote')">Keynote boeken</button>
       <button class="btn-g" onclick="scrollToId('cp-boek')">Het boek bekijken &#x2193;</button>
     </div>
   </div>
@@ -1022,7 +1238,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
           <span class="sp-tag">Vrijheid en productiviteit</span>
           <span class="sp-tag">Directe toepasbaarheid</span>
         </div>
-        <a href="mailto:totmorgen@morgenacademy.nl?subject=Keynote Danielle van den Berg" class="sp-cta">Keynote boeken &#x2192;</a>
+        <a href="mailto:totmorgen@morgenacademy.nl?subject=Keynote Danielle van den Berg" class="sp-cta">Keynote boeken</a>
       </div>
     </div>
     <div class="speaker-card">
@@ -1039,7 +1255,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
           <span class="sp-tag">Balans werk en leven</span>
           <span class="sp-tag">Menselijkheid in AI-tijdperk</span>
         </div>
-        <a href="mailto:totmorgen@morgenacademy.nl?subject=Keynote Karin van Tongerlo" class="sp-cta">Keynote boeken &#x2192;</a>
+        <a href="mailto:totmorgen@morgenacademy.nl?subject=Keynote Karin van Tongerlo" class="sp-cta">Keynote boeken</a>
       </div>
     </div>
     <div class="speaker-card">
@@ -1056,7 +1272,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
           <span class="sp-tag">Toekomst van werk</span>
           <span class="sp-tag">Scherpe voorbeelden</span>
         </div>
-        <a href="mailto:totmorgen@morgenacademy.nl?subject=Keynote Harmen" class="sp-cta">Keynote boeken &#x2192;</a>
+        <a href="mailto:totmorgen@morgenacademy.nl?subject=Keynote Harmen" class="sp-cta">Keynote boeken</a>
       </div>
     </div>
   </div>
@@ -1066,7 +1282,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <div style="font-family:var(--fd);font-size:1.4rem;font-weight:900;text-transform:uppercase;color:var(--white);line-height:1.1">20 tot 60 minuten &#183; incl. Q&amp;A &#183; maatwerk op aanvraag</div>
       <p style="font-family:var(--fb);font-size:.84rem;color:var(--lgrey);margin-top:.6rem">Geschikt voor bedrijfsevents, congressen, inspiratiedagen en netwerksessies. Eén spreker of een combinatie van twee of drie.</p>
     </div>
-    <a href="mailto:totmorgen@morgenacademy.nl?subject=Keynote boeken" class="btn-p">Keynote boeken &#x2192;</a>
+    <a href="mailto:totmorgen@morgenacademy.nl?subject=Keynote boeken" class="btn-p">Keynote boeken</a>
   </div>
 </section>
 
@@ -1078,8 +1294,8 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <p style="font-family:var(--fb);color:#5a5878;margin-top:1.2rem;font-size:.95rem;line-height:1.8;max-width:45ch">Geen theorie, maar herkenbare situaties en concrete inzichten over wat AI echt verandert voor organisaties, teams en mensen. Geschreven vanuit de praktijk van MKB-trajecten.</p>
       <p style="font-family:var(--fb);color:#5a5878;margin-top:.8rem;font-size:.95rem;line-height:1.8;max-width:45ch">Ideaal als startpunt voor een team dat over AI wil nadenken, als cadeau voor een directeur die wil snappen wat er echt speelt, of als onderbouwing voor een digitaliseringsagenda.</p>
       <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
-        <a href="mailto:totmorgen@morgenacademy.nl?subject=Boek bestellen" class="btn-p">Boek bestellen &#x2192;</a>
-        <a href="mailto:totmorgen@morgenacademy.nl?subject=Boek voor het team" style="font-family:var(--fu);font-weight:600;font-size:.9rem;border:1.5px solid rgba(124,53,201,.4);color:var(--purple);padding:1rem 2rem;border-radius:3px;text-decoration:none;cursor:pointer;transition:border-color .2s">Boek voor het team &#x2192;</a>
+        <a href="mailto:totmorgen@morgenacademy.nl?subject=Boek bestellen" class="btn-p">Boek bestellen</a>
+        <a href="mailto:totmorgen@morgenacademy.nl?subject=Boek voor het team" style="font-family:var(--fu);font-weight:600;font-size:.9rem;border:1.5px solid rgba(124,53,201,.4);color:var(--purple);padding:1rem 2rem;border-radius:3px;text-decoration:none;cursor:pointer;transition:border-color .2s">Boek voor het team</a>
       </div>
     </div>
     <div class="book-cover">
@@ -1087,7 +1303,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <div style="font-family:var(--fd);font-weight:900;font-size:1.8rem;letter-spacing:.04em;text-transform:uppercase;line-height:1;color:var(--white);position:relative;z-index:1;margin-top:.8rem">AI EN DIGITALISERING<br>IN DE PRAKTIJK</div>
       <div class="book-sd">Voor het MKB van vandaag en morgen</div>
       <div class="book-au">Morgen Academy &#183; 2025</div>
-      <div class="book-ct"><a href="mailto:totmorgen@morgenacademy.nl?subject=Boek bestellen" style="font-family:var(--fu);font-size:.8rem;font-weight:700;background:var(--pink);color:#fff;padding:.7rem 1.5rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem">Bestellen &#x2192;</a></div>
+      <div class="book-ct"><a href="mailto:totmorgen@morgenacademy.nl?subject=Boek bestellen" style="font-family:var(--fu);font-size:.8rem;font-weight:700;background:var(--pink);color:#fff;padding:.7rem 1.5rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem">Bestellen</a></div>
     </div>
   </div>
 </section>
@@ -1204,6 +1420,179 @@ function navTraining(){
   setTimeout(openTrainingPopup,350);
 }
 
+const assistantShowcase=[
+  {name:'Joris',title:'Lead Validatie Agent',bio:'Belt leads, vraagt door en plant direct afspraken in met de juiste specialist.',slug:'joris',tags:['spraak','sales','automatisering']},
+  {name:'Corne',title:'Onderhoudsassistent',bio:'Kent alle manuals en geeft direct advies op jouw vraag of foto.',slug:'corne',tags:['support','rag-docs','afbeelding']},
+  {name:'Karel',title:'Orderverwerker',bio:'Automatiseert orderflow, regelt proefdrukken en houdt iedereen synchroon.',slug:'karel',tags:['workflow','validatie','database']},
+  {name:'Gijs',title:'Interieurrender Assistent',bio:'Zet 2D- of 3D-exports om naar fotorealistische interieur-renders.',slug:'gijs',tags:['render','afbeelding','interieur']},
+  {name:'Tina',title:'Persoonlijke Assistent',bio:'Maakt van jouw gedachten overzicht en concrete to-do\'s.',slug:'tina',tags:['spraak','samenvatten','notificaties']},
+  {name:'Tom',title:'Project Firestarter',bio:'Coordineert met je team tot een scherpe opdrachtbrief in een fractie van de tijd.',slug:'tom',tags:['projectmanagement','events','vragenflow']},
+  {name:'Bernard',title:'Vinoloog (WSET-trainer)',bio:'Genereert oefenexamens, beoordeelt en legt uit wat beter kan.',slug:'bernard',tags:['training','oefeningen','validatie']},
+  {name:'Sherlock',title:'Slimme Zoekmachine',bio:'Begrijpt context en levert relevante content op basis van semantisch zoeken.',slug:'moerasdraak',tags:['semantisch-zoeken','content','advies']},
+  {name:'Pepijn',title:'Start-Up Business Developer',bio:'Begeleidt van idee tot lancering met tools per fase.',slug:'raketje',tags:['startup','workflow','advies']},
+  {name:'Jim',title:'Ontdek-je-Superkrachten',bio:'Haalt talenten bij neurodivergentie naar boven en maakt ze toepasbaar.',slug:'jim',tags:['coaching','spraak','tekst']},
+  {name:'Noel',title:'Projectmanagement Assistent',bio:'Stuurt reminders, bewaakt voortgang en houdt projecten op koers.',slug:'noel',tags:['planning','monitoring','notificaties']},
+  {name:'Lora',title:'Marketing & Content Assistent',bio:'Bewaakt socials, schrijft blogs en maakt visuals in recordtempo.',slug:'lora',tags:['marketing','content','visuals']},
+  {name:'Barry',title:'Projectplan Assistent',bio:'Vertaalt ideeen naar een compleet projectplan in jouw format.',slug:'barry',tags:['planning','workflow','advies']},
+  {name:'Sita',title:'SEO-specialist',bio:'Optimaliseert content automatisch en behoudt je eigen tone-of-voice.',slug:'sita',tags:['seo','content','integratie']},
+  {name:'Connie',title:'Transcriptie in Slack',bio:'Zet audio direct om naar tekst in Slack en archiveert in je drive.',slug:'connie',tags:['slack','audio','documentatie']},
+  {name:'Jeroen',title:'Parkeerassistent Den Bosch',bio:'Geeft de slimste parkeeropties op basis van actuele informatie.',slug:'jeroen',tags:['live-data','advies','platform']},
+  {name:'Driek',title:'WeekendGuide Bouwer',bio:'Zet ruwe eventteksten om naar nette web-HTML in vaste stijl.',slug:'driek',tags:['events','publicatie','workflow']}
+];
+
+const organizationMap={
+  executive:{name:'Tom',role:'Chief Project Officer',badge:'Executive',slug:'tom'},
+  management:[
+    {name:'Noel',role:'Operations Director',badge:'Monitoring',slug:'noel'},
+    {name:'Lora',role:'Marketing Director',badge:'Team Lead',slug:'lora'},
+    {name:'Barry',role:'Planning Director',badge:'Planning',slug:'barry'}
+  ],
+  departments:[
+    {
+      name:'Sales & Customer Success',
+      icon:'&#127919;',
+      members:[
+        {name:'Joris',role:'Lead Validatie Agent',badge:'Lead Kwalificatie',slug:'joris'},
+        {name:'Corne',role:'Onderhoudsassistent',badge:'24/7 Support',slug:'corne'},
+        {name:'Jeroen',role:'Customer Service',badge:'Geo-specialist',slug:'jeroen'},
+        {name:'Bernard',role:'Customer Success',badge:'Training',slug:'bernard'}
+      ]
+    },
+    {
+      name:'Marketing & Content',
+      icon:'&#128227;',
+      members:[
+        {name:'Lora',role:'Social Media Manager',badge:'Team Lead',slug:'lora'},
+        {name:'Sita',role:'Content Creator',badge:'SEO Expert',slug:'sita'},
+        {name:'Sherlock',role:'LinkedIn Expert',badge:'AI Search',slug:'moerasdraak'},
+        {name:'Driek',role:'Marketing Automation',badge:'Publishing',slug:'driek'}
+      ]
+    },
+    {
+      name:'Operations & Processing',
+      icon:'&#9881;&#65039;',
+      members:[
+        {name:'Karel',role:'Orderverwerker',badge:'Automation',slug:'karel'},
+        {name:'Connie',role:'Process Manager',badge:'Slack Integration',slug:'connie'},
+        {name:'Tina',role:'Operations Support',badge:'Productivity',slug:'tina'},
+        {name:'Gijs',role:'Operations Analyst',badge:'Analytics',slug:'gijs'}
+      ]
+    },
+    {
+      name:'Product & Project Management',
+      icon:'&#128203;',
+      members:[
+        {name:'Tom',role:'Project Firestarter',badge:'Executive',slug:'tom'},
+        {name:'Barry',role:'Planning Specialist',badge:'Planning',slug:'barry'},
+        {name:'Noel',role:'Operations Lead',badge:'Monitoring',slug:'noel'}
+      ]
+    },
+    {
+      name:'Innovation & Special Projects',
+      icon:'&#128640;',
+      members:[
+        {name:'Pepijn',role:'Innovation Scout',badge:'Startup Launch Path',slug:'raketje'},
+        {name:'Jim',role:'R&D Specialist',badge:'Youth Development',slug:'jim'}
+      ]
+    }
+  ]
+};
+
+function renderAssistantShowcase(){
+  const grid=document.getElementById('agent-grid');
+  if(!grid)return;
+  grid.innerHTML=assistantShowcase.map(a=>`
+    <article class="agent-show-card">
+      <div class="agent-show-avatar-wrap">
+        <img class="agent-show-avatar" src="/docs/assistenten/avatars/${a.slug}.png" alt="${a.name}">
+      </div>
+      <div class="agent-show-name">${a.name}</div>
+      <div class="agent-show-role">${a.title}</div>
+      <p class="agent-show-bio">${a.bio}</p>
+      <div class="agent-show-tags">
+        ${a.tags.map(tag=>`<span class="agent-show-tag">${tag}</span>`).join('')}
+      </div>
+      <a class="agent-show-link" href="/assistenten/${a.slug}/">Ontdek ${a.name}</a>
+    </article>
+  `).join('');
+}
+
+function renderOrganizationMap(){
+  const executiveEl=document.getElementById('org-executive');
+  const managersEl=document.getElementById('org-managers');
+  const departmentsEl=document.getElementById('org-departments');
+  if(!executiveEl || !managersEl || !departmentsEl)return;
+
+  const executive=organizationMap.executive;
+  executiveEl.innerHTML=`
+    <div class="org-node-avatar"><img src="/docs/assistenten/avatars/${executive.slug}.png" alt="${executive.name}"></div>
+    <div class="org-node-name">${executive.name}</div>
+    <div class="org-node-role">${executive.role}</div>
+    <span class="org-node-badge">${executive.badge}</span>
+  `;
+
+  managersEl.innerHTML=organizationMap.management.map(m=>`
+    <article class="org-node">
+      <div class="org-node-avatar"><img src="/docs/assistenten/avatars/${m.slug}.png" alt="${m.name}"></div>
+      <div class="org-node-name">${m.name}</div>
+      <div class="org-node-role">${m.role}</div>
+      <span class="org-node-badge">${m.badge}</span>
+    </article>
+  `).join('');
+
+  departmentsEl.innerHTML=organizationMap.departments.map(d=>`
+    <article class="org-dept">
+      <div class="org-dept-head">
+        <div class="org-dept-top">
+          <div class="org-dept-icon">${d.icon}</div>
+          <div class="org-dept-title">${d.name}</div>
+        </div>
+        <div class="org-dept-count">${d.members.length} assistenten</div>
+      </div>
+      <div class="org-dept-body">
+        ${d.members.map(m=>`
+          <a class="org-member" href="/assistenten/${m.slug}/">
+            <img src="/docs/assistenten/avatars/${m.slug}.png" alt="${m.name}">
+            <div>
+              <div class="org-member-name">${m.name}</div>
+              <div class="org-member-role">${m.role}</div>
+              <span class="org-member-badge">${m.badge}</span>
+            </div>
+          </a>
+        `).join('')}
+      </div>
+    </article>
+  `).join('');
+}
+
+function applyRouteFromQuery(){
+  const params=new URLSearchParams(window.location.search);
+  const page=params.get('p');
+  const anchor=params.get('a');
+  const validPages=new Set(['home','academy','technology','consultancy','assistenten','organisatie','company']);
+
+  if(page && validPages.has(page)){
+    nav(page,anchor||undefined);
+    const cleanUrl=window.location.pathname+(window.location.hash||'');
+    window.history.replaceState({},'',cleanUrl);
+    return true;
+  }
+  return false;
+}
+
+function applyRouteFromPath(){
+  const path=window.location.pathname.replace(/\/+$/,'') || '/';
+  if(path==='/assistenten' || path.startsWith('/assistenten/')){
+    nav('assistenten');
+    return true;
+  }
+  if(path==='/organisatie' || path.startsWith('/organisatie/')){
+    nav('organisatie');
+    return true;
+  }
+  return false;
+}
+
 function initReveal(){
   document.body.classList.add('anim');
   const reveals=document.querySelectorAll('.page.active .reveal');
@@ -1218,7 +1607,10 @@ function initReveal(){
 
 document.addEventListener('DOMContentLoaded',initReveal);
 window.addEventListener('load',initReveal);
+renderAssistantShowcase();
+renderOrganizationMap();
 initReveal();
+if(!applyRouteFromQuery())applyRouteFromPath();
 
 document.addEventListener('click',e=>{
   if(e.target.id==='training-popup')closeTrainingPopup();

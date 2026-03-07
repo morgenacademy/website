@@ -1,0 +1,6 @@
+/assistenten /index.html 200
+/assistenten/ /index.html 200
+/assistenten/* /index.html 200
+/organisatie /index.html 200
+/organisatie/ /index.html 200
+/organisatie/* /index.html 200
