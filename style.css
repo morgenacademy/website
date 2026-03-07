@@ -22,15 +22,22 @@
   /* Glassmorphism */
   --glass-bg:           rgba(255, 255, 255, 0.08);
   --glass-bg-strong:    rgba(255, 255, 255, 0.12);
-  --glass-bg-hover:     rgba(255, 255, 255, 0.15);
-  --glass-border:       rgba(255, 255, 255, 0.15);
-  --glass-border-hover: rgba(255, 255, 255, 0.28);
-  --glass-highlight:    rgba(255, 255, 255, 0.2);
+  --glass-bg-hover:     rgba(255, 255, 255, 0.18);
+  --glass-border:       rgba(255, 255, 255, 0.18);
+  --glass-border-hover: rgba(255, 255, 255, 0.35);
+  --glass-highlight:    rgba(255, 255, 255, 0.22);
   --glass-blur:         blur(40px) saturate(200%);
 
+  /* Kaart-specifiek – duidelijk zichtbaar, lichter paars-glas */
+  --card-bg:        rgba(155, 111, 207, 0.22);
+  --card-bg-strong: rgba(155, 111, 207, 0.30);
+  --card-bg-hover:  rgba(155, 111, 207, 0.44);
+  --card-border:    rgba(180, 145, 230, 0.45);
+  --card-highlight: rgba(255, 255, 255, 0.18);
+
   /* Schaduwen */
-  --shadow:       0 8px 32px rgba(0, 0, 0, 0.3);
-  --shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.4);
+  --shadow:       0 4px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(155, 111, 207, 0.15);
+  --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(155, 111, 207, 0.25);
 
   /* Border radius */
   --radius:    20px;
@@ -307,21 +314,21 @@ nav.scrolled {
   gap: .8rem; background: transparent;
 }
 .sc {
-  background: var(--glass-bg);
+  background: var(--card-bg-strong);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow), inset 0 1px 0 var(--glass-highlight);
+  box-shadow: var(--shadow), inset 0 1px 0 var(--card-highlight);
   padding: 1.8rem;
   transition: var(--transition);
   min-height: 184px;
   display: flex; flex-direction: column; justify-content: flex-start;
 }
 .sc:hover {
-  background: var(--glass-bg-hover);
+  background: var(--card-bg-hover);
   border-color: var(--glass-border-hover);
-  box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.15);
+  box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.3);
   transform: translateY(-2px);
 }
 .scn {
@@ -348,21 +355,21 @@ nav.scrolled {
 .lg4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
 
 .lcard {
-  background: var(--glass-bg);
+  background: var(--card-bg-strong);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow), inset 0 1px 0 var(--glass-highlight);
+  box-shadow: var(--shadow), inset 0 1px 0 var(--card-highlight);
   padding: 2rem;
   display: flex; flex-direction: column;
   transition: var(--transition);
   cursor: none;
 }
 .lcard:hover {
-  background: var(--glass-bg-hover);
+  background: var(--card-bg-hover);
   border-color: var(--glass-border-hover);
-  box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.15);
+  box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.3);
   transform: translateY(-4px);
 }
 .lcard-label {
@@ -435,20 +442,20 @@ nav.scrolled {
 .trgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 3rem; }
 
 .tcard {
-  background: var(--glass-bg);
+  background: var(--card-bg-strong);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow), inset 0 1px 0 var(--glass-highlight);
+  box-shadow: var(--shadow), inset 0 1px 0 var(--card-highlight);
   padding: 1.8rem;
   transition: var(--transition);
   cursor: none;
 }
 .tcard:hover {
-  background: var(--glass-bg-hover);
+  background: var(--card-bg-hover);
   border-color: var(--glass-border-hover);
-  box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.15);
+  box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.3);
   transform: translateY(-3px);
 }
 .tlev {
@@ -617,18 +624,18 @@ footer {
 /* ── 21. Sprekers ── */
 .speaker-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; }
 .speaker-card {
-  background: var(--glass-bg);
+  background: var(--card-bg-strong);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow), inset 0 1px 0 var(--glass-highlight);
+  box-shadow: var(--shadow), inset 0 1px 0 var(--card-highlight);
   overflow: hidden;
   transition: var(--transition);
 }
 .speaker-card:hover {
   border-color: var(--glass-border-hover);
-  box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.15);
+  box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.3);
   transform: translateY(-4px);
 }
 .sp-head {
@@ -729,21 +736,21 @@ footer {
 .agents-lead { color: var(--text-secondary); max-width: 62ch; margin-top: 1.2rem; font-size: .97rem; line-height: 1.8; }
 .agent-show-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 3rem; }
 .agent-show-card {
-  background: var(--glass-bg);
+  background: var(--card-bg-strong);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow), inset 0 1px 0 var(--glass-highlight);
+  box-shadow: var(--shadow), inset 0 1px 0 var(--card-highlight);
   padding: 1.8rem;
   display: flex; flex-direction: column;
   align-items: center; text-align: center;
   transition: var(--transition);
 }
 .agent-show-card:hover {
-  background: var(--glass-bg-hover);
+  background: var(--card-bg-hover);
   border-color: var(--glass-border-hover);
-  box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.15);
+  box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.3);
   transform: translateY(-4px);
 }
 .agent-show-avatar-wrap {
