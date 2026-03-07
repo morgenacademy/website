@@ -100,38 +100,38 @@
     <p class="lbintro-p">Elke organisatie heeft een andere beginsituatie. Soms moeten mensen getraind worden. Soms processen gebouwd. Soms ontbreekt de regie. Morgen werkt vanuit vier disciplines, los of gecombineerd.</p>
   </div>
   <div class="lg4 reveal">
-    <article class="lcard">
+    <article class="lcard" onclick="nav('academy')" style="cursor:pointer">
       <div class="lcard-label">Morgen Academy</div>
       <div class="licon ib"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
       <h3 class="lname">AI-trainingen voor teams</h3>
       <div class="ltag">Workshop &#183; Leerpad &#183; Online &#183; Incompany</div>
       <p class="ldesc">Van losse workshop tot volledig incompany leerpad. Online beschikbaar. Opgezet conform de EU AI Act.</p>
-      <button class="llink ll-b" onclick="nav('academy')">Bekijk het trainingsaanbod</button>
-      <button class="llink ll-k" onclick="nav('academy','trainingwijzer-app')" style="font-size:.8rem;margin-top:.5rem">&#x2192; Start de routewijzer</button>
+      <button class="llink ll-b" onclick="event.stopPropagation();nav('academy')">Bekijk het trainingsaanbod</button>
+      <button class="llink ll-k" onclick="event.stopPropagation();nav('academy','trainingwijzer-app')" style="font-size:.8rem;margin-top:.5rem">&#x2192; Start de routewijzer</button>
     </article>
-    <article class="lcard">
+    <article class="lcard" onclick="nav('technology')" style="cursor:pointer">
       <div class="lcard-label">Morgen Technology</div>
       <div class="licon ip"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
       <h3 class="lname">Digitale oplossingen bouwen</h3>
       <div class="ltag">Maatwerk &#183; AI-workflows &#183; Automatisering</div>
       <p class="ldesc">AI-workflows, procesautomatisering en systeemkoppelingen. Op maat gebouwd, vertrekkend vanuit de bedrijfsprocessen.</p>
-      <button class="llink ll-p" onclick="nav('technology')">Bekijk wat we bouwen</button>
+      <button class="llink ll-p" onclick="event.stopPropagation();nav('technology')">Bekijk wat we bouwen</button>
     </article>
-    <article class="lcard">
+    <article class="lcard" onclick="nav('consultancy')" style="cursor:pointer">
       <div class="lcard-label">Morgen Consultancy</div>
       <div class="licon ik"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg></div>
       <h3 class="lname">Begeleiding bij digitalisering</h3>
       <div class="ltag">Strategie &#183; Uitvoering &#183; Veranderkunde</div>
       <p class="ldesc">Van digitale audit tot implementatie en borging. Met kennis van veranderkunde. Techniek én mensen tegelijk.</p>
-      <button class="llink ll-k" onclick="nav('consultancy')">Bekijk onze aanpak</button>
+      <button class="llink ll-k" onclick="event.stopPropagation();nav('consultancy')">Bekijk onze aanpak</button>
     </article>
-    <article class="lcard">
+    <article class="lcard" onclick="nav('company')" style="cursor:pointer">
       <div class="lcard-label">Morgen Company</div>
       <div class="licon ig"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></div>
       <h3 class="lname">Boek en keynotes over AI</h3>
       <div class="ltag">Keynote &#183; Boek &#183; Thought leadership</div>
       <p class="ldesc">Inspirerende keynotes over AI voor congressen en bedrijfsevents. Plus een praktisch boek over digitalisering.</p>
-      <button class="llink ll-g" onclick="nav('company')">Ontdek Morgen Company</button>
+      <button class="llink ll-g" onclick="event.stopPropagation();nav('company')">Ontdek Morgen Company</button>
     </article>
   </div>
 </section>
@@ -975,23 +975,63 @@
 <div class="page" id="page-assistent-detail">
 <section class="assistant-detail-page">
   <button class="back-btn" onclick="nav('assistenten')">&#x2190; Terug naar alle assistenten</button>
-  <div class="assistant-detail-grid reveal">
-    <aside class="assistant-detail-card">
+
+  <!-- Hero: avatar + name + CTA -->
+  <div class="adet-hero reveal">
+    <div class="adet-hero-left">
       <div class="assistant-detail-avatar"><img id="assistant-detail-avatar" src="" alt=""></div>
-      <div class="assistant-detail-name" id="assistant-detail-name"></div>
-      <div class="assistant-detail-role" id="assistant-detail-role"></div>
-    </aside>
-    <article class="assistant-detail-content">
-      <h2 id="assistant-detail-title"></h2>
-      <p id="assistant-detail-bio"></p>
-      <ul class="assistant-detail-list" id="assistant-detail-points"></ul>
-      <div class="assistant-detail-actions">
-        <button class="btn-p" onclick="nav('assistenten','da-aanvraag')">Vraag eigen assistent aan</button>
-        <button class="btn-o" onclick="nav('assistenten')">Bekijk alle assistenten</button>
+      <div class="adet-identity">
+        <div class="assistant-detail-name" id="assistant-detail-name"></div>
+        <div class="assistant-detail-role" id="assistant-detail-role"></div>
+        <div class="adet-ctas" id="assistant-detail-ctas"></div>
       </div>
-      <p class="form-help">Vragen? Mail gerust: <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
-    </article>
+    </div>
+    <div class="adet-hero-right">
+      <p class="adet-description" id="assistant-detail-description"></p>
+    </div>
   </div>
+
+  <!-- Belangrijkste functies -->
+  <div class="adet-section reveal" id="adet-section-features">
+    <h3 class="adet-h3">Belangrijkste functies</h3>
+    <ul class="adet-feature-list" id="assistant-detail-features"></ul>
+  </div>
+
+  <!-- Hoe werkt het? -->
+  <div class="adet-section reveal" id="adet-section-how">
+    <h3 class="adet-h3">Hoe werkt het?</h3>
+    <div class="adet-how-text" id="assistant-detail-how"></div>
+  </div>
+
+  <!-- Screenshots -->
+  <div class="adet-section reveal" id="adet-section-screenshots" style="display:none">
+    <h3 class="adet-h3">In de praktijk</h3>
+    <div class="adet-screenshots" id="assistant-detail-screenshots"></div>
+  </div>
+
+  <!-- Use cases -->
+  <div class="adet-section reveal" id="adet-section-usecases">
+    <div class="adet-two-col">
+      <div>
+        <h3 class="adet-h3">Use case</h3>
+        <div class="adet-usecase-list" id="assistant-detail-usecases"></div>
+      </div>
+      <div>
+        <h3 class="adet-h3">Voordelen</h3>
+        <ul class="adet-benefit-list" id="assistant-detail-benefits"></ul>
+        <div id="assistant-detail-results"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA footer -->
+  <div class="adet-footer reveal">
+    <a id="assistant-detail-readmore" href="#" target="_blank" style="display:none" class="llink ll-k">Lees het volledige verhaal ↗</a>
+    <button class="btn-p" onclick="nav('assistenten','da-aanvraag')">Vraag eigen assistent aan</button>
+    <button class="btn-o" onclick="nav('assistenten')">Bekijk alle assistenten</button>
+    <p class="form-help">Vragen? Mail gerust: <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
+  </div>
+
 </section>
 </div><!-- /page-assistent-detail -->
 
@@ -1176,9 +1216,10 @@
   <div class="book-grid reveal">
     <div>
       <div class="slabel dk">Het boek</div>
-      <h2 class="stitle" style="color:var(--black)">Geschreven<br>vanuit de<br><span style="color:var(--purple-light)">praktijk.</span></h2>
-      <p style="font-family:var(--fb);color:var(--text-secondary);margin-top:1.2rem;font-size:.95rem;line-height:1.8;max-width:45ch">Geen theorie, maar herkenbare situaties en concrete inzichten over wat AI echt verandert voor organisaties, teams en mensen. Geschreven vanuit de praktijk van MKB-trajecten.</p>
-      <p style="font-family:var(--fb);color:var(--text-secondary);margin-top:.8rem;font-size:.95rem;line-height:1.8;max-width:45ch">Ideaal als startpunt voor een team dat over AI wil nadenken, als cadeau voor een directeur die wil snappen wat er echt speelt, of als onderbouwing voor een digitaliseringsagenda.</p>
+      <h2 class="stitle" style="color:var(--black)">De Digitale<br><span style="color:var(--purple-light)">Collega.</span></h2>
+      <p style="font-family:var(--fb);color:var(--text-secondary);margin-top:1.2rem;font-size:.95rem;line-height:1.8;max-width:45ch"><em>De Digitale Collega</em> neemt een duidelijke en frisse invalshoek: AI wordt niet neergezet als losse tool, maar als een digitale collega — een teamlid. Dat vraagt om een fundamentele mindset-shift: benader AI als volwaardige medewerker binnen je organisatie, niet als gadget die je "erbij" gebruikt.</p>
+      <p style="font-family:var(--fb);color:var(--text-secondary);margin-top:.8rem;font-size:.95rem;line-height:1.8;max-width:45ch">Het centrale inzicht: het gaat niet om sneller hetzelfde doen, maar om werk radicaal anders organiseren. Het boek maakt concreet wat er van je verwacht wordt (skills of the future), doorbreekt de chaos van losse tools en geeft leidinggevenden taal en houvast.</p>
+      <p style="font-family:var(--fb);color:var(--text-secondary);margin-top:.8rem;font-size:.95rem;line-height:1.8;max-width:45ch">Voor professionals die relevant willen blijven. Voor teams die AI werkbaar willen maken. Voor leidinggevenden die richting willen geven zonder te verdwalen in techniek.</p>
       <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
         <a href="mailto:totmorgen@morgenacademy.nl?subject=Boek bestellen" class="btn-p">Boek bestellen</a>
         <a href="mailto:totmorgen@morgenacademy.nl?subject=Boek voor het team" style="font-family:var(--fu);font-weight:600;font-size:.9rem;border:1.5px solid rgba(155,111,207,.5);color:var(--text-secondary);padding:1rem 2rem;border-radius:3px;text-decoration:none;cursor:pointer;transition:border-color .2s">Boek voor het team</a>
@@ -1186,10 +1227,10 @@
     </div>
     <div class="book-cover">
       <div class="book-td">MORGEN<em>.</em></div>
-      <div style="font-family:var(--fd);font-weight:900;font-size:1.8rem;letter-spacing:.04em;text-transform:uppercase;line-height:1;color:var(--white);position:relative;z-index:1;margin-top:.8rem">AI EN DIGITALISERING<br>IN DE PRAKTIJK</div>
-      <div class="book-sd">Voor het MKB van vandaag en morgen</div>
+      <div style="font-family:var(--fd);font-weight:900;font-size:1.8rem;letter-spacing:.04em;text-transform:uppercase;line-height:1;color:var(--white);position:relative;z-index:1;margin-top:.8rem">DE DIGITALE<br>COLLEGA</div>
+      <div class="book-sd">AI als teamlid in jouw organisatie</div>
       <div class="book-au">Morgen Academy &#183; 2025</div>
-      <div class="book-ct"><a href="mailto:totmorgen@morgenacademy.nl?subject=Boek bestellen" style="font-family:var(--fu);font-size:.8rem;font-weight:700;background:var(--pink);color:var(--bg);padding:.7rem 1.5rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem">Bestellen</a></div>
+      <div class="book-ct"><a href="mailto:totmorgen@morgenacademy.nl?subject=Boek bestellen" style="font-family:var(--fu);font-size:.8rem;font-weight:700;background:var(--orange);color:var(--bg);padding:.7rem 1.5rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem">Bestellen</a></div>
     </div>
   </div>
 </section>
@@ -1334,63 +1375,171 @@ function navTraining(){
 }
 
 const assistantShowcase=[
-  {name:'Joris',title:'Lead Validatie Agent',bio:'Belt leads, vraagt door en plant direct afspraken in met de juiste specialist.',slug:'joris',tags:['spraak','sales','automatisering']},
-  {name:'Corne',title:'Onderhoudsassistent',bio:'Kent alle manuals en geeft direct advies op jouw vraag of foto.',slug:'corne',tags:['support','rag-docs','afbeelding']},
-  {name:'Karel',title:'Orderverwerker',bio:'Automatiseert orderflow, regelt proefdrukken en houdt iedereen synchroon.',slug:'karel',tags:['workflow','validatie','database']},
-  {name:'Gijs',title:'Interieurrender Assistent',bio:'Zet 2D- of 3D-exports om naar fotorealistische interieur-renders.',slug:'gijs',tags:['render','afbeelding','interieur']},
-  {name:'Tina',title:'Persoonlijke Assistent',bio:'Maakt van jouw gedachten overzicht en concrete to-do\'s.',slug:'tina',tags:['spraak','samenvatten','notificaties']},
-  {name:'Tom',title:'Project Firestarter',bio:'Coordineert met je team tot een scherpe opdrachtbrief in een fractie van de tijd.',slug:'tom',tags:['projectmanagement','events','vragenflow']},
-  {name:'Bernard',title:'Vinoloog (WSET-trainer)',bio:'Genereert oefenexamens, beoordeelt en legt uit wat beter kan.',slug:'bernard',tags:['training','oefeningen','validatie']},
-  {name:'Sherlock',title:'Slimme Zoekmachine',bio:'Begrijpt context en levert relevante content op basis van semantisch zoeken.',slug:'moerasdraak',tags:['semantisch-zoeken','content','advies']},
-  {name:'Pepijn',title:'Start-Up Business Developer',bio:'Begeleidt van idee tot lancering met tools per fase.',slug:'raketje',tags:['startup','workflow','advies']},
-  {name:'Jim',title:'Ontdek-je-Superkrachten',bio:'Haalt talenten bij neurodivergentie naar boven en maakt ze toepasbaar.',slug:'jim',tags:['coaching','spraak','tekst']},
-  {name:'Noel',title:'Projectmanagement Assistent',bio:'Stuurt reminders, bewaakt voortgang en houdt projecten op koers.',slug:'noel',tags:['planning','monitoring','notificaties']},
-  {name:'Lora',title:'Marketing & Content Assistent',bio:'Bewaakt socials, schrijft blogs en maakt visuals in recordtempo.',slug:'lora',tags:['marketing','content','visuals']},
-  {name:'Barry',title:'Projectplan Assistent',bio:'Vertaalt ideeen naar een compleet projectplan in jouw format.',slug:'barry',tags:['planning','workflow','advies']},
-  {name:'Sita',title:'SEO-specialist',bio:'Optimaliseert content automatisch en behoudt je eigen tone-of-voice.',slug:'sita',tags:['seo','content','integratie']},
-  {name:'Connie',title:'Transcriptie in Slack',bio:'Zet audio direct om naar tekst in Slack en archiveert in je drive.',slug:'connie',tags:['slack','audio','documentatie']},
-  {name:'Jeroen',title:'Parkeerassistent Den Bosch',bio:'Geeft de slimste parkeeropties op basis van actuele informatie.',slug:'jeroen',tags:['live-data','advies','platform']},
-  {name:'Driek',title:'WeekendGuide Bouwer',bio:'Zet ruwe eventteksten om naar nette web-HTML in vaste stijl.',slug:'driek',tags:['events','publicatie','workflow']}
+  {
+    name:'Joris',title:'Lead Validatie Agent',bio:'Belt leads, vraagt door en plant direct afspraken in met de juiste specialist.',slug:'joris',tags:['spraak','sales','automatisering'],
+    description:'Joris is jouw AI-gestuurde lead validatie specialist die telefonisch contact opneemt met potentiële klanten. Hij voert intakegesprekken, stelt de juiste vragen en beoordeelt of een lead écht interessant is. Daarna plant hij automatisch een afspraak in met de juiste specialist uit jouw team. Zo combineert Joris snelheid met persoonlijke aandacht.',
+    features:['Automatische telefoonverbinding met nieuwe leads','Slimme doorvraag-logica tijdens gesprekken','Directe agenda-integratie voor vervolgafspraken','Kwalificatie op basis van jouw criteria'],
+    howItWorks:'Wanneer een potentiële klant een formulier invult, belt Joris binnen enkele minuten terug. Tijdens het gesprek stelt hij op maat gemaakte vragen om de behoefte van de klant te begrijpen en te bepalen of de lead geschikt is. Joris zorgt dat jouw klant zich gehoord voelt en jij duidelijk samengevat krijgt waar de behoefte van deze potentiële klant liggen.\n\nDe antwoorden worden automatisch vastgelegd en samengevat volgens de criteria. Als de lead relevant is, plant Joris direct een afspraak in met de juiste specialist (bijvoorbeeld via Calandly).\n\nZo verloopt het eerste klantcontact snel, persoonlijk en volledig geautomatiseerd.',
+    benefits:['Tijdwinst: geen handmatig nabellen of afspraken plannen','Hogere conversie: directe opvolging zorgt voor meer warme leads','Consistente ervaring: elke lead krijgt dezelfde professionele intake','Betere inzichten: je weet meteen wat de klant zoekt en waar de behoefte ligt'],
+    useCases:['Ideaal voor teams in sales, marketing en service die veel inkomende leads of vragen ontvangen. Joris haalt deze direct voor je op en presenteert ze in een werkbaar format. Ook wordt direct een afspraak ingepland, wanneer de lead relevant is.','Bedrijven gebruiken Joris om hun opvolging te versnellen, de kwaliteit van gesprekken te verhogen en klanten meteen het gevoel te geven dat ze gehoord worden.'],
+    readMoreLink:'https://www.morgenacademy.nl/post/hoe-joris-met-ai-leads-kwalificeert-en-sales-versnelt',
+    screenshots:['/docs/assistenten/screenshots/joris-screenshot.png'],
+    demoUrl:null,ctaLabel:'Vraag aan'
+  },
+  {
+    name:'Tom',title:'Project Firestarter',bio:'Coördineert met je team tot een scherpe opdrachtbrief in een fractie van de tijd.',slug:'tom',tags:['projectmanagement','events','vragenflow'],
+    description:'Tom is een echte Project Firestarter. Hij helpt jou en je opdrachtgever om in één uur samen een glasheldere projectopdracht te maken. Geen eindeloze tekstversies of discussies over formuleringen, gewoon een duidelijke, gedragen opdracht waarmee je direct aan de slag kunt.\n\nTom zorgt dat jullie snel weten wat er moet gebeuren, waarom en onder welke afspraken. Zo start elk project met energie, focus en vertrouwen.',
+    features:['Voert een slim gesprek met projectleider en opdrachtgever','Gestructureerde vragenflows voor projectdefinitie','Bouwt stap voor stap een volledige, gecontracteerde projectopdracht','Houdt het gesprek scherp, concreet en resultaatgericht','Levert direct een nette, exporteerbare opdrachtbrief op','Stakeholder alignment'],
+    howItWorks:'Tom leidt jullie door een gestructureerd gesprek, digitaal maar persoonlijk. Hij stelt de juiste vragen over doelen, resultaten, verantwoordelijkheden en randvoorwaarden. Terwijl jullie praten, zet hij de antwoorden om in een duidelijke projectopdracht. Aan het eind van het uur ligt er een concept klaar dat beide partijen kunnen goedkeuren en gebruiken als contract of startdocument.',
+    benefits:['Van vaag idee naar concreet plan in één uur','Minder tijd kwijt aan tekstgedoe en revisies','Draagvlak en duidelijkheid vanaf dag één'],
+    useCases:['Tom is gemaakt voor projectleiders, opdrachtgevers en adviseurs die regelmatig samen projecten starten. Bij een grote publieke organisatie hielp Tom een team om in één middag een projectopdracht op te stellen waar normaal weken overheen gingen. De sessie gaf niet alleen snelheid, maar ook rust en wederzijds begrip, een vliegende start voor het hele project.'],
+    screenshots:[],demoUrl:null,ctaLabel:'Vraag aan'
+  },
+  {
+    name:'Noel',title:'Projectmanagement Assistent',bio:'Stuurt reminders, bewaakt voortgang en houdt projecten op koers.',slug:'noel',tags:['planning','monitoring','notificaties'],
+    description:'Noël is je projectbewaker met een goed geheugen én een scherp oog voor voortgang. Hij zorgt dat alles volgens planning loopt — zonder dat jij constant hoeft te checken, najagen of herinneren. Van actiepunten tot deadlines en statusrapportages: Noël houdt het overzicht, stuurt bij en leert mee met elk project.',
+    features:['Voortgang bewaken – Noël leest je projectplannen en takenlijsten, signaleert vertragingen en stuurt tijdig reminders.','Communicatie automatiseren – Regelt follow-ups, samenvattingen en reminders rond meetings en deadlines.','Project op koers houden – Analyseert voortgang, scope en risico\'s, en maakt automatische statusupdates.','Inhoudelijke ondersteuning – Helpt bij plannen van aanpak, rapportages en analyses van feedback.','Lerende assistent – Past zich aan jouw werkstijl aan en wordt slimmer na elk project.'],
+    howItWorks:'Je koppelt Noël aan je projecttools, zoals Asana, Notion, Trello of Excel. Hij leest automatisch de taken, deadlines en afhankelijkheden in en vergelijkt ze met de planning. Als iets dreigt te vertragen, stuurt Noël een vriendelijk seintje naar de verantwoordelijke — of een korte samenvatting naar het team. Wekelijks krijg je een helder overzicht van de voortgang, bottlenecks en verbeterpunten. En omdat Noël leert van eerdere projecten, wordt hij elke keer proactiever en persoonlijker.',
+    benefits:['Minder tijd kwijt aan opvolgen en najagen','Altijd zicht op voortgang en risico\'s','Betere communicatie en minder verrassingen','Continu leren en verbeteren op basis van eerdere projecten'],
+    useCases:['Voor projectleiders, consultants en teams die met meerdere projecten tegelijk werken. Noël neemt de projectbewaking en communicatie uit handen, zodat jij kunt focussen op inhoud en resultaat. Teams merken snel minder stress, meer overzicht en een veel consistenter ritme in hun samenwerking.'],
+    screenshots:[],demoUrl:null,ctaLabel:'Vraag aan'
+  },
+  {
+    name:'Lora',title:'Marketing & Content Assistent',bio:'Bewaakt socials, schrijft blogs en maakt visuals in recordtempo.',slug:'lora',tags:['marketing','content','visuals'],
+    description:'Lora is de marketing- en contentassistent die nooit stilzit. Ze bewaakt je socials, schrijft blogs, maakt visuals en zet in recordtempo complete contentkalenders klaar. Lora haalt moeiteloos de kern uit teamgesprekken of notities en vertaalt die naar sterke posts voor LinkedIn, TikTok of Instagram. Geen losse ideeën meer — gewoon een consistente, doordachte contentstroom die past bij jouw merk.',
+    features:['Maakt automatisch social posts uit meetings, notities of ruwe ideeën','Stelt complete contentkalenders op voor meerdere platforms','Schrijft en redigeert blogs in jouw tone of voice','Ontwerpt visuals die passen bij je merkstijl'],
+    howItWorks:'Je neemt een meeting op — dat kan een brainstorm, teamoverleg of klantgesprek zijn. Lora luistert mee, haalt de belangrijkste inzichten eruit en zet ze om in concrete content: kant-en-klare posts, visuals en een overzichtelijke kalender. Jij hoeft alleen nog maar te kiezen wat je wilt publiceren.',
+    benefits:['Bespaar uren aan planning en schrijven','Houd je socials altijd actueel en consistent','Werk slimmer samen tussen marketing en copywriters'],
+    useCases:['Lora is gebouwd voor marketingteams en copywriters die geen tijd willen verliezen aan herhaling. Ze vervangt geen creatieve professionals — ze versterkt ze. Door het voorwerk uit handen te nemen, houdt de copywriter ruimte over voor strategie, tone of voice en klantimpact.'],
+    screenshots:[],demoUrl:null,ctaLabel:'Vraag aan'
+  },
+  {
+    name:'Sita',title:'SEO-specialist',bio:'Optimaliseert content automatisch en behoudt je eigen tone-of-voice.',slug:'sita',tags:['seo','content','integratie'],
+    description:'Sita is de AI-assistent die jouw content automatisch SEO-proof maakt. Ze analyseert teksten, behoudt de originele toon en verbetert vindbaarheid met slimme zoekwoorden, metadata en structuur. Perfect voor organisaties met veel artikelen die beter willen scoren in zoekmachines zonder eindeloos handmatig te optimaliseren.',
+    features:['Automatische SEO-analyse per artikel','Slimme suggesties voor zoekwoorden, titels en metadata','Realtime SEO-score en verbeterfeedback','Volledige integratie met bestaande CMS-systemen'],
+    howItWorks:'Sita scant elk artikel en beoordeelt de SEO-kwaliteit. Ze ziet waar verbetering mogelijk is en past optimalisaties toe, zonder dat de schrijfstijl verloren gaat. Vervolgens test ze of de aanpassingen de score daadwerkelijk verhogen. Zo wordt content continu beter vindbaar, artikel voor artikel. Failsafe: aanpassingen worden desgewenst per mail met het team gedeeld, zodat het team altijd nog in kan grijpen.',
+    benefits:['Meer organisch verkeer zonder extra handwerk','Betere zichtbaarheid in zoekmachines','Consistente, authentieke content die blijft passen bij jouw merk'],
+    useCases:['Den Bosch City, actief in citymarketing, had honderden artikelen die je uiteraard goed vindbaar moeten zijn. Sita nam het zware werk over: ze analyseerde alle teksten, verbeterde zoekwoorden en voegde metadata toe.'],
+    results:['+35% meer organisch verkeer','Gemiddeld +42% hogere SEO-score per artikel','Wekelijks uren tijdsbesparing voor het team'],
+    screenshots:[],demoUrl:null,ctaLabel:'Vraag aan'
+  },
+  {
+    name:'Barry',title:'Projectplan Assistent',bio:'Vertaalt ideeën naar een compleet projectplan in jouw format.',slug:'barry',tags:['planning','workflow','advies'],
+    description:'Barry helpt je om jouw projectidee om te zetten in een helder, compleet en motiverend projectplan. Geen losse notities of half ingevulde documenten meer, maar één duidelijk overzicht dat iedereen begrijpt en waar het team direct mee aan de slag kan. Barry denkt mee, stelt de juiste vragen en zorgt dat alles klopt — van doel tot uitvoering.',
+    features:['Zet ruwe ideeën om in een gestructureerd projectplan','Stelt gerichte vragen om ontbrekende informatie aan te vullen','Past het plan aan jouw eigen format en stijl aan','Maakt het plan deelbaar en bruikbaar voor teams'],
+    howItWorks:'Je vertelt Barry waar je project over gaat en wat je al weet. Dat kan via tekst, gesproken input of gewoon de flarden projectbestanden die je al hebt. Barry analyseert wat er ligt en maakt een projectplan in jouw format. Denk aan doel, kaders, succescriteria, budget, taken en/of planning. Net wat voor jouw projectplannen belangrijk is. Als iets nog onduidelijk is, vraagt hij gericht door. Het resultaat: een helder projectplan dat precies past bij jouw werkwijze en dat iedereen in het team begrijpt en kan uitvoeren.',
+    benefits:['Van chaos naar structuur in één gesprek','Je eigen format en toon blijven behouden','Iedereen in het team snapt het plan en kan direct aan de slag'],
+    useCases:['Een organisatie in Den Bosch wilde voor Serious Request een inzamelactie opzetten via een veiling en loterij. De initiatiefnemers hadden veel ideeën, maar geen duidelijk plan. Barry hielp om hun gedachten te structureren tot één compleet projectplan dat ze konden delen met partners, vrijwilligers en sponsors. Het resultaat: heldere doelen, betrokken teamleden en een plan dat echt werd uitgevoerd.'],
+    screenshots:[],demoUrl:null,ctaLabel:'Vraag aan'
+  },
+  {
+    name:'Connie',title:'Transcriptie in Slack',bio:'Zet audio direct om naar tekst in Slack en archiveert in je drive.',slug:'connie',tags:['slack','audio','documentatie'],
+    description:'Connie zet audio direct om naar tekst – gewoon binnen je Slack-kanaal. Upload een audiobestand, en Connie regelt de rest: een volledig transcript verschijnt in je chat én wordt automatisch opgeslagen in je gedeelde Drive-map. Geen losse tools of handmatig uploaden meer. Alles gebeurt daar waar jij toch al werkt.',
+    features:['Zet audiobestanden direct om naar tekst in Slack','Slaat automatisch het transcript op in je gedeelde Drive-map','Maakt een deelbare link aan voor snelle toegang','Herkent automatisch sprekers en tijdstippen (optioneel)'],
+    howItWorks:'Upload een audiobestand in Slack, bijvoorbeeld van een vergadering of voice note. Connie herkent het bestand, start direct met transcriberen en plaatst het resultaat in dezelfde thread. Tegelijk wordt het transcript opgeslagen in je Drive, netjes in de juiste map. Je krijgt een link terug zodat jij en je team het meteen kunnen gebruiken of delen.',
+    benefits:['Geen aparte transcriptietool meer nodig','Alles direct beschikbaar voor het hele team','Bespaart tijd en voorkomt zoekwerk','Volledig geïntegreerd in je bestaande workflow'],
+    useCases:['Teams die veel vergaderingen, interviews of voice-notes delen, houden met Connie automatisch overzicht. Audio\'s worden niet langer vergeten of onvindbaar, maar direct omgezet in bruikbare tekst – klaar voor rapportage, documentatie of analyse.'],
+    screenshots:[],demoUrl:null,ctaLabel:'Vraag aan'
+  },
+  {
+    name:'Tina',title:'Persoonlijke Assistent',bio:'Maakt van jouw gedachten overzicht en to-do\'s.',slug:'tina',tags:['spraak','samenvatten','notificaties'],
+    description:'Tina is jouw persoonlijke assistent die meedenkt terwijl jij bezig bent. Spreek of typ wat er in je hoofd zit — Tina luistert, vat samen en haalt automatisch de belangrijkste to-do\'s eruit. Geen losse gedachten meer, geen taken die tussen wal en schip vallen. Tina houdt het overzicht voor jou.',
+    features:['Zet gedachten direct om in concrete to-do\'s','Maakt automatische samenvattingen van je notities of spraak','Exporteert taken naar Excel, Notion of een andere plek die jij kiest','Werkt met een sneltoets, zodat je Tina overal kunt oproepen'],
+    howItWorks:'Je vertelt Tina waar je aan denkt, wat je bezig houdt of wat je niet wilt vergeten. Dat kan via spraak of tekst. Tina analyseert wat je zegt, pikt de actiepunten eruit en bundelt die in een helder overzicht. Wil je het resultaat ergens anders bewaren? Met één klik stuur je het naar je favoriete tool of exporteer je het als bestand.',
+    benefits:['Nooit meer iets vergeten','Altijd overzicht, zonder extra moeite','Meer rust in je hoofd en focus op wat echt telt'],
+    useCases:['Tina is gemaakt voor iedereen die veel aan zijn hoofd heeft — van drukke ondernemers tot creatieve makers. In plaats van eindeloze notities in je telefoon, praat je gewoon met Tina. Zij ordent, filtert en vertaalt jouw chaos in structuur.'],
+    screenshots:[],demoUrl:'https://pa-tina.assistentenvanmorgen.nl',ctaLabel:'Probeer Tina uit'
+  },
+  {
+    name:'Karel',title:'Orderverwerker',bio:'Automatiseert orderflow, regelt proefdrukken en houdt iedereen synchroon.',slug:'karel',tags:['workflow','validatie','database'],
+    description:'Karel is de slimme print-order assistent. Hij verwerkt elke printorder van begin tot eind, zonder dat iemand een spreadsheet hoeft aan te raken. Karel herkent nieuwe bestellingen, vraagt automatisch ontbrekende gegevens op, controleert aantallen en genereert de juiste proefdruk- en printinstructies. Alles verloopt via e-mail en is inzichtelijk in een helder dashboard.\nKarel is geavanceerd: hij denkt mee, checkt, herinnert en regelt.',
+    features:['Herkent en verwerkt automatisch nieuwe printorders','Voert checks uit op MOQ, aantallen en productvarianten','Stuurt klanten gepersonaliseerde mails (in hun taal) voor aanlevering printdata','Genereert proefdrukverzoeken en bewaakt goedkeuringen','Maakt en deelt automatisch print- en verpakinstructies','Houdt orderstatussen bij in een live dashboard'],
+    howItWorks:'Karel scant inkomende orders, filtert op printopdrachten en maakt automatisch een nieuwe tapstructuren aan. Hij controleert of het aantal prints klopt, of de minimale bestelhoeveelheid (MOQ) is behaald en vraagt zo nodig aanvullende informatie aan bij de klant.\n\nAlle communicatie verloopt via e-mail: klanten ontvangen een bericht vanuit de webwinkel met een formulierlink om hun logo en printlocatie aan te leveren.\n\nNa ontvangst genereert Karel een proefdrukverzoek. Zodra de klant de proefdruk goedkeurt, maakt Karel de definitieve print- en verpakinstructies aan.\n\nIntussen houdt hij alles bij in het statusdashboard, inclusief automatische herinneringen als er iets blijft liggen.',
+    benefits:['Geen handmatig rekenwerk of ordercontrole meer','Minder fouten, sneller goedgekeurde proefdrukken','Volledig overzicht in één dashboard'],
+    useCases:['Solo Solis gebruikt Karel voor de volledige afhandeling van printorders. Waar het proces vroeger meerdere handmatige stappen kende, verloopt nu alles automatisch: van orderinvoer tot verzending van instructies. Het resultaat: kortere doorlooptijden, minder fouten en een duidelijk overzicht voor iedereen die met printorders werkt.'],
+    readMoreLink:'https://www.morgenacademy.nl/post/hoe-solo-solis-met-ai-orderkwaliteit-verhoogt-en-fouten-voorkomt',
+    screenshots:['/docs/assistenten/screenshots/karel-screenshot-1.png','/docs/assistenten/screenshots/karel-screenshot-2.png'],
+    demoUrl:null,ctaLabel:'Vraag aan'
+  },
+  {
+    name:'Gijs',title:'Interieurrender Assistent',bio:'Zet 2D- of 3D-exports om naar fotorealistische interieur-renders.',slug:'gijs',tags:['render','afbeelding','interieur'],
+    description:'Gijs is de assistent die elke eenvoudige 2D- of 3D-export omzet in een overtuigende, fotorealistische interieur-render. Het maakt niet uit of je werkt in SketchUp, Revit, Fusion, AutoCAD of een ander modelleerprogramma: upload een beeld, kies de stijl en Gijs vertaalt alle kleurcodes automatisch naar echte materialen. Zo presenteer je binnen seconden een realistische versie van jouw ontwerp, perfect passend bij het moodboard van je klant.',
+    features:['Upload exports uit elk tekenprogramma (PNG/JPG; later uitbreidbaar naar 3D-bestanden)','Automatische kleur-naar-materiaal mapping via je eigen materialenbibliotheek','Combineert modelbeeld, materiaaldata en jouw prompt tot één optimale renderopdracht','Genereert realistische renders + varianten, klaar voor moodboards en klantpresentaties'],
+    howItWorks:'Je uploadt een export uit je tekenprogramma. Gijs leest de kleuren in de afbeelding en koppelt die aan jouw materiaalset: hout, lak, steen, apparaten – alles wat jij definieert. Daarna geef je een korte beschrijving mee, zoals "moderne keuken met rustige, Scandinavische sfeer."\n\nGijs combineert automatisch:\n• de geometrie uit jouw afbeelding\n• de ingestelde materiaal-mapping\n• de gewenste stijlprompt\n\n… en maakt daar één superprompt van voor het AI-model. Binnen enkele seconden zie je een realistische render, kun je varianten genereren en het eindbeeld downloaden.',
+    benefits:['Werkt met elk tekenprogramma – geen extra conversiewerk','Direct een overtuigend beeld voor klanten, zonder handmatig renderen','Minder revisies doordat verwachtingen vanaf het begin helder zijn'],
+    useCases:['Gijs is ideaal voor interieurbouwers, ontwerpers en studio\'s die snel willen schakelen. Tijdens een klantgesprek een realistische visual tonen? Met Gijs kan dat. Je vertaalt schetsen, exports of grove views direct naar een professionele render, waardoor besluitvorming sneller en makkelijker wordt.'],
+    screenshots:['/docs/assistenten/screenshots/gijs-screenshot-1.png','/docs/assistenten/screenshots/gijs-screenshot-2.jpeg','/docs/assistenten/screenshots/gijs-screenshot-3.jpeg','/docs/assistenten/screenshots/gijs-screenshot-4.jpeg'],
+    demoUrl:null,ctaLabel:'Vraag aan'
+  },
+  {
+    name:'Jim',title:'Ontdek-je-Superkrachten',bio:'Haalt talenten bij neurodivergentie naar boven en maakt ze toepasbaar.',slug:'jim',tags:['coaching','spraak','tekst'],
+    description:'Jim is een AI-coach die jongeren met neurodiverse kenmerken – zoals ADHD, dyslexie of autisme – helpt hun talenten te ontdekken en zichtbaar te maken. Niet door te testen of te beoordelen, maar door positieve, reflectieve gesprekken te voeren. Jim ziet neurodiversiteit niet als beperking, maar als kracht. Jongeren ontdekken wat hen energie geeft, waar hun talent ligt en hoe ze dat met trots kunnen delen.',
+    features:['Talentgesprekken met jongeren op basis van Positieve Psychologie en Storytelling','Herkenning van karaktereigenschappen via het VIA Character Strengths-model','Vertaling naar een Superpower-profiel in de eigen woorden van de jongere','Gebruik van spraak of tekst voor natuurlijke, laagdrempelige gesprekken'],
+    howItWorks:'Je praat met Jim zoals jij dat prettig vindt – pratend of typend, onderweg of thuis op de bank. Veel jongeren voeren hun gesprek gewoon terwijl ze door het park lopen. Jim luistert, stelt vragen en helpt je woorden vinden voor wat jou energie geeft en waar je goed in bent.\n\nTijdens het gesprek gebruikt hij bewezen methodieken zoals het PERMA-model en VIA Character Strengths om te spiegelen wat goed gaat. Alles gebeurt in gewone taal, zonder testtaal of oordeel.\n\nLangzaam ontstaat er een persoonlijk "Superpower-profiel": een kort verhaal over wie jij bent, wat jou energie geeft en hoe jouw unieke manier van denken een kracht is. Dat profiel kun je gebruiken voor school, werk of persoonlijke groei.\n\nJim is geen therapeut en stelt geen diagnoses. Alle gesprekken vinden plaats met menselijke begeleiding in de buurt.',
+    benefits:['Vergroot zelfinzicht en zelfvertrouwen bij jongeren','Maakt neurodiversiteit zichtbaar als kracht','Ondersteunt begeleiders met een gestructureerde, positieve gespreksmethode'],
+    useCases:['Jim wordt gebruikt in trajecten voor jongeren met een neurodiverse achtergrond die willen ontdekken wat hen uniek maakt. Begeleiders zien dat jongeren meer zelfvertrouwen krijgen, positiever spreken over hun talenten en beter woorden vinden voor wat ze kunnen bijdragen.'],
+    screenshots:['/docs/assistenten/screenshots/jim-screenshot-1.png','/docs/assistenten/screenshots/jim-screenshot-2.png'],
+    demoUrl:'https://chatgpt.com/g/g-68652984f1308191a62eb6e86cb64e88-neurodiversiteit-als-superpower-bij-jongeren',ctaLabel:'Probeer Jim uit'
+  },
+  {
+    name:'Corné',title:'Onderhoudsassistent',bio:'Kent alle manuals en geeft direct advies op jouw vraag of foto.',slug:'corne',tags:['support','rag-docs','afbeelding'],
+    description:'Corné is jouw onderhoudsassistent. Gemaakt voor een trappenfabriek, maar inzetbaar voor elk bedrijf met een scala aan producten of diensten, met onderhoudsinstructies of producthandleidingen. Corné geeft jouw klanten persoonlijk advies op een individuele casus. Klanten kunnen direct vragen stellen, foto\'s uploaden en persoonlijk advies krijgen op basis van de officiële documentatie van de fabrikant. Geen zoekwerk, geen wachttijden – gewoon helder advies dat klopt.',
+    features:['Geeft onderhoudsadvies op basis van officiële fabrieksdocumentatie','Geeft productadvies op basis van specifieke wensen van klant en officiële fabrieksdocumentatie','Herkent problemen via foto\'s en biedt direct passende oplossingen','Beantwoordt klantvragen over onderhoud of productkeuze','Verwijst door naar de juiste contactpersoon als nodig'],
+    howItWorks:'Corné gebruikt de echte onderhoudsmanuals en productinformatie van de fabriek. Een klant kan typen of praten: "Ik heb deze trap, dit onderdeel, en dit probleem." De assistent analyseert de input, checkt de juiste handleiding en geeft exact het juiste advies. Is er iets wat niet digitaal opgelost kan worden? Dan zorgt Corné voor een nette doorverwijzing naar de juiste medewerker.',
+    benefits:['Minder telefoontjes en e-mails over standaardvragen','Klanten krijgen 24/7 betrouwbaar advies','Documentatie wordt eindelijk écht gebruikt in plaats van kwijtgeraakt'],
+    useCases:['Ontwikkeld voor een trappenfabriek die klanten snel en correct wil helpen bij onderhoudsvragen. In plaats van losse PDF\'s of handleidingen, praat de klant nu met een digitale onderhoudsexpert. Het resultaat: minder supportwerk, tevredener klanten en een professionelere service.','Ook is Corné ook in ontwikkeling als product-adviseur. Geen chatbot die nooit het antwoord geeft dat de klant zoekt. Corné snapt echt waar de klant naar op zoek is en adviseert op basis van officiële documentatie.'],
+    readMoreLink:'https://www.morgenacademy.nl/post/hoe-een-productiebedrijf-met-ai-60-minder-supportvragen-kreeg',
+    screenshots:['/docs/assistenten/screenshots/corne-screenshot.png'],
+    demoUrl:'https://vermeulen.assistentenvanmorgen.nl',ctaLabel:'Probeer Corné uit'
+  },
+  {
+    name:'Pepijn',title:'Start-Up Business Developer',bio:'Begeleidt van idee tot lancering met tools per fase.',slug:'raketje',tags:['startup','workflow','advies'],
+    description:'Pepijn is jouw AI-launchpad: een slim ecosysteem van negen samenhangende GPT-tools die je van eerste idee tot echte marktvalidatie begeleiden. Geen losse appjes of eindeloze handleidingen, maar een doorlopende, conversatie-gestuurde workflow die voelt als een mentor, 24/7 beschikbaar. Zo lanceer je sneller, slimmer en met meer vertrouwen je onderneming. Pepijn is kritisch, stelt vragen en daagt je uit, maar geeft je ook de nodige suggesties, methodieken en instrumenten om te versnellen.',
+    features:['Volledig ecosysteem – Negen AI-assistenten, elk met hun eigen rol in jouw startuptraject','Conversatie-gestuurd – Vloeiend doorverwijzen tussen GPTs, zodat je nooit vastloopt','Beproefde methodieken – Maakt volledig gebruik van Lean Startup, Design Thinking, Pretotyping en The MOM Test'],
+    howItWorks:'Pepijn doorloopt acht fases die je stap voor stap langs alle essentiële stappen van je startup leiden:\n\nFase 1: Idee Generator & Propositie Validator. Ontdek kansen vanuit trends of persoonlijke frustraties en scherp je waardevoorstel aan.\n\nFase 2: Interview Assistent. Bereid MOM-geïnspireerde interviews voor en achterhaal de échte behoeften van je doelgroep.\n\nFase 3: Waardepropositie Bouwer & MVP Ontwerper. Bouw een eerste demo of MVP en stel testcards op om in de praktijk te experimenteren.\n\nFase 4: Voer je experimenten uit, verzamel feedback van je doelgroep en pas je MVP direct aan.\n\nFase 5: Werk toe naar product–market fit door een oplossing te ontwikkelen waar je eerste klanten fan van zijn.\n\nFase 6: Iteratie-GPT. Analyseer je testresultaten, bepaal vervolgacties en bouw versie 2.0 van je MVP.\n\nFase 7: BMC Generator. Vul stap voor stap je Business Model Canvas in en krijg overzicht in je organisatie.\n\nFase 8: Impact Scan. Reflecteer op de maatschappelijke en ecologische waarde van jouw idee.',
+    benefits:['Activeert ondernemerschapsdenken bij studenten, starters en professionals','Stimuleert zelfstandig nadenken met scherpe vragen in plaats van kant-en-klare antwoorden','Integreert theorie en praktijk: van whiteboard tot werkvloer in één doorlopende workflow','Sneller tot de kern: eerder testen, bijsturen en impact maken met je idee'],
+    useCases:['Dit ecosysteem van assistenten is een ideaal hulpmiddel voor elke startende onderneming. Natuurlijk ook voor onderwijsinstellingen en incubators: geef studenten en starters tussen workshops door hun eigen AI-coach die ideeën valideert, test en verfijnt. Voor startups: overbrug kennis- en coachgaps en werk uniform volgens bewezen methodes. Resultaat: focus, minder faalkosten en sneller product–market fit.'],
+    screenshots:[],demoUrl:null,ctaLabel:'Vraag aan'
+  },
+  {
+    name:'Jeroen',title:'Parkeerassistent Den Bosch',bio:'Geeft de slimste parkeeropties op basis van actuele info.',slug:'jeroen',tags:['live-data','advies','platform'],
+    description:'Jeroen is jouw slimme parkeerassistent in Den Bosch, vernoemd naar de beroemde schilder Jeroen Bosch. Jeroen zoekt actief op vooraf gevalideerde en betrouwbare websites om jou het beste en meest actuele parkeeradvies te geven. Of je nu een museum wilt bezoeken, gaat lunchen of een evenement bijwoont: Jeroen weet precies waar je kunt parkeren.',
+    features:['Live parkeerinformatie van de gemeente \'s-Hertogenbosch','Advies voor zowel parkeergarages als straatparkeren','Loopafstand, kostenindicatie en parkeerbeperkingen in één overzicht','Opties voor P+R en fietsenstalling waar relevant'],
+    howItWorks:'1. Je begint met een korte begroeting: "Hallo! Waar wil je heen in Den Bosch?"\n2. Je geeft jouw bestemming op (bijvoorbeeld een restaurant of museum).\n3. Jeroen raadpleegt de officiële gemeentelijke parkeerdata en andere betrouwbare bronnen.\n4. Hij presenteert de drie beste parkeermogelijkheden, inclusief naam, loopafstand, kosten en beperkingen.',
+    benefits:['Actueel en betrouwbaar: alleen data van de gemeente of gevalideerde sites','Snel en to the point: drie concrete opties, geen overbodige informatie','Diverse keuzes: van parkeergarages tot straatparkeren en P+R','Kostenbewust: schattingen gebaseerd op de laatste tarieven'],
+    useCases:['Voor toeristen en dagjesmensen in \'s-Hertogenbosch die snel en zorgeloos willen parkeren bij hun bestemming – van lunchafspraak tot museumbezoek. Jeroen heeft al honderden bezoekers geholpen om direct de beste plek te vinden, zonder rondjes door de stad.','Natuurlijk is de opzet van Jeroen ook in vele andere use-cases toe te passen.'],
+    screenshots:[],demoUrl:'https://chatgpt.com/g/g-6824f86f3cac8191ab60b5073685aec3-denboschcity-parkeerhulp',ctaLabel:'Probeer Jeroen uit'
+  },
+  {
+    name:'Sherlock',title:'Slimme Zoekmachine',bio:'Begrijpt context en levert écht relevante content.',slug:'moerasdraak',tags:['semantisch-zoeken','content','advies'],
+    description:'Sherlock is de slimme zoekbalk die je website écht begrijpt. In plaats van te vertrouwen op vooraf ingestelde keywords, zoekt Sherlock op basis van context en associaties. Typ je "ik wil een wijn bij vis", dan serveert Sherlock direct relevante opties als Chablis of Pinot Grigio – ook als die termen niet letterlijk in je teksten staan. Zo vinden je bezoekers sneller wat ze nodig hebben, zonder eindeloos bladeren of zoeken.',
+    features:['Contextueel zoeken – Begrijpt de intentie achter je zoekopdracht, niet alleen de woorden','Slimme associaties – Legt verbanden tussen onderwerpen en toont verrassende, relevante content','Non-deterministische matching – Vindt artikelen, blogs of producten op basis van betekenis, niet op basis van exacte trefwoorden','Realtime resultaten – Presenteert direct de beste hits terwijl je typt, voor een razendsnelle gebruikerservaring'],
+    howItWorks:'1. Jij typt je vraag in gewone taal.\n2. De AI analyseert de context en zoekt in alle content van je site.\n3. Sherlock rangschikt en toont relevante pagina\'s, ongeacht of je zoekwoorden voorkomen.\n4. Jij klikt door naar precies dat artikel, die blogpost of dat product dat écht bij je past.',
+    benefits:['Betere vindbaarheid – Ontdek content die voorheen verborgen bleef achter keyword-limieten','Hogere conversie – Bezoekers vinden sneller wat ze zoeken, waardoor ze langer op je site blijven en vaker converteren','Minder supportverzoeken – Vragen als "Waar vind ik info over vegan opties?" beantwoordt Sherlock direct'],
+    useCases:['Op de Den Bosch City-pagina van meer dan 500 artikelen zorgde Sherlock voor een doorbraak. Bezoekers die voorheen vooral de populairste trefwoorden gebruikten, vonden nu ook niche-verhalen over lokale culinaire hotspots en verborgen stadswandelingen. Resultaat: +35% paginaweergaven en een stijging van 20% in nieuwsbriefinschrijvingen.'],
+    results:['+35% meer paginaweergaven','+20% stijging nieuwsbriefinschrijvingen'],
+    screenshots:[],demoUrl:null,ctaLabel:'Vraag aan'
+  },
+  {
+    name:'Bernard',title:'Vinoloog (WSET-trainer)',bio:'Genereert oefenexamens, beoordeelt en legt uit wat beter kan.',slug:'bernard',tags:['training','oefeningen','validatie'],
+    description:'Bernard is jouw examencoach voor de Vinologenopleiding. Hij doorzoekt alleen de door jou geüploade lesboeken en oefenexamens en stelt oefenvragen exact volgens de officiële examenstructuur. Zo houd je volledige controle over de brondata en leer je in de praktijksituatie van het echte examen.',
+    features:['Exclusieve bron – Gebruikt alleen de door jou geüploade PDF-bestanden van de Wijnacademie','Examenvragen in officiële stijl – Automatisch 10 meerkeuzevragen per module, mét subtiele afleiders en instinkers','Twee modi – Oefenmodus: directe feedback + uitleg per vraag | Examenvorm: alleen resultaat ná 10 vragen','Strikt bronvermelding – Bij elke uitleg verwijst Bernard naar het juiste boek en hoofdstuk'],
+    howItWorks:'1. Modus kiezen: Je start in Oefenmodus (directe feedback) of Examenvorm (feedback na alle 10 vragen).\n\n2. Module selecteren: Kies uit de standaardmodules (Wijnbouw, Frankrijk, Italië, Spanje enz.).\n\n3. Vragenronde: Bernard genereert 10 officiële meerkeuzevragen gebaseerd op de bronpdf\'s.\n\n4. Feedback:\n– In Oefenmodus zie je per vraag meteen of je goed zit, mét uitleg.\n– In Examenvorm krijg je aan het einde je totaalscore, per vraag de juiste antwoorden en toelichting.',
+    benefits:['100% controle – Je bepaalt welke documenten als bron dienen','Realistische examenomgeving – Vragen, formulering en feedback volgens Wijnacademie-standaard','Tijdbesparend – Direct starten zonder zelf vragen te bedenken of handmatig nakijken','Veelzijdig inzetbaar – In te zetten voor elk eigen dossier of trainingsmateriaal'],
+    useCases:['Je bereidt je gericht voor op de Nederlandse Vinologenopleiding. Bernard stelt modulegewijs 10 oefenvragen in de gekozen examenstijl en helpt je stap voor stap naar een topscore. Uiteraard kun je Bernard ook inzetten voor andere trainingsvragen op je eigen documenten.'],
+    screenshots:['/docs/assistenten/screenshots/bernard-screenshot-1.png','/docs/assistenten/screenshots/bernard-screenshot-2.png'],
+    demoUrl:'https://chatgpt.com/g/g-6831a6108b0081918f77f80a1254f898-vinologen-examentrainer',ctaLabel:'Probeer Bernard uit'
+  },
+  {
+    name:'Driek',title:'WeekendGuide Bouwer',bio:'Zet ruwe eventteksten om naar nette web-HTML in vaste stijl.',slug:'driek',tags:['events','publicatie','workflow'],
+    description:'Driek WeekendGuide Bouwer zet jouw ruwe evenemententeksten automatisch om in een nette, gestructureerde HTML voor op je website. Geen gedoe met inconsistente formats of ontbrekende data meer: Driek sorteert events op dag, zorgt voor uniforme beschrijvingen en voert automatische controles uit. Zo bespaar je uren aan handmatig werk en verschijnt je WeekendGuide altijd foutloos online.',
+    features:['Automatische dataverwerking per dag: Extractie en sortering van events op donderdag, vrijdag, zaterdag, zondag, maandag of "hele weekend"','Uniforme HTML-formattering: Altijd dezelfde opmaak en beschrijvinglengte – direct klaar voor publicatie','Geavanceerde validatiechecks: Controle op datumbereik én eventcount om fouten vroegtijdig op te sporen','Bliksemsnelle verwerking: Vermindert je verwerkingstijd van zo\'n 5 uur naar slechts 20 minuten'],
+    howItWorks:'1. Document uploaden: Je levert een Word- of tekstdocument met alle ruwe data aan.\n\n2. Datumbereik instellen: Geef het weekend op (start- en einddatum) en Driek filtert events buiten dat bereik eruit.\n\n3. Tellen & classificeren: Elk event wordt uitgelezen, genummerd en in een interne tabel gezet, vervolgens ingedeeld op dag of "hele weekend".\n\n4. HTML-generatie per categorie: Voor elke dag genereert Driek een HTML-blok volgens de vaste template, gesorteerd op tijd.\n\n5. Automatische check: Driek vergelijkt het aantal ingevoerde events met het aantal gegenereerde HTML-items en meldt direct eventuele afwijkingen.',
+    benefits:['Massale tijdwinst: Van vijf uur handwerk per weekend naar twintig minuten geautomatiseerd werk','100% consistente styling: Altijd dezelfde opmaak en beschrijvinglengte, zonder handmatige nabewerkingen','Betrouwbare data: Fouten in datum, tijd of eventcount worden direct gesignaleerd','Schaalbaar en flexibel: Variabelen voor beschrijvinglengte, lay-out en categorisatie pas je eenvoudig aan'],
+    useCases:['Den Bosch City gebruikt Driek om hun wekelijkse evenementengids te vullen. Voorheen kostte het sorteren en omzetten van events zo\'n vijf uur per week. Met Driek is die klus teruggebracht tot slechts twintig minuten. En dat wekelijks.'],
+    screenshots:[],demoUrl:'https://chatgpt.com/g/g-682ca145c2548191b4ba1021720837f7-denboschcity-weekendguide-gpt',ctaLabel:'Probeer Driek uit'
+  }
 ];
-
-const assistantTagContext={
-  'spraak':'Werkt met spraak en tekst als invoer, zodat teams sneller kunnen schakelen.',
-  'sales':'Ondersteunt salesprocessen met kwalificatie, opvolging en planning.',
-  'automatisering':'Neemt repetitieve handelingen over en voorkomt handmatig werk.',
-  'support':'Geeft direct antwoord op veelvoorkomende vragen.',
-  'rag-docs':'Gebruikt bestaande documenten als kennisbron.',
-  'afbeelding':'Kan beeldinput verwerken in het proces.',
-  'workflow':'Verbindt losse stappen tot een werkbare keten.',
-  'validatie':'Checkt invoer en bewaakt kwaliteit.',
-  'database':'Werkt met gestructureerde data en bronbestanden.',
-  'render':'Levert visuele output op basis van briefing of bronmateriaal.',
-  'interieur':'Specifiek gericht op interieurcontext en presentaties.',
-  'samenvatten':'Maakt besluiten en actiepunten direct inzichtelijk.',
-  'notificaties':'Stuurt reminders en meldingen op de juiste momenten.',
-  'projectmanagement':'Ondersteunt planning, afstemming en opvolging.',
-  'events':'Helpt bij event-content en publicatieprocessen.',
-  'vragenflow':'Stuurt gesprekken met logische vervolgstappen.',
-  'training':'Ondersteunt leren, oefenen en terugkoppeling.',
-  'oefeningen':'Maakt en beoordeelt opdrachten op maat.',
-  'semantisch-zoeken':'Zoekt op betekenis in plaats van losse zoekwoorden.',
-  'content':'Levert content-output in afgesproken stijl.',
-  'advies':'Geeft gerichte voorstellen op basis van context.',
-  'startup':'Ondersteunt validatie en opbouw van nieuwe initiatieven.',
-  'coaching':'Helpt met reflectie en persoonlijke ontwikkeling.',
-  'tekst':'Zet input om naar bruikbare tekstoutput.',
-  'planning':'Bewaakt voortgang en deadlines.',
-  'monitoring':'Signaleert afwijkingen vroegtijdig.',
-  'marketing':'Ondersteunt campagnes en zichtbaarheid.',
-  'visuals':'Levert ondersteunende visuele content.',
-  'seo':'Verbetert vindbaarheid met behoud van tone-of-voice.',
-  'integratie':'Koppelt processen en systemen slim aan elkaar.',
-  'slack':'Integreert output direct in teamcommunicatie.',
-  'audio':'Verwerkt audio naar bruikbare tekst.',
-  'documentatie':'Legt informatie automatisch vast.',
-  'live-data':'Werkt met actuele gegevens uit externe bronnen.',
-  'platform':'Ondersteunt interactie binnen bestaande platformen.',
-  'publicatie':'Maakt content publiceerbaar in vaste formats.'
-};
 
 const assistantBySlug=Object.fromEntries(assistantShowcase.map(a=>[a.slug,a]));
 let activeAssistantSlug=null;
@@ -1399,21 +1548,66 @@ function renderAssistantDetail(slug){
   const assistant=assistantBySlug[slug];
   if(!assistant)return false;
   activeAssistantSlug=slug;
-  const detailTitle=document.getElementById('assistant-detail-title');
   const detailName=document.getElementById('assistant-detail-name');
   const detailRole=document.getElementById('assistant-detail-role');
-  const detailBio=document.getElementById('assistant-detail-bio');
   const detailAvatar=document.getElementById('assistant-detail-avatar');
-  const detailPoints=document.getElementById('assistant-detail-points');
-  if(!detailTitle || !detailName || !detailRole || !detailBio || !detailAvatar || !detailPoints)return false;
+  const detailDesc=document.getElementById('assistant-detail-description');
+  const detailFeatures=document.getElementById('assistant-detail-features');
+  const detailHow=document.getElementById('assistant-detail-how');
+  const detailScreenshots=document.getElementById('assistant-detail-screenshots');
+  const detailUsecases=document.getElementById('assistant-detail-usecases');
+  const detailBenefits=document.getElementById('assistant-detail-benefits');
+  const detailResults=document.getElementById('assistant-detail-results');
+  const detailCtas=document.getElementById('assistant-detail-ctas');
+  const detailReadmore=document.getElementById('assistant-detail-readmore');
+  if(!detailName)return false;
 
-  detailTitle.textContent=`${assistant.name} in de praktijk`;
   detailName.textContent=assistant.name;
   detailRole.textContent=assistant.title;
-  detailBio.textContent=assistant.bio;
   detailAvatar.src=`/docs/assistenten/avatars/${assistant.slug}.png`;
   detailAvatar.alt=assistant.name;
-  detailPoints.innerHTML=assistant.tags.map(tag=>`<li>${assistantTagContext[tag] || `Toepassing binnen ${tag}`}</li>`).join('');
+  if(detailDesc)detailDesc.textContent=assistant.description||assistant.bio||'';
+  if(detailFeatures)detailFeatures.innerHTML=(assistant.features||[]).map(f=>`<li>${f}</li>`).join('');
+  if(detailHow){
+    const hw=(assistant.howItWorks||'');
+    detailHow.innerHTML=hw.replace(/\*\*(.*?)\*\*/g,'<b>$1</b>').replace(/\n/g,'<br>');
+  }
+  // Screenshots
+  const ssSection=document.getElementById('adet-section-screenshots');
+  if(detailScreenshots && ssSection){
+    const shots=(assistant.screenshots||[]).filter(Boolean);
+    if(shots.length>0){
+      detailScreenshots.innerHTML=shots.map(src=>`<img src="${src}" alt="${assistant.name} screenshot" loading="lazy">`).join('');
+      ssSection.style.display='';
+    } else {
+      ssSection.style.display='none';
+    }
+  }
+  // Use cases
+  if(detailUsecases)detailUsecases.innerHTML=(assistant.useCases||[]).map(u=>`<p>${u}</p>`).join('');
+  // Benefits
+  if(detailBenefits)detailBenefits.innerHTML=(assistant.benefits||[]).map(b=>`<li>${b}</li>`).join('');
+  // Results
+  if(detailResults){
+    const res=assistant.results||[];
+    detailResults.innerHTML=res.length>0?`<div class="adet-results">${res.map(r=>`<div class="adet-result-item">▲ ${r}</div>`).join('')}</div>`:'';
+  }
+  // CTAs
+  if(detailCtas){
+    let ctasHtml='';
+    if(assistant.demoUrl)ctasHtml+=`<a href="${assistant.demoUrl}" target="_blank" class="btn-p">${assistant.ctaLabel||'Probeer uit'}</a>`;
+    ctasHtml+=`<button class="btn-o" onclick="nav('assistenten','da-aanvraag')">Vraag aan</button>`;
+    detailCtas.innerHTML=ctasHtml;
+  }
+  // Read more link
+  if(detailReadmore){
+    if(assistant.readMoreLink){
+      detailReadmore.href=assistant.readMoreLink;
+      detailReadmore.style.display='';
+    } else {
+      detailReadmore.style.display='none';
+    }
+  }
   return true;
 }
 
