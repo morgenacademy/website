@@ -23,20 +23,22 @@ nav.scrolled{background:rgba(10,10,26,.96);backdrop-filter:blur(18px);border-bot
 .nav-links a:hover,.nav-links a.active{color:var(--white)}
 .btn-nav{background:var(--pink) !important;color:#fff !important;padding:.5rem 1.2rem !important;border-radius:3px;font-weight:600 !important}
 .btn-nav:hover{background:#a028b8 !important}
+.nav-toggle{display:none;width:40px;height:40px;border:1px solid rgba(255,255,255,.2);border-radius:6px;background:rgba(10,10,26,.75);color:#fff;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:4px}
+.nav-toggle span{display:block;width:18px;height:2px;background:#fff;border-radius:1px}
 .page{display:none}.page.active{display:block}
-.sd{padding:6rem 4rem;background:var(--navy)}.sl{padding:6rem 4rem;background:var(--white)}.sm{padding:6rem 4rem;background:var(--nmd)}
-.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:flex-end;padding:8rem 4rem 4rem;position:relative;overflow:hidden}
+.sd{padding:5rem 4rem;background:var(--navy)}.sl{padding:5rem 4rem;background:var(--white)}.sm{padding:5rem 4rem;background:var(--nmd)}
+.hero{min-height:86vh;display:flex;flex-direction:column;justify-content:flex-end;padding:7.5rem 4rem 3.5rem;position:relative;overflow:hidden}
 .orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
 .o1{width:560px;height:560px;background:radial-gradient(circle,#c850d8,#7c35c9 55%,transparent);top:-120px;right:-80px;opacity:.5;animation:fl1 9s ease-in-out infinite}
 .o2{width:400px;height:400px;background:radial-gradient(circle,#2552c9,#7c35c9 60%,transparent);bottom:60px;right:180px;opacity:.45;animation:fl2 11s ease-in-out infinite}
 .o3{width:280px;height:280px;background:radial-gradient(circle,#d460e0,transparent);bottom:240px;right:520px;opacity:.25;animation:fl3 13s ease-in-out infinite}
 .hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:70px 70px;mask-image:radial-gradient(ellipse 85% 85% at 50% 50%,black 20%,transparent 100%)}
 .hi{position:relative;z-index:2}
-.eyebrow{font-family:var(--fu);font-size:.76rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);display:flex;align-items:center;gap:.8rem;margin-bottom:1.6rem;opacity:0;animation:up .7s .3s forwards}
+.eyebrow{font-family:var(--fu);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);display:flex;align-items:center;gap:.8rem;margin-bottom:1.4rem;opacity:0;animation:up .7s .3s forwards}
 .eyebrow::before{display:none}
-.h1{font-family:var(--fd);font-weight:900;font-size:clamp(4rem,9vw,10rem);line-height:.87;letter-spacing:.02em;text-transform:uppercase;margin-bottom:2rem;opacity:0;animation:up .8s .5s forwards}
+.h1{font-family:var(--fd);font-weight:900;font-size:clamp(3.2rem,7.2vw,7.8rem);line-height:.9;letter-spacing:.01em;text-transform:none;margin-bottom:1.6rem;opacity:0;animation:up .8s .5s forwards}
 .h1 .pk{color:var(--pink)}
-.hbody{font-family:var(--fb);font-size:1.05rem;line-height:1.75;color:var(--lgrey);max-width:50ch;margin-bottom:2.5rem;opacity:0;animation:up .8s .75s forwards}
+.hbody{font-family:var(--fb);font-size:1rem;line-height:1.7;color:var(--lgrey);max-width:58ch;margin-bottom:2.2rem;opacity:0;animation:up .8s .75s forwards}
 .hctas{display:flex;align-items:center;gap:1.2rem;opacity:0;animation:up .8s 1s forwards;flex-wrap:wrap}
 .btn-p{font-family:var(--fu);font-weight:600;font-size:.9rem;display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:.9rem 1.8rem;border-radius:3px;text-decoration:none;cursor:pointer;transition:opacity .2s,transform .2s;border:none}
 .btn-p:hover{opacity:.85;transform:translateY(-2px)}
@@ -64,17 +66,26 @@ nav.scrolled{background:rgba(10,10,26,.96);backdrop-filter:blur(18px);border-bot
 .slabel{font-family:var(--fu);font-size:.63rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
 .slabel::before{display:none}
 .slabel.dk{color:var(--purple)}.slabel.dk::before{background:var(--purple)}
-.stitle{font-family:var(--fd);font-weight:900;font-size:clamp(2.8rem,5.5vw,5.5rem);line-height:.9;letter-spacing:.03em;text-transform:uppercase}
+.stitle{font-family:var(--fd);font-weight:900;font-size:clamp(2.3rem,4.8vw,4.6rem);line-height:.95;letter-spacing:.02em;text-transform:none}
 .reveal{opacity:1;transform:none;transition:opacity .8s ease,transform .8s ease}
 .anim .reveal{opacity:0;transform:translateY(24px)}.anim .reveal.visible{opacity:1;transform:translateY(0)}
-.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
-.ptitle{font-family:var(--fd);font-weight:900;font-size:clamp(2.2rem,4vw,3.5rem);line-height:.93;letter-spacing:.03em;text-transform:uppercase;margin-bottom:1.6rem}
-.pbody{font-family:var(--fb);font-size:.95rem;line-height:1.8;color:var(--lgrey);margin-bottom:1.2rem}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center}
+.ptitle{font-family:var(--fd);font-weight:900;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1;letter-spacing:.02em;text-transform:none;margin-bottom:1.2rem}
+.pbody{font-family:var(--fb);font-size:.94rem;line-height:1.75;color:var(--lgrey);margin-bottom:1rem}
 .callout{background:rgba(200,80,216,.08);border-left:3px solid var(--pink);padding:1.1rem 1.4rem;border-radius:0 4px 4px 0;margin-top:1.8rem;font-family:var(--fu);font-size:.9rem;font-weight:500;line-height:1.6;color:var(--white)}
 .scards{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.06);border-radius:6px;overflow:hidden}
-.sc{background:var(--nmd);padding:1.8rem;transition:background .2s}.sc:hover{background:var(--nlt)}
+.sc{background:var(--nmd);padding:1.6rem;transition:background .2s;min-height:184px;display:flex;flex-direction:column;justify-content:flex-start}.sc:hover{background:var(--nlt)}
 .scn{font-family:var(--fd);font-size:3rem;font-weight:900;letter-spacing:.02em;color:var(--pink);line-height:1;margin-bottom:.4rem}
 .scd{font-family:var(--fb);font-size:.8rem;color:var(--lgrey);line-height:1.5}
+/* ACADEMY STATS: calmer, cleaner alignment */
+#page-academy .scards{gap:.8rem;background:transparent}
+#page-academy .sc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:8px;min-height:200px;padding:1.5rem;display:flex;flex-direction:column;justify-content:flex-start}
+#page-academy .sc:hover{background:rgba(255,255,255,.06)}
+#page-academy .scn{font-size:2.4rem;color:#d47ce2;letter-spacing:.01em;margin-bottom:.6rem}
+#page-academy .scn-stars{font-size:2.05rem;letter-spacing:.07em}
+#page-academy .scn-text{font-size:2.2rem;line-height:1.06}
+#page-academy .scn-plus{font-size:1.45rem;line-height:1;color:#ddb2e9}
+#page-academy .scd{font-size:.78rem;line-height:1.55;color:#bcb8d8;max-width:24ch}
 .lbintro{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem}
 .lbintro-p{font-family:var(--fb);font-size:.95rem;line-height:1.8;color:#4a4870}
 .lg4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
@@ -98,8 +109,8 @@ nav.scrolled{background:rgba(10,10,26,.96);backdrop-filter:blur(18px);border-bot
 .wstep:hover .wnum{color:rgba(200,80,216,.3)}
 .wtitle{font-family:var(--fu);font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:.6rem}
 .wbody{font-family:var(--fb);font-size:.83rem;color:var(--lgrey);line-height:1.7}
-.trgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:3.5rem}
-.tcard{background:#fff;border:1.5px solid #e2dffa;border-radius:6px;padding:1.8rem;transition:transform .2s,box-shadow .2s;cursor:none}
+.trgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+.tcard{background:#fff;border:1.5px solid #e2dffa;border-radius:6px;padding:1.6rem;transition:transform .2s,box-shadow .2s;cursor:none}
 .tcard:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(124,53,201,.11)}
 .tlev{font-family:var(--fu);font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.28rem .65rem;border-radius:2px;display:inline-block;margin-bottom:.9rem}
 .tl-s{background:rgba(37,82,201,.1);color:var(--blue)}.tl-a{background:rgba(124,53,201,.1);color:var(--purple)}.tl-e{background:rgba(200,80,216,.1);color:var(--pink)}
@@ -133,8 +144,8 @@ nav.scrolled{background:rgba(10,10,26,.96);backdrop-filter:blur(18px);border-bot
 .slink-b{color:#6a92ff}.slink-p{color:#b07cff}.slink-k{color:var(--pink)}.slink-g{color:#2dd4a0}
 /* TRUST */
 .trust-section{padding:5rem 4rem;background:var(--nmd)}
-.trgst{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
-.tquote{font-family:var(--fd);font-weight:700;text-transform:uppercase;font-size:clamp(1.6rem,2.8vw,2.5rem);letter-spacing:.03em;line-height:1.15;border-left:4px solid var(--pink);padding-left:2rem;color:var(--white)}
+.trgst{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.tquote{font-family:var(--fu);font-weight:700;font-size:clamp(1.25rem,2.1vw,1.8rem);line-height:1.35;border-left:4px solid var(--pink);padding-left:2rem;color:var(--white)}
 .tauthor{font-family:var(--fu);font-size:.8rem;font-weight:500;color:var(--grey);margin-top:1.2rem;padding-left:2rem}
 .tlogos-label{font-family:var(--fu);font-size:.63rem;font-weight:600;letter-spacing:.2em;color:var(--grey);text-transform:uppercase;margin-bottom:1.5rem}
 .tnums{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
@@ -146,10 +157,10 @@ nav.scrolled{background:rgba(10,10,26,.96);backdrop-filter:blur(18px);border-bot
 .corb1{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(200,80,216,.2),transparent 70%);top:-200px;right:-100px;pointer-events:none}
 .corb2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(37,82,201,.2),transparent 70%);bottom:-100px;left:-50px;pointer-events:none}
 .cta-in{position:relative;z-index:2}
-.cta-ey{font-family:var(--fu);font-size:.73rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--pink);margin-bottom:1.3rem}
-.cta-h{font-family:var(--fd);font-weight:900;font-size:clamp(3rem,7vw,8.5rem);line-height:.87;letter-spacing:.04em;text-transform:uppercase;margin-bottom:1.6rem}
+.cta-ey{font-family:var(--fu);font-size:.69rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--pink);margin-bottom:1.1rem}
+.cta-h{font-family:var(--fd);font-weight:900;font-size:clamp(2.4rem,5.8vw,5.8rem);line-height:.94;letter-spacing:.02em;text-transform:none;margin-bottom:1.3rem}
 .cta-h .ol{-webkit-text-stroke:2px rgba(255,255,255,.55);color:transparent}
-.cta-sub{font-family:var(--fb);font-size:1rem;line-height:1.75;color:var(--lgrey);max-width:46ch;margin:0 auto 2.5rem}
+.cta-sub{font-family:var(--fb);font-size:.95rem;line-height:1.7;color:var(--lgrey);max-width:58ch;margin:0 auto 2.1rem}
 .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 .btn-w{font-family:var(--fu);font-weight:700;font-size:.9rem;background:var(--white);color:var(--purple);padding:1rem 2rem;border-radius:3px;text-decoration:none;cursor:pointer;border:none;transition:background .2s,transform .2s}
 .btn-w:hover{background:#fff;transform:translateY(-2px)}
@@ -227,14 +238,30 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 .agent-show-tag{font-family:var(--fu);font-size:.56rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#f0defa;background:rgba(200,80,216,.18);border:1px solid rgba(200,80,216,.35);border-radius:2px;padding:.24rem .5rem}
 .agent-show-link{font-family:var(--fu);font-size:.81rem;font-weight:700;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--pink),var(--purple));padding:.62rem 1rem;border-radius:4px;transition:opacity .2s,transform .2s}
 .agent-show-link:hover{opacity:.88;transform:translateY(-2px)}
-.da-form-wrap{background:rgba(0,0,0,.28);border:1px solid rgba(200,80,216,.28);border-radius:10px;padding:2rem}
-.da-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.da-field{display:flex;flex-direction:column;gap:.45rem}
-.da-field label{font-family:var(--fu);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c9c5e8}
-.da-field input,.da-field textarea{width:100%;font-family:var(--fb);font-size:.92rem;color:#fff;background:rgba(12,12,34,.76);border:1px solid rgba(255,255,255,.16);border-radius:6px;padding:.8rem .9rem;outline:none}
-.da-field textarea{min-height:120px;resize:vertical}
-.da-field input:focus,.da-field textarea:focus{border-color:rgba(200,80,216,.7)}
-.da-field-full{grid-column:1/-1}
+.assistant-detail-page{padding:7rem 4rem 5rem;background:linear-gradient(145deg,#0d0d31,#17164b 60%,#221254)}
+.assistant-detail-grid{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:2rem;align-items:start}
+.assistant-detail-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:1.5rem;text-align:center}
+.assistant-detail-avatar{width:160px;height:160px;border-radius:50%;padding:3px;background:linear-gradient(135deg,var(--pink),var(--purple));margin:0 auto 1rem}
+.assistant-detail-avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid rgba(14,14,48,.95)}
+.assistant-detail-name{font-family:var(--fd);font-size:2rem;letter-spacing:.02em;color:#fff;line-height:1}
+.assistant-detail-role{font-family:var(--fu);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#d2cef0;margin-top:.45rem}
+.assistant-detail-content{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:1.7rem}
+.assistant-detail-content h2{font-family:var(--fu);font-size:1.2rem;color:#fff;margin-bottom:.9rem}
+.assistant-detail-content p{font-family:var(--fb);font-size:.94rem;line-height:1.75;color:var(--lgrey)}
+.assistant-detail-list{margin-top:1.1rem;display:grid;gap:.55rem}
+.assistant-detail-list li{list-style:none;font-family:var(--fb);font-size:.9rem;color:#ddd9f4;line-height:1.55}
+.assistant-detail-list li::before{content:'• ';color:var(--pink)}
+.assistant-detail-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem}
+.form-wrap,.da-form-wrap{background:rgba(0,0,0,.28);border:1px solid rgba(200,80,216,.28);border-radius:10px;padding:2rem;max-width:980px;margin:0 auto}
+.form-grid,.da-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-field,.da-field{display:flex;flex-direction:column;gap:.45rem}
+.form-field label,.da-field label{font-family:var(--fu);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c9c5e8}
+.form-field input,.form-field textarea,.da-field input,.da-field textarea{width:100%;font-family:var(--fb);font-size:.92rem;color:#fff;background:rgba(12,12,34,.76);border:1px solid rgba(255,255,255,.16);border-radius:6px;padding:.8rem .9rem;outline:none}
+.form-field textarea,.da-field textarea{min-height:120px;resize:vertical}
+.form-field input:focus,.form-field textarea:focus,.da-field input:focus,.da-field textarea:focus{border-color:rgba(200,80,216,.7)}
+.form-field-full,.da-field-full{grid-column:1/-1}
+.form-actions{margin-top:1.2rem;display:flex;justify-content:flex-end}
+.form-help{font-family:var(--fb);font-size:.82rem;color:#a9a6cb;margin-top:1rem}
 /* AI ORGANISATIE */
 .org-map{display:flex;flex-direction:column;align-items:center}
 .org-line{width:2px;height:40px;background:rgba(255,255,255,.18)}
@@ -297,8 +324,21 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 @keyframes fl2{0%,100%{transform:translateY(0)}50%{transform:translateY(22px)}}
 @keyframes fl3{0%,100%{transform:translateX(0)}50%{transform:translateX(-18px)}}
 @media(max-width:1280px){.lg4{grid-template-columns:repeat(2,1fr)}.sgrid{grid-template-columns:repeat(2,1fr)}.speaker-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:1024px){nav{padding:1.2rem 2rem}.sd,.sl,.sm,.trust-section,.da-hero,.agents-overview{padding:4rem 2rem}.hero{padding:8rem 2rem 4rem}.pgrid,.trgst,.lbintro,.book-grid,.da-grid,.da-form-grid{grid-template-columns:1fr;gap:3rem}.trgrid{grid-template-columns:1fr}.wgrid{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr 1fr}.cta-btns{flex-direction:column;align-items:center}.hstats{flex-wrap:wrap;gap:2rem}.speaker-grid{grid-template-columns:1fr}.da-card-grid{grid-template-columns:1fr}.agent-show-grid{grid-template-columns:1fr 1fr}.agents-head{flex-direction:column}.agents-head-copy{max-width:none}.agents-head-cta{padding-top:0;align-items:flex-start}.org-managers,.org-departments,.org-stats{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.nav-links{display:none}.lg4,.sgrid,.speaker-grid,.agent-show-grid,.org-managers,.org-departments,.org-stats{grid-template-columns:1fr}.wgrid,.trgrid{grid-template-columns:1fr}.ft{grid-template-columns:1fr}.tnums{grid-template-columns:1fr 1fr}.da-form-wrap{padding:1.2rem}.agents-head-cta .btn-p,.agents-head-cta .btn-o{width:100%}}
+@media(max-width:1024px){nav{padding:1.2rem 2rem}.sd,.sl,.sm,.trust-section,.da-hero,.agents-overview,.assistant-detail-page{padding:4rem 2rem}.hero{padding:7rem 2rem 3rem}.pgrid,.trgst,.lbintro,.book-grid,.da-grid,.da-form-grid,.assistant-detail-grid{grid-template-columns:1fr;gap:3rem}.trgrid{grid-template-columns:1fr}.wgrid{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr 1fr}.cta-btns{flex-direction:column;align-items:center}.hstats{flex-wrap:wrap;gap:2rem}.speaker-grid{grid-template-columns:1fr}.da-card-grid{grid-template-columns:1fr}.agent-show-grid{grid-template-columns:1fr 1fr}.agents-head{flex-direction:column}.agents-head-copy{max-width:none}.agents-head-cta{padding-top:0;align-items:flex-start}.org-managers,.org-departments,.org-stats{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){
+  .nav-toggle{display:inline-flex}
+  .nav-links{display:none;position:absolute;top:100%;left:1rem;right:1rem;padding:1rem;border-radius:10px;background:rgba(10,10,26,.97);border:1px solid rgba(255,255,255,.1);flex-direction:column;align-items:flex-start;gap:.85rem}
+  body.nav-open .nav-links{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:inline-flex;width:100%}
+  .lg4,.sgrid,.speaker-grid,.agent-show-grid,.org-managers,.org-departments,.org-stats,.assistant-detail-grid{grid-template-columns:1fr}
+  .wgrid,.trgrid{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr}
+  .tnums{grid-template-columns:1fr 1fr}
+  .form-wrap,.da-form-wrap{padding:1.2rem}
+  .form-grid,.da-form-grid{grid-template-columns:1fr}
+  .agents-head-cta .btn-p,.agents-head-cta .btn-o{width:100%}
+}
 </style>
 <link rel="stylesheet" href="/docs/trainingwijzer/style.css">
 </head>
@@ -313,16 +353,20 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <div class="popup-incl">
       <span>Praktisch en direct toepasbaar</span>
       <span>Eigen tempo, altijd online beschikbaar</span>
+      <span>Duur: circa 2 uur</span>
       <span>Conform de EU AI Act</span>
       <span>Bewijs van deelname na afronding</span>
     </div>
-    <a href="PLUGANDPAY_URL_HIER" class="popup-btn" target="_blank" rel="noopener">Direct kopen</a>
+    <button class="popup-btn" onclick="closeTrainingPopup();nav('academy','ac-aanvraag')">Start met basistraining</button>
     <p class="popup-note">Vragen? Mail naar <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
   </div>
 </div>
 
 <nav id="mainNav">
   <button class="logo-btn" onclick="nav('home')">MORGEN<em>.</em></button>
+  <button class="nav-toggle" type="button" onclick="toggleNav()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
     <li><a onclick="nav('home','aanbod')">Wat we doen</a></li>
     <li><a onclick="nav('academy')" data-page="academy">Academy</a></li>
@@ -330,7 +374,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <li><a onclick="nav('consultancy')" data-page="consultancy">Consultancy</a></li>
     <li><a onclick="nav('assistenten')" data-page="assistenten">Assistenten</a></li>
     <li><a onclick="nav('company')" data-page="company">Company</a></li>
-    <li><a onclick="nav('home','contact')" class="btn-nav">Gratis kennismaking</a></li>
+    <li><a onclick="nav('home','home-aanvraag')" class="btn-nav">Gratis kennismaking</a></li>
   </ul>
 </nav>
 <div class="page active" id="page-home">
@@ -339,10 +383,10 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   <div class="hgrid"></div>
   <div class="hi">
     <p class="eyebrow">AI-trainingen &#183; Digitale oplossingen &#183; Begeleiding &#183; Thought leadership</p>
-    <h1 class="h1">WAT DOET<br>JOUW BEDRIJF<br><span class="pk">MORGEN?</span></h1>
+    <h1 class="h1">Wat doet<br>jouw bedrijf<br><span class="pk">morgen?</span></h1>
     <p class="hbody">Morgen helpt MKB-organisaties groeien met AI-trainingen, digitale oplossingen en strategische begeleiding. Van eerste stap tot volledige implementatie.</p>
     <div class="hctas">
-      <button class="btn-p" onclick="scrollToId('contact')">Plan gratis kennismakingsgesprek</button>
+      <button class="btn-p" onclick="scrollToId('home-aanvraag')">Plan gratis kennismakingsgesprek</button>
       <button class="btn-g" onclick="nav('home','aanbod')">Bekijk ons aanbod &#x2193;</button>
     </div>
     <div class="hstats">
@@ -382,7 +426,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   <div class="lbintro reveal">
     <div>
       <div class="slabel dk">Vier disciplines, één richting</div>
-      <h2 class="stitle" style="color:var(--black)">WAT KAN<br>MORGEN<br><span style="color:var(--purple)">DOEN?</span></h2>
+      <h2 class="stitle" style="color:var(--black)">Wat kan<br>Morgen<br><span style="color:var(--purple)">doen?</span></h2>
     </div>
     <p class="lbintro-p">Elke organisatie heeft een andere beginsituatie. Soms moeten mensen getraind worden. Soms processen gebouwd. Soms ontbreekt de regie. Morgen werkt vanuit vier disciplines, los of gecombineerd.</p>
   </div>
@@ -426,7 +470,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 <section class="sd" id="situaties">
   <div class="reveal" style="text-align:center">
     <div class="slabel" style="justify-content:center">Neem contact op</div>
-    <h2 class="stitle">WAT SPEELT<br><span style="color:var(--pink)">ER NU?</span></h2>
+    <h2 class="stitle">Wat speelt<br><span style="color:var(--pink)">er nu?</span></h2>
     <p style="font-family:var(--fb);color:var(--lgrey);max-width:52ch;margin:1.2rem auto 0;font-size:.93rem;line-height:1.75">Vier herkenbare situaties bij MKB-organisaties. Herkent een ervan? Dan is de volgende stap direct duidelijk.</p>
   </div>
   <div class="sgrid reveal">
@@ -469,7 +513,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   </div>
   <div style="text-align:center;margin-top:3rem" class="reveal">
     <p style="font-family:var(--fb);color:var(--grey);margin-bottom:1rem;font-size:.88rem">Meerdere situaties herkenbaar? Plan een gratis gesprek in en we kijken samen wat de beste eerste stap is.</p>
-    <button class="btn-p" onclick="scrollToId('contact')">Plan een gratis kennismakingsgesprek</button>
+    <button class="btn-p" onclick="scrollToId('home-aanvraag')">Plan een gratis kennismakingsgesprek</button>
   </div>
 </section>
 <section class="trust-section">
@@ -491,14 +535,51 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 <section class="cta-s" id="contact">
   <div class="corb1"></div><div class="corb2"></div>
   <div class="cta-in reveal">
-    <div class="cta-ey">Gratis kennismakingsgesprek &#183; 45 minuten &#183; geen verplichtingen</div>
-    <h2 class="cta-h">WAT DOET<br><span class="ol">JOUW BEDRIJF</span><br>MORGEN?</h2>
-    <p class="cta-sub">Plan een gratis gesprek in. Samen bespreken we de situatie, benoemen de grootste kansen en bepalen welke eerste stap het meeste oplevert. Geen verkoopverhaal, een eerlijk gesprek.</p>
+    <div class="cta-ey">Gratis kennismakingsgesprek &#183; 45 minuten &#183; zonder verplichtingen</div>
+    <h2 class="cta-h">Welke stap zet<br><span class="ol">jouw organisatie</span><br>morgen?</h2>
+    <p class="cta-sub">Plan een gratis gesprek in. Samen bespreken we de situatie, benoemen de grootste kansen en kiezen een nuchtere eerste stap.</p>
     <div class="cta-btns">
-      <a href="mailto:totmorgen@morgenacademy.nl" class="btn-w">Plan gratis kennismakingsgesprek</a>
+      <button class="btn-w" onclick="scrollToId('home-aanvraag')">Plan gratis kennismakingsgesprek</button>
       <a href="mailto:totmorgen@morgenacademy.nl?subject=Download: 5 stappen naar digitale transformatie" class="btn-o">Download: in 5 stappen naar een digitale transformatie</a>
     </div>
   </div>
+</section>
+<section class="sd" id="home-aanvraag">
+  <div class="reveal" style="margin-bottom:2rem">
+    <div class="slabel">Kennismaking aanvragen</div>
+    <h2 class="ptitle">Vertel kort wat er speelt in je organisatie.</h2>
+    <p class="pbody" style="max-width:70ch">We reageren binnen 1 werkdag met een concreet voorstel voor een eerste gesprek.</p>
+  </div>
+  <form class="form-wrap reveal" name="kennismaking-aanvraag" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?p=home&a=home-aanvraag">
+    <input type="hidden" name="form-name" value="kennismaking-aanvraag">
+    <p style="display:none"><label>Laat dit veld leeg: <input name="bot-field"></label></p>
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="hm-naam">Naam *</label>
+        <input id="hm-naam" type="text" name="naam" required>
+      </div>
+      <div class="form-field">
+        <label for="hm-email">E-mailadres *</label>
+        <input id="hm-email" type="email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label for="hm-bedrijf">Bedrijfsnaam *</label>
+        <input id="hm-bedrijf" type="text" name="bedrijf" required>
+      </div>
+      <div class="form-field">
+        <label for="hm-telefoon">Telefoonnummer</label>
+        <input id="hm-telefoon" type="tel" name="telefoon">
+      </div>
+      <div class="form-field form-field-full">
+        <label for="hm-vraag">Waar wil je hulp bij? *</label>
+        <textarea id="hm-vraag" name="vraag" required></textarea>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn-p">Verstuur aanvraag</button>
+    </div>
+    <p class="form-help">Liever mailen? <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
+  </form>
 </section>
 <footer>
   <div class="ft">
@@ -550,11 +631,11 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   <div class="hi">
     <button class="back-btn" onclick="nav('home')">&#x2190; Terug naar home</button>
     <p class="eyebrow">Morgen Academy &#183; AI-training &#183; Workshop &#183; Leerpad &#183; EU AI Act</p>
-    <h1 class="h1">MEER DAN<br>VRAGEN<br><span class="pk">STELLEN.</span></h1>
+    <h1 class="h1">Meer dan<br>vragen<br><span class="pk">stellen.</span></h1>
     <p class="hbody">Veel teams gebruiken AI als een slimme zoekmachine. Maar er is zoveel meer potentieel. Morgen Academy laat zien hoe AI echt werk uit handen neemt. Individueel online of als incompany leerpad.</p>
     <div class="hctas">
       <button class="btn-p" onclick="openTrainingPopup()">Online basistraining kopen</button>
-      <button class="btn-g" onclick="scrollToId('ac-trainingen')">Alle trainingen bekijken &#x2193;</button>
+      <button class="btn-g" onclick="scrollToId('ac-trainingen')">Bekijk alle trainingen &#x2193;</button>
     </div>
     <div class="hstats">
       <div><div class="hsn">9.8<em>/10</em></div><div class="hsl">Gemiddelde trainings&shy;beoordeling</div></div>
@@ -574,17 +655,22 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <div class="callout">Eenmalige trainingen zijn een startpunt. Voor duurzame verandering is opvolging nodig. Morgen biedt beide: de losse workshop en het leerpad dat beklijft.</div>
     </div>
     <div class="scards">
-      <div class="sc"><div class="scn">9.8</div><div class="scd">Gemiddelde beoordeling door trainingsdeelnemers</div></div>
-      <div class="sc"><div class="scn">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="scd">Alleen 5-sterren reviews op Google</div></div>
-      <div class="sc"><div class="scn">850<em style="font-size:1.5rem">+</em></div><div class="scd">Medewerkers getraind in AI en digitale vaardigheden</div></div>
-      <div class="sc"><div class="scn" style="font-size:2rem;line-height:1.2">EU AI<br>Act</div><div class="scd">Alle trainingen opgezet conform de EU AI Act</div></div>
+      <div class="sc"><div class="scn">2<em style="font-size:1.4rem">u</em></div><div class="scd">Duur van de basistraining (online en fysiek)</div></div>
+      <div class="sc"><div class="scn">5</div><div class="scd">Modules van basis tot implementatie</div></div>
+      <div class="sc"><div class="scn scn-text">Online<br>&amp; fysiek</div><div class="scd">Te volgen als individuele training of incompany traject</div></div>
+      <div class="sc"><div class="scn scn-text">Bewijs<br>van deelname</div><div class="scd">Deelnemers ontvangen aantoonbare afronding voor dossieropbouw</div></div>
     </div>
+  </div>
+</section>
+<section style="padding:0">
+  <div class="trainingwijzer-wrapper">
+    <div id="trainingwijzer-app"></div>
   </div>
 </section>
 <section class="sl" id="ac-trainingen">
   <div class="reveal">
     <div class="slabel dk">Trainingsaanbod</div>
-    <h2 class="stitle" style="color:var(--black)">ELK NIVEAU.<br>ELKE GROEP.<br><span style="color:var(--purple)">EEN LIJN.</span></h2>
+    <h2 class="stitle" style="color:var(--black)">Elk niveau.<br>Elke groep.<br><span style="color:var(--purple)">Een lijn.</span></h2>
     <p style="font-family:var(--fb);color:#5a5878;max-width:55ch;margin-top:1.2rem;font-size:.95rem;line-height:1.8">Van bewustwording tot het bouwen van werkende automatiseringen. Elke module staat op zichzelf of maakt deel uit van het leerpad.</p>
   </div>
   <div class="trgrid reveal">
@@ -592,7 +678,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
       <span class="tlev tl-s">Module 1 &#183; Online &#183; Direct beschikbaar</span>
       <div class="ttitle">Bespaar 1 dag per week met AI</div>
       <p class="tdesc">Leer hoe AI concreet tijd bespaart in het dagelijkse werk. Geen technische uitleg, maar directe toepasbaarheid voor de eigen functie. Individueel online te volgen of incompany te boeken.</p>
-      <div class="tmeta"><span>&#8987; 1 dag</span><span>&#128101; Online &amp; incompany</span></div>
+      <div class="tmeta"><span>&#8987; 2 uur</span><span>&#128101; Online &amp; incompany</span></div>
       <div style="margin-top:1rem;font-family:var(--fu);font-size:.75rem;font-weight:700;color:var(--purple)">&#x25B6; Direct online kopen</div>
     </div>
     <div class="tcard"><span class="tlev tl-s">Module 2</span><div class="ttitle">Slimmer werken met AI-tools die er al zijn</div><p class="tdesc">Microsoft Copilot, ChatGPT en meer. Het team heeft de tools al. Na deze training halen medewerkers er structureel meer uit dan alleen antwoorden op vragen.</p><div class="tmeta"><span>&#8987; 2 dagen</span><span>&#128101; Incompany</span></div></div>
@@ -602,13 +688,45 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <div class="tcard"><span class="tlev tl-e">Volledig leerpad</span><div class="ttitle">Van bewustwording tot implementatie</div><p class="tdesc">Alle modules als incompany traject van zes tot twaalf maanden, inclusief begeleiding vanuit Morgen Consultancy. Voor organisaties die echt doorpakken.</p><div class="tmeta"><span>&#8987; Op maat</span><span>&#128101; Incompany</span></div></div>
   </div>
 </section>
-<section style="padding:0">
-  <div class="trainingwijzer-wrapper">
-    <div id="trainingwijzer-app"></div>
+<section class="sd" id="ac-aanvraag">
+  <div class="reveal" style="margin-bottom:2rem">
+    <div class="slabel">Training aanvragen</div>
+    <h2 class="ptitle">Plan een training die past bij je team.</h2>
+    <p class="pbody" style="max-width:70ch">Of het nu gaat om de basistraining van 2 uur of een volledig leerpad: we denken mee over de juiste opzet.</p>
   </div>
+  <form class="form-wrap reveal" name="training-aanvraag" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/academy/?p=academy&a=ac-aanvraag">
+    <input type="hidden" name="form-name" value="training-aanvraag">
+    <p style="display:none"><label>Laat dit veld leeg: <input name="bot-field"></label></p>
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="ac-naam">Naam *</label>
+        <input id="ac-naam" type="text" name="naam" required>
+      </div>
+      <div class="form-field">
+        <label for="ac-email">E-mailadres *</label>
+        <input id="ac-email" type="email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label for="ac-bedrijf">Organisatie *</label>
+        <input id="ac-bedrijf" type="text" name="organisatie" required>
+      </div>
+      <div class="form-field">
+        <label for="ac-grootte">Teamgrootte</label>
+        <input id="ac-grootte" type="text" name="teamgrootte" placeholder="bijv. 15 medewerkers">
+      </div>
+      <div class="form-field form-field-full">
+        <label for="ac-vraag">Wat wil je met de training bereiken? *</label>
+        <textarea id="ac-vraag" name="doel" required></textarea>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn-p">Verstuur aanvraag</button>
+    </div>
+    <p class="form-help">Liever mailen? <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
+  </form>
 </section>
 <section class="sm">
-  <div class="reveal"><div class="slabel">AI compliant</div><h2 class="stitle">KLAAR VOOR<br>DE EU<br><span style="color:var(--pink)">AI ACT.</span></h2></div>
+  <div class="reveal"><div class="slabel">AI compliant</div><h2 class="stitle">Klaar voor<br>de EU<br><span style="color:var(--pink)">AI Act.</span></h2></div>
   <div class="wgrid reveal">
     <div class="wstep"><div class="wnum">01</div><div class="wtitle">Wat is de EU AI Act?</div><p class="wbody">De Europese wet die regels stelt aan het gebruik van AI. Organisaties zijn verplicht medewerkers die met AI werken op te leiden. Morgen Academy is volledig op de AI Act afgestemd.</p></div>
     <div class="wstep"><div class="wnum">02</div><div class="wtitle">AI literacy voor iedereen</div><p class="wbody">De AI Act vereist basiskennis van AI voor alle medewerkers die met AI-systemen werken. Morgen Academy verzorgt precies deze kennis, praktisch en goed gedocumenteerd.</p></div>
@@ -619,14 +737,14 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 <section class="trust-section">
   <div class="trgst reveal">
     <div>
-      <div class="tquote">"Morgen liet zien dat we eigenlijk nog nooit serieus hadden nagedacht over hoe dit bedrijf slimmer kon werken. Dat inzicht alleen al was het waard."</div>
-      <div class="tauthor">Corn&#233; Mol, Directeur Saal Trappenfabriek Vermeulen (100+ medewerkers)</div>
+      <div class="tquote">Teams waarderen vooral de praktische opzet: direct toepasbaar in het dagelijkse werk, zonder technisch gedoe.</div>
+      <div class="tauthor">Uit evaluaties van trainingen en incompany sessies</div>
     </div>
     <div>
       <div class="tlogos-label">Werkt samen met</div>
       <div class="tnums">
-        <div><div class="tn">9.8<em>/10</em></div><div class="tnl">Gemiddelde trainings&shy;beoordeling</div></div>
-        <div><div class="tn">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tnl">Alleen 5-sterren reviews op Google</div></div>
+        <div><div class="tn">9.8<em>/10</em></div><div class="tnl">Gemiddelde trainingsbeoordeling</div></div>
+        <div><div class="tn">2<em>u</em></div><div class="tnl">Duur basistraining</div></div>
         <div><div class="tn">850<em>+</em></div><div class="tnl">Medewerkers getraind</div></div>
       </div>
     </div>
@@ -634,11 +752,11 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 </section>
 <section class="cta-s" id="ac-contact"><div class="corb1"></div><div class="corb2"></div><div class="cta-in reveal">
   <div class="cta-ey">Training inplannen &#183; workshop of leerpad &#183; online of incompany</div>
-  <h2 class="cta-h">MEER DAN<br><span class="ol">VRAGEN</span><br>STELLEN.</h2>
+  <h2 class="cta-h">Meer dan<br><span class="ol">vragen</span><br>stellen.</h2>
   <p class="cta-sub">Plan een gratis gesprek in. Samen kijken we welke training of leerpad het beste aansluit. Online starten kan direct.</p>
   <div class="cta-btns">
     <button class="btn-w" onclick="openTrainingPopup()">Online basistraining direct kopen</button>
-    <a href="mailto:totmorgen@morgenacademy.nl" class="btn-o">Of plan een gratis gesprek</a>
+    <button class="btn-o" onclick="scrollToId('ac-aanvraag')">Plan een trainingsgesprek</button>
   </div>
 </div></section>
 <footer>
@@ -692,11 +810,11 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   <div class="hi">
     <button class="back-btn" onclick="nav('home')">&#x2190; Terug naar home</button>
     <p class="eyebrow">Morgen Technology &#183; Maatwerk &#183; AI-workflows &#183; Procesautomatisering</p>
-    <h1 class="h1">MINDER<br>HANDWERK.<br><span class="pk">MEER RESULTAAT.</span></h1>
+    <h1 class="h1">Minder<br>handwerk.<br><span class="pk">Meer resultaat.</span></h1>
     <p class="hbody">Morgen Technology bouwt de digitale oplossingen die een organisatie slimmer maken. Altijd op maat. Altijd vertrekkend vanuit de bedrijfsprocessen, niet vanuit tools.</p>
     <div class="hctas">
       <button class="btn-p" onclick="scrollToId('te-aanpak')">Bekijk wat we bouwen</button>
-      <button class="btn-g" onclick="scrollToId('te-contact')">Plan een kennismaking &#x2193;</button>
+      <button class="btn-g" onclick="scrollToId('te-aanvraag')">Plan een kennismaking &#x2193;</button>
     </div>
   </div>
 </header>
@@ -720,7 +838,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 </section>
 <section class="sl" id="te-aanpak">
   <div class="lbintro reveal">
-    <div><div class="slabel dk">Werkwijze</div><h2 class="stitle" style="color:var(--black)">VAN ANALYSE<br>TOT WERKENDE<br><span style="color:var(--purple)">OPLOSSING.</span></h2></div>
+    <div><div class="slabel dk">Werkwijze</div><h2 class="stitle" style="color:var(--black)">Van analyse<br>tot werkende<br><span style="color:var(--purple)">oplossing.</span></h2></div>
     <p class="lbintro-p">Morgen Technology werkt in vier stappen: analyseren, bouwen, implementeren en doorontwikkelen. Niet alleen de tech, ook de mensen.</p>
   </div>
   <div class="wgrid reveal" style="margin-top:0">
@@ -730,28 +848,65 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <div class="wstep"><div class="wnum">04</div><div class="wtitle">Doorontwikkeling</div><p class="wbody">Na implementatie begeleidt Morgen de doorontwikkeling. Naarmate de organisatie groeit, groeit de oplossing mee.</p></div>
   </div>
 </section>
+<section class="sd" id="te-aanvraag">
+  <div class="reveal" style="margin-bottom:2rem">
+    <div class="slabel">Procesanalyse aanvragen</div>
+    <h2 class="ptitle">Laat ons meekijken naar je processen.</h2>
+    <p class="pbody" style="max-width:70ch">We kijken waar tijd verloren gaat en welke automatisering als eerste echt verschil maakt.</p>
+  </div>
+  <form class="form-wrap reveal" name="procesanalyse-aanvraag" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/technology/?p=technology&a=te-aanvraag">
+    <input type="hidden" name="form-name" value="procesanalyse-aanvraag">
+    <p style="display:none"><label>Laat dit veld leeg: <input name="bot-field"></label></p>
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="te-naam">Naam *</label>
+        <input id="te-naam" type="text" name="naam" required>
+      </div>
+      <div class="form-field">
+        <label for="te-email">E-mailadres *</label>
+        <input id="te-email" type="email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label for="te-bedrijf">Bedrijf *</label>
+        <input id="te-bedrijf" type="text" name="bedrijf" required>
+      </div>
+      <div class="form-field">
+        <label for="te-systeem">Belangrijkste systeem/tool</label>
+        <input id="te-systeem" type="text" name="systeem">
+      </div>
+      <div class="form-field form-field-full">
+        <label for="te-proces">Welk proces kost nu het meeste tijd? *</label>
+        <textarea id="te-proces" name="proces" required></textarea>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn-p">Verstuur aanvraag</button>
+    </div>
+    <p class="form-help">Liever mailen? <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
+  </form>
+</section>
 <section class="trust-section">
   <div class="trgst reveal">
     <div>
-      <div class="tquote">"Morgen liet zien dat we eigenlijk nog nooit serieus hadden nagedacht over hoe dit bedrijf slimmer kon werken. Dat inzicht alleen al was het waard."</div>
-      <div class="tauthor">Corn&#233; Mol, Directeur Saal Trappenfabriek Vermeulen (100+ medewerkers)</div>
+      <div class="tquote">De grootste winst zit meestal niet in nieuwe software, maar in slimmer inrichten van bestaand werk.</div>
+      <div class="tauthor">Ervaring uit projecten bij MKB-organisaties</div>
     </div>
     <div>
       <div class="tlogos-label">Werkt samen met</div>
       <div class="tnums">
-        <div><div class="tn">9.8<em>/10</em></div><div class="tnl">Gemiddelde trainings&shy;beoordeling</div></div>
-        <div><div class="tn">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tnl">Alleen 5-sterren reviews op Google</div></div>
-        <div><div class="tn">850<em>+</em></div><div class="tnl">Medewerkers getraind</div></div>
+        <div><div class="tn">3<em>u</em></div><div class="tnl">Gemiddeld dagelijks tijdverlies dat vaak te automatiseren is</div></div>
+        <div><div class="tn">&#8364;40k</div><div class="tnl">Gemiddelde jaarlijkse kostenpost van handwerkprocessen</div></div>
+        <div><div class="tn">6<em>mnd</em></div><div class="tnl">Tot eerste meetbare resultaten</div></div>
       </div>
     </div>
   </div>
 </section>
 <section class="cta-s" id="te-contact"><div class="corb1"></div><div class="corb2"></div><div class="cta-in reveal">
   <div class="cta-ey">Gratis procesanalyse &#183; 45 minuten &#183; geen verplichtingen</div>
-  <h2 class="cta-h">WAT KAN<br><span class="ol">WORDEN</span><br>GEAUTOMATISEERD?</h2>
+  <h2 class="cta-h">Wat kan<br><span class="ol">worden</span><br>geautomatiseerd?</h2>
   <p class="cta-sub">Plan een gratis gesprek in. We analyseren samen welke processen het meeste opleveren als ze geautomatiseerd worden.</p>
   <div class="cta-btns">
-    <a href="mailto:totmorgen@morgenacademy.nl" class="btn-w">Plan gratis procesanalyse</a>
+    <button class="btn-w" onclick="scrollToId('te-aanvraag')">Plan gratis procesanalyse</button>
     <button class="btn-o" onclick="nav('assistenten')">Bekijk onze digitale assistenten</button>
   </div>
 </div></section>
@@ -806,11 +961,11 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   <div class="hi">
     <button class="back-btn" onclick="nav('home')">&#x2190; Terug naar home</button>
     <p class="eyebrow">Morgen Consultancy &#183; Strategie &#183; Uitvoering &#183; Veranderkunde</p>
-    <h1 class="h1">DIGITALISERING<br>SLAAGT NIET<br><span class="pk">MET TECH ALLEEN.</span></h1>
+    <h1 class="h1">Digitalisering<br>slaagt niet<br><span class="pk">met tech alleen.</span></h1>
     <p class="hbody">Morgen Consultancy begeleidt de hele digitaliseringstransitie. Van strategie tot uitvoering, met kennis van veranderkunde. Techniek en mensen tegelijk.</p>
     <div class="hctas">
       <button class="btn-p" onclick="scrollToId('co-aanpak')">Bekijk onze aanpak</button>
-      <button class="btn-g" onclick="scrollToId('co-contact')">Gratis digitale scan &#x2193;</button>
+      <button class="btn-g" onclick="scrollToId('co-aanvraag')">Gratis digitale scan &#x2193;</button>
     </div>
     <div class="hstats">
       <div><div class="hsn">6<em>mnd</em></div><div class="hsl">Gemiddelde tijd tot eerste meetbare resultaten</div></div>
@@ -831,14 +986,14 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     </div>
     <div class="scards">
       <div class="sc"><div class="scn">6<em style="font-size:1.2rem">mnd</em></div><div class="scd">Gemiddelde doorlooptijd tot eerste meetbare resultaten</div></div>
-      <div class="sc"><div class="scn">98<em style="font-size:1.2rem">%</em></div><div class="scd">Klanten zegt achteraf dat ze eerder hadden moeten beginnen</div></div>
+      <div class="sc"><div class="scn">98<em style="font-size:1.2rem">%</em></div><div class="scd">Klanten zeggen achteraf dat ze eerder hadden moeten beginnen</div></div>
       <div class="sc"><div class="scn">&#8364;40k</div><div class="scd">Gemiddelde jaarlijkse kostenpost van niet-geautomatiseerde processen</div></div>
       <div class="sc"><div class="scn">10&#8211;250</div><div class="scd">Medewerkers: de schaal waarop Morgen Consultancy werkt</div></div>
     </div>
   </div>
 </section>
 <section class="sm" id="co-aanpak">
-  <div class="reveal"><div class="slabel">Werkwijze</div><h2 class="stitle">VAN SCAN<br>TOT BORGING.<br><span style="color:var(--pink)">STAP VOOR STAP.</span></h2></div>
+  <div class="reveal"><div class="slabel">Werkwijze</div><h2 class="stitle">Van scan<br>tot borging.<br><span style="color:var(--pink)">Stap voor stap.</span></h2></div>
   <div class="wgrid reveal">
     <div class="wstep"><div class="wnum">01</div><div class="wtitle">Gratis digitale scan</div><p class="wbody">We starten met een gratis gesprek van 45 minuten. Luisteren, de situatie in kaart brengen en direct de grootste kansen benoemen. Geen verplichtingen.</p></div>
     <div class="wstep"><div class="wnum">02</div><div class="wtitle">Strategie en plan</div><p class="wbody">Een helder actieplan in gewone taal: wat doen we, in welke volgorde, wat kost het en wat levert het op. Geen rapport dat in een la verdwijnt.</p></div>
@@ -846,28 +1001,65 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <div class="wstep"><div class="wnum">04</div><div class="wtitle">Borging en doorgroei</div><p class="wbody">Het doel: kennis en werkwijze beklijven in de organisatie. Morgen is beschikbaar als de volgende stap gezet wordt, maar de organisatie staat op eigen benen.</p></div>
   </div>
 </section>
+<section class="sd" id="co-aanvraag">
+  <div class="reveal" style="margin-bottom:2rem">
+    <div class="slabel">Digitale scan aanvragen</div>
+    <h2 class="ptitle">Start met een scherpe eerste stap.</h2>
+    <p class="pbody" style="max-width:70ch">In 45 minuten brengen we de situatie in kaart en krijg je een concreet advies voor vervolg.</p>
+  </div>
+  <form class="form-wrap reveal" name="digitale-scan-aanvraag" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/consultancy/?p=consultancy&a=co-aanvraag">
+    <input type="hidden" name="form-name" value="digitale-scan-aanvraag">
+    <p style="display:none"><label>Laat dit veld leeg: <input name="bot-field"></label></p>
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="co-naam">Naam *</label>
+        <input id="co-naam" type="text" name="naam" required>
+      </div>
+      <div class="form-field">
+        <label for="co-email">E-mailadres *</label>
+        <input id="co-email" type="email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label for="co-bedrijf">Bedrijf *</label>
+        <input id="co-bedrijf" type="text" name="bedrijf" required>
+      </div>
+      <div class="form-field">
+        <label for="co-functie">Functie</label>
+        <input id="co-functie" type="text" name="functie">
+      </div>
+      <div class="form-field form-field-full">
+        <label for="co-uitdaging">Wat is nu je grootste digitale uitdaging? *</label>
+        <textarea id="co-uitdaging" name="uitdaging" required></textarea>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn-p">Verstuur aanvraag</button>
+    </div>
+    <p class="form-help">Liever mailen? <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
+  </form>
+</section>
 <section class="trust-section">
   <div class="trgst reveal">
     <div>
-      <div class="tquote">"Morgen liet zien dat we eigenlijk nog nooit serieus hadden nagedacht over hoe dit bedrijf slimmer kon werken. Dat inzicht alleen al was het waard."</div>
-      <div class="tauthor">Corn&#233; Mol, Directeur Saal Trappenfabriek Vermeulen (100+ medewerkers)</div>
+      <div class="tquote">Consultancy werkt het best als strategie en uitvoering gekoppeld blijven aan de dagelijkse praktijk van het team.</div>
+      <div class="tauthor">Aanpak gebaseerd op trajecten in het MKB</div>
     </div>
     <div>
       <div class="tlogos-label">Werkt samen met</div>
       <div class="tnums">
-        <div><div class="tn">9.8<em>/10</em></div><div class="tnl">Gemiddelde trainings&shy;beoordeling</div></div>
-        <div><div class="tn">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tnl">Alleen 5-sterren reviews op Google</div></div>
-        <div><div class="tn">850<em>+</em></div><div class="tnl">Medewerkers getraind</div></div>
+        <div><div class="tn">45<em>m</em></div><div class="tnl">Gratis digitale scan</div></div>
+        <div><div class="tn">10&#8211;250</div><div class="tnl">Typische organisatiegrootte</div></div>
+        <div><div class="tn">4</div><div class="tnl">Stappen van scan tot borging</div></div>
       </div>
     </div>
   </div>
 </section>
 <section class="cta-s" id="co-contact"><div class="corb1"></div><div class="corb2"></div><div class="cta-in reveal">
   <div class="cta-ey">Gratis digitale scan &#183; 45 minuten &#183; geen verplichtingen</div>
-  <h2 class="cta-h">WAAR BEGINT<br><span class="ol">DE DIGITALE</span><br>AGENDA?</h2>
+  <h2 class="cta-h">Waar begint<br><span class="ol">de digitale</span><br>agenda?</h2>
   <p class="cta-sub">Plan een gratis scan in. We brengen samen de situatie in kaart en benoemen direct de eerste concrete stap. Eerlijk en zonder verkoopverhaal.</p>
   <div class="cta-btns">
-    <a href="mailto:totmorgen@morgenacademy.nl" class="btn-w">Plan gratis digitale scan</a>
+    <button class="btn-w" onclick="scrollToId('co-aanvraag')">Plan gratis digitale scan</button>
     <button class="btn-o" onclick="nav('assistenten')">Bekijk onze digitale assistenten</button>
   </div>
 </div></section>
@@ -922,7 +1114,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   <div class="hi">
     <button class="back-btn" onclick="nav('home')">&#x2190; Terug naar home</button>
     <p class="eyebrow">Morgen Technology &#183; Digitale assistenten &#183; AI-agents &#183; Automatisering</p>
-    <h1 class="h1" style="animation:none;opacity:1">EEN BEDRIJF<br>DAT ZICHZELF<br><span class="pk">RUNT.</span></h1>
+    <h1 class="h1" style="animation:none;opacity:1">Een bedrijf<br>dat zichzelf<br><span class="pk">runt.</span></h1>
     <p class="hbody" style="animation:none;opacity:1">We automatiseren onze eigen processen. Niet omdat we niet van klantcontact houden, maar juist om meer échte tijd over te hebben voor het werk dat er toe doet: het MKB helpen groeien.</p>
     <div class="hctas" style="animation:none;opacity:1">
       <button class="btn-p" onclick="scrollToId('agents-overzicht')">Bekijk alle digitale assistenten</button>
@@ -936,7 +1128,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   <div class="agents-head reveal">
     <div class="agents-head-copy">
       <div class="slabel">Assistenten Van Morgen</div>
-      <h2 class="stitle">ONZE<br><span style="color:var(--pink)">SHOWCASE</span><br>IN DE PRAKTIJK.</h2>
+      <h2 class="stitle">Onze<br><span style="color:var(--pink)">showcase</span><br>in de praktijk.</h2>
       <p class="agents-lead">Hieronder staan de digitale assistenten die we gebouwd hebben voor onze eigen organisatie en voor klanten. Hiermee vullen we de originele assistentenpagina aan, zonder een aparte website-ervaring.</p>
     </div>
     <div class="agents-head-cta">
@@ -950,7 +1142,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 <section class="sd" id="da-aanvraag">
   <div class="reveal" style="margin-bottom:2rem">
     <div class="slabel">Vraag Eigen Assistent Aan</div>
-    <h2 class="ptitle">SAMEN BOUWEN WE<br>JOUW EIGEN<br><span style="color:var(--pink)">AI-ASSISTENT.</span></h2>
+    <h2 class="ptitle">Samen bouwen we<br>jouw eigen<br><span style="color:var(--pink)">AI-assistent.</span></h2>
     <p class="pbody" style="max-width:70ch">Vertel ons over je gewenste uitkomst, huidige proces en opdracht. Dan kijken we samen welke assistent het meeste oplevert voor jouw organisatie.</p>
   </div>
   <form class="da-form-wrap reveal" name="assistent-aanvraag" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/assistenten/?p=assistenten&a=da-aanvraag">
@@ -991,6 +1183,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
     <div style="margin-top:1.2rem;display:flex;justify-content:flex-end">
       <button type="submit" class="btn-p">Verstuur aanvraag</button>
     </div>
+    <p class="form-help">Liever mailen? <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
   </form>
 </section>
 
@@ -1024,7 +1217,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 <section class="sl">
   <div class="reveal">
     <div class="slabel dk">Wat zijn digitale assistenten?</div>
-    <h2 class="stitle" style="color:var(--black)">GEBOUWD<br>VOOR DE<br><span style="color:var(--purple)">PRAKTIJK.</span></h2>
+    <h2 class="stitle" style="color:var(--black)">Gebouwd<br>voor de<br><span style="color:var(--purple)">praktijk.</span></h2>
     <p style="font-family:var(--fb);color:#5a5878;max-width:55ch;margin-top:1.2rem;font-size:.95rem;line-height:1.8">Elke assistent is gebouwd voor een specifiek bedrijfsproces. Soms voor de eigen organisatie van Morgen, soms voor een klant. Allemaal zijn ze te zien op de showcasepagina.</p>
   </div>
   <div class="da-card-grid reveal">
@@ -1042,22 +1235,22 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 <section class="trust-section">
   <div class="trgst reveal">
     <div>
-      <div class="tquote">"Morgen liet zien dat we eigenlijk nog nooit serieus hadden nagedacht over hoe dit bedrijf slimmer kon werken. Dat inzicht alleen al was het waard."</div>
-      <div class="tauthor">Corn&#233; Mol, Directeur Saal Trappenfabriek Vermeulen (100+ medewerkers)</div>
+      <div class="tquote">De assistenten laten in de praktijk zien wat werkt: kleine processen verbeteren en daarna stap voor stap opschalen.</div>
+      <div class="tauthor">Showcases uit eigen organisatie en klantprojecten</div>
     </div>
     <div>
       <div class="tlogos-label">Werkt samen met</div>
       <div class="tnums">
-        <div><div class="tn">9.8<em>/10</em></div><div class="tnl">Gemiddelde trainings&shy;beoordeling</div></div>
-        <div><div class="tn">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tnl">Alleen 5-sterren reviews op Google</div></div>
-        <div><div class="tn">850<em>+</em></div><div class="tnl">Medewerkers getraind</div></div>
+        <div><div class="tn">17</div><div class="tnl">Digitale assistenten in de showcase</div></div>
+        <div><div class="tn">5</div><div class="tnl">Operationele domeinen</div></div>
+        <div><div class="tn">24/7</div><div class="tnl">Beschikbaarheid</div></div>
       </div>
     </div>
   </div>
 </section>
 <section class="cta-s"><div class="corb1"></div><div class="corb2"></div><div class="cta-in reveal">
   <div class="cta-ey">Maatwerk digitale assistenten &#183; voor de eigen organisatie</div>
-  <h2 class="cta-h">WELKE AGENT<br><span class="ol">BOUWT</span><br>MORGEN?</h2>
+  <h2 class="cta-h">Welke agent<br><span class="ol">bouwt</span><br>morgen?</h2>
   <p class="cta-sub">Plan een gesprek in. We kijken samen welk proces het meeste oplevert als het geautomatiseerd wordt, en of een bestaande assistent als startpunt kan dienen.</p>
   <div class="cta-btns">
     <a href="mailto:totmorgen@morgenacademy.nl" class="btn-w">Plan een gesprek</a>
@@ -1109,13 +1302,36 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 </footer>
 </div><!-- /page-assistenten -->
 
+<div class="page" id="page-assistent-detail">
+<section class="assistant-detail-page">
+  <button class="back-btn" onclick="nav('assistenten')">&#x2190; Terug naar alle assistenten</button>
+  <div class="assistant-detail-grid reveal">
+    <aside class="assistant-detail-card">
+      <div class="assistant-detail-avatar"><img id="assistant-detail-avatar" src="" alt=""></div>
+      <div class="assistant-detail-name" id="assistant-detail-name"></div>
+      <div class="assistant-detail-role" id="assistant-detail-role"></div>
+    </aside>
+    <article class="assistant-detail-content">
+      <h2 id="assistant-detail-title"></h2>
+      <p id="assistant-detail-bio"></p>
+      <ul class="assistant-detail-list" id="assistant-detail-points"></ul>
+      <div class="assistant-detail-actions">
+        <button class="btn-p" onclick="nav('assistenten','da-aanvraag')">Vraag eigen assistent aan</button>
+        <button class="btn-o" onclick="nav('assistenten')">Bekijk alle assistenten</button>
+      </div>
+      <p class="form-help">Vragen? Mail gerust: <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
+    </article>
+  </div>
+</section>
+</div><!-- /page-assistent-detail -->
+
 <div class="page" id="page-organisatie">
 <header class="hero">
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="hgrid"></div>
   <div class="hi">
     <button class="back-btn" onclick="nav('assistenten')">&#x2190; Terug naar assistenten</button>
     <p class="eyebrow">Morgen Technology &#183; AI organisatie &#183; Digitale teams</p>
-    <h1 class="h1">ONZE<br>AI<br><span class="pk">ORGANISATIE.</span></h1>
+    <h1 class="h1">Onze<br>AI<br><span class="pk">organisatie.</span></h1>
     <p class="hbody">Geen losse tools, maar een samenwerkend digitaal team. Elke assistent heeft een rol in het proces: van intake en sales tot operatie, content en opvolging.</p>
     <div class="hctas">
       <button class="btn-p" onclick="nav('assistenten')">Terug naar assistenten</button>
@@ -1128,7 +1344,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 <section class="sd" id="org-structuur">
   <div class="reveal" style="margin-bottom:2rem">
     <div class="slabel">Structuur</div>
-    <h2 class="ptitle">VAN LEAD TOT OPLEVERING<br>IN &#201;&#201;N DIGITALE KETEN.</h2>
+    <h2 class="ptitle">Van lead tot oplevering<br>in &#201;&#201;n digitale keten.</h2>
     <p class="pbody" style="max-width:70ch">Dit is hoe de assistenten als team samenwerken. Niet als gimmick, maar als vaste operationele laag onder de organisatie.</p>
   </div>
   <div class="org-map reveal">
@@ -1207,7 +1423,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   <div class="hi">
     <button class="back-btn" onclick="nav('home')">&#x2190; Terug naar home</button>
     <p class="eyebrow">Morgen Company &#183; Drie sprekers &#183; Drie invalshoeken &#183; Boek</p>
-    <h1 class="h1">INSPIRATIE<br>DIE SCHUURT<br><span class="pk">EN BEKLIJFT.</span></h1>
+    <h1 class="h1">Inspiratie<br>die schuurt<br><span class="pk">en beklijft.</span></h1>
     <p class="hbody">Drie sprekers. Drie perspectieven op AI. Van slimmer werken tot menselijkheid in een digitale wereld. Praktisch, energiek en direct toepasbaar. Morgen geeft keynotes en publiceerde een boek over dit thema.</p>
     <div class="hctas">
       <button class="btn-p" onclick="scrollToId('cp-keynote')">Keynote boeken</button>
@@ -1220,7 +1436,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 <section class="sd" id="cp-keynote">
   <div class="reveal" style="text-align:center;margin-bottom:3rem">
     <div class="slabel" style="justify-content:center">Drie sprekers, één richting</div>
-    <h2 class="stitle">INSPIRATIE<br>DIE<br><span style="color:var(--pink)">AANZET TOT ACTIE.</span></h2>
+    <h2 class="stitle">Inspiratie<br>die<br><span style="color:var(--pink)">aanzet tot actie.</span></h2>
     <p style="font-family:var(--fb);color:var(--lgrey);max-width:55ch;margin:1.2rem auto 0;font-size:.95rem;line-height:1.8">AI verandert hoe we werken, leren en leven. De drie sprekers van Morgen brengen elk hun eigen perspectief op die transitie. Geen hype, geen theorie: inspiratie die schuurt, prikkelt en aanzet tot actie.</p>
   </div>
   <div class="speaker-grid reveal">
@@ -1290,7 +1506,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
   <div class="book-grid reveal">
     <div>
       <div class="slabel dk">Het boek</div>
-      <h2 class="stitle" style="color:var(--black)">GESCHREVEN<br>VANUIT DE<br><span style="color:var(--purple)">PRAKTIJK.</span></h2>
+      <h2 class="stitle" style="color:var(--black)">Geschreven<br>vanuit de<br><span style="color:var(--purple)">praktijk.</span></h2>
       <p style="font-family:var(--fb);color:#5a5878;margin-top:1.2rem;font-size:.95rem;line-height:1.8;max-width:45ch">Geen theorie, maar herkenbare situaties en concrete inzichten over wat AI echt verandert voor organisaties, teams en mensen. Geschreven vanuit de praktijk van MKB-trajecten.</p>
       <p style="font-family:var(--fb);color:#5a5878;margin-top:.8rem;font-size:.95rem;line-height:1.8;max-width:45ch">Ideaal als startpunt voor een team dat over AI wil nadenken, als cadeau voor een directeur die wil snappen wat er echt speelt, of als onderbouwing voor een digitaliseringsagenda.</p>
       <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
@@ -1327,7 +1543,7 @@ footer{background:#08081c;border-top:1px solid rgba(200,80,216,.15);padding:5rem
 
 <section class="cta-s" id="cp-contact"><div class="corb1"></div><div class="corb2"></div><div class="cta-in reveal">
   <div class="cta-ey">Keynote &#183; boek &#183; of een combinatie</div>
-  <h2 class="cta-h">HET GESPREK<br><span class="ol">STARTEN</span><br>MORGEN?</h2>
+  <h2 class="cta-h">Het gesprek<br><span class="ol">starten</span><br>morgen?</h2>
   <p class="cta-sub">Keynote boeken voor een event, boek bestellen voor het team, of een combinatie? Mail direct en de planning is snel geregeld.</p>
   <div class="cta-btns">
     <a href="mailto:totmorgen@morgenacademy.nl?subject=Keynote boeken" class="btn-w">Keynote boeken</a>
@@ -1392,6 +1608,9 @@ document.addEventListener('mouseover',e=>{
 const navEl=document.getElementById('mainNav');
 window.addEventListener('scroll',()=>navEl.classList.toggle('scrolled',scrollY>60));
 
+function toggleNav(){document.body.classList.toggle('nav-open');}
+function closeNav(){document.body.classList.remove('nav-open');}
+
 const validPages=new Set(['home','academy','technology','consultancy','assistenten','organisatie','company']);
 const pagePaths={
   home:'/',
@@ -1399,21 +1618,22 @@ const pagePaths={
   technology:'/technology',
   consultancy:'/consultancy',
   assistenten:'/assistenten',
+  'assistent-detail':'/assistenten',
   organisatie:'/organisatie',
   company:'/company'
 };
 
 function nav(page,anchor,options={}){
-  const {updateHistory=true,replaceHistory=false}=options;
+  const {updateHistory=true,replaceHistory=false,customPath=null,activeNav=null}=options;
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   const t=document.getElementById('page-'+page);
   if(t)t.classList.add('active');
   window.scrollTo(0,0);
   document.querySelectorAll('.nav-links a[data-page]').forEach(a=>a.classList.remove('active'));
-  const al=document.querySelector('.nav-links a[data-page="'+page+'"]');
+  const al=document.querySelector('.nav-links a[data-page="'+(activeNav||page)+'"]');
   if(al)al.classList.add('active');
   if(updateHistory){
-    const nextPath=pagePaths[page] || '/';
+    const nextPath=customPath || pagePaths[page] || '/';
     const nextUrl=nextPath+(anchor?`#${anchor}`:'');
     const currentUrl=window.location.pathname+(window.location.hash||'');
     if(replaceHistory){
@@ -1423,6 +1643,7 @@ function nav(page,anchor,options={}){
     }
   }
   if(anchor){setTimeout(()=>{const el=document.getElementById(anchor);if(el)el.scrollIntoView({behavior:'smooth'});},80);}
+  closeNav();
   setTimeout(initReveal,100);
 }
 
@@ -1461,6 +1682,84 @@ const assistantShowcase=[
   {name:'Jeroen',title:'Parkeerassistent Den Bosch',bio:'Geeft de slimste parkeeropties op basis van actuele informatie.',slug:'jeroen',tags:['live-data','advies','platform']},
   {name:'Driek',title:'WeekendGuide Bouwer',bio:'Zet ruwe eventteksten om naar nette web-HTML in vaste stijl.',slug:'driek',tags:['events','publicatie','workflow']}
 ];
+
+const assistantTagContext={
+  'spraak':'Werkt met spraak en tekst als invoer, zodat teams sneller kunnen schakelen.',
+  'sales':'Ondersteunt salesprocessen met kwalificatie, opvolging en planning.',
+  'automatisering':'Neemt repetitieve handelingen over en voorkomt handmatig werk.',
+  'support':'Geeft direct antwoord op veelvoorkomende vragen.',
+  'rag-docs':'Gebruikt bestaande documenten als kennisbron.',
+  'afbeelding':'Kan beeldinput verwerken in het proces.',
+  'workflow':'Verbindt losse stappen tot een werkbare keten.',
+  'validatie':'Checkt invoer en bewaakt kwaliteit.',
+  'database':'Werkt met gestructureerde data en bronbestanden.',
+  'render':'Levert visuele output op basis van briefing of bronmateriaal.',
+  'interieur':'Specifiek gericht op interieurcontext en presentaties.',
+  'samenvatten':'Maakt besluiten en actiepunten direct inzichtelijk.',
+  'notificaties':'Stuurt reminders en meldingen op de juiste momenten.',
+  'projectmanagement':'Ondersteunt planning, afstemming en opvolging.',
+  'events':'Helpt bij event-content en publicatieprocessen.',
+  'vragenflow':'Stuurt gesprekken met logische vervolgstappen.',
+  'training':'Ondersteunt leren, oefenen en terugkoppeling.',
+  'oefeningen':'Maakt en beoordeelt opdrachten op maat.',
+  'semantisch-zoeken':'Zoekt op betekenis in plaats van losse zoekwoorden.',
+  'content':'Levert content-output in afgesproken stijl.',
+  'advies':'Geeft gerichte voorstellen op basis van context.',
+  'startup':'Ondersteunt validatie en opbouw van nieuwe initiatieven.',
+  'coaching':'Helpt met reflectie en persoonlijke ontwikkeling.',
+  'tekst':'Zet input om naar bruikbare tekstoutput.',
+  'planning':'Bewaakt voortgang en deadlines.',
+  'monitoring':'Signaleert afwijkingen vroegtijdig.',
+  'marketing':'Ondersteunt campagnes en zichtbaarheid.',
+  'visuals':'Levert ondersteunende visuele content.',
+  'seo':'Verbetert vindbaarheid met behoud van tone-of-voice.',
+  'integratie':'Koppelt processen en systemen slim aan elkaar.',
+  'slack':'Integreert output direct in teamcommunicatie.',
+  'audio':'Verwerkt audio naar bruikbare tekst.',
+  'documentatie':'Legt informatie automatisch vast.',
+  'live-data':'Werkt met actuele gegevens uit externe bronnen.',
+  'platform':'Ondersteunt interactie binnen bestaande platformen.',
+  'publicatie':'Maakt content publiceerbaar in vaste formats.'
+};
+
+const assistantBySlug=Object.fromEntries(assistantShowcase.map(a=>[a.slug,a]));
+let activeAssistantSlug=null;
+
+function renderAssistantDetail(slug){
+  const assistant=assistantBySlug[slug];
+  if(!assistant)return false;
+  activeAssistantSlug=slug;
+  const detailTitle=document.getElementById('assistant-detail-title');
+  const detailName=document.getElementById('assistant-detail-name');
+  const detailRole=document.getElementById('assistant-detail-role');
+  const detailBio=document.getElementById('assistant-detail-bio');
+  const detailAvatar=document.getElementById('assistant-detail-avatar');
+  const detailPoints=document.getElementById('assistant-detail-points');
+  if(!detailTitle || !detailName || !detailRole || !detailBio || !detailAvatar || !detailPoints)return false;
+
+  detailTitle.textContent=`${assistant.name} in de praktijk`;
+  detailName.textContent=assistant.name;
+  detailRole.textContent=assistant.title;
+  detailBio.textContent=assistant.bio;
+  detailAvatar.src=`/docs/assistenten/avatars/${assistant.slug}.png`;
+  detailAvatar.alt=assistant.name;
+  detailPoints.innerHTML=assistant.tags.map(tag=>`<li>${assistantTagContext[tag] || `Toepassing binnen ${tag}`}</li>`).join('');
+  return true;
+}
+
+function openAssistant(slug,options={}){
+  if(!assistantBySlug[slug]){
+    nav('assistenten',undefined,{...options,updateHistory:false});
+    return false;
+  }
+  renderAssistantDetail(slug);
+  nav('assistent-detail',undefined,{
+    ...options,
+    activeNav:'assistenten',
+    customPath:`/assistenten/${slug}`
+  });
+  return true;
+}
 
 const organizationMap={
   executive:{name:'Tom',role:'Chief Project Officer',badge:'Executive',slug:'tom'},
@@ -1534,7 +1833,7 @@ function renderAssistantShowcase(){
       <div class="agent-show-tags">
         ${a.tags.map(tag=>`<span class="agent-show-tag">${tag}</span>`).join('')}
       </div>
-      <a class="agent-show-link" href="/assistenten/${a.slug}/">Ontdek ${a.name}</a>
+      <a class="agent-show-link" href="/assistenten/${a.slug}/" onclick="event.preventDefault();openAssistant('${a.slug}')">Ontdek ${a.name}</a>
     </article>
   `).join('');
 }
@@ -1573,7 +1872,7 @@ function renderOrganizationMap(){
       </div>
       <div class="org-dept-body">
         ${d.members.map(m=>`
-          <a class="org-member" href="/assistenten/${m.slug}/">
+          <a class="org-member" href="/assistenten/${m.slug}/" onclick="event.preventDefault();openAssistant('${m.slug}')">
             <img src="/docs/assistenten/avatars/${m.slug}.png" alt="${m.name}">
             <div>
               <div class="org-member-name">${m.name}</div>
@@ -1600,7 +1899,13 @@ function applyRouteFromQuery(){
 
 function applyRouteFromPath(){
   const path=window.location.pathname.replace(/\/+$/,'') || '/';
-  const firstSegment=path==='/' ? 'home' : path.split('/')[1];
+  const segments=path==='/' ? [] : path.split('/').filter(Boolean);
+  if(segments[0]==='assistenten' && segments[1]){
+    if(openAssistant(segments[1],{updateHistory:false}))return true;
+    nav('assistenten',undefined,{updateHistory:false});
+    return true;
+  }
+  const firstSegment=segments[0] || 'home';
   if(!validPages.has(firstSegment))return false;
   const anchor=window.location.hash?window.location.hash.slice(1):undefined;
   nav(firstSegment,anchor,{updateHistory:false});
@@ -1627,6 +1932,14 @@ initReveal();
 if(!applyRouteFromQuery() && !applyRouteFromPath())nav('home',undefined,{updateHistory:false});
 window.addEventListener('popstate',()=>{
   if(!applyRouteFromPath())nav('home',undefined,{updateHistory:false});
+});
+window.addEventListener('resize',()=>{if(window.innerWidth>640)closeNav();});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',closeNav));
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    closeNav();
+    closeTrainingPopup();
+  }
 });
 
 document.addEventListener('click',e=>{
