@@ -16,7 +16,7 @@
 
   /* Tekst hiërarchie */
   --text-primary:   #F0ECF5;
-  --text-secondary: #C4B5D8;
+  --text-secondary: #D8CCEC;   /* was #C4B5D8, iets helderder op paarse kaarten */
   --text-muted:     #7A6B8E;
 
   /* Glassmorphism */
@@ -375,7 +375,7 @@ nav.scrolled {
 .lcard-label {
   font-size: .62rem; font-weight: 700;
   letter-spacing: .2em; text-transform: uppercase;
-  color: var(--text-muted); margin-bottom: 1.4rem;
+  color: var(--text-secondary); margin-bottom: 1.4rem;
 }
 .licon { width: 46px; height: 46px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; margin-bottom: 1.2rem; }
 .ib { background: linear-gradient(135deg, var(--purple), #7B4DAE); }
@@ -389,7 +389,7 @@ nav.scrolled {
 }
 .ltag {
   font-size: .67rem; font-weight: 600;
-  letter-spacing: .12em; color: var(--text-muted);
+  letter-spacing: .12em; color: var(--text-secondary);
   text-transform: uppercase; margin-bottom: 1rem;
 }
 .ldesc { font-size: .88rem; line-height: 1.75; color: var(--text-secondary); flex-grow: 1; margin-bottom: 1.4rem; }
@@ -400,7 +400,7 @@ nav.scrolled {
   padding: .8rem 1rem; margin-bottom: 1.4rem;
   box-shadow: inset 0 1px 0 rgba(155, 111, 207, 0.1);
 }
-.lfor-t { font-size: .6rem; font-weight: 700; letter-spacing: .18em; color: var(--text-muted); text-transform: uppercase; margin-bottom: .25rem; }
+.lfor-t { font-size: .6rem; font-weight: 700; letter-spacing: .18em; color: var(--text-secondary); text-transform: uppercase; margin-bottom: .25rem; }
 .lfor-v { font-size: .85rem; color: var(--text-secondary); line-height: 1.5; }
 .llink {
   font-weight: 600; font-size: .85rem;
@@ -409,10 +409,10 @@ nav.scrolled {
   margin-top: auto; border: none; background: none; text-decoration: none;
 }
 .llink:hover { gap: .7rem; }
-.ll-b { color: var(--purple-light); }
-.ll-p { color: var(--purple-light); }
+.ll-b { color: var(--white); }
+.ll-p { color: var(--white); }
 .ll-k { color: var(--orange); }
-.ll-g { color: var(--green); }
+.ll-g { color: #2dd4a0; }
 
 /* ── 14. Werkwijze stappen (.wstep) ── */
 .wgrid {
@@ -464,12 +464,12 @@ nav.scrolled {
   padding: .3rem .7rem; border-radius: 100px;
   display: inline-block; margin-bottom: .9rem;
 }
-.tl-s { background: rgba(155,111,207,.15); border: 1px solid rgba(155,111,207,.3); color: var(--purple-light); }
-.tl-a { background: rgba(91,45,142,.2); border: 1px solid rgba(91,45,142,.4); color: var(--purple-light); }
-.tl-e { background: var(--orange-light); border: 1px solid rgba(216,254,86,.3); color: var(--orange); }
+.tl-s { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.28); color: var(--text-primary); }
+.tl-a { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.20); color: var(--text-secondary); }
+.tl-e { background: rgba(216,254,86,.18); border: 1px solid rgba(216,254,86,.4); color: var(--orange); }
 .ttitle { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: .5rem; line-height: 1.3; }
 .tdesc { font-size: .85rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem; }
-.tmeta { display: flex; gap: 1rem; font-size: .72rem; color: var(--text-muted); font-weight: 500; }
+.tmeta { display: flex; gap: 1rem; font-size: .72rem; color: var(--text-secondary); font-weight: 500; }
 
 /* ── 16. Situatiekaarten ── */
 .sgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 3.5rem; }
@@ -857,12 +857,12 @@ footer {
 .org-map { display: flex; flex-direction: column; align-items: center; }
 .org-line { width: 2px; height: 40px; background: var(--glass-border); }
 .org-node {
-  background: var(--glass-bg);
+  background: var(--card-bg-strong);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius);
-  box-shadow: inset 0 1px 0 var(--glass-highlight);
+  box-shadow: var(--shadow), inset 0 1px 0 var(--card-highlight);
   padding: 1rem 1.1rem; text-align: center;
 }
 .org-node.primary {
@@ -885,12 +885,13 @@ footer {
 .org-managers .org-node-avatar { width: 70px; height: 70px; }
 .org-departments { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; width: 100%; margin-top: 2rem; }
 .org-dept {
-  background: var(--glass-bg);
+  background: var(--card-bg-strong);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  box-shadow: var(--shadow);
 }
 .org-dept-head {
   padding: 1rem;
@@ -921,12 +922,12 @@ footer {
 }
 .org-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
 .org-stat {
-  background: var(--glass-bg);
+  background: var(--card-bg-strong);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius);
-  box-shadow: inset 0 1px 0 var(--glass-highlight);
+  box-shadow: var(--shadow), inset 0 1px 0 var(--card-highlight);
   padding: 1rem; text-align: center;
 }
 .org-stat-n { font-size: 2.4rem; line-height: 1; color: var(--white); font-weight: 900; }
