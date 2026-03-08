@@ -217,6 +217,7 @@ nav.scrolled {
   opacity: 0; animation: up .8s .5s forwards;
 }
 .h1 .pk { color: var(--orange); }
+.h1 .ol { -webkit-text-stroke: 2px rgba(255,255,255,.35); color: transparent; }
 
 .hbody {
   font-size: 1.05rem; line-height: 1.7;
