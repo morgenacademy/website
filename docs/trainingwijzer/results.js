@@ -40,6 +40,7 @@ export function renderResult(route) {
             ${followUp ? `<div class="follow-up-note">${followUp}</div>` : ''}
 
             <div class="training-cta">
+              <a href="javascript:void(0)" onclick="openTrainingPopup('${route.key === 'team' ? 'teamworkshop' : route.key}')" class="btn btn-secondary">Meer over deze training</a>
               <a href="javascript:void(0)" onclick="nav('home','contact')" class="btn btn-primary">Plan een kennismakingsgesprek</a>
               <a href="mailto:totmorgen@morgenacademy.nl" class="btn btn-secondary">Stuur ons een bericht</a>
             </div>
@@ -76,7 +77,7 @@ function renderIndividualResult(route) {
       </div>
 
       <div class="result-cta result-cta-centered">
-        <a href="javascript:void(0)" onclick="openTrainingPopup()" class="btn btn-primary">Bekijk online trainingen</a>
+        <a href="javascript:void(0)" onclick="openTrainingPopup('basis')" class="btn btn-primary">Bekijk online trainingen</a>
         <a href="mailto:totmorgen@morgenacademy.nl" class="btn btn-secondary">Stuur ons een bericht</a>
       </div>
 
@@ -152,14 +153,17 @@ function renderFollowUpPaths() {
     {
       title: 'Workflows & Agents',
       desc: 'Automatiseer processen tussen jullie systemen',
+      popupKey: 'workflows',
     },
     {
       title: 'Tool Building',
       desc: 'Bouw eigen tools voor het team',
+      popupKey: 'toolbuilding',
     },
     {
       title: 'Team-workshop',
       desc: 'Pak als team jullie werkproces aan',
+      popupKey: 'teamworkshop',
     },
   ];
 
@@ -170,7 +174,7 @@ function renderFollowUpPaths() {
         ${paths
           .map(
             (p) => `
-          <div class="follow-up-card">
+          <div class="follow-up-card" onclick="openTrainingPopup('${p.popupKey}')" style="cursor:pointer">
             <div class="follow-up-card-title">${p.title}</div>
             <div class="follow-up-card-desc">${p.desc}</div>
           </div>
