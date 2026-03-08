@@ -440,7 +440,21 @@ nav.scrolled {
 .wbody { font-size: .85rem; color: var(--text-secondary); line-height: 1.7; }
 
 /* ── 15. Trainingskaarten (.tcard) ── */
-.trgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 3rem; }
+.tr-filter {
+  display: flex; gap: .5rem; margin-top: 2rem; justify-content: center;
+}
+.tr-filter-btn {
+  font-family: var(--fu); font-size: .72rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: .6rem 1.4rem; border-radius: 100px; cursor: pointer;
+  border: 1px solid var(--glass-border); background: rgba(255,255,255,.08);
+  color: var(--white); transition: var(--transition);
+}
+.tr-filter-btn:hover { border-color: var(--glass-border-hover); color: var(--white); }
+.tr-filter-btn.active {
+  background: var(--white); color: #1a1225; border-color: var(--white);
+}
+.trgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 1.5rem; }
 .trgrid .tcard:last-child { grid-column: 2 / -1; }
 
 .tcard {

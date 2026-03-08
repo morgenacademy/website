@@ -339,33 +339,37 @@
     <h2 class="stitle" style="color:var(--black)">Elk niveau.<br>Elke groep.<br><span style="color:var(--purple-light)">Een lijn.</span></h2>
     <p style="font-family:var(--fb);color:var(--text-secondary);max-width:55ch;margin-top:1.2rem;font-size:.95rem;line-height:1.8">Van bewustwording tot het bouwen van werkende automatiseringen. Elke training staat op zichzelf of maakt deel uit van het volledige leerpad.</p>
   </div>
-  <div class="trgrid reveal">
-    <div class="tcard" onclick="openTrainingPopup('basis')" style="cursor:pointer;border-color:rgba(200,80,216,.3);box-shadow:0 4px 20px rgba(200,80,216,.1)">
-      <span class="tlev tl-s">Kennis &amp; skills &#183; Online &#183; Direct beschikbaar</span>
+  <div class="tr-filter reveal">
+    <button class="tr-filter-btn active" data-filter="incompany" onclick="filterTrainings('incompany')">Incompany</button>
+    <button class="tr-filter-btn" data-filter="online" onclick="filterTrainings('online')">Online &#183; Direct starten</button>
+  </div>
+  <div class="trgrid reveal" id="trgrid">
+    <div class="tcard" data-format="both" onclick="openTrainingPopup('basis')" style="cursor:pointer;border-color:rgba(200,80,216,.3);box-shadow:0 4px 20px rgba(200,80,216,.1)">
+      <span class="tlev tl-s">Kennis &amp; skills</span>
       <div class="ttitle">Basistraining AI</div>
       <p class="tdesc">Van kennismaking tot de eerste eigen AI-assistent. Begrijp het AI-landschap, leer effectief prompten en bouw je eerste eigen Custom GPT of Gem.</p>
       <div class="tmeta"><span>&#8987; 2 uur</span><span>&#128101; Online &amp; incompany</span></div>
       <div style="margin-top:1rem;font-family:var(--fu);font-size:.75rem;font-weight:700;color:var(--orange)">&#x25B6; Meer info &amp; direct kopen</div>
     </div>
-    <div class="tcard" onclick="openTrainingPopup('workflows')" style="cursor:pointer">
+    <div class="tcard" data-format="incompany" onclick="openTrainingPopup('workflows')" style="cursor:pointer">
       <span class="tlev tl-a">Automatisering</span>
       <div class="ttitle">Workflows &amp; Agents</div>
       <p class="tdesc">Laat jullie systemen samenwerken — met en zonder AI. Bouw workflows met Make, n8n of Zapier en leer wanneer je automatisering of agentic AI inzet.</p>
       <div class="tmeta"><span>&#8987; 2 uur</span><span>&#128101; Incompany</span></div>
     </div>
-    <div class="tcard" onclick="openTrainingPopup('toolbuilding')" style="cursor:pointer">
+    <div class="tcard" data-format="incompany" onclick="openTrainingPopup('toolbuilding')" style="cursor:pointer">
       <span class="tlev tl-a">Bouwen</span>
       <div class="ttitle">Tool Building</div>
       <p class="tdesc">Bouw eigen tools — van idee naar werkend prototype. Maak eigen tools met Loveable, Cursor of Antigravity. Geen programmeerervaring nodig.</p>
       <div class="tmeta"><span>&#8987; 2 uur</span><span>&#128101; Incompany</span></div>
     </div>
-    <div class="tcard" onclick="openTrainingPopup('teamworkshop')" style="cursor:pointer">
+    <div class="tcard" data-format="incompany" onclick="openTrainingPopup('teamworkshop')" style="cursor:pointer">
       <span class="tlev tl-e">Strategie &amp; proces</span>
       <div class="ttitle">Team-workshop</div>
       <p class="tdesc">Samen als team jullie werkproces slimmer maken. Breng processen in kaart, ontdek waar AI het verschil maakt en ga naar huis met een concreet verbeterplan.</p>
       <div class="tmeta"><span>&#8987; Halve dag</span><span>&#128101; Incompany</span></div>
     </div>
-    <div class="tcard" style="border-color:rgba(216,254,86,.35);box-shadow:0 4px 20px rgba(216,254,86,.08)">
+    <div class="tcard" data-format="incompany" style="border-color:rgba(216,254,86,.35);box-shadow:0 4px 20px rgba(216,254,86,.08)">
       <span class="tlev" style="background:var(--orange);color:#0C0818">&#9733; Volledig leerpad</span>
       <div class="ttitle">Van bewustwording tot implementatie</div>
       <p class="tdesc">Alle trainingen als incompany traject van zes tot twaalf maanden, inclusief begeleiding vanuit Morgen Consultancy en het boek <em>De Digitale Collega</em>. Voor organisaties die echt doorpakken.</p>
@@ -1377,7 +1381,7 @@ function scrollToId(id){const el=document.getElementById(id);if(el)el.scrollInto
 
 const trainingData={
   basis:{
-    badge:'Kennis & skills \u00b7 Online \u00b7 Direct beschikbaar',
+    badge:'Kennis & skills \u00b7 Online & incompany',
     title:'Basistraining AI',
     intro:'Van bewustwording tot je eerste eigen assistent. In twee uur begrijp je het AI-landschap, leer je effectief prompten en bouw je je eerste Custom GPT of Gem \u2014 zonder technische voorkennis.',
     sections:[
@@ -1429,6 +1433,20 @@ const trainingData={
     cta:'Workshop aanvragen'
   }
 };
+
+function filterTrainings(mode){
+  document.querySelectorAll('.tr-filter-btn').forEach(b=>{
+    b.classList.toggle('active',b.dataset.filter===mode);
+  });
+  document.querySelectorAll('#trgrid .tcard').forEach(c=>{
+    const fmt=c.dataset.format;
+    if(mode==='online'){
+      c.style.display=(fmt==='both')?'':'none';
+    } else {
+      c.style.display='';
+    }
+  });
+}
 
 function openTrainingPopup(key){
   key=key||'basis';
