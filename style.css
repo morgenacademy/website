@@ -522,6 +522,45 @@ nav.scrolled {
 .slink-k { color: var(--orange); }
 .slink-g { color: #2dd4a0; }
 
+/* ── 16b. Trainingswijzer banner ── */
+.tw-banner {
+  padding: 4rem 4rem;
+  position: relative;
+  z-index: 1;
+}
+.tw-banner-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(135deg, var(--purple), #3a1a5e);
+  border-radius: 1.5rem;
+  padding: 3.5rem 3rem;
+  border: 1px solid rgba(155, 111, 207, .25);
+  box-shadow: 0 0 60px rgba(91, 45, 142, .3);
+}
+.tw-banner-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--white);
+  margin: .75rem 0 1rem;
+}
+.tw-banner-sub {
+  font-family: var(--fb);
+  font-size: .93rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, .75);
+  max-width: 44ch;
+  margin: 0 auto;
+}
+.tw-banner-time {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: .78rem;
+  color: rgba(255, 255, 255, .5);
+  font-family: var(--fb);
+}
+
 /* ── 17. Trust sectie ── */
 .trust-section { padding: 5rem 4rem; position: relative; z-index: 1; }
 .trgst { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
@@ -1080,7 +1119,8 @@ footer {
 }
 @media (max-width: 1024px) {
   nav { padding: 1.2rem 2rem; }
-  .sd, .sl, .sm, .trust-section, .da-hero, .agents-overview, .assistant-detail-page { padding: 4rem 2rem; }
+  .sd, .sl, .sm, .trust-section, .tw-banner, .da-hero, .agents-overview, .assistant-detail-page { padding: 4rem 2rem; }
+  .tw-banner-inner { padding: 2.5rem 1.5rem; }
   .hero { padding: 7rem 2rem 3rem; }
   .pgrid, .trgst, .lbintro, .book-grid, .da-grid, .da-form-grid, .assistant-detail-grid { grid-template-columns: 1fr; gap: 3rem; }
   .adet-hero { grid-template-columns: 1fr; gap: 1.5rem; }
