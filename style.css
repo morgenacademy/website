@@ -441,6 +441,7 @@ nav.scrolled {
 
 /* ── 15. Trainingskaarten (.tcard) ── */
 .trgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 3rem; }
+.trgrid .tcard:last-child { grid-column: 1 / -1; text-align: center; }
 
 .tcard {
   background: var(--card-bg-strong);
