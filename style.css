@@ -1000,6 +1000,29 @@ footer {
   padding: 3rem; max-width: 500px; width: 90%;
   position: relative;
 }
+.popup-training-detail {
+  max-width: 620px; max-height: 85vh; overflow-y: auto;
+  scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.15) transparent;
+}
+.popup-training-detail::-webkit-scrollbar { width: 6px; }
+.popup-training-detail::-webkit-scrollbar-track { background: transparent; }
+.popup-training-detail::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 3px; }
+.tp-sections { display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: 1.5rem; }
+.tp-section h4 {
+  font-family: var(--fu); font-size: .82rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .08em;
+  color: var(--orange); margin-bottom: .4rem;
+}
+.tp-section p {
+  font-size: .85rem; color: var(--text-secondary); line-height: 1.75; margin: 0;
+}
+.tp-quote blockquote {
+  border-left: 3px solid var(--pink);
+  padding: .8rem 1.2rem; margin: 0 0 1.5rem 0;
+  font-size: .82rem; font-style: italic;
+  color: rgba(255,255,255,.7); line-height: 1.7;
+  background: rgba(200,80,216,.06); border-radius: 0 var(--radius) var(--radius) 0;
+}
 .popup-close { position: absolute; top: 1rem; right: 1.2rem; font-size: .82rem; font-weight: 700; color: var(--text-muted); cursor: pointer; border: none; background: none; transition: color .2s; }
 .popup-close:hover { color: var(--white); }
 .popup-badge {
