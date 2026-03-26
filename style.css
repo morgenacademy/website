@@ -228,7 +228,7 @@ nav.scrolled {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 62% center;
+  object-position: 62% 38%;
   display: block;
   opacity: .72;
   filter: saturate(1.04) contrast(1.02);
@@ -238,7 +238,7 @@ nav.scrolled {
     min-height: auto;
   }
   .academy-hero-media img {
-    object-position: 66% center;
+    object-position: 66% 34%;
     opacity: .56;
   }
 }
@@ -1497,16 +1497,27 @@ footer {
 }
 .academy-online-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
-  gap: 2.5rem;
-  align-items: center;
+  gap: 2.25rem;
 }
 .academy-online-copy .ptitle {
-  max-width: 12ch;
+  max-width: 14ch;
+}
+.academy-online-copy .pbody {
+  max-width: 62ch;
+}
+.academy-online-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.9fr) minmax(320px, .95fr);
+  gap: 2rem;
+  align-items: stretch;
 }
 .academy-online-card {
   max-width: none;
-  margin: 2rem 0 0;
+  margin: 0;
+  padding: 2rem;
+  background: rgba(255,255,255,.08);
+  border-color: rgba(182,154,224,.18);
+  box-shadow: 0 14px 30px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.08);
 }
 .academy-online-photo {
   margin: 0;
@@ -1524,9 +1535,9 @@ footer {
   display: block;
 }
 .academy-online-photo-single {
-  align-self: center;
-  justify-self: end;
-  width: min(100%, 28rem);
+  align-self: stretch;
+  justify-self: stretch;
+  width: 100%;
 }
 .academy-online-photo-single img {
   object-position: center 56%;
@@ -1762,7 +1773,7 @@ footer {
   .home-company-band-visual { align-items: flex-start; }
   .home-company-band-people { text-align: left; }
   .home-company-band-tags { justify-content: flex-start; }
-  .academy-online-layout { grid-template-columns: 1fr; }
+  .academy-online-body { grid-template-columns: 1fr; }
   .company-hero { min-height: 82vh; }
   .company-hero-media video { object-position: 72% center; opacity: .64; }
   .company-hero-media::after {
