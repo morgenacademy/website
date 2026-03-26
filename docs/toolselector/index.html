@@ -216,20 +216,31 @@
       }
 
       .route-link {
-        display: block;
-        padding: 24px 26px 22px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 236px;
+        padding: 26px 26px 22px;
         border-radius: 24px;
         text-decoration: none;
         color: inherit;
-        background: rgba(20, 13, 33, 0.78);
+        background:
+          linear-gradient(180deg, rgba(25, 17, 40, 0.92), rgba(17, 11, 29, 0.96));
         border: 1px solid rgba(230, 222, 244, 0.12);
-        transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.06),
+          0 18px 36px rgba(4, 3, 10, 0.18);
+        transition: transform 140ms ease, border-color 140ms ease, background 140ms ease, box-shadow 140ms ease;
       }
 
       .route-link:hover {
         transform: translateY(-2px);
         border-color: rgba(215, 255, 55, 0.42);
-        background: rgba(24, 16, 39, 0.92);
+        background:
+          linear-gradient(180deg, rgba(29, 20, 46, 0.96), rgba(20, 13, 34, 0.98));
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.08),
+          0 24px 42px rgba(4, 3, 10, 0.24);
       }
 
       .route-label {
@@ -247,8 +258,40 @@
         border: 1px solid rgba(215, 255, 55, 0.26);
       }
 
+      .route-link > .route-label {
+        position: absolute;
+        top: 22px;
+        left: 22px;
+        margin: 0;
+      }
+
+      .route-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        min-height: 118px;
+        margin: 18px 0 18px;
+        color: rgba(245, 242, 251, 0.86);
+      }
+
+      .route-icon svg {
+        width: 94px;
+        height: 94px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 1.7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.22));
+      }
+
+      .route-copy {
+        margin-top: auto;
+      }
+
       .route-link h3 {
-        margin: 0 0 8px;
+        margin: 0 0 10px;
         font-size: 1.55rem;
         line-height: 1.05;
         letter-spacing: -0.035em;
@@ -504,6 +547,25 @@
         .route-hint {
           margin-left: 0;
         }
+
+        .route-link {
+          min-height: auto;
+        }
+
+        .route-link > .route-label {
+          top: 18px;
+          left: 18px;
+        }
+
+        .route-icon {
+          min-height: 92px;
+          margin: 10px 0 14px;
+        }
+
+        .route-icon svg {
+          width: 78px;
+          height: 78px;
+        }
       }
     </style>
   </head>
@@ -552,23 +614,91 @@
             <div class="route-picker">
               <a class="route-link" href="#route-a">
                 <span class="route-label">A</span>
-                <h3>Algemene software, app of site</h3>
-                <p>Van MVP en landingspagina tot serieuzer softwareproject.</p>
+                <div class="route-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64">
+                    <rect x="11" y="10" width="42" height="44" rx="6"></rect>
+                    <line x1="11" y1="20" x2="53" y2="20"></line>
+                    <circle cx="18" cy="15" r="1.6"></circle>
+                    <circle cx="24" cy="15" r="1.6"></circle>
+                    <circle cx="30" cy="15" r="1.6"></circle>
+                    <rect x="18" y="28" width="14" height="11" rx="2"></rect>
+                    <path d="M18 39l14-11"></path>
+                    <path d="M32 39L18 28"></path>
+                    <rect x="37" y="28" width="9" height="3" rx="1.5"></rect>
+                    <rect x="37" y="34" width="9" height="3" rx="1.5"></rect>
+                    <rect x="18" y="43" width="28" height="3" rx="1.5"></rect>
+                  </svg>
+                </div>
+                <div class="route-copy">
+                  <h3>Algemene software, app of site</h3>
+                  <p>Van MVP en landingspagina tot serieuzer softwareproject.</p>
+                </div>
               </a>
               <a class="route-link" href="#route-b">
                 <span class="route-label">B</span>
-                <h3>Automatisering tussen bestaande tools</h3>
-                <p>Iets moet automatisch bewegen tussen systemen, data of processen.</p>
+                <div class="route-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64">
+                    <circle cx="24" cy="37" r="9"></circle>
+                    <circle cx="42" cy="23" r="7"></circle>
+                    <path d="M24 22v6"></path>
+                    <path d="M24 46v6"></path>
+                    <path d="M39 23h-4"></path>
+                    <path d="M53 23h-4"></path>
+                    <path d="M24 37h0"></path>
+                    <path d="M18 27l3 5"></path>
+                    <path d="M30 42l3 5"></path>
+                    <path d="M18 47l3-5"></path>
+                    <path d="M30 32l3-5"></path>
+                    <path d="M42 12v4"></path>
+                    <path d="M42 30v4"></path>
+                    <path d="M31 23h4"></path>
+                    <path d="M49 23h4"></path>
+                    <path d="M36 17l3 3"></path>
+                    <path d="M45 26l3 3"></path>
+                    <path d="M36 29l3-3"></path>
+                    <path d="M45 20l3-3"></path>
+                  </svg>
+                </div>
+                <div class="route-copy">
+                  <h3>Automatisering tussen bestaande tools</h3>
+                  <p>Iets moet automatisch bewegen tussen systemen, data of processen.</p>
+                </div>
               </a>
               <a class="route-link" href="#route-c">
                 <span class="route-label">C</span>
-                <h3>Kennislaag of document-gedreven AI</h3>
-                <p>De juiste informatie uit pdf's, handleidingen of kennisbronnen is de bottleneck.</p>
+                <div class="route-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64">
+                    <path d="M18 38c-3-2.5-5-6.2-5-10.5 0-7.7 6.5-14 14.5-14 6.9 0 12.8 4.6 14.2 10.8 4.7 1 8.3 5 8.3 9.9 0 5.7-4.8 10.3-10.8 10.3H29.5"></path>
+                    <path d="M27 50c-3.2 0-5.8-2.5-5.8-5.6V34.3c0-3.1 2.6-5.6 5.8-5.6h8.4l6.4 6.2v9.5c0 3.1-2.6 5.6-5.8 5.6H27z"></path>
+                    <path d="M35.4 28.7v6.2h6.4"></path>
+                    <path d="M26.5 39h10"></path>
+                    <path d="M26.5 43h8"></path>
+                  </svg>
+                </div>
+                <div class="route-copy">
+                  <h3>Kennislaag of document-gedreven AI</h3>
+                  <p>De juiste informatie uit pdf's, handleidingen of kennisbronnen is de bottleneck.</p>
+                </div>
               </a>
               <a class="route-link" href="#route-d">
                 <span class="route-label">D</span>
-                <h3>AI-assistent, AI-app of agent-systeem</h3>
-                <p>Je wilt een AI-product, assistent of agent-opzet voor intern of extern gebruik.</p>
+                <div class="route-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64">
+                    <rect x="15" y="18" width="34" height="28" rx="8"></rect>
+                    <path d="M24 14v4"></path>
+                    <path d="M40 14v4"></path>
+                    <path d="M32 10v8"></path>
+                    <circle cx="26" cy="31" r="2.2"></circle>
+                    <circle cx="38" cy="31" r="2.2"></circle>
+                    <path d="M24 39c2.3 2 5 3 8 3s5.7-1 8-3"></path>
+                    <path d="M15 32h-4"></path>
+                    <path d="M53 32h-4"></path>
+                  </svg>
+                </div>
+                <div class="route-copy">
+                  <h3>AI-assistent, AI-app of agent-systeem</h3>
+                  <p>Je wilt een AI-product, assistent of agent-opzet voor intern of extern gebruik.</p>
+                </div>
               </a>
             </div>
           </div>

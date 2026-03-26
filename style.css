@@ -199,41 +199,83 @@ nav.scrolled {
   align-items: flex-end;
 }
 .hero-academy {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .72fr);
-  gap: 2.5rem;
-  align-items: end;
+  min-height: 92vh;
 }
 .hero-academy .hi {
-  max-width: 40rem;
+  max-width: 42rem;
   position: relative;
   z-index: 3;
 }
-.academy-hero-panel {
+.academy-hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.academy-hero-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(12,8,24,.97) 0%, rgba(12,8,24,.95) 26%, rgba(12,8,24,.82) 46%, rgba(12,8,24,.46) 68%, rgba(12,8,24,.14) 100%),
+    radial-gradient(circle at 78% 54%, rgba(155,111,207,.16) 0%, transparent 36%);
+}
+.academy-hero-main {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(44vw, 42rem);
+  min-width: 28rem;
+  max-width: 52%;
+  height: auto;
+  display: block;
+  filter: saturate(1.03) contrast(1.04);
+}
+.academy-intro-side {
+  display: grid;
+  gap: 1rem;
+}
+.academy-intro-photo {
   margin: 0;
-  position: relative;
-  z-index: 2;
-  justify-self: end;
-  width: min(100%, 29rem);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,.12);
-  box-shadow: var(--shadow-hover);
   background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: var(--shadow);
 }
-.academy-hero-panel img {
+.academy-intro-photo img {
   width: 100%;
   height: auto;
   display: block;
 }
 @media (max-width: 980px) {
   .hero-academy {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    min-height: auto;
   }
-  .academy-hero-panel {
-    justify-self: stretch;
+  .hero-academy .hi {
+    order: 1;
+  }
+  .academy-hero-media {
+    position: relative;
+    inset: auto;
+    margin-top: 2rem;
+    min-height: 0;
+    overflow: visible;
+    order: 2;
+  }
+  .academy-hero-media::after {
+    display: none;
+  }
+  .academy-hero-main {
+    position: relative;
     width: 100%;
+    min-width: 0;
+    max-width: none;
+    right: auto;
+    bottom: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
   }
 }
 /* Orbs in hero (retained for animation, updated colors) */
