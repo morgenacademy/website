@@ -260,6 +260,62 @@
         line-height: 1.5;
       }
 
+      .quick-tree {
+        display: grid;
+        gap: 12px;
+        margin: 24px 0 30px;
+      }
+
+      .quick-tree-link {
+        display: grid;
+        grid-template-columns: 44px 1fr;
+        gap: 16px;
+        align-items: start;
+        padding: 18px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        color: inherit;
+        background: rgba(20, 13, 33, 0.72);
+        border: 1px solid rgba(230, 222, 244, 0.12);
+        transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+      }
+
+      .quick-tree-link:hover {
+        transform: translateY(-2px);
+        border-color: rgba(215, 255, 55, 0.42);
+        background: rgba(24, 16, 39, 0.92);
+      }
+
+      .quick-tree-tag {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        font-size: 0.95rem;
+        font-weight: 800;
+        color: var(--accent);
+        background: rgba(215, 255, 55, 0.12);
+        border: 1px solid rgba(215, 255, 55, 0.26);
+      }
+
+      .quick-tree-copy {
+        display: grid;
+        gap: 4px;
+      }
+
+      .quick-tree-copy strong {
+        font-size: 1rem;
+        line-height: 1.35;
+        color: var(--ink);
+      }
+
+      .quick-tree-copy span {
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
       .choice-grid {
         display: grid;
         gap: 18px;
@@ -303,6 +359,31 @@
 
       .choice-meta {
         margin-top: 14px;
+      }
+
+      .tool-link {
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(215, 255, 55, 0.3);
+        transition: color 140ms ease, border-color 140ms ease;
+      }
+
+      .tool-link:hover {
+        color: var(--accent);
+        border-color: rgba(215, 255, 55, 0.75);
+      }
+
+      .inline-link {
+        color: var(--ink);
+        text-decoration: underline;
+        text-decoration-color: rgba(215, 255, 55, 0.3);
+        text-underline-offset: 0.18em;
+        transition: color 140ms ease, text-decoration-color 140ms ease;
+      }
+
+      .inline-link:hover {
+        color: var(--accent);
+        text-decoration-color: rgba(215, 255, 55, 0.75);
       }
 
       .inline-divider {
@@ -455,8 +536,39 @@
         <section class="step-section" aria-labelledby="step-2">
           <div class="step-number">2</div>
           <div>
-            <h2 id="step-2" class="step-title">Volg daarna de hulpvraag binnen dat pad</h2>
-            <p class="step-copy">Hier maak je de echte toolkeuze. Elk pad heeft een eigen hulpvraag, zodat je niet alles tegelijk hoeft af te wegen.</p>
+            <h2 id="step-2" class="step-title">Spring direct naar de juiste richting</h2>
+            <p class="step-copy">Gebruik dit korte beslisboompje om meteen naar de route te springen die het best past bij wat je wilt bouwen.</p>
+
+            <div class="quick-tree">
+              <a class="quick-tree-link" href="#route-a">
+                <span class="quick-tree-tag">A</span>
+                <div class="quick-tree-copy">
+                  <strong>Wil je vooral een app, site of MVP bouwen?</strong>
+                  <span>Ga naar algemene software, app of site.</span>
+                </div>
+              </a>
+              <a class="quick-tree-link" href="#route-b">
+                <span class="quick-tree-tag">B</span>
+                <div class="quick-tree-copy">
+                  <strong>Moet werk automatisch tussen tools, systemen of data bewegen?</strong>
+                  <span>Ga naar automatisering tussen bestaande tools.</span>
+                </div>
+              </a>
+              <a class="quick-tree-link" href="#route-c">
+                <span class="quick-tree-tag">C</span>
+                <div class="quick-tree-copy">
+                  <strong>Bepaalt kennis uit documenten of bronnen vooral de kwaliteit?</strong>
+                  <span>Ga naar kennislaag of document-gedreven AI.</span>
+                </div>
+              </a>
+              <a class="quick-tree-link" href="#route-d">
+                <span class="quick-tree-tag">D</span>
+                <div class="quick-tree-copy">
+                  <strong>Wil je een AI-assistent, AI-app of agent-opzet bouwen?</strong>
+                  <span>Ga naar AI-assistent, AI-app of agent-systeem.</span>
+                </div>
+              </a>
+            </div>
 
             <div class="routes">
               <section id="route-a" class="route-block">
@@ -464,21 +576,21 @@
                   <span class="route-label">A</span>
                   <div>
                     <h3>Algemene software, app of site</h3>
-                    <p>Hulpvraag: wil je vooral snel en eenvoudig bouwen, of juist krachtiger met meer vrijheid en controle?</p>
+                    <p>Wil je vooral snel en eenvoudig bouwen, of juist krachtiger met meer vrijheid en controle?</p>
                   </div>
                 </div>
                 <div class="choice-grid two">
                   <article class="choice-card">
-                    <h4>Lovable</h4>
+                    <h4><a class="tool-link" href="https://lovable.dev/" target="_blank" rel="noopener noreferrer">Lovable</a></h4>
                     <p class="choice-question">Wil je vooral snel en eenvoudig bouwen?</p>
                     <p class="choice-copy">Kies dit als je snel iets bruikbaars wilt bouwen met zo min mogelijk gedoe.</p>
-                    <p class="choice-meta">Alternatieven: v0 / Bolt</p>
+                    <p class="choice-meta">Alternatieven: <a class="inline-link" href="https://v0.app/" target="_blank" rel="noopener noreferrer">v0</a> / <a class="inline-link" href="https://bolt.new/" target="_blank" rel="noopener noreferrer">Bolt</a></p>
                   </article>
                   <article class="choice-card">
-                    <h4>Claude Code / Cursor</h4>
+                    <h4><a class="tool-link" href="https://www.claude.com/product/claude-code" target="_blank" rel="noopener noreferrer">Claude Code</a> / <a class="tool-link" href="https://www.cursor.com/" target="_blank" rel="noopener noreferrer">Cursor</a></h4>
                     <p class="choice-question">Wil je krachtiger bouwen met meer controle?</p>
                     <p class="choice-copy">Kies dit als je krachtiger wilt bouwen, met meer vrijheid en toegang tot topmodellen.</p>
-                    <p class="choice-meta">Ook passend: Antigravity</p>
+                    <p class="choice-meta">Ook passend: <a class="inline-link" href="https://antigravity.chat/" target="_blank" rel="noopener noreferrer">Antigravity</a></p>
                   </article>
                 </div>
               </section>
@@ -488,15 +600,15 @@
                   <span class="route-label">B</span>
                   <div>
                     <h3>Automatisering tussen bestaande tools</h3>
-                    <p>Hulpvraag: moet er vooral iets automatisch gebeuren tussen bestaande tools, systemen of data?</p>
+                    <p>Moet er vooral iets automatisch gebeuren tussen bestaande tools, systemen of data?</p>
                   </div>
                 </div>
                 <div class="stack">
                   <article class="choice-card">
-                    <h4>n8n</h4>
+                    <h4><a class="tool-link" href="https://n8n.io/" target="_blank" rel="noopener noreferrer">n8n</a></h4>
                     <p class="choice-question">Past dit vooral bij workflows en orkestratie?</p>
                     <p class="choice-copy">Gebruik dit als de logica vooral is: “als dit gebeurt, moet dat volgen”.</p>
-                    <p class="choice-meta">Alternatieven: Make / Zapier</p>
+                    <p class="choice-meta">Alternatieven: <a class="inline-link" href="https://www.make.com/" target="_blank" rel="noopener noreferrer">Make</a> / <a class="inline-link" href="https://zapier.com/" target="_blank" rel="noopener noreferrer">Zapier</a></p>
                   </article>
                 </div>
               </section>
@@ -506,12 +618,12 @@
                   <span class="route-label">C</span>
                   <div>
                     <h3>Kennislaag of document-gedreven AI</h3>
-                    <p>Hulpvraag: bepaalt de juiste context uit documenten of kennisbronnen de kwaliteit van wat je bouwt?</p>
+                    <p>Bepaalt de juiste context uit documenten of kennisbronnen de kwaliteit van wat je bouwt?</p>
                   </div>
                 </div>
                 <div class="stack">
                   <article class="choice-card">
-                    <h4>RAGFlow</h4>
+                    <h4><a class="tool-link" href="https://ragflow.io/" target="_blank" rel="noopener noreferrer">RAGFlow</a></h4>
                     <p class="choice-question">Past dit als kennislaag of document-engine?</p>
                     <p class="choice-copy">Kies dit als informatie uit documenten of kennisbronnen het lastigste deel is.</p>
                     <p class="choice-meta">Parsing = inlezen en structureren. Retrieval = relevante info terugvinden.</p>
@@ -524,29 +636,29 @@
                   <span class="route-label">D</span>
                   <div>
                     <h3>AI-assistent, AI-app of agent-systeem</h3>
-                    <p>Hulpvraag: wil je vooral iets snel samenstellen, de flow zelf bouwen, maximale vrijheid, of echte rolverdeling tussen meerdere agents?</p>
+                    <p>Wil je vooral iets snel samenstellen, de flow zelf bouwen, maximale vrijheid, of echte rolverdeling tussen meerdere agents?</p>
                   </div>
                 </div>
                 <div class="choice-grid four">
                   <article class="choice-card">
-                    <h4>Dify</h4>
+                    <h4><a class="tool-link" href="https://dify.ai/" target="_blank" rel="noopener noreferrer">Dify</a></h4>
                     <p class="choice-question">Wil je vooral snel iets bruikbaars samenstellen?</p>
                     <p class="choice-copy">Kies dit als je snel een AI-assistent, AI-app of interne tool wilt opzetten.</p>
                   </article>
                   <article class="choice-card">
-                    <h4>Langflow</h4>
+                    <h4><a class="tool-link" href="https://www.langflow.org/" target="_blank" rel="noopener noreferrer">Langflow</a></h4>
                     <p class="choice-question">Wil je de flow zelf visueel bouwen?</p>
                     <p class="choice-copy">Kies dit als je juist de stappen, tools, prompts en logica zelf wilt modelleren.</p>
-                    <p class="choice-meta">Flow = de route of logica van stappen. MCP = tools en systemen koppelen aan AI. Alternatief: Flowise.</p>
+                    <p class="choice-meta">Flow = de route of logica van stappen. MCP = tools en systemen koppelen aan AI. Alternatief: <a class="inline-link" href="https://flowiseai.com/" target="_blank" rel="noopener noreferrer">Flowise</a>.</p>
                   </article>
                   <article class="choice-card">
-                    <h4>LangChain</h4>
+                    <h4><a class="tool-link" href="https://www.langchain.com/langchain" target="_blank" rel="noopener noreferrer">LangChain</a></h4>
                     <p class="choice-question">Wil je maximale vrijheid en code-first werken?</p>
                     <p class="choice-copy">Kies dit als je niet vooral wilt samenstellen, maar zelf wilt programmeren en orkestreren.</p>
                     <p class="choice-meta">Code-first = vooral in code bouwen. Agent = AI die stappen uitvoert met tools.</p>
                   </article>
                   <article class="choice-card">
-                    <h4>CrewAI</h4>
+                    <h4><a class="tool-link" href="https://crewai.com/open-source" target="_blank" rel="noopener noreferrer">CrewAI</a></h4>
                     <p class="choice-question">Wordt het werk beter door echte rolverdeling?</p>
                     <p class="choice-copy">Kies dit pas als het werk echt beter wordt als je het splitst in rollen zoals onderzoek, analyse, schrijven en controle.</p>
                     <p class="choice-meta">Zo niet: begin met één goede agent.</p>
@@ -564,15 +676,15 @@
             <p class="step-copy">Deze tools zijn vaak extra lagen bovenop je hoofdkeuze, niet per se een vervanger daarvan.</p>
             <div class="addons">
               <article class="addon-card">
-                <h4>Voeg n8n toe</h4>
+                <h4>Voeg <a class="tool-link" href="https://n8n.io/" target="_blank" rel="noopener noreferrer">n8n</a> toe</h4>
                 <p class="choice-copy">Als je gekozen oplossing ook automatisch tussen systemen, tools of data moet bewegen.</p>
               </article>
               <article class="addon-card">
-                <h4>Voeg RAGFlow toe</h4>
+                <h4>Voeg <a class="tool-link" href="https://ragflow.io/" target="_blank" rel="noopener noreferrer">RAGFlow</a> toe</h4>
                 <p class="choice-copy">Als documenten, handleidingen of kennis de kwaliteit van je antwoord bepalen.</p>
               </article>
               <article class="addon-card">
-                <h4>Voeg Langfuse toe</h4>
+                <h4>Voeg <a class="tool-link" href="https://langfuse.com/" target="_blank" rel="noopener noreferrer">Langfuse</a> toe</h4>
                 <p class="choice-copy">Als het serieus in gebruik gaat en je tracing, evaluatie en promptbeheer nodig hebt.</p>
               </article>
             </div>
