@@ -40,7 +40,7 @@ export function renderResult(route) {
             ${followUp ? `<div class="follow-up-note">${followUp}</div>` : ''}
 
             <div class="training-cta">
-              <a href="javascript:void(0)" onclick="goToAcademy('aanbod')" class="btn btn-primary">Bekijk trainingen op Morgen Academy</a>
+              <a href="javascript:void(0)" onclick="scrollToId('ac-trainingen')" class="btn btn-primary">Bekijk incompany trainingen</a>
               <a href="javascript:void(0)" onclick="openTrainingPopup('${route.key === 'team' ? 'teamworkshop' : route.key}')" class="btn btn-secondary">Meer over deze training</a>
               <a href="mailto:totmorgen@morgenacademy.nl" class="btn btn-secondary">Stuur ons een bericht</a>
             </div>
@@ -77,7 +77,7 @@ function renderIndividualResult(route) {
       </div>
 
       <div class="result-cta result-cta-centered">
-        <a href="javascript:void(0)" onclick="goToAcademy('aanbod')" class="btn btn-primary">Bekijk trainingen op Morgen Academy</a>
+        <a href="javascript:void(0)" onclick="goToAcademy('online')" class="btn btn-primary">Bekijk online trainingen op Morgen Academy</a>
         <a href="javascript:void(0)" onclick="openTrainingPopup('basis')" class="btn btn-secondary">Meer over de basistraining</a>
         <a href="mailto:totmorgen@morgenacademy.nl" class="btn btn-secondary">Stuur ons een bericht</a>
       </div>
