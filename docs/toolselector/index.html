@@ -226,15 +226,36 @@
 
       .routes {
         display: grid;
-        gap: 26px;
+        gap: 38px;
+        margin-top: 12px;
       }
 
       .route-block {
-        scroll-margin-top: 28px;
+        scroll-margin-top: 132px;
         padding: 26px;
         border-radius: 28px;
         background: rgba(12, 8, 22, 0.52);
         border: 1px solid rgba(215, 255, 55, 0.12);
+        transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease, transform 180ms ease;
+      }
+
+      .route-block:target {
+        background: rgba(18, 12, 31, 0.82);
+        border-color: rgba(215, 255, 55, 0.48);
+        box-shadow:
+          0 0 0 1px rgba(215, 255, 55, 0.12),
+          0 18px 48px rgba(12, 8, 22, 0.28);
+        transform: translateY(-2px);
+      }
+
+      .route-block:target .route-label {
+        background: rgba(215, 255, 55, 0.2);
+        border-color: rgba(215, 255, 55, 0.52);
+        box-shadow: 0 0 0 6px rgba(215, 255, 55, 0.08);
+      }
+
+      .route-block:target .route-head h3 {
+        color: #f0ff9f;
       }
 
       .route-head {
@@ -485,7 +506,6 @@
           <div class="step-number">2</div>
           <div>
             <h2 id="step-2" class="step-title">Per richting: dit is vaak een logisch startpunt</h2>
-            <p class="step-copy spacious">Heb je een richting gekozen? Dan zie je hieronder welke tool vaak een goed startpunt is, plus welke alternatieven daarbij passen.</p>
 
             <div class="routes">
               <section id="route-a" class="route-block">
