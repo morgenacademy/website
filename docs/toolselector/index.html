@@ -120,6 +120,52 @@
         color: var(--muted);
       }
 
+      .step-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .step-nav-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 16px;
+        border-radius: 999px;
+        text-decoration: none;
+        color: var(--ink);
+        background: rgba(20, 13, 33, 0.72);
+        border: 1px solid rgba(230, 222, 244, 0.12);
+        transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+      }
+
+      .step-nav-link:hover {
+        transform: translateY(-2px);
+        border-color: rgba(215, 255, 55, 0.42);
+        background: rgba(24, 16, 39, 0.92);
+      }
+
+      .step-nav-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: var(--accent);
+        background: rgba(215, 255, 55, 0.12);
+        border: 1px solid rgba(215, 255, 55, 0.26);
+      }
+
+      .step-nav-text {
+        font-size: 0.88rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
       .step-intro {
         display: grid;
         grid-template-columns: 120px 1fr;
@@ -285,6 +331,14 @@
         line-height: 1.5;
       }
 
+      .route-hint {
+        margin: 0 0 18px 66px;
+        font-size: 0.84rem;
+        line-height: 1.45;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
       .choice-grid {
         display: grid;
         gap: 18px;
@@ -446,6 +500,10 @@
           grid-template-columns: 1fr;
           gap: 12px;
         }
+
+        .route-hint {
+          margin-left: 0;
+        }
       }
     </style>
   </head>
@@ -471,6 +529,20 @@
         <p class="eyebrow">Toolkeuze · AI · Automation · Development</p>
         <h1>Welke tool <span class="hero-accent">past het best?</span></h1>
         <p class="lede">Deze beslisboom helpt je kiezen met welke tool je begint en welke lagen je later eventueel toevoegt.</p>
+        <div class="step-nav" aria-label="Stappen in de toolselector">
+          <a class="step-nav-link" href="#step-1">
+            <span class="step-nav-number">1</span>
+            <span class="step-nav-text">Doel kiezen</span>
+          </a>
+          <a class="step-nav-link" href="#step-2">
+            <span class="step-nav-number">2</span>
+            <span class="step-nav-text">Starttool kiezen</span>
+          </a>
+          <a class="step-nav-link" href="#step-3">
+            <span class="step-nav-number">3</span>
+            <span class="step-nav-text">Extra lagen</span>
+          </a>
+        </div>
 
         <section class="step-intro" aria-labelledby="step-1">
           <div class="step-number">1</div>
@@ -516,6 +588,7 @@
                     <p>Wil je vooral snel en eenvoudig bouwen, of juist krachtiger met meer vrijheid en controle?</p>
                   </div>
                 </div>
+                <p class="route-hint">Hier heb je 2 logische startpunten: snel en laagdrempelig, of krachtiger met meer controle.</p>
                 <div class="choice-grid two">
                   <article class="choice-card">
                     <h4><a class="tool-link" href="https://lovable.dev/?via=karin-van-tongerlo" target="_blank" rel="noopener noreferrer">Lovable</a></h4>
@@ -576,6 +649,7 @@
                     <p>Wil je vooral iets snel samenstellen, de flow zelf bouwen, maximale vrijheid, of echte rolverdeling tussen meerdere agents?</p>
                   </div>
                 </div>
+                <p class="route-hint">Hier heb je 4 mogelijke startpunten: snel opzetten, visueel bouwen, code-first of multi-agent.</p>
                 <div class="choice-grid four">
                   <article class="choice-card">
                     <h4><a class="tool-link" href="https://dify.ai/" target="_blank" rel="noopener noreferrer">Dify</a></h4>
