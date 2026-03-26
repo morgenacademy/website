@@ -187,15 +187,16 @@ nav.scrolled {
   padding: 7.5rem 4rem 3.5rem;
   position: relative; z-index: 1; overflow: hidden;
 }
-.hero-home { display: block; }
+.hero-home {
+  display: block;
+  min-height: 92vh;
+}
 .hero-home-layout {
   position: relative;
   z-index: 2;
-  min-height: calc(86vh - 11rem);
-  display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(320px, .88fr);
-  gap: 2rem;
-  align-items: end;
+  min-height: calc(92vh - 11rem);
+  display: flex;
+  align-items: flex-end;
 }
 /* Orbs in hero (retained for animation, updated colors) */
 .orb { position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none; }
@@ -209,15 +210,18 @@ nav.scrolled {
   mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 20%, transparent 100%);
 }
 .hi { position: relative; z-index: 2; }
-.hero-home .hi { max-width: 780px; }
+.hero-home .hi {
+  max-width: 54rem;
+  position: relative;
+  z-index: 3;
+}
 
 .home-hero-media {
-  position: relative;
-  width: 100%;
-  min-height: 31rem;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   pointer-events: none;
+  overflow: hidden;
 }
 .home-hero-media::after {
   content: '';
@@ -394,96 +398,7 @@ nav.scrolled {
 .lbintro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 4rem; }
 .lbintro-p { font-size: .95rem; line-height: 1.8; color: var(--text-secondary); }
 
-/* ── 13. Home startstrip ── */
-.home-start-strip {
-  padding-top: 3rem;
-  padding-bottom: 3.4rem;
-}
-.home-start-head {
-  max-width: 44rem;
-  margin-bottom: 1.6rem;
-}
-.home-start-copy {
-  font-size: .95rem;
-  line-height: 1.75;
-  color: var(--text-secondary);
-  max-width: 58ch;
-}
-.home-start-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-.home-start-card {
-  appearance: none;
-  border: 1px solid var(--card-border);
-  background: linear-gradient(135deg, rgba(155,111,207,.18), rgba(255,255,255,.04));
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border-radius: calc(var(--radius-lg) - 2px);
-  box-shadow: var(--shadow), inset 0 1px 0 var(--card-highlight);
-  padding: 1.35rem 1.3rem;
-  text-align: left;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  gap: .7rem;
-  transition: var(--transition);
-  cursor: none;
-}
-.home-start-card:hover {
-  transform: translateY(-3px);
-  background: linear-gradient(135deg, rgba(155,111,207,.26), rgba(255,255,255,.07));
-  border-color: var(--glass-border-hover);
-  box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.24);
-}
-.home-start-card-kicker {
-  font-size: .66rem;
-  font-weight: 800;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--orange);
-}
-.home-start-card-title {
-  font-family: var(--fu);
-  font-size: 1.28rem;
-  font-weight: 800;
-  line-height: 1.05;
-  color: var(--white);
-}
-.home-start-card-text {
-  font-size: .88rem;
-  line-height: 1.65;
-  color: var(--text-secondary);
-}
-.home-start-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .75rem;
-  margin-top: 1.1rem;
-}
-.home-start-chip {
-  appearance: none;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.04);
-  border-radius: 999px;
-  padding: .7rem 1rem;
-  font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  transition: var(--transition);
-  cursor: none;
-}
-.home-start-chip:hover {
-  transform: translateY(-2px);
-  color: var(--white);
-  border-color: rgba(255,255,255,.24);
-  background: rgba(255,255,255,.08);
-}
-
-/* ── 14. Toolselector ── */
+/* ── 13. Toolselector ── */
 .toolselector-wrap {
   max-width: 960px;
   margin: 0 auto;
@@ -559,7 +474,7 @@ nav.scrolled {
   display: flex;
 }
 
-/* ── 15. Opleidingen kaarten (.lcard) ── */
+/* ── 14. Opleidingen kaarten (.lcard) ── */
 .lg4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
 
 .lcard {
@@ -1535,18 +1450,14 @@ footer {
   .sd, .sl, .sm, .trust-section, .tw-banner, .da-hero, .agents-overview, .assistant-detail-page { padding: 4rem 2rem; }
   .tw-banner-inner { padding: 2.5rem 1.5rem; }
   .hero { padding: 7rem 2rem 3rem; }
-  .hero-home-layout { grid-template-columns: 1fr; gap: 2rem; min-height: auto; }
+  .hero-home-layout { min-height: auto; }
   .hero-home .hi { max-width: none; }
-  .home-hero-media { min-height: 22rem; max-width: 42rem; }
   .home-hero-media video { object-position: 72% center; opacity: .64; }
   .home-hero-media::after {
     background:
       linear-gradient(90deg, rgba(12,8,24,.97) 0%, rgba(12,8,24,.94) 34%, rgba(12,8,24,.74) 58%, rgba(12,8,24,.28) 100%),
       radial-gradient(circle at 78% 50%, rgba(155,111,207,.16) 0%, transparent 38%);
   }
-  .home-start-strip { padding-top: 2.5rem; padding-bottom: 3rem; }
-  .home-start-grid { grid-template-columns: 1fr; }
-  .home-start-head { margin-bottom: 1.35rem; }
   .home-company-band-card { grid-template-columns: 1fr; gap: 1.5rem; }
   .home-company-band-title { max-width: none; }
   .home-company-band-visual { align-items: flex-start; }
@@ -1602,18 +1513,12 @@ footer {
   .agents-head-cta .btn-p, .agents-head-cta .btn-o { width: 100%; }
   .btn-p, .btn-w, .btn-o, .btn-g { width: 100%; justify-content: center; }
   .glass-card { padding: 1.4rem; }
-  .home-hero-media { min-height: 18rem; }
   .home-hero-media video { object-position: 76% center; opacity: .46; }
   .home-hero-media::after {
     background:
       linear-gradient(90deg, rgba(12,8,24,.98) 0%, rgba(12,8,24,.95) 42%, rgba(12,8,24,.74) 72%, rgba(12,8,24,.34) 100%),
       radial-gradient(circle at 80% 45%, rgba(155,111,207,.12) 0%, transparent 38%);
   }
-  .home-start-card { padding: 1.2rem; }
-  .home-start-card-title { font-size: 1.15rem; }
-  .home-start-card-text { font-size: .84rem; }
-  .home-start-chips { gap: .55rem; }
-  .home-start-chip { padding: .65rem .9rem; font-size: .68rem; letter-spacing: .08em; }
   .toolselector-teaser { padding: 1.6rem; }
   .toolselector-open { width: 100%; }
   .toolselector-followup .btn-o { width: 100%; }
