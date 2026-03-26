@@ -285,6 +285,28 @@ nav.scrolled {
 .hsn em { color: var(--orange); font-style: normal; }
 .hsn-word { font-size: 1.7rem; line-height: 1.05; letter-spacing: .01em; }
 .hsl { font-size: .73rem; color: var(--text-muted); margin-top: .3rem; max-width: 16ch; line-height: 1.4; }
+.hstats-home {
+  gap: 1.25rem;
+  padding-top: 1.35rem;
+  margin-top: 1.7rem;
+  border-top-color: rgba(255,255,255,.12);
+  max-width: 43rem;
+}
+.hstats-home .hstat { min-width: 0; }
+.hstats-home .hsn {
+  font-size: 1.95rem;
+  color: rgba(255,255,255,.92);
+}
+.hstats-home .hsn-stars {
+  font-size: 1.62rem;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.88);
+}
+.hstats-home .hsl {
+  font-size: .68rem;
+  color: rgba(216,204,236,.72);
+  max-width: 12ch;
+}
 
 /* ── 8. Ticker ── */
 .ticker {
@@ -305,7 +327,7 @@ nav.scrolled {
   font-size: .69rem;
   font-weight: 500;
   letter-spacing: .1em;
-  color: rgba(255,255,255,.84);
+  color: rgba(255,255,255,.76);
 }
 #page-home .ticker .ts { opacity: .34; }
 
@@ -511,7 +533,7 @@ nav.scrolled {
 .lcard-label {
   font-size: .62rem; font-weight: 700;
   letter-spacing: .2em; text-transform: uppercase;
-  color: var(--text-secondary); margin-bottom: 1.4rem;
+  color: var(--text-secondary); margin-bottom: .9rem;
 }
 .licon {
   width: 46px; height: 46px; border-radius: var(--radius);
@@ -528,7 +550,7 @@ nav.scrolled {
 .lname {
   font-weight: 800; font-size: 1.5rem;
   letter-spacing: .02em; text-transform: uppercase;
-  color: var(--white); margin-bottom: .15rem; line-height: 1;
+  color: var(--white); margin-bottom: .3rem; line-height: 1;
 }
 .ltag {
   font-size: .67rem; font-weight: 600;
@@ -916,6 +938,16 @@ nav.scrolled {
   background: var(--glass-bg-hover);
   border-color: var(--glass-border-hover);
   transform: translateY(-2px);
+}
+#page-home .hero-home .btn-o {
+  color: rgba(255,255,255,.82);
+  background: rgba(26,18,42,.38);
+  border-color: rgba(255,255,255,.12);
+}
+#page-home .hero-home .btn-o:hover {
+  color: var(--white);
+  background: rgba(42,27,69,.56);
+  border-color: rgba(255,255,255,.18);
 }
 
 /* ── 19. CTA Sectie ── */
