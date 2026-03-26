@@ -238,23 +238,17 @@ nav.scrolled {
     radial-gradient(circle at 80% 45%, rgba(155,111,207,.22) 0%, transparent 40%);
   z-index: 1;
 }
-.home-hero-preview-media {
+.home-hero-preview-poster {
   position: absolute;
   inset: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-.home-hero-preview-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transform: scale(1.05);
+  object-position: 62% center;
+  transform: scale(1.04);
   filter: saturate(.94) contrast(1.04) brightness(.78);
 }
-.home-hero-preview-photo-danielle { object-position: center 28%; }
-.home-hero-preview-photo-karin { object-position: center 24%; }
-.home-hero-preview-photo-harmen { object-position: center 24%; }
 .home-hero-preview-label,
 .home-hero-preview-note,
 .home-hero-play {
