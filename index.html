@@ -28,6 +28,17 @@
     <p class="popup-note">Vragen? Mail naar <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
   </div>
 </div>
+<div class="popup-overlay" id="company-video-modal">
+  <div class="popup-box popup-video-box">
+    <button class="popup-close" onclick="closeCompanyVideoModal()">&#x2715; Sluiten</button>
+    <div class="popup-badge">Morgen Company</div>
+    <div class="popup-video-frame">
+      <video id="company-video-player" controls playsinline preload="metadata">
+        <source src="/docs/company/Filmpje%20Harmen%20Daan%20Karin.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
 
 <nav id="mainNav">
   <button class="logo-btn" onclick="nav('home')">MORGEN<em>.</em></button>
@@ -39,28 +50,43 @@
     <li><a onclick="nav('academy')" data-page="academy">Academy</a></li>
     <li><a onclick="nav('technology')" data-page="technology">Technology</a></li>
     <li><a onclick="nav('consultancy')" data-page="consultancy">Consultancy</a></li>
-    <li><a onclick="nav('assistenten')" data-page="assistenten">Assistenten</a></li>
     <li><a onclick="nav('company')" data-page="company">Company</a></li>
+    <li><a onclick="nav('assistenten')" data-page="assistenten">Assistenten</a></li>
     <li><a onclick="nav('home','home-aanvraag')" class="btn-nav">Gratis kennismaking</a></li>
   </ul>
 </nav>
 <div class="page active" id="page-home">
-<header class="hero">
+<header class="hero hero-home">
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
   <div class="hgrid"></div>
-  <div class="hi">
-    <p class="eyebrow">AI-trainingen &#183; Digitale oplossingen &#183; Begeleiding &#183; Thought leadership</p>
-    <h1 class="h1">Wat doet<br><span class="ol">jouw bedrijf</span><br><span class="pk">morgen?</span></h1>
-    <p class="hbody">Morgen helpt MKB-organisaties groeien met AI-trainingen, digitale oplossingen en strategische begeleiding. Van eerste stap tot volledige implementatie.</p>
-    <div class="hctas">
-      <button class="btn-p" onclick="scrollToId('home-aanvraag')">Plan gratis kennismakingsgesprek</button>
-      <button class="btn-g" onclick="nav('home','aanbod')">Bekijk ons aanbod &#x2193;</button>
+  <div class="hero-home-layout">
+    <div class="hi">
+      <p class="eyebrow">AI-trainingen &#183; Digitale oplossingen &#183; Begeleiding &#183; Thought leadership</p>
+      <h1 class="h1">Wat doet<br><span class="ol">jouw bedrijf</span><br><span class="pk">morgen?</span></h1>
+      <p class="hbody">Morgen helpt MKB-organisaties groeien met AI-trainingen, digitale oplossingen en strategische begeleiding. Van eerste stap tot volledige implementatie.</p>
+      <div class="hctas">
+        <button class="btn-p" onclick="scrollToId('home-aanvraag')">Plan gratis kennismakingsgesprek</button>
+        <button class="btn-g" onclick="nav('home','aanbod')">Bekijk ons aanbod &#x2193;</button>
+      </div>
+      <div class="hstats">
+        <div><div class="hsn">9.8<em>/10</em></div><div class="hsl">Gemiddelde trainings&shy;beoordeling</div></div>
+        <div><div class="hsn">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="hsl">Alleen 5-sterren reviews op Google</div></div>
+        <div><div class="hsn">850<em>+</em></div><div class="hsl">Medewerkers getraind in AI en digitale tools</div></div>
+      </div>
     </div>
-    <div class="hstats">
-      <div><div class="hsn">9.8<em>/10</em></div><div class="hsl">Gemiddelde trainings&shy;beoordeling</div></div>
-      <div><div class="hsn">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="hsl">Alleen 5-sterren reviews op Google</div></div>
-      <div><div class="hsn">850<em>+</em></div><div class="hsl">Medewerkers getraind in AI en digitale tools</div></div>
-    </div>
+    <button class="home-hero-preview reveal" type="button" onclick="openCompanyVideoModal()" aria-label="Bekijk video van Morgen Company">
+      <div class="home-hero-preview-media" aria-hidden="true">
+        <img src="/docs/company/danielle-van-den-berg.jpg" alt="" class="home-hero-preview-photo home-hero-preview-photo-danielle">
+        <img src="/docs/company/karin-van-tongerlo.jpg" alt="" class="home-hero-preview-photo home-hero-preview-photo-karin">
+        <img src="/docs/company/harmen.jpg" alt="" class="home-hero-preview-photo home-hero-preview-photo-harmen">
+      </div>
+      <div class="home-hero-preview-label">Morgen Company</div>
+      <div class="home-hero-preview-note">Danielle &#183; Karin &#183; Harmen</div>
+      <div class="home-hero-play">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3.5v9l7-4.5-7-4.5z" fill="currentColor"/></svg>
+        Bekijk video
+      </div>
+    </button>
   </div>
 </header>
 <div class="ticker"><div class="ticker-t"><span>AI-trainingen voor teams</span><span class="ts">&#10022;</span><span>Digitale oplossingen op maat</span><span class="ts">&#10022;</span><span>Procesautomatisering MKB</span><span class="ts">&#10022;</span><span>Begeleiding bij digitale strategie</span><span class="ts">&#10022;</span><span>AI compliant &#183; EU AI Act</span><span class="ts">&#10022;</span><span>Keynotes en boek over digitalisering</span><span class="ts">&#10022;</span><span>AI-trainingen voor teams</span><span class="ts">&#10022;</span><span>Digitale oplossingen op maat</span><span class="ts">&#10022;</span><span>Procesautomatisering MKB</span><span class="ts">&#10022;</span><span>Begeleiding bij digitale strategie</span><span class="ts">&#10022;</span><span>AI compliant &#183; EU AI Act</span><span class="ts">&#10022;</span><span>Keynotes en boek over digitalisering</span><span class="ts">&#10022;</span></div></div><div class="logo-band">
@@ -103,7 +129,7 @@
       <h3 class="lname">AI-trainingen voor teams</h3>
       <div class="ltag">Workshop &#183; Leerpad &#183; Online &#183; Incompany</div>
       <p class="ldesc">Van losse workshop tot volledig incompany leerpad. Online beschikbaar. Opgezet conform de EU AI Act.</p>
-      <button class="llink ll-b" onclick="event.stopPropagation();goToAcademy('aanbod')">Bekijk het trainingsaanbod</button>
+      <button class="llink ll-b" onclick="event.stopPropagation();nav('academy')">Bekijk het trainingsaanbod</button>
       <button class="llink ll-k" onclick="event.stopPropagation();nav('academy','trainingwijzer-app')" style="font-size:.8rem;margin-top:.5rem">&#x2192; Start de routewijzer</button>
     </article>
     <article class="lcard" onclick="nav('technology')" style="cursor:pointer">
@@ -159,7 +185,7 @@
         <p class="ssub">Het potentieel is er. Maar niemand weet hoe het dagelijkse werk echt slimmer kan.</p>
       </div>
       <div class="sarrow"><svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 0v18M1 12l6 8 6-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="sres sr-p"><div class="srl srl-p">Stap vooruit</div><div class="srn">AI-training voor het team</div><div class="srs">Praktisch, direct toepasbaar, EU AI Act-conform</div><button class="slink slink-p" onclick="goToAcademy('aanbod')">Bekijk het trainingsaanbod</button></div>
+      <div class="sres sr-p"><div class="srl srl-p">Stap vooruit</div><div class="srn">AI-training voor het team</div><div class="srs">Praktisch, direct toepasbaar, EU AI Act-conform</div><button class="slink slink-p" onclick="nav('academy')">Bekijk het trainingsaanbod</button></div>
     </div>
     <div class="spath">
       <div class="sscen ss-b">
@@ -206,6 +232,32 @@
         <div><div class="tn">9.8<em>/10</em></div><div class="tnl">Gemiddelde trainings&shy;beoordeling</div></div>
         <div><div class="tn">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tnl">Alleen 5-sterren reviews op Google</div></div>
         <div><div class="tn">850<em>+</em></div><div class="tnl">Medewerkers getraind</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sl home-company-band">
+  <div class="home-company-band-card reveal" onclick="nav('company')">
+    <div class="home-company-band-copy">
+      <div class="slabel">Morgen Company</div>
+      <h2 class="home-company-band-title">Drie sprekers, &#233;&#233;n boek en een duidelijke visie op AI.</h2>
+      <p class="home-company-band-body">Voor events, teams en leiders die AI niet als hype willen begrijpen, maar als iets dat werk, mens en organisatie echt verandert.</p>
+      <div class="home-company-band-actions">
+        <button class="btn-p" onclick="event.stopPropagation();nav('company')">Ontdek Morgen Company</button>
+        <button class="btn-o" onclick="event.stopPropagation();nav('company','cp-keynote')">Bekijk keynotes</button>
+      </div>
+    </div>
+    <div class="home-company-band-visual" aria-hidden="true">
+      <div class="home-company-band-avatars">
+        <div class="home-company-band-avatar"><img src="/docs/company/danielle-van-den-berg.jpg" alt=""></div>
+        <div class="home-company-band-avatar"><img src="/docs/company/karin-van-tongerlo.jpg" alt=""></div>
+        <div class="home-company-band-avatar"><img src="/docs/company/harmen.jpg" alt=""></div>
+      </div>
+      <div class="home-company-band-people">Danielle &#183; Karin &#183; Harmen</div>
+      <div class="home-company-band-tags">
+        <span>Keynotes</span>
+        <span>Boek</span>
+        <span>Company</span>
       </div>
     </div>
   </div>
@@ -1175,8 +1227,13 @@
 </div><!-- /page-organisatie -->
 
 <div class="page" id="page-company">
-<header class="hero">
+<header class="hero company-hero">
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="hgrid"></div>
+  <div class="company-hero-media" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="metadata">
+      <source src="/docs/company/Filmpje%20Harmen%20Daan%20Karin.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="hi">
     <button class="back-btn" onclick="nav('home')">&#x2190; Terug naar home</button>
     <p class="eyebrow">Morgen Company &#183; Drie sprekers &#183; Drie invalshoeken &#183; Boek</p>
@@ -1199,7 +1256,10 @@
   <div class="speaker-grid reveal">
     <div class="speaker-card">
       <div class="sp-head">
-        <div class="sp-avatar">DvdB</div>
+        <div class="sp-avatar sp-avatar-photo">
+          <img src="/docs/company/danielle-van-den-berg.jpg" alt="Danielle van den Berg">
+          <img src="/docs/company/danielle-van-den-berg-alt.jpg" alt="" aria-hidden="true">
+        </div>
         <div class="sp-name">Danielle van den Berg</div>
         <div class="sp-role">Werk in dienst van het leven</div>
       </div>
@@ -1216,7 +1276,10 @@
     </div>
     <div class="speaker-card">
       <div class="sp-head">
-        <div class="sp-avatar">KvT</div>
+        <div class="sp-avatar sp-avatar-photo sp-avatar-photo-delayed">
+          <img src="/docs/company/karin-van-tongerlo.jpg" alt="Karin van Tongerlo">
+          <img src="/docs/company/karin-van-tongerlo-alt.jpg" alt="" aria-hidden="true">
+        </div>
         <div class="sp-name">Karin van Tongerlo</div>
         <div class="sp-role">Technologie en menselijkheid</div>
       </div>
@@ -1233,7 +1296,10 @@
     </div>
     <div class="speaker-card">
       <div class="sp-head">
-        <div class="sp-avatar">H</div>
+        <div class="sp-avatar sp-avatar-photo sp-avatar-photo-harmen">
+          <img src="/docs/company/harmen.jpg" alt="Harmen">
+          <img src="/docs/company/harmen-alt.jpg" alt="" aria-hidden="true">
+        </div>
         <div class="sp-name">Harmen</div>
         <div class="sp-role">Mens en machine</div>
       </div>
@@ -1359,7 +1425,7 @@
 const cur=document.getElementById('cur');
 document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
 document.addEventListener('mouseover',e=>{
-  if(e.target.closest('a,button,.lcard,.sc,.tcard,.wstep,.spath,.speaker-card,.da-card,.agent-show-card'))cur.classList.add('big');
+  if(e.target.closest('a,button,.lcard,.sc,.tcard,.wstep,.spath,.speaker-card,.da-card,.agent-show-card,.home-company-band-card,.home-hero-preview'))cur.classList.add('big');
   else cur.classList.remove('big');
 });
 
@@ -1510,6 +1576,27 @@ function openTrainingPopup(key){
 }
 function closeTrainingPopup(){
   document.getElementById('training-popup').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function openCompanyVideoModal(){
+  const modal=document.getElementById('company-video-modal');
+  const video=document.getElementById('company-video-player');
+  if(!modal || !video)return;
+  modal.classList.add('open');
+  document.body.style.overflow='hidden';
+  video.currentTime=0;
+  const playPromise=video.play();
+  if(playPromise && typeof playPromise.catch==='function')playPromise.catch(()=>{});
+}
+function closeCompanyVideoModal(){
+  const modal=document.getElementById('company-video-modal');
+  const video=document.getElementById('company-video-player');
+  if(modal)modal.classList.remove('open');
+  if(video){
+    video.pause();
+    video.currentTime=0;
+  }
   document.body.style.overflow='';
 }
 
@@ -1946,11 +2033,13 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){
     closeNav();
     closeTrainingPopup();
+    closeCompanyVideoModal();
   }
 });
 
 document.addEventListener('click',e=>{
   if(e.target.id==='training-popup')closeTrainingPopup();
+  if(e.target.id==='company-video-modal')closeCompanyVideoModal();
 });
 </script>
 
