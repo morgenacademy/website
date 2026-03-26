@@ -913,7 +913,7 @@ nav.scrolled {
 }
 
 .home-photo-strip {
-  padding: 0 4rem 2.5rem;
+  padding: 1.75rem 4rem 4rem;
 }
 .home-photo-strip-grid {
   display: grid;
@@ -922,6 +922,7 @@ nav.scrolled {
 }
 .home-photo-strip-card {
   margin: 0;
+  aspect-ratio: 4 / 3;
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: rgba(255,255,255,.03);
@@ -930,8 +931,13 @@ nav.scrolled {
 }
 .home-photo-strip-card img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
+}
+.home-photo-strip-card-training img {
+  object-position: center 56%;
 }
 
 @media (max-width: 1024px) {
@@ -1504,6 +1510,7 @@ footer {
 }
 .academy-online-photo {
   margin: 0;
+  aspect-ratio: 4 / 3;
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: rgba(255,255,255,.03);
@@ -1512,11 +1519,15 @@ footer {
 }
 .academy-online-photo img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 .academy-online-photo-single {
   align-self: center;
+}
+.academy-online-photo-single img {
+  object-position: center 56%;
 }
 .form-grid, .da-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .form-field, .da-field { display: flex; flex-direction: column; gap: .45rem; }
@@ -1794,7 +1805,7 @@ footer {
   .adet-ctas { justify-content: center; }
   .adet-two-col { grid-template-columns: 1fr; }
   .wgrid, .trgrid { grid-template-columns: 1fr; }
-  .home-photo-strip { padding: 0 2rem 2rem; }
+  .home-photo-strip { padding: 1.25rem 2rem 2.75rem; }
   .home-photo-strip-grid { grid-template-columns: 1fr; }
   .home-metrics-grid { grid-template-columns: 1fr; }
   .home-metric-label { max-width: none; }
