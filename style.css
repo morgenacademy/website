@@ -228,7 +228,7 @@ nav.scrolled {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center right;
+  object-position: 62% center;
   display: block;
   opacity: .72;
   filter: saturate(1.04) contrast(1.02);
@@ -238,7 +238,7 @@ nav.scrolled {
     min-height: auto;
   }
   .academy-hero-media img {
-    object-position: 72% center;
+    object-position: 66% center;
     opacity: .56;
   }
 }
@@ -1497,12 +1497,12 @@ footer {
 }
 .academy-online-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 2rem;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+  gap: 2.5rem;
   align-items: center;
 }
 .academy-online-copy .ptitle {
-  max-width: 16ch;
+  max-width: 12ch;
 }
 .academy-online-card {
   max-width: none;
@@ -1525,6 +1525,8 @@ footer {
 }
 .academy-online-photo-single {
   align-self: center;
+  justify-self: end;
+  width: min(100%, 28rem);
 }
 .academy-online-photo-single img {
   object-position: center 56%;
