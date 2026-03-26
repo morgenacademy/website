@@ -239,6 +239,7 @@ nav.scrolled {
 }
 .hsn { font-size: 2.8rem; font-weight: 900; letter-spacing: .02em; line-height: 1; color: var(--white); }
 .hsn em { color: var(--orange); font-style: normal; }
+.hsn-word { font-size: 1.7rem; line-height: 1.05; letter-spacing: .01em; }
 .hsl { font-size: .76rem; color: var(--text-muted); margin-top: .3rem; max-width: 18ch; line-height: 1.4; }
 
 /* ── 8. Ticker ── */
@@ -654,6 +655,7 @@ nav.scrolled {
 .tnums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
 .tn { font-size: 2.4rem; font-weight: 900; letter-spacing: .02em; line-height: 1; color: var(--white); }
 .tn em { color: var(--orange); font-style: normal; }
+.tn-word { font-size: 1.45rem; line-height: 1.05; letter-spacing: .01em; }
 .tnl { font-size: .78rem; color: var(--text-muted); margin-top: .25rem; line-height: 1.4; }
 
 /* ── 18. Knoppen ── */
@@ -878,11 +880,19 @@ footer {
   display: flex; flex-direction: column;
   align-items: center; text-align: center;
   transition: var(--transition);
+  cursor: pointer;
 }
 .agent-show-card:hover {
   background: var(--card-bg-hover);
   border-color: var(--glass-border-hover);
   box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.3);
+  transform: translateY(-4px);
+}
+.agent-show-card:focus-visible {
+  outline: none;
+  background: var(--card-bg-hover);
+  border-color: rgba(216,254,86,.55);
+  box-shadow: 0 0 0 3px rgba(216,254,86,.18), var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.3);
   transform: translateY(-4px);
 }
 .agent-show-avatar-wrap {
