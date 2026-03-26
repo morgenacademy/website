@@ -158,6 +158,10 @@
         line-height: 1.5;
       }
 
+      .step-copy.spacious {
+        margin-bottom: 24px;
+      }
+
       .route-picker {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -258,62 +262,6 @@
         margin: 0;
         color: var(--muted);
         line-height: 1.5;
-      }
-
-      .quick-tree {
-        display: grid;
-        gap: 12px;
-        margin: 24px 0 30px;
-      }
-
-      .quick-tree-link {
-        display: grid;
-        grid-template-columns: 44px 1fr;
-        gap: 16px;
-        align-items: start;
-        padding: 18px 20px;
-        border-radius: 20px;
-        text-decoration: none;
-        color: inherit;
-        background: rgba(20, 13, 33, 0.72);
-        border: 1px solid rgba(230, 222, 244, 0.12);
-        transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
-      }
-
-      .quick-tree-link:hover {
-        transform: translateY(-2px);
-        border-color: rgba(215, 255, 55, 0.42);
-        background: rgba(24, 16, 39, 0.92);
-      }
-
-      .quick-tree-tag {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        font-size: 0.95rem;
-        font-weight: 800;
-        color: var(--accent);
-        background: rgba(215, 255, 55, 0.12);
-        border: 1px solid rgba(215, 255, 55, 0.26);
-      }
-
-      .quick-tree-copy {
-        display: grid;
-        gap: 4px;
-      }
-
-      .quick-tree-copy strong {
-        font-size: 1rem;
-        line-height: 1.35;
-        color: var(--ink);
-      }
-
-      .quick-tree-copy span {
-        color: var(--muted);
-        line-height: 1.45;
       }
 
       .choice-grid {
@@ -506,8 +454,8 @@
         <section class="step-intro" aria-labelledby="step-1">
           <div class="step-number">1</div>
           <div>
-            <h2 id="step-1" class="step-title">Kies eerst wat je vooral probeert te maken</h2>
-            <p class="step-copy">Begin niet bij de toolnaam maar bij het soort probleem. Klik op het pad dat het dichtst bij je situatie ligt.</p>
+            <h2 id="step-1" class="step-title">Wat wil je creeren, wat is je doel?</h2>
+            <p class="step-copy">Begin niet bij de toolnaam, maar bij wat je wilt maken. Kies de richting die het dichtst bij je doel ligt.</p>
             <div class="route-picker">
               <a class="route-link" href="#route-a">
                 <span class="route-label">A</span>
@@ -536,39 +484,8 @@
         <section class="step-section" aria-labelledby="step-2">
           <div class="step-number">2</div>
           <div>
-            <h2 id="step-2" class="step-title">Spring direct naar de juiste richting</h2>
-            <p class="step-copy">Gebruik dit korte beslisboompje om meteen naar de route te springen die het best past bij wat je wilt bouwen.</p>
-
-            <div class="quick-tree">
-              <a class="quick-tree-link" href="#route-a">
-                <span class="quick-tree-tag">A</span>
-                <div class="quick-tree-copy">
-                  <strong>Wil je vooral een app, site of MVP bouwen?</strong>
-                  <span>Ga naar algemene software, app of site.</span>
-                </div>
-              </a>
-              <a class="quick-tree-link" href="#route-b">
-                <span class="quick-tree-tag">B</span>
-                <div class="quick-tree-copy">
-                  <strong>Moet werk automatisch tussen tools, systemen of data bewegen?</strong>
-                  <span>Ga naar automatisering tussen bestaande tools.</span>
-                </div>
-              </a>
-              <a class="quick-tree-link" href="#route-c">
-                <span class="quick-tree-tag">C</span>
-                <div class="quick-tree-copy">
-                  <strong>Bepaalt kennis uit documenten of bronnen vooral de kwaliteit?</strong>
-                  <span>Ga naar kennislaag of document-gedreven AI.</span>
-                </div>
-              </a>
-              <a class="quick-tree-link" href="#route-d">
-                <span class="quick-tree-tag">D</span>
-                <div class="quick-tree-copy">
-                  <strong>Wil je een AI-assistent, AI-app of agent-opzet bouwen?</strong>
-                  <span>Ga naar AI-assistent, AI-app of agent-systeem.</span>
-                </div>
-              </a>
-            </div>
+            <h2 id="step-2" class="step-title">Per richting: dit is vaak een logisch startpunt</h2>
+            <p class="step-copy spacious">Heb je een richting gekozen? Dan zie je hieronder welke tool vaak een goed startpunt is, plus welke alternatieven daarbij passen.</p>
 
             <div class="routes">
               <section id="route-a" class="route-block">
@@ -581,16 +498,16 @@
                 </div>
                 <div class="choice-grid two">
                   <article class="choice-card">
-                    <h4><a class="tool-link" href="https://lovable.dev/" target="_blank" rel="noopener noreferrer">Lovable</a></h4>
-                    <p class="choice-question">Wil je vooral snel en eenvoudig bouwen?</p>
+                    <h4><a class="tool-link" href="https://lovable.dev/?via=karin-van-tongerlo" target="_blank" rel="noopener noreferrer">Lovable</a></h4>
+                    <p class="choice-question">Als je snel en eenvoudig wilt bouwen met een zeer gebruiksvriendelijke interface, inclusief simpele publicatie en backend.</p>
                     <p class="choice-copy">Kies dit als je snel iets bruikbaars wilt bouwen met zo min mogelijk gedoe.</p>
                     <p class="choice-meta">Alternatieven: <a class="inline-link" href="https://v0.app/" target="_blank" rel="noopener noreferrer">v0</a> / <a class="inline-link" href="https://bolt.new/" target="_blank" rel="noopener noreferrer">Bolt</a></p>
                   </article>
                   <article class="choice-card">
-                    <h4><a class="tool-link" href="https://www.claude.com/product/claude-code" target="_blank" rel="noopener noreferrer">Claude Code</a> / <a class="tool-link" href="https://www.cursor.com/" target="_blank" rel="noopener noreferrer">Cursor</a></h4>
-                    <p class="choice-question">Wil je krachtiger bouwen met meer controle?</p>
-                    <p class="choice-copy">Kies dit als je krachtiger wilt bouwen, met meer vrijheid en toegang tot topmodellen.</p>
-                    <p class="choice-meta">Ook passend: <a class="inline-link" href="https://antigravity.chat/" target="_blank" rel="noopener noreferrer">Antigravity</a></p>
+                    <h4><a class="tool-link" href="https://www.claude.com/product/claude-code" target="_blank" rel="noopener noreferrer">Claude Code</a> / <a class="tool-link" href="https://openai.com/codex/" target="_blank" rel="noopener noreferrer">Codex</a></h4>
+                    <p class="choice-question">Als je jouw oplossing met de krachtigste tools wilt bouwen.</p>
+                    <p class="choice-copy">Kies dit als je krachtiger wilt bouwen, met meer vrijheid, topmodellen en meer controle over hoe je oplossing werkt.</p>
+                    <p class="choice-meta">Alternatieven: <a class="inline-link" href="https://antigravity.chat/" target="_blank" rel="noopener noreferrer">Antigravity</a> / <a class="inline-link" href="https://www.cursor.com/" target="_blank" rel="noopener noreferrer">Cursor</a>, als je liever in een IDE of code-editor werkt.</p>
                   </article>
                 </div>
               </section>
@@ -606,9 +523,9 @@
                 <div class="stack">
                   <article class="choice-card">
                     <h4><a class="tool-link" href="https://n8n.io/" target="_blank" rel="noopener noreferrer">n8n</a></h4>
-                    <p class="choice-question">Past dit vooral bij workflows en orkestratie?</p>
+                    <p class="choice-question">Als je vooral workflows wilt bouwen en bestaande systemen of tools aan elkaar wilt koppelen (orkestratie).</p>
                     <p class="choice-copy">Gebruik dit als de logica vooral is: “als dit gebeurt, moet dat volgen”.</p>
-                    <p class="choice-meta">Alternatieven: <a class="inline-link" href="https://www.make.com/" target="_blank" rel="noopener noreferrer">Make</a> / <a class="inline-link" href="https://zapier.com/" target="_blank" rel="noopener noreferrer">Zapier</a></p>
+                    <p class="choice-meta">Alternatieven: <a class="inline-link" href="https://www.make.com/en/register?pc=morgenacademy" target="_blank" rel="noopener noreferrer">Make</a> / <a class="inline-link" href="https://zapier.com/" target="_blank" rel="noopener noreferrer">Zapier</a></p>
                   </article>
                 </div>
               </section>
@@ -624,7 +541,7 @@
                 <div class="stack">
                   <article class="choice-card">
                     <h4><a class="tool-link" href="https://ragflow.io/" target="_blank" rel="noopener noreferrer">RAGFlow</a></h4>
-                    <p class="choice-question">Past dit als kennislaag of document-engine?</p>
+                    <p class="choice-question">Als documenten, handleidingen of kennisbronnen bepalen hoe goed je oplossing werkt.</p>
                     <p class="choice-copy">Kies dit als informatie uit documenten of kennisbronnen het lastigste deel is.</p>
                     <p class="choice-meta">Parsing = inlezen en structureren. Retrieval = relevante info terugvinden.</p>
                   </article>
@@ -642,24 +559,24 @@
                 <div class="choice-grid four">
                   <article class="choice-card">
                     <h4><a class="tool-link" href="https://dify.ai/" target="_blank" rel="noopener noreferrer">Dify</a></h4>
-                    <p class="choice-question">Wil je vooral snel iets bruikbaars samenstellen?</p>
+                    <p class="choice-question">Als je snel een AI-assistent of AI-app wilt opzetten zonder te veel technische frictie.</p>
                     <p class="choice-copy">Kies dit als je snel een AI-assistent, AI-app of interne tool wilt opzetten.</p>
                   </article>
                   <article class="choice-card">
                     <h4><a class="tool-link" href="https://www.langflow.org/" target="_blank" rel="noopener noreferrer">Langflow</a></h4>
-                    <p class="choice-question">Wil je de flow zelf visueel bouwen?</p>
+                    <p class="choice-question">Als je de flow, tools en logica zelf visueel wilt ontwerpen en finetunen.</p>
                     <p class="choice-copy">Kies dit als je juist de stappen, tools, prompts en logica zelf wilt modelleren.</p>
                     <p class="choice-meta">Flow = de route of logica van stappen. MCP = tools en systemen koppelen aan AI. Alternatief: <a class="inline-link" href="https://flowiseai.com/" target="_blank" rel="noopener noreferrer">Flowise</a>.</p>
                   </article>
                   <article class="choice-card">
                     <h4><a class="tool-link" href="https://www.langchain.com/langchain" target="_blank" rel="noopener noreferrer">LangChain</a></h4>
-                    <p class="choice-question">Wil je maximale vrijheid en code-first werken?</p>
+                    <p class="choice-question">Als je code-first wilt bouwen met maximale vrijheid en controle.</p>
                     <p class="choice-copy">Kies dit als je niet vooral wilt samenstellen, maar zelf wilt programmeren en orkestreren.</p>
                     <p class="choice-meta">Code-first = vooral in code bouwen. Agent = AI die stappen uitvoert met tools.</p>
                   </article>
                   <article class="choice-card">
                     <h4><a class="tool-link" href="https://crewai.com/open-source" target="_blank" rel="noopener noreferrer">CrewAI</a></h4>
-                    <p class="choice-question">Wordt het werk beter door echte rolverdeling?</p>
+                    <p class="choice-question">Als het werk echt beter wordt door meerdere agents met duidelijke rollen te laten samenwerken.</p>
                     <p class="choice-copy">Kies dit pas als het werk echt beter wordt als je het splitst in rollen zoals onderzoek, analyse, schrijven en controle.</p>
                     <p class="choice-meta">Zo niet: begin met één goede agent.</p>
                   </article>
