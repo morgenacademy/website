@@ -198,6 +198,30 @@ nav.scrolled {
   display: flex;
   align-items: flex-end;
 }
+.academy-hero-visual {
+  position: relative;
+  margin: 1.5rem 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow: var(--shadow);
+  background: rgba(12, 8, 24, 0.5);
+}
+.academy-hero-img img {
+  width: 100%;
+  display: block;
+  height: 320px;
+  object-fit: cover;
+}
+.academy-hero-caption {
+  font-size: .78rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--orange);
+  padding: .8rem 1rem;
+  background: rgba(0, 0, 0, 0.35);
+}
 /* Orbs in hero (retained for animation, updated colors) */
 .orb { position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none; }
 .o1 { width: 560px; height: 560px; background: radial-gradient(circle, rgba(91,45,142,.7), rgba(155,111,207,.4) 55%, transparent); top: -120px; right: -80px; opacity: .5; animation: fl1 9s ease-in-out infinite; }
