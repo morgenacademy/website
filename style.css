@@ -125,7 +125,8 @@ nav.scrolled {
   font-weight: 900; font-size: 1.5rem;
   letter-spacing: .1em; text-transform: uppercase;
   color: var(--white); cursor: pointer;
-  border: none; background: none;
+  border: none; background: none; text-decoration: none;
+  display: inline-flex; align-items: center;
 }
 .logo-btn em { color: var(--orange); font-style: normal; }
 
@@ -353,91 +354,79 @@ nav.scrolled {
 .lbintro-p { font-size: .95rem; line-height: 1.8; color: var(--text-secondary); }
 
 /* ── 13. Toolselector ── */
-.toolselector-intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: end;
-  margin-bottom: 2rem;
+.toolselector-wrap {
+  max-width: 960px;
+  margin: 0 auto;
 }
-.toolselector-copy { max-width: 60ch; }
-.toolselector-meta {
-  font-size: .82rem;
-  line-height: 1.7;
-  color: var(--text-muted);
-  margin-top: .9rem;
-}
-.toolselector-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1.6rem;
-}
-.toolselector-card {
+.toolselector-teaser {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   background: var(--card-bg-strong);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow), inset 0 1px 0 var(--card-highlight);
-  overflow: hidden;
+  padding: 2.2rem;
+  transition: var(--transition);
 }
-.toolselector-bar {
+.toolselector-teaser:hover {
+  transform: translateY(-3px);
+  background: var(--card-bg-hover);
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.3);
+}
+.toolselector-kicker {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 1rem;
+}
+.toolselector-head {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 1.2rem;
-  background: rgba(255,255,255,.04);
-  border-bottom: 1px solid var(--card-border);
+  align-items: end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
-.toolselector-window {
-  display: flex;
-  align-items: center;
-  gap: .85rem;
-  min-width: 0;
-}
-.toolselector-dots {
+.toolselector-highlight { color: var(--purple-light); }
+.toolselector-open {
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
   display: inline-flex;
-  gap: .35rem;
-  flex-shrink: 0;
+  align-items: center;
+  gap: .45rem;
+  transition: color .2s, gap .2s;
 }
-.toolselector-dots span {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.18);
+.toolselector-teaser:hover .toolselector-open {
+  color: var(--white);
+  gap: .7rem;
 }
-.toolselector-dots span:nth-child(1) { background: rgba(255,255,255,.35); }
-.toolselector-dots span:nth-child(2) { background: rgba(155,111,207,.75); }
-.toolselector-dots span:nth-child(3) { background: rgba(216,254,86,.75); }
-.toolselector-path {
+.toolselector-teaser .ptitle { margin-bottom: .9rem; }
+.toolselector-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin-top: 1.5rem;
+}
+.toolselector-tags span {
   font-size: .72rem;
   font-weight: 700;
-  letter-spacing: .14em;
+  letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--text-muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: var(--text-secondary);
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  padding: .5rem .8rem;
 }
-.toolselector-link {
-  font-size: .77rem;
-  font-weight: 700;
-  color: var(--orange);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
-  transition: gap .2s;
-}
-.toolselector-link:hover { gap: .55rem; }
-.toolselector-frame {
-  display: block;
-  width: 100%;
-  height: 1100px;
-  border: 0;
-  background: #f2ede6;
+.toolselector-followup {
+  margin-top: 1rem;
+  display: flex;
 }
 
 /* ── 13. Opleidingen kaarten (.lcard) ── */
@@ -1211,7 +1200,6 @@ footer {
   .tw-banner-inner { padding: 2.5rem 1.5rem; }
   .hero { padding: 7rem 2rem 3rem; }
   .pgrid, .trgst, .lbintro, .book-grid, .da-grid, .da-form-grid, .assistant-detail-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .toolselector-intro { grid-template-columns: 1fr; gap: 2rem; }
   .adet-hero { grid-template-columns: 1fr; gap: 1.5rem; }
   .adet-two-col { grid-template-columns: 1fr; gap: 1.5rem; }
   .trgrid { grid-template-columns: 1fr; }
@@ -1226,7 +1214,6 @@ footer {
   .agents-head-copy { max-width: none; }
   .agents-head-cta { padding-top: 0; align-items: flex-start; }
   .org-managers, .org-departments, .org-stats { grid-template-columns: 1fr 1fr; }
-  .toolselector-frame { height: 980px; }
 }
 @media (max-width: 640px) {
   .nav-toggle { display: inline-flex; }
@@ -1255,6 +1242,7 @@ footer {
   .agents-head-cta .btn-p, .agents-head-cta .btn-o { width: 100%; }
   .btn-p, .btn-w, .btn-o, .btn-g { width: 100%; justify-content: center; }
   .glass-card { padding: 1.4rem; }
-  .toolselector-bar { flex-direction: column; align-items: flex-start; }
-  .toolselector-frame { height: 760px; }
+  .toolselector-teaser { padding: 1.6rem; }
+  .toolselector-open { width: 100%; }
+  .toolselector-followup .btn-o { width: 100%; }
 }

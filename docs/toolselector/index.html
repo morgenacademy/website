@@ -7,6 +7,10 @@
     <meta name="description" content="Kies een logische starttool voor apps, automatisering, kennislagen en AI-assistenten." />
     <meta name="theme-color" content="#000000" />
     <link rel="icon" href="/favicon-company.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
     <style>
       :root {
         --bg: #f2ede6;
@@ -32,12 +36,15 @@
       body {
         margin: 0;
         min-height: 100vh;
-        font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+        padding-top: 88px;
+        font-family: "Barlow", "Avenir Next", "Helvetica Neue", sans-serif;
         color: var(--ink);
+        cursor: auto;
         background:
-          radial-gradient(circle at 85% 12%, rgba(187, 92, 54, 0.10), transparent 22%),
-          radial-gradient(circle at 12% 78%, rgba(187, 92, 54, 0.07), transparent 16%),
-          var(--bg);
+          radial-gradient(ellipse 70% 50% at 50% -10%, rgba(91, 45, 142, 0.55) 0%, transparent 60%),
+          radial-gradient(ellipse 50% 40% at 85% 70%, rgba(123, 77, 174, 0.22) 0%, transparent 50%),
+          radial-gradient(ellipse 45% 35% at 15% 65%, rgba(155, 111, 207, 0.12) 0%, transparent 50%),
+          #070510;
       }
 
       body::before {
@@ -45,8 +52,8 @@
         position: fixed;
         inset: 0;
         background-image:
-          linear-gradient(rgba(23, 23, 23, 0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(23, 23, 23, 0.03) 1px, transparent 1px);
+          linear-gradient(rgba(215, 255, 55, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(215, 255, 55, 0.03) 1px, transparent 1px);
         background-size: 80px 80px;
         pointer-events: none;
       }
@@ -54,7 +61,7 @@
       main {
         position: relative;
         width: min(1520px, calc(100vw - 32px));
-        margin: 24px auto 40px;
+        margin: 32px auto 56px;
         padding: 36px;
         border-radius: 32px;
         background:
@@ -77,6 +84,11 @@
       .content {
         position: relative;
         z-index: 1;
+      }
+
+      .toolselector-back {
+        text-decoration: none;
+        margin-bottom: 1.2rem;
       }
 
       .eyebrow {
@@ -357,6 +369,10 @@
       }
 
       @media (max-width: 840px) {
+        body {
+          padding-top: 76px;
+        }
+
         main {
           width: calc(100vw - 16px);
           margin: 12px auto 24px;
@@ -384,8 +400,24 @@
     </style>
   </head>
   <body>
+    <nav id="mainNav">
+      <a class="logo-btn" href="/">MORGEN<em>.</em></a>
+      <button class="nav-toggle" type="button" onclick="toggleNav()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/#aanbod">Wat we doen</a></li>
+        <li><a href="/academy">Academy</a></li>
+        <li><a href="/technology" class="active" aria-current="page">Technology</a></li>
+        <li><a href="/consultancy">Consultancy</a></li>
+        <li><a href="/assistenten">Assistenten</a></li>
+        <li><a href="/company">Company</a></li>
+        <li><a href="/#home-aanvraag" class="btn-nav">Gratis kennismaking</a></li>
+      </ul>
+    </nav>
     <main>
       <div class="content">
+        <a class="back-btn toolselector-back" href="/technology#te-toolselector">&#x2190; Terug naar Technology</a>
         <p class="eyebrow">Toolkeuze · AI · Automation · Development</p>
         <h1>Welke tool <span class="hero-accent">past het best?</span></h1>
         <p class="lede">Deze beslisboom helpt je kiezen met welke tool je begint en welke lagen je later eventueel toevoegt.</p>
@@ -549,5 +581,71 @@
         </section>
       </div>
     </main>
+    <footer>
+      <div class="ft">
+        <div>
+          <a class="logo-btn" href="/">MORGEN<em>.</em></a>
+          <p class="fbrand">AI-trainingen, digitale oplossingen, strategische begeleiding en thought leadership voor het MKB.</p>
+          <div class="fsoc">
+            <a href="https://www.linkedin.com/company/morgenacademy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn Morgen Academy">LI</a>
+            <a href="https://www.instagram.com/morgenacademy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram Morgen Academy">IG</a>
+            <a href="https://www.youtube.com/@OptinexYT1NL" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube OptiNex YT1 NL">YT</a>
+          </div>
+        </div>
+        <div>
+          <div class="fcol-t">Academy</div>
+          <ul class="flinks">
+            <li><a href="https://www.morgenacademy.nl/aanbod" target="_blank" rel="noopener noreferrer">Online basistraining kopen</a></li>
+            <li><a href="https://www.morgenacademy.nl/aanbod" target="_blank" rel="noopener noreferrer">AI-trainingen voor teams</a></li>
+            <li><a href="https://www.morgenacademy.nl/aanbod" target="_blank" rel="noopener noreferrer">Incompany leerpad</a></li>
+            <li><a href="https://www.morgenacademy.nl/aanbod" target="_blank" rel="noopener noreferrer">EU AI Act conform</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fcol-t">Technology &amp; Consultancy</div>
+          <ul class="flinks">
+            <li><a href="/technology">Digitale oplossingen</a></li>
+            <li><a href="/technology">Procesautomatisering</a></li>
+            <li><a href="/consultancy">Digitale strategie</a></li>
+            <li><a href="/assistenten">Digitale assistenten</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fcol-t">Company &amp; Info</div>
+          <ul class="flinks">
+            <li><a href="/company#cp-keynote">Keynote boeken</a></li>
+            <li><a href="/company#cp-boek">Boek bestellen</a></li>
+            <li><a href="mailto:totmorgen@morgenacademy.nl">totmorgen@morgenacademy.nl</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="fb-bar">
+        <p>&#169; 2025 Morgen Academy. Alle rechten voorbehouden.</p>
+        <div class="fbl"><a href="#">Privacybeleid</a><a href="#">Cookieverklaring</a><a href="#">Algemene voorwaarden</a></div>
+      </div>
+    </footer>
+    <script>
+      const navEl = document.getElementById("mainNav");
+
+      function toggleNav() {
+        document.body.classList.toggle("nav-open");
+      }
+
+      function closeNav() {
+        document.body.classList.remove("nav-open");
+      }
+
+      window.addEventListener("scroll", () => {
+        navEl.classList.toggle("scrolled", window.scrollY > 20);
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 640) closeNav();
+      });
+
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", closeNav);
+      });
+    </script>
   </body>
 </html>
