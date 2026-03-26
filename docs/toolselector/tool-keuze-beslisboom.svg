@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 3060" role="img" aria-labelledby="title desc">
+  <title id="title">Besliskaart voor toolkeuze</title>
+  <desc id="desc">Besliskaart voor het kiezen en combineren van Lovable, Claude Code, Cursor, Antigravity, n8n, Make, Zapier, RAGFlow, Dify, Langflow, Flowise, LangChain, CrewAI en Langfuse.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0817"/>
+      <stop offset="55%" stop-color="#140c24"/>
+      <stop offset="100%" stop-color="#23163a"/>
+    </linearGradient>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M 72 0 L 0 0 0 72" fill="none" stroke="#8b7bbb" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <style>
+      .panel { fill: rgba(13, 9, 24, 0.80); stroke: rgba(226, 220, 242, 0.08); stroke-width: 1.5; }
+      .section { fill: rgba(22, 15, 35, 0.72); stroke: rgba(226, 220, 242, 0.08); stroke-width: 1.5; }
+      .card { fill: rgba(29, 20, 45, 0.94); stroke: rgba(221, 215, 240, 0.14); stroke-width: 1.5; }
+      .accent-card { fill: rgba(18, 12, 32, 0.98); stroke: rgba(225, 218, 242, 0.16); stroke-width: 1.5; }
+      .add-card { fill: rgba(14, 10, 24, 0.98); stroke: rgba(215, 255, 55, 0.22); stroke-width: 2; }
+      .route-panel { fill: rgba(12, 8, 22, 0.62); stroke: rgba(215, 255, 55, 0.10); stroke-width: 1.5; }
+      .route-pill { fill: rgba(215, 255, 55, 0.14); stroke: rgba(215, 255, 55, 0.24); stroke-width: 1.5; }
+      .route-rule { fill: none; stroke: rgba(215, 255, 55, 0.14); stroke-width: 1.5; }
+      .eyebrow { font-family: "Avenir Next", "Helvetica Neue", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+      .title { font-family: "Avenir Next", "Helvetica Neue", sans-serif; font-size: 76px; font-weight: 800; letter-spacing: -0.05em; }
+      .subtitle { font-family: "Avenir Next", "Helvetica Neue", sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.01em; }
+      .section-title { font-family: "Avenir Next", "Helvetica Neue", sans-serif; font-size: 26px; font-weight: 760; letter-spacing: -0.02em; }
+      .card-title { font-family: "Avenir Next", "Helvetica Neue", sans-serif; font-size: 24px; font-weight: 780; letter-spacing: -0.02em; }
+      .card-copy { font-family: "Avenir Next", "Helvetica Neue", sans-serif; font-size: 15px; font-weight: 600; letter-spacing: -0.01em; }
+      .card-note { font-family: "Avenir Next", "Helvetica Neue", sans-serif; font-size: 13px; font-weight: 500; letter-spacing: -0.01em; }
+      .jump { cursor: pointer; }
+      .jump:hover rect { stroke: rgba(215, 255, 55, 0.52); }
+      .guide { fill: none; stroke: rgba(215, 255, 55, 0.24); stroke-width: 2; stroke-linecap: round; }
+      .white { fill: #f4f1fa; }
+      .muted { fill: #b7aecf; }
+      .lime { fill: #d7ff37; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="3060" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1600" height="3060" fill="url(#grid)"/>
+  <rect x="70" y="70" width="1460" height="2920" rx="40" class="panel"/>
+
+  <text x="112" y="208" class="eyebrow lime">TOOLKEUZE · AI · AUTOMATION · DEVELOPMENT</text>
+  <text x="112" y="304" class="title white">Welke tool</text>
+  <text x="112" y="392" class="title lime">past het best?</text>
+  <text x="112" y="446" class="subtitle muted">Deze beslisboom helpt je kiezen met welke tool je begint en welke lagen je later eventueel toevoegt.</text>
+  <rect x="112" y="492" width="238" height="42" rx="21" fill="rgba(215, 255, 55, 0.12)" stroke="rgba(215, 255, 55, 0.24)"/>
+  <text x="136" y="519" class="eyebrow lime" style="font-size:12px;">BEGIN MET JE HOOFDKEUZE</text>
+
+  <!-- Section 1 -->
+  <rect x="100" y="580" width="1400" height="468" rx="34" class="section"/>
+  <text x="128" y="632" class="section-title white">1. Wat probeer je vooral te maken?</text>
+  <text x="128" y="662" class="card-note muted">Kies eerst het soort oplossing. Niet alles valt in dezelfde categorie.</text>
+
+  <a href="#path-a" class="jump">
+    <rect x="128" y="702" width="654" height="134" rx="26" class="card"/>
+    <text x="160" y="738" class="eyebrow muted">A</text>
+    <text x="160" y="782" class="card-title white">Algemene software, app of site</text>
+    <text x="160" y="814" class="card-note muted">Van MVP en landingspagina tot serieuzer softwareproject.</text>
+  </a>
+
+  <a href="#path-b" class="jump">
+    <rect x="816" y="702" width="654" height="134" rx="26" class="card"/>
+    <text x="848" y="738" class="eyebrow muted">B</text>
+    <text x="848" y="782" class="card-title white">Automatisering tussen bestaande tools</text>
+    <text x="848" y="814" class="card-note muted">Iets moet automatisch bewegen tussen systemen, data of processen.</text>
+  </a>
+
+  <a href="#path-c" class="jump">
+    <rect x="128" y="868" width="654" height="134" rx="26" class="card"/>
+    <text x="160" y="904" class="eyebrow muted">C</text>
+    <text x="160" y="948" class="card-title white">Kennislaag of document-gedreven AI</text>
+    <text x="160" y="980" class="card-note muted">De juiste informatie uit pdf's, handleidingen of kennisbronnen is de bottleneck.</text>
+  </a>
+
+  <a href="#path-d" class="jump">
+    <rect x="816" y="868" width="654" height="134" rx="26" class="card"/>
+    <text x="848" y="904" class="eyebrow muted">D</text>
+    <text x="848" y="948" class="card-title white">AI-assistent, AI-app of agent-systeem</text>
+    <text x="848" y="980" class="card-note muted">Je wilt een AI-product, assistent of agent-opzet voor intern of extern gebruik.</text>
+  </a>
+
+  <path d="M 455 836 L 455 1212 L 338 1212" class="guide"/>
+  <path d="M 1143 836 L 1143 1518 L 338 1518" class="guide"/>
+  <path d="M 455 1002 L 455 1834 L 788 1834" class="guide"/>
+  <path d="M 1143 1002 L 1143 1212 L 1248 1212" class="guide"/>
+
+  <!-- Section 2 -->
+  <rect x="100" y="1090" width="1400" height="1336" rx="34" class="section"/>
+  <text x="128" y="1142" class="section-title white">2. Kies daarbinnen de aanpak die het best past</text>
+  <text x="128" y="1172" class="card-note muted">Dit is je hoofdkeuze. Extra lagen zoals n8n, RAGFlow of Langfuse voeg je pas later toe als ze echt nodig zijn.</text>
+
+  <rect x="118" y="1204" width="890" height="308" rx="30" class="route-panel"/>
+  <rect x="138" y="1224" width="46" height="30" rx="15" class="route-pill"/>
+  <text x="154" y="1245" class="eyebrow lime" style="font-size:12px;">A</text>
+  <text id="path-a" x="198" y="1246" class="eyebrow lime">ALS JE ALGEMENE SOFTWARE, EEN APP OF SITE WILT BOUWEN</text>
+  <text x="198" y="1272" class="card-note muted">
+    <tspan x="198" dy="0">Hulpvraag: wil je vooral snel en eenvoudig bouwen,</tspan>
+    <tspan x="198" dy="20">of juist krachtiger met meer vrijheid en controle?</tspan>
+  </text>
+  <path d="M 138 1292 L 988 1292" class="route-rule"/>
+  <rect x="128" y="1286" width="420" height="204" rx="28" class="accent-card"/>
+  <text x="160" y="1340" class="card-title white">Lovable</text>
+  <text x="160" y="1374" class="card-copy white">Wil je vooral snel en eenvoudig bouwen?</text>
+  <text x="160" y="1422" class="card-note muted">
+    <tspan x="160" dy="0">Kies dit als je snel iets bruikbaars wilt</tspan>
+    <tspan x="160" dy="20">bouwen met zo min mogelijk gedoe.</tspan>
+  </text>
+  <text x="160" y="1470" class="card-note muted">Alternatieven: v0 / Bolt</text>
+
+  <rect x="578" y="1286" width="420" height="204" rx="28" class="accent-card"/>
+  <text x="610" y="1340" class="card-title white">Claude Code / Cursor</text>
+  <text x="610" y="1374" class="card-copy white">Wil je krachtiger bouwen met meer controle?</text>
+  <text x="610" y="1422" class="card-note muted">
+    <tspan x="610" dy="0">Kies dit als je krachtiger wilt bouwen,</tspan>
+    <tspan x="610" dy="20">met meer vrijheid en toegang tot topmodellen.</tspan>
+  </text>
+  <text x="610" y="1470" class="card-note muted">Ook passend: Antigravity</text>
+  <rect x="554" y="1366" width="32" height="32" rx="16" class="route-pill"/>
+  <text x="566" y="1388" class="eyebrow lime" style="font-size:11px;">OF</text>
+
+  <rect x="118" y="1520" width="438" height="326" rx="30" class="route-panel"/>
+  <rect x="138" y="1540" width="46" height="30" rx="15" class="route-pill"/>
+  <text x="154" y="1561" class="eyebrow lime" style="font-size:12px;">B</text>
+  <text id="path-b" x="198" y="1562" class="eyebrow lime">ALS JE VOORAL TOOLS OF SYSTEMEN AAN ELKAAR WILT KOPPELEN</text>
+  <text x="198" y="1588" class="card-note muted">
+    <tspan x="198" dy="0">Hulpvraag: moet er vooral iets automatisch gebeuren</tspan>
+    <tspan x="198" dy="20">tussen bestaande tools, systemen of data?</tspan>
+  </text>
+  <path d="M 138 1608 L 536 1608" class="route-rule"/>
+  <rect x="128" y="1602" width="420" height="220" rx="28" class="accent-card"/>
+  <text x="160" y="1656" class="card-title white">n8n</text>
+  <text x="160" y="1690" class="card-copy white">Past dit vooral bij workflows en orkestratie?</text>
+  <text x="160" y="1738" class="card-note muted">
+    <tspan x="160" dy="0">Gebruik dit als de logica vooral is:</tspan>
+    <tspan x="160" dy="20">“als dit gebeurt, moet dat volgen”.</tspan>
+  </text>
+  <text x="160" y="1800" class="card-note muted">Alternatieven: Make / Zapier</text>
+
+  <rect x="568" y="1836" width="438" height="350" rx="30" class="route-panel"/>
+  <rect x="588" y="1856" width="46" height="30" rx="15" class="route-pill"/>
+  <text x="604" y="1877" class="eyebrow lime" style="font-size:12px;">C</text>
+  <text id="path-c" x="648" y="1878" class="eyebrow lime">ALS KENNIS OF DOCUMENTEN DE KWALITEIT BEPALEN</text>
+  <text x="648" y="1904" class="card-note muted">
+    <tspan x="648" dy="0">Hulpvraag: bepaalt de juiste context uit documenten</tspan>
+    <tspan x="648" dy="20">of kennisbronnen de kwaliteit van wat je bouwt?</tspan>
+  </text>
+  <path d="M 588 1924 L 986 1924" class="route-rule"/>
+  <rect x="578" y="1918" width="420" height="244" rx="28" class="accent-card"/>
+  <text x="610" y="1972" class="card-title white">RAGFlow</text>
+  <text x="610" y="2006" class="card-copy white">Past dit als kennislaag of document-engine?</text>
+  <text x="610" y="2054" class="card-note muted">
+    <tspan x="610" dy="0">Kies dit als informatie uit documenten of</tspan>
+    <tspan x="610" dy="20">kennisbronnen het lastigste deel is.</tspan>
+  </text>
+  <text x="610" y="2116" class="card-note muted">
+    <tspan x="610" dy="0">Parsing = inlezen en structureren.</tspan>
+    <tspan x="610" dy="20">Retrieval = relevante info terugvinden.</tspan>
+  </text>
+
+  <rect x="1018" y="1204" width="462" height="1180" rx="30" class="route-panel"/>
+  <rect x="1038" y="1224" width="46" height="30" rx="15" class="route-pill"/>
+  <text x="1054" y="1245" class="eyebrow lime" style="font-size:12px;">D</text>
+  <text id="path-d" x="1098" y="1246" class="eyebrow lime">ALS JE EEN AI-ASSISTENT OF AI-SYSTEEM OPZET</text>
+  <text x="1098" y="1272" class="card-note muted">
+    <tspan x="1098" dy="0">Hulpvraag: wil je vooral iets snel samenstellen,</tspan>
+    <tspan x="1098" dy="20">de flow zelf bouwen, maximale vrijheid,</tspan>
+    <tspan x="1098" dy="20">of echte rolverdeling tussen meerdere agents?</tspan>
+  </text>
+  <path d="M 1038 1310 L 1460 1310" class="route-rule"/>
+  <rect x="1028" y="1302" width="442" height="204" rx="28" class="accent-card"/>
+  <text x="1060" y="1356" class="card-title white">Dify</text>
+  <text x="1060" y="1390" class="card-copy white">Wil je vooral snel iets bruikbaars samenstellen?</text>
+  <text x="1060" y="1438" class="card-note muted">
+    <tspan x="1060" dy="0">Kies dit als je snel een AI-assistent,</tspan>
+    <tspan x="1060" dy="20">AI-app of interne tool wilt opzetten.</tspan>
+  </text>
+
+  <rect x="1028" y="1530" width="442" height="276" rx="28" class="accent-card"/>
+  <text x="1060" y="1584" class="card-title white">Langflow</text>
+  <text x="1060" y="1618" class="card-copy white">Wil je de flow zelf visueel bouwen?</text>
+  <text x="1060" y="1666" class="card-note muted">
+    <tspan x="1060" dy="0">Kies dit als je juist de stappen, tools,</tspan>
+    <tspan x="1060" dy="20">prompts en logica zelf wilt modelleren.</tspan>
+  </text>
+  <text x="1060" y="1728" class="card-note muted">
+    <tspan x="1060" dy="0">Flow = de route of logica van stappen.</tspan>
+    <tspan x="1060" dy="20">MCP = tools en systemen koppelen aan AI.</tspan>
+  </text>
+  <text x="1060" y="1780" class="card-note muted">Alternatief: Flowise</text>
+
+  <rect x="1028" y="1832" width="442" height="244" rx="28" class="accent-card"/>
+  <text x="1060" y="1886" class="card-title white">LangChain</text>
+  <text x="1060" y="1920" class="card-copy white">Wil je maximale vrijheid en code-first werken?</text>
+  <text x="1060" y="1968" class="card-note muted">
+    <tspan x="1060" dy="0">Kies dit als je niet vooral wilt samenstellen,</tspan>
+    <tspan x="1060" dy="20">maar zelf wilt programmeren en orkestreren.</tspan>
+  </text>
+  <text x="1060" y="2030" class="card-note muted">
+    <tspan x="1060" dy="0">Code-first = vooral in code bouwen.</tspan>
+    <tspan x="1060" dy="20">Agent = AI die stappen uitvoert met tools.</tspan>
+  </text>
+
+  <rect x="1028" y="2102" width="442" height="260" rx="28" class="accent-card"/>
+  <text x="1060" y="2156" class="card-title white">CrewAI</text>
+  <text x="1060" y="2190" class="card-copy white">Wordt het werk beter door echte rolverdeling?</text>
+  <text x="1060" y="2238" class="card-note muted">
+    <tspan x="1060" dy="0">Kies dit pas als het werk echt beter wordt als je het splitst</tspan>
+    <tspan x="1060" dy="20">in rollen zoals onderzoek, analyse, schrijven en controle.</tspan>
+  </text>
+  <text x="1060" y="2300" class="card-note muted">
+    <tspan x="1060" dy="0">Zo niet: begin met één goede agent.</tspan>
+    <tspan x="1060" dy="20">Meerdere rollen voegen niet automatisch waarde toe.</tspan>
+  </text>
+
+  <!-- Section 3 -->
+  <rect x="100" y="2462" width="1400" height="416" rx="34" class="section"/>
+  <text x="128" y="2514" class="section-title white">3. Wat voeg je eventueel nog toe?</text>
+  <text x="128" y="2544" class="card-note muted">Alleen relevant als dit nog niet je hoofdkeuze was. Dit zijn vaak extra lagen bovenop de tool waarmee je begint.</text>
+
+  <rect x="128" y="2592" width="420" height="180" rx="26" class="add-card"/>
+  <text x="160" y="2660" class="card-title white">Voeg n8n toe</text>
+  <text x="160" y="2692" class="card-note muted">
+    <tspan x="160" dy="0">Als je gekozen oplossing ook automatisch</tspan>
+    <tspan x="160" dy="20">tussen systemen, tools of data moet bewegen.</tspan>
+  </text>
+
+  <rect x="578" y="2592" width="420" height="180" rx="26" class="add-card"/>
+  <text x="610" y="2660" class="card-title white">Voeg RAGFlow toe</text>
+  <text x="610" y="2692" class="card-note muted">
+    <tspan x="610" dy="0">Als documenten, handleidingen of kennis</tspan>
+    <tspan x="610" dy="20">de kwaliteit van je antwoord bepalen.</tspan>
+  </text>
+
+  <rect x="1028" y="2592" width="442" height="180" rx="26" class="add-card"/>
+  <text x="1060" y="2660" class="card-title white">Voeg Langfuse toe</text>
+  <text x="1060" y="2692" class="card-note muted">
+    <tspan x="1060" dy="0">Als het serieus in gebruik gaat en je tracing,</tspan>
+    <tspan x="1060" dy="20">evaluatie en promptbeheer nodig hebt.</tspan>
+  </text>
+
+  <rect x="128" y="2800" width="1342" height="54" rx="24" class="add-card"/>
+  <text x="160" y="2834" class="card-note muted">Houd het simpel als één goede assistent al genoeg is. Niet elk probleem vraagt om meerdere tools of een complexe architectuur.</text>
+</svg>

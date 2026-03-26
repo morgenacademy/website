@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Morgen Company | Toolselector voor AI, automation en development</title>
+    <meta name="description" content="Kies een logische starttool voor apps, automatisering, kennislagen en AI-assistenten." />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="/favicon-company.svg" type="image/svg+xml" />
+    <style>
+      :root {
+        --bg: #f2ede6;
+        --paper: #120c20;
+        --paper-2: #1a122c;
+        --card: #171024;
+        --card-2: #201631;
+        --line: rgba(234, 227, 248, 0.10);
+        --ink: #f5f2fb;
+        --muted: #b8afcf;
+        --accent: #d7ff37;
+        --shadow: 0 24px 80px rgba(12, 8, 22, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 85% 12%, rgba(187, 92, 54, 0.10), transparent 22%),
+          radial-gradient(circle at 12% 78%, rgba(187, 92, 54, 0.07), transparent 16%),
+          var(--bg);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(23, 23, 23, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(23, 23, 23, 0.03) 1px, transparent 1px);
+        background-size: 80px 80px;
+        pointer-events: none;
+      }
+
+      main {
+        position: relative;
+        width: min(1520px, calc(100vw - 32px));
+        margin: 24px auto 40px;
+        padding: 36px;
+        border-radius: 32px;
+        background:
+          linear-gradient(180deg, rgba(33, 24, 54, 0.96), rgba(16, 11, 29, 0.98));
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      main::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(215, 255, 55, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(215, 255, 55, 0.04) 1px, transparent 1px);
+        background-size: 72px 72px;
+        pointer-events: none;
+      }
+
+      .content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(3.2rem, 7vw, 6rem);
+        line-height: 0.92;
+        letter-spacing: -0.06em;
+      }
+
+      .hero-accent {
+        display: block;
+        color: var(--accent);
+      }
+
+      .lede {
+        max-width: 880px;
+        margin: 18px 0 0;
+        font-size: 1.2rem;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .step-intro {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 24px;
+        align-items: start;
+        margin-top: 46px;
+        padding-top: 32px;
+        border-top: 1px solid var(--line);
+      }
+
+      .step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        background: rgba(215, 255, 55, 0.12);
+        border: 1px solid rgba(215, 255, 55, 0.28);
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--accent);
+      }
+
+      .step-title {
+        margin: 0;
+        font-size: clamp(1.9rem, 3vw, 2.8rem);
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+
+      .step-copy {
+        margin: 12px 0 0;
+        max-width: 760px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .route-picker {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 28px;
+      }
+
+      .route-link {
+        display: block;
+        padding: 24px 26px 22px;
+        border-radius: 24px;
+        text-decoration: none;
+        color: inherit;
+        background: rgba(20, 13, 33, 0.78);
+        border: 1px solid rgba(230, 222, 244, 0.12);
+        transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+      }
+
+      .route-link:hover {
+        transform: translateY(-2px);
+        border-color: rgba(215, 255, 55, 0.42);
+        background: rgba(24, 16, 39, 0.92);
+      }
+
+      .route-label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        margin-bottom: 18px;
+        font-size: 0.95rem;
+        font-weight: 800;
+        color: var(--accent);
+        background: rgba(215, 255, 55, 0.12);
+        border: 1px solid rgba(215, 255, 55, 0.26);
+      }
+
+      .route-link h3 {
+        margin: 0 0 8px;
+        font-size: 1.55rem;
+        line-height: 1.05;
+        letter-spacing: -0.035em;
+      }
+
+      .route-link p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
+      .step-section {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 24px;
+        align-items: start;
+        margin-top: 46px;
+        padding-top: 32px;
+        border-top: 1px solid var(--line);
+      }
+
+      .routes {
+        display: grid;
+        gap: 26px;
+      }
+
+      .route-block {
+        scroll-margin-top: 28px;
+        padding: 26px;
+        border-radius: 28px;
+        background: rgba(12, 8, 22, 0.52);
+        border: 1px solid rgba(215, 255, 55, 0.12);
+      }
+
+      .route-head {
+        display: grid;
+        grid-template-columns: 48px 1fr;
+        gap: 18px;
+        align-items: start;
+        margin-bottom: 18px;
+      }
+
+      .route-head .route-label {
+        margin: 0;
+      }
+
+      .route-head h3 {
+        margin: 0 0 8px;
+        font-size: 1.1rem;
+        line-height: 1.2;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .route-head p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .choice-grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .choice-grid.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .choice-grid.four {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .choice-card {
+        padding: 24px;
+        border-radius: 24px;
+        background: rgba(19, 13, 33, 0.96);
+        border: 1px solid rgba(233, 225, 246, 0.12);
+      }
+
+      .choice-card h4 {
+        margin: 0 0 10px;
+        font-size: 1.9rem;
+        line-height: 1;
+        letter-spacing: -0.045em;
+      }
+
+      .choice-question {
+        margin: 0 0 18px;
+        font-size: 1.02rem;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+
+      .choice-copy,
+      .choice-meta {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .choice-meta {
+        margin-top: 14px;
+      }
+
+      .inline-divider {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        margin: 6px auto;
+        font-size: 0.78rem;
+        font-weight: 800;
+        color: var(--accent);
+        background: rgba(215, 255, 55, 0.10);
+        border: 1px solid rgba(215, 255, 55, 0.24);
+      }
+
+      .stack {
+        display: grid;
+        gap: 18px;
+      }
+
+      .addons {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .addon-card {
+        padding: 24px;
+        border-radius: 24px;
+        background: rgba(12, 8, 22, 0.78);
+        border: 2px solid rgba(215, 255, 55, 0.18);
+      }
+
+      .addon-card h4 {
+        margin: 0 0 10px;
+        font-size: 1.75rem;
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+
+      .simple-note {
+        margin-top: 18px;
+        padding: 18px 22px;
+        border-radius: 20px;
+        background: rgba(12, 8, 22, 0.72);
+        border: 2px solid rgba(215, 255, 55, 0.18);
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .simple-note strong {
+        color: var(--ink);
+      }
+
+      @media (max-width: 1120px) {
+        .route-picker,
+        .choice-grid.two,
+        .choice-grid.four,
+        .addons {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 840px) {
+        main {
+          width: calc(100vw - 16px);
+          margin: 12px auto 24px;
+          padding: 22px 18px 24px;
+          border-radius: 24px;
+        }
+
+        .step-intro,
+        .step-section {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .step-number {
+          width: 72px;
+          height: 72px;
+          font-size: 1.6rem;
+        }
+
+        .route-head {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <p class="eyebrow">Toolkeuze · AI · Automation · Development</p>
+        <h1>Welke tool <span class="hero-accent">past het best?</span></h1>
+        <p class="lede">Deze beslisboom helpt je kiezen met welke tool je begint en welke lagen je later eventueel toevoegt.</p>
+
+        <section class="step-intro" aria-labelledby="step-1">
+          <div class="step-number">1</div>
+          <div>
+            <h2 id="step-1" class="step-title">Kies eerst wat je vooral probeert te maken</h2>
+            <p class="step-copy">Begin niet bij de toolnaam maar bij het soort probleem. Klik op het pad dat het dichtst bij je situatie ligt.</p>
+            <div class="route-picker">
+              <a class="route-link" href="#route-a">
+                <span class="route-label">A</span>
+                <h3>Algemene software, app of site</h3>
+                <p>Van MVP en landingspagina tot serieuzer softwareproject.</p>
+              </a>
+              <a class="route-link" href="#route-b">
+                <span class="route-label">B</span>
+                <h3>Automatisering tussen bestaande tools</h3>
+                <p>Iets moet automatisch bewegen tussen systemen, data of processen.</p>
+              </a>
+              <a class="route-link" href="#route-c">
+                <span class="route-label">C</span>
+                <h3>Kennislaag of document-gedreven AI</h3>
+                <p>De juiste informatie uit pdf's, handleidingen of kennisbronnen is de bottleneck.</p>
+              </a>
+              <a class="route-link" href="#route-d">
+                <span class="route-label">D</span>
+                <h3>AI-assistent, AI-app of agent-systeem</h3>
+                <p>Je wilt een AI-product, assistent of agent-opzet voor intern of extern gebruik.</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="step-section" aria-labelledby="step-2">
+          <div class="step-number">2</div>
+          <div>
+            <h2 id="step-2" class="step-title">Volg daarna de hulpvraag binnen dat pad</h2>
+            <p class="step-copy">Hier maak je de echte toolkeuze. Elk pad heeft een eigen hulpvraag, zodat je niet alles tegelijk hoeft af te wegen.</p>
+
+            <div class="routes">
+              <section id="route-a" class="route-block">
+                <div class="route-head">
+                  <span class="route-label">A</span>
+                  <div>
+                    <h3>Algemene software, app of site</h3>
+                    <p>Hulpvraag: wil je vooral snel en eenvoudig bouwen, of juist krachtiger met meer vrijheid en controle?</p>
+                  </div>
+                </div>
+                <div class="choice-grid two">
+                  <article class="choice-card">
+                    <h4>Lovable</h4>
+                    <p class="choice-question">Wil je vooral snel en eenvoudig bouwen?</p>
+                    <p class="choice-copy">Kies dit als je snel iets bruikbaars wilt bouwen met zo min mogelijk gedoe.</p>
+                    <p class="choice-meta">Alternatieven: v0 / Bolt</p>
+                  </article>
+                  <article class="choice-card">
+                    <h4>Claude Code / Cursor</h4>
+                    <p class="choice-question">Wil je krachtiger bouwen met meer controle?</p>
+                    <p class="choice-copy">Kies dit als je krachtiger wilt bouwen, met meer vrijheid en toegang tot topmodellen.</p>
+                    <p class="choice-meta">Ook passend: Antigravity</p>
+                  </article>
+                </div>
+              </section>
+
+              <section id="route-b" class="route-block">
+                <div class="route-head">
+                  <span class="route-label">B</span>
+                  <div>
+                    <h3>Automatisering tussen bestaande tools</h3>
+                    <p>Hulpvraag: moet er vooral iets automatisch gebeuren tussen bestaande tools, systemen of data?</p>
+                  </div>
+                </div>
+                <div class="stack">
+                  <article class="choice-card">
+                    <h4>n8n</h4>
+                    <p class="choice-question">Past dit vooral bij workflows en orkestratie?</p>
+                    <p class="choice-copy">Gebruik dit als de logica vooral is: “als dit gebeurt, moet dat volgen”.</p>
+                    <p class="choice-meta">Alternatieven: Make / Zapier</p>
+                  </article>
+                </div>
+              </section>
+
+              <section id="route-c" class="route-block">
+                <div class="route-head">
+                  <span class="route-label">C</span>
+                  <div>
+                    <h3>Kennislaag of document-gedreven AI</h3>
+                    <p>Hulpvraag: bepaalt de juiste context uit documenten of kennisbronnen de kwaliteit van wat je bouwt?</p>
+                  </div>
+                </div>
+                <div class="stack">
+                  <article class="choice-card">
+                    <h4>RAGFlow</h4>
+                    <p class="choice-question">Past dit als kennislaag of document-engine?</p>
+                    <p class="choice-copy">Kies dit als informatie uit documenten of kennisbronnen het lastigste deel is.</p>
+                    <p class="choice-meta">Parsing = inlezen en structureren. Retrieval = relevante info terugvinden.</p>
+                  </article>
+                </div>
+              </section>
+
+              <section id="route-d" class="route-block">
+                <div class="route-head">
+                  <span class="route-label">D</span>
+                  <div>
+                    <h3>AI-assistent, AI-app of agent-systeem</h3>
+                    <p>Hulpvraag: wil je vooral iets snel samenstellen, de flow zelf bouwen, maximale vrijheid, of echte rolverdeling tussen meerdere agents?</p>
+                  </div>
+                </div>
+                <div class="choice-grid four">
+                  <article class="choice-card">
+                    <h4>Dify</h4>
+                    <p class="choice-question">Wil je vooral snel iets bruikbaars samenstellen?</p>
+                    <p class="choice-copy">Kies dit als je snel een AI-assistent, AI-app of interne tool wilt opzetten.</p>
+                  </article>
+                  <article class="choice-card">
+                    <h4>Langflow</h4>
+                    <p class="choice-question">Wil je de flow zelf visueel bouwen?</p>
+                    <p class="choice-copy">Kies dit als je juist de stappen, tools, prompts en logica zelf wilt modelleren.</p>
+                    <p class="choice-meta">Flow = de route of logica van stappen. MCP = tools en systemen koppelen aan AI. Alternatief: Flowise.</p>
+                  </article>
+                  <article class="choice-card">
+                    <h4>LangChain</h4>
+                    <p class="choice-question">Wil je maximale vrijheid en code-first werken?</p>
+                    <p class="choice-copy">Kies dit als je niet vooral wilt samenstellen, maar zelf wilt programmeren en orkestreren.</p>
+                    <p class="choice-meta">Code-first = vooral in code bouwen. Agent = AI die stappen uitvoert met tools.</p>
+                  </article>
+                  <article class="choice-card">
+                    <h4>CrewAI</h4>
+                    <p class="choice-question">Wordt het werk beter door echte rolverdeling?</p>
+                    <p class="choice-copy">Kies dit pas als het werk echt beter wordt als je het splitst in rollen zoals onderzoek, analyse, schrijven en controle.</p>
+                    <p class="choice-meta">Zo niet: begin met één goede agent.</p>
+                  </article>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section class="step-section" aria-labelledby="step-3">
+          <div class="step-number">3</div>
+          <div>
+            <h2 id="step-3" class="step-title">Voeg daarna alleen toe wat echt nodig is</h2>
+            <p class="step-copy">Deze tools zijn vaak extra lagen bovenop je hoofdkeuze, niet per se een vervanger daarvan.</p>
+            <div class="addons">
+              <article class="addon-card">
+                <h4>Voeg n8n toe</h4>
+                <p class="choice-copy">Als je gekozen oplossing ook automatisch tussen systemen, tools of data moet bewegen.</p>
+              </article>
+              <article class="addon-card">
+                <h4>Voeg RAGFlow toe</h4>
+                <p class="choice-copy">Als documenten, handleidingen of kennis de kwaliteit van je antwoord bepalen.</p>
+              </article>
+              <article class="addon-card">
+                <h4>Voeg Langfuse toe</h4>
+                <p class="choice-copy">Als het serieus in gebruik gaat en je tracing, evaluatie en promptbeheer nodig hebt.</p>
+              </article>
+            </div>
+            <p class="simple-note"><strong>Houd het simpel</strong> als één goede assistent al genoeg is. Niet elk probleem vraagt om meerdere tools of een complexe architectuur.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
