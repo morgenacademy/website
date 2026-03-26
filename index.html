@@ -231,6 +231,14 @@
     </div>
   </div>
 </section>
+<section class="home-photo-strip">
+  <div class="home-photo-strip-grid reveal" aria-hidden="true">
+    <figure class="home-photo-strip-card"><img src="/docs/company/academy-hero-01.jpg" alt="" loading="lazy"></figure>
+    <figure class="home-photo-strip-card"><img src="/docs/company/academy-hero-02.jpg" alt="" loading="lazy"></figure>
+    <figure class="home-photo-strip-card"><img src="/docs/company/karin-speaking-01.jpg" alt="" loading="lazy"></figure>
+    <figure class="home-photo-strip-card"><img src="/docs/company/harmen-stage-01.jpg" alt="" loading="lazy"></figure>
+  </div>
+</section>
 <section class="sl home-company-band">
   <div class="home-company-band-card reveal" onclick="nav('company')">
     <div class="home-company-band-copy">
@@ -353,7 +361,7 @@
 <header class="hero hero-academy">
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="hgrid"></div>
   <div class="academy-hero-media" aria-hidden="true">
-    <img class="academy-hero-main" src="/docs/company/academy-hero-01.jpg" alt="" loading="lazy">
+    <img src="/docs/company/academy-hero-01.jpg" alt="" loading="lazy">
   </div>
   <div class="hi">
     <button class="back-btn" onclick="nav('home')">&#x2190; Terug naar home</button>
@@ -381,16 +389,11 @@
       <p class="pbody">De basistraining is ook online beschikbaar. Individueel te kopen, of in te zetten voor medewerkers die flexibel willen leren. Alle trainingen zijn opgezet conform de EU AI Act.</p>
       <div class="callout">Eenmalige trainingen zijn een startpunt. Voor duurzame verandering is opvolging nodig. De incompany trainingen en leerpaden voor teams staan op deze pagina. De losse online trainingen vind je op Morgen Academy.</div>
     </div>
-    <div class="academy-intro-side">
-      <figure class="academy-intro-photo" aria-hidden="true">
-        <img src="/docs/company/academy-hero-02.jpg" alt="" loading="lazy">
-      </figure>
-      <div class="scards">
-        <div class="sc"><div class="scn scn-text">Online<br>&amp; fysiek</div><div class="scd">Te volgen als individuele training of incompany traject</div></div>
-        <div class="sc"><div class="scn scn-text">Voor<br>teams</div><div class="scd">Gericht op echte werkprocessen, met voorbeelden en toepassingen uit de eigen organisatie</div></div>
-        <div class="sc"><div class="scn scn-text">EU AI<br>Act</div><div class="scd">Opgezet voor AI literacy, veilig gebruik en aantoonbare opleiding binnen organisaties</div></div>
-        <div class="sc"><div class="scn scn-text">Bewijs<br>van deelname</div><div class="scd">Deelnemers ontvangen aantoonbare afronding voor dossieropbouw</div></div>
-      </div>
+    <div class="scards">
+      <div class="sc"><div class="scn scn-text">Online<br>&amp; fysiek</div><div class="scd">Te volgen als individuele training of incompany traject</div></div>
+      <div class="sc"><div class="scn scn-text">Voor<br>teams</div><div class="scd">Gericht op echte werkprocessen, met voorbeelden en toepassingen uit de eigen organisatie</div></div>
+      <div class="sc"><div class="scn scn-text">EU AI<br>Act</div><div class="scd">Opgezet voor AI literacy, veilig gebruik en aantoonbare opleiding binnen organisaties</div></div>
+      <div class="sc"><div class="scn scn-text">Bewijs<br>van deelname</div><div class="scd">Deelnemers ontvangen aantoonbare afronding voor dossieropbouw</div></div>
     </div>
   </div>
 </section>
@@ -444,18 +447,23 @@
   </div>
 </section>
 <section class="sd" id="ac-aanvraag">
-  <div class="reveal" style="margin-bottom:2rem">
-    <div class="slabel">Online trainingen</div>
-    <h2 class="ptitle">Individueel online leren? Dan ga je door naar Morgen Academy.</h2>
-    <p class="pbody" style="max-width:70ch">Het incompany aanbod, de workshops en het leerpad voor teams staan hierboven op deze pagina. Voor losse online trainingen waarmee je direct zelf kunt starten, ga je door naar Morgen Academy.</p>
-  </div>
-  <div class="form-wrap reveal">
-    <p class="pbody" style="max-width:58ch;margin-bottom:1.5rem">Zoek je iets voor je team? Bekijk dan het trainingsaanbod hierboven of start eerst de routewijzer. Wil je zelf direct online beginnen, dan vind je dat aanbod op Morgen Academy.</p>
-    <div class="form-actions" style="display:flex;gap:1rem;flex-wrap:wrap">
-      <button type="button" class="btn-p" onclick="goToAcademy('online')">Bekijk online trainingen</button>
-      <button type="button" class="btn-o" onclick="scrollToId('ac-trainingen')">Bekijk incompany aanbod</button>
+  <div class="academy-online-layout reveal">
+    <div class="academy-online-copy">
+      <div class="slabel">Online trainingen</div>
+      <h2 class="ptitle">Individueel online leren? Dan ga je door naar Morgen Academy.</h2>
+      <p class="pbody" style="max-width:70ch">Het incompany aanbod, de workshops en het leerpad voor teams staan hierboven op deze pagina. Voor losse online trainingen waarmee je direct zelf kunt starten, ga je door naar Morgen Academy.</p>
+      <div class="form-wrap academy-online-card">
+        <p class="pbody" style="max-width:58ch;margin-bottom:1.5rem">Zoek je iets voor je team? Bekijk dan het trainingsaanbod hierboven of start eerst de routewijzer. Wil je zelf direct online beginnen, dan vind je dat aanbod op Morgen Academy.</p>
+        <div class="form-actions" style="display:flex;gap:1rem;flex-wrap:wrap">
+          <button type="button" class="btn-p" onclick="goToAcademy('online')">Bekijk online trainingen</button>
+          <button type="button" class="btn-o" onclick="scrollToId('ac-trainingen')">Bekijk incompany aanbod</button>
+        </div>
+        <p class="form-help">Liever mailen? <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
+      </div>
     </div>
-    <p class="form-help">Liever mailen? <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
+    <figure class="academy-online-photo academy-online-photo-single" aria-hidden="true">
+      <img src="/docs/company/academy-hero-02.jpg" alt="" loading="lazy">
+    </figure>
   </div>
 </section>
 <section class="sm" id="ac-ai-act">
@@ -1353,7 +1361,7 @@
       <p style="font-family:var(--fb);color:var(--text-secondary);margin-top:.8rem;font-size:.95rem;line-height:1.8;max-width:45ch">Voor professionals die relevant willen blijven. Voor teams die AI werkbaar willen maken. Voor leidinggevenden die richting willen geven zonder te verdwalen in techniek.</p>
       <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
         <a href="mailto:totmorgen@morgenacademy.nl?subject=Boek bestellen" class="btn-p">Boek bestellen</a>
-        <a href="mailto:totmorgen@morgenacademy.nl?subject=Boek voor het team" style="font-family:var(--fu);font-weight:600;font-size:.9rem;border:1.5px solid rgba(155,111,207,.5);color:var(--text-secondary);padding:1rem 2rem;border-radius:3px;text-decoration:none;cursor:pointer;transition:border-color .2s">Boek voor het team</a>
+        <a href="mailto:totmorgen@morgenacademy.nl?subject=Boek voor het team" class="btn-o">Boek voor het team</a>
       </div>
     </div>
     <div class="book-cover">
@@ -1361,7 +1369,7 @@
       <div style="font-family:var(--fd);font-weight:900;font-size:1.8rem;letter-spacing:.04em;text-transform:uppercase;line-height:1;color:var(--white);position:relative;z-index:1;margin-top:.8rem">DE DIGITALE<br>COLLEGA</div>
       <div class="book-sd">AI als teamlid in jouw organisatie</div>
       <div class="book-au">Morgen Academy &#183; 2025</div>
-      <div class="book-ct"><a href="mailto:totmorgen@morgenacademy.nl?subject=Boek bestellen" style="font-family:var(--fu);font-size:.8rem;font-weight:700;background:var(--orange);color:var(--bg);padding:.7rem 1.5rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem">Bestellen</a></div>
+      <div class="book-ct"><a href="mailto:totmorgen@morgenacademy.nl?subject=Boek bestellen" class="btn-p">Bestellen</a></div>
     </div>
   </div>
 </section>
