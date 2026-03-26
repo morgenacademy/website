@@ -276,15 +276,15 @@ nav.scrolled {
 }
 
 .hstats {
-  display: flex; gap: 3.5rem;
-  padding-top: 3rem; margin-top: 3.5rem;
+  display: flex; gap: 2.4rem;
+  padding-top: 2rem; margin-top: 2.4rem;
   border-top: 1px solid var(--glass-border);
   opacity: 0; animation: fi 1s 1.4s forwards; flex-wrap: wrap;
 }
-.hsn { font-size: 2.8rem; font-weight: 900; letter-spacing: .02em; line-height: 1; color: var(--white); }
+.hsn { font-size: 2.35rem; font-weight: 900; letter-spacing: .02em; line-height: 1; color: var(--white); }
 .hsn em { color: var(--orange); font-style: normal; }
 .hsn-word { font-size: 1.7rem; line-height: 1.05; letter-spacing: .01em; }
-.hsl { font-size: .76rem; color: var(--text-muted); margin-top: .3rem; max-width: 18ch; line-height: 1.4; }
+.hsl { font-size: .73rem; color: var(--text-muted); margin-top: .3rem; max-width: 16ch; line-height: 1.4; }
 
 /* ── 8. Ticker ── */
 .ticker {
@@ -295,6 +295,19 @@ nav.scrolled {
 .ticker-t { display: inline-flex; gap: 2.5rem; animation: tick 35s linear infinite; }
 .ticker-t span { font-size: .74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--white); }
 .ts { opacity: .5; }
+#page-home .ticker {
+  background: linear-gradient(90deg, rgba(91,45,142,.66), rgba(155,111,207,.5));
+}
+#page-home .ticker-t {
+  animation-duration: 42s;
+}
+#page-home .ticker-t span {
+  font-size: .69rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.84);
+}
+#page-home .ticker .ts { opacity: .34; }
 
 /* ── 9. Logo band ── */
 .logo-band {
@@ -500,11 +513,18 @@ nav.scrolled {
   letter-spacing: .2em; text-transform: uppercase;
   color: var(--text-secondary); margin-bottom: 1.4rem;
 }
-.licon { width: 46px; height: 46px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; margin-bottom: 1.2rem; }
-.ib { background: linear-gradient(135deg, var(--purple), #7B4DAE); }
-.ip { background: linear-gradient(135deg, var(--purple), var(--purple-light)); }
-.ik { background: linear-gradient(135deg, var(--orange), #c8d820); }
-.ig { background: linear-gradient(135deg, #1a9e72, #2dd4a0); }
+.licon {
+  width: 46px; height: 46px; border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 1.2rem;
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--glass-border);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+}
+.licon svg { opacity: .92; }
+.ib, .ip, .ik, .ig {
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--glass-border);
+}
 .lname {
   font-weight: 800; font-size: 1.5rem;
   letter-spacing: .02em; text-transform: uppercase;
@@ -723,7 +743,7 @@ nav.scrolled {
 .tmeta { display: flex; gap: 1rem; font-size: .72rem; color: var(--text-secondary); font-weight: 500; }
 
 /* ── 16. Situatiekaarten ── */
-.sgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 3.5rem; }
+.sgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 2.75rem; }
 .spath { display: flex; flex-direction: column; }
 .sscen { padding: 1.6rem; border-radius: var(--radius) var(--radius) 0 0; flex: 1; }
 .ss-b { background: rgba(91,45,142,.15); border: 1px solid rgba(91,45,142,.3); border-bottom: none; }
@@ -737,25 +757,69 @@ nav.scrolled {
 .stag-g { color: #2dd4a0; }
 .sq { font-size: .9rem; font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: .4rem; }
 .ssub { font-size: .8rem; color: var(--text-secondary); line-height: 1.55; }
-.sarrow { height: 1.8rem; display: flex; align-items: center; justify-content: center; }
-.sres { padding: 1.3rem 1.6rem; text-align: center; border-radius: 0 0 var(--radius) var(--radius); }
+.sarrow {
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .42;
+}
+.sarrow svg path { stroke: rgba(255,255,255,.62); stroke-width: 1.2; }
+.sres { padding: 1.2rem 1.35rem 1.3rem; text-align: left; border-radius: 0 0 var(--radius) var(--radius); }
 .sr-b { background: rgba(91,45,142,.2); border: 1px solid rgba(91,45,142,.4); border-top: none; }
 .sr-p { background: rgba(155,111,207,.18); border: 1px solid rgba(155,111,207,.4); border-top: none; }
 .sr-k { background: rgba(216,254,86,.12); border: 1px solid rgba(216,254,86,.3); border-top: none; }
 .sr-g { background: rgba(26,158,114,.15); border: 1px solid rgba(26,158,114,.4); border-top: none; }
-.srl { font-size: .6rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; margin-bottom: .3rem; }
+.srl { font-size: .58rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .45rem; }
 .srl-b { color: var(--purple-light); }
 .srl-p { color: var(--purple-light); }
 .srl-k { color: var(--orange); }
 .srl-g { color: #2dd4a0; }
-.srn { font-weight: 800; font-size: 1.1rem; letter-spacing: .02em; text-transform: uppercase; color: var(--white); line-height: 1.2; margin-bottom: .3rem; }
-.srs { font-size: .78rem; color: var(--text-secondary); margin-bottom: .6rem; }
+.srn { font-weight: 800; font-size: 1rem; letter-spacing: .01em; color: var(--white); line-height: 1.25; margin-bottom: .45rem; }
+.srs { font-size: .78rem; color: var(--text-secondary); margin-bottom: .75rem; line-height: 1.55; }
 .slink { font-size: .77rem; font-weight: 700; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: .3rem; transition: gap .2s; border: none; background: none; }
 .slink:hover { gap: .6rem; }
 .slink-b { color: var(--purple-light); }
 .slink-p { color: var(--purple-light); }
 .slink-k { color: var(--orange); }
 .slink-g { color: #2dd4a0; }
+
+.why-morgen {
+  align-items: start;
+}
+.why-morgen-copy .ptitle {
+  margin-bottom: 1.1rem;
+}
+.why-morgen-copy .pbody + .pbody {
+  margin-top: .95rem;
+}
+.why-morgen-copy .callout {
+  margin-top: 1.5rem;
+}
+.why-morgen-points {
+  display: grid;
+  gap: 1rem;
+}
+.why-morgen-point {
+  background: var(--card-bg-strong);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow), inset 0 1px 0 var(--card-highlight);
+  padding: 1.45rem 1.35rem;
+}
+.why-morgen-point h3 {
+  font-size: .98rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: .45rem;
+}
+.why-morgen-point p {
+  font-size: .84rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
 
 /* ── 16b. Trainingswijzer banner ── */
 .tw-banner {
