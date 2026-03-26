@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Morgen Company - AI-trainingen, digitale oplossingen en begeleiding voor het MKB</title>
 <meta name="description" content="Morgen helpt MKB-organisaties groeien met AI-trainingen, digitale oplossingen, strategische begeleiding en thought leadership.">
+<meta name="theme-color" content="#591270">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -22,7 +24,7 @@
     <div id="tp-sections" class="tp-sections"></div>
     <div id="tp-quote" class="tp-quote"></div>
     <div class="popup-incl" id="tp-incl"></div>
-    <button id="tp-cta" class="popup-btn" onclick="closeTrainingPopup();nav('academy','ac-aanvraag')"></button>
+    <button id="tp-cta" class="popup-btn" onclick="closeTrainingPopup();goToAcademy('aanbod')"></button>
     <p class="popup-note">Vragen? Mail naar <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
   </div>
 </div>
@@ -102,7 +104,7 @@
       <h3 class="lname">AI-trainingen voor teams</h3>
       <div class="ltag">Workshop &#183; Leerpad &#183; Online &#183; Incompany</div>
       <p class="ldesc">Van losse workshop tot volledig incompany leerpad. Online beschikbaar. Opgezet conform de EU AI Act.</p>
-      <button class="llink ll-b" onclick="event.stopPropagation();nav('academy')">Bekijk het trainingsaanbod</button>
+      <button class="llink ll-b" onclick="event.stopPropagation();goToAcademy('aanbod')">Bekijk het trainingsaanbod</button>
       <button class="llink ll-k" onclick="event.stopPropagation();nav('academy','trainingwijzer-app')" style="font-size:.8rem;margin-top:.5rem">&#x2192; Start de routewijzer</button>
     </article>
     <article class="lcard" onclick="nav('technology')" style="cursor:pointer">
@@ -158,7 +160,7 @@
         <p class="ssub">Het potentieel is er. Maar niemand weet hoe het dagelijkse werk echt slimmer kan.</p>
       </div>
       <div class="sarrow"><svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 0v18M1 12l6 8 6-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="sres sr-p"><div class="srl srl-p">Stap vooruit</div><div class="srn">AI-training voor het team</div><div class="srs">Praktisch, direct toepasbaar, EU AI Act-conform</div><button class="slink slink-p" onclick="nav('academy')">Bekijk het trainingsaanbod</button></div>
+      <div class="sres sr-p"><div class="srl srl-p">Stap vooruit</div><div class="srn">AI-training voor het team</div><div class="srs">Praktisch, direct toepasbaar, EU AI Act-conform</div><button class="slink slink-p" onclick="goToAcademy('aanbod')">Bekijk het trainingsaanbod</button></div>
     </div>
     <div class="spath">
       <div class="sscen ss-b">
@@ -272,10 +274,10 @@
     <div>
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
-        <li><a onclick="navTraining()">Online basistraining kopen</a></li>
-        <li><a onclick="nav('academy')">AI-trainingen voor teams</a></li>
-        <li><a onclick="nav('academy')">Incompany leerpad</a></li>
-        <li><a onclick="nav('academy')">EU AI Act conform</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Online basistraining kopen</a></li>
+        <li><a onclick="goToAcademy('aanbod')">AI-trainingen voor teams</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Incompany leerpad</a></li>
+        <li><a onclick="goToAcademy('aanbod')">EU AI Act conform</a></li>
       </ul>
     </div>
     <div>
@@ -311,8 +313,8 @@
     <h1 class="h1">Meer dan<br><span class="ol">vragen</span><br><span class="pk">stellen.</span></h1>
     <p class="hbody">Veel teams gebruiken AI als een slimme zoekmachine. Maar er is zoveel meer potentieel. Morgen Academy laat zien hoe AI echt werk uit handen neemt. Individueel online of als incompany leerpad.</p>
     <div class="hctas">
-      <button class="btn-p" onclick="openTrainingPopup('basis')">Online basistraining kopen</button>
-      <button class="btn-g" onclick="scrollToId('ac-trainingen')">Bekijk alle trainingen &#x2193;</button>
+      <button class="btn-p" onclick="goToAcademy('aanbod')">Bekijk alle trainingen</button>
+      <button class="btn-g" onclick="scrollToId('trainingwijzer-app')">Start de routewijzer &#x2193;</button>
     </div>
     <div class="hstats">
       <div><div class="hsn">9.8<em>/10</em></div><div class="hsl">Gemiddelde trainings&shy;beoordeling</div></div>
@@ -329,7 +331,7 @@
       <h2 class="ptitle">Altijd praktisch. Nooit abstract.</h2>
       <p class="pbody">Veel teams gebruiken AI als een slimme zoekmachine. Vragen stellen, antwoorden krijgen. Dat is een begin. Maar de echte tijdwinst zit in automatisering, slimmere workflows en systemen die werk overnemen. Morgen Academy laat zien hoe dat werkt in de eigen organisatie.</p>
       <p class="pbody">De basistraining is ook online beschikbaar. Individueel te kopen, of in te zetten voor medewerkers die flexibel willen leren. Alle trainingen zijn opgezet conform de EU AI Act.</p>
-      <div class="callout">Eenmalige trainingen zijn een startpunt. Voor duurzame verandering is opvolging nodig. Morgen biedt beide: de losse workshop en het leerpad dat beklijft.</div>
+      <div class="callout">Eenmalige trainingen zijn een startpunt. Voor duurzame verandering is opvolging nodig. Morgen biedt beide: de losse workshop en het leerpad dat beklijft. Het actuele aanbod en aanvragen lopen via Morgen Academy.</div>
     </div>
     <div class="scards">
       <div class="sc"><div class="scn">2<em style="font-size:1.4rem">u</em></div><div class="scd">Duur van de basistraining (online en fysiek)</div></div>
@@ -390,40 +392,18 @@
 </section>
 <section class="sd" id="ac-aanvraag">
   <div class="reveal" style="margin-bottom:2rem">
-    <div class="slabel">Training aanvragen</div>
-    <h2 class="ptitle">Plan een training die past bij je team.</h2>
-    <p class="pbody" style="max-width:70ch">Of het nu gaat om de basistraining van 2 uur of een volledig leerpad: we denken mee over de juiste opzet.</p>
+    <div class="slabel">Verder op Morgen Academy</div>
+    <h2 class="ptitle">Bekijk het actuele aanbod of vraag direct een voorstel aan.</h2>
+    <p class="pbody" style="max-width:70ch">De Academy-pagina op Morgen Company helpt je oriënteren. Voor het actuele trainingsaanbod, online trainingen en aanvragen ga je door naar Morgen Academy.</p>
   </div>
-  <form class="form-wrap reveal" name="training-aanvraag" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/academy/?p=academy&a=ac-aanvraag">
-    <input type="hidden" name="form-name" value="training-aanvraag">
-    <p style="display:none"><label>Laat dit veld leeg: <input name="bot-field"></label></p>
-    <div class="form-grid">
-      <div class="form-field">
-        <label for="ac-naam">Naam *</label>
-        <input id="ac-naam" type="text" name="naam" required>
-      </div>
-      <div class="form-field">
-        <label for="ac-email">E-mailadres *</label>
-        <input id="ac-email" type="email" name="email" required>
-      </div>
-      <div class="form-field">
-        <label for="ac-bedrijf">Organisatie *</label>
-        <input id="ac-bedrijf" type="text" name="organisatie" required>
-      </div>
-      <div class="form-field">
-        <label for="ac-grootte">Teamgrootte</label>
-        <input id="ac-grootte" type="text" name="teamgrootte" placeholder="bijv. 15 medewerkers">
-      </div>
-      <div class="form-field form-field-full">
-        <label for="ac-vraag">Wat wil je met de training bereiken? *</label>
-        <textarea id="ac-vraag" name="doel" required></textarea>
-      </div>
-    </div>
-    <div class="form-actions">
-      <button type="submit" class="btn-p">Verstuur aanvraag</button>
+  <div class="form-wrap reveal">
+    <p class="pbody" style="max-width:58ch;margin-bottom:1.5rem">Wil je meteen door? Bekijk alle trainingen op het platform of gebruik eerst de routewijzer hierboven om de juiste richting te bepalen.</p>
+    <div class="form-actions" style="display:flex;gap:1rem;flex-wrap:wrap">
+      <button type="button" class="btn-p" onclick="goToAcademy('aanbod')">Bekijk alle trainingen</button>
+      <button type="button" class="btn-o" onclick="scrollToId('trainingwijzer-app')">Start eerst de routewijzer</button>
     </div>
     <p class="form-help">Liever mailen? <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
-  </form>
+  </div>
 </section>
 <section class="sm">
   <div class="reveal"><div class="slabel">AI compliant</div><h2 class="stitle">Klaar voor<br>de EU<br><span style="color:var(--pink)">AI Act.</span></h2></div>
@@ -451,12 +431,12 @@
   </div>
 </section>
 <section class="cta-s" id="ac-contact"><div class="corb1"></div><div class="corb2"></div><div class="cta-in reveal">
-  <div class="cta-ey">Training inplannen &#183; workshop of leerpad &#183; online of incompany</div>
+  <div class="cta-ey">Verder op Morgen Academy &#183; workshop of leerpad &#183; online of incompany</div>
   <h2 class="cta-h">Meer dan<br><span class="ol">vragen</span><br>stellen.</h2>
-  <p class="cta-sub">Plan een gratis gesprek in. Samen kijken we welke training of leerpad het beste aansluit. Online starten kan direct.</p>
+  <p class="cta-sub">Bekijk het actuele trainingsaanbod op Morgen Academy of gebruik eerst de routewijzer op deze pagina om de juiste richting te bepalen.</p>
   <div class="cta-btns">
-    <button class="btn-w" onclick="openTrainingPopup('basis')">Online basistraining direct kopen</button>
-    <button class="btn-o" onclick="scrollToId('ac-aanvraag')">Plan een trainingsgesprek</button>
+    <button class="btn-w" onclick="goToAcademy('aanbod')">Bekijk trainingen op Morgen Academy</button>
+    <button class="btn-o" onclick="scrollToId('trainingwijzer-app')">Start eerst de routewijzer</button>
   </div>
 </div></section>
 <footer>
@@ -473,10 +453,10 @@
     <div>
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
-        <li><a onclick="navTraining()">Online basistraining kopen</a></li>
-        <li><a onclick="nav('academy')">AI-trainingen voor teams</a></li>
-        <li><a onclick="nav('academy')">Incompany leerpad</a></li>
-        <li><a onclick="nav('academy')">EU AI Act conform</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Online basistraining kopen</a></li>
+        <li><a onclick="goToAcademy('aanbod')">AI-trainingen voor teams</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Incompany leerpad</a></li>
+        <li><a onclick="goToAcademy('aanbod')">EU AI Act conform</a></li>
       </ul>
     </div>
     <div>
@@ -624,10 +604,10 @@
     <div>
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
-        <li><a onclick="navTraining()">Online basistraining kopen</a></li>
-        <li><a onclick="nav('academy')">AI-trainingen voor teams</a></li>
-        <li><a onclick="nav('academy')">Incompany leerpad</a></li>
-        <li><a onclick="nav('academy')">EU AI Act conform</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Online basistraining kopen</a></li>
+        <li><a onclick="goToAcademy('aanbod')">AI-trainingen voor teams</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Incompany leerpad</a></li>
+        <li><a onclick="goToAcademy('aanbod')">EU AI Act conform</a></li>
       </ul>
     </div>
     <div>
@@ -777,10 +757,10 @@
     <div>
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
-        <li><a onclick="navTraining()">Online basistraining kopen</a></li>
-        <li><a onclick="nav('academy')">AI-trainingen voor teams</a></li>
-        <li><a onclick="nav('academy')">Incompany leerpad</a></li>
-        <li><a onclick="nav('academy')">EU AI Act conform</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Online basistraining kopen</a></li>
+        <li><a onclick="goToAcademy('aanbod')">AI-trainingen voor teams</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Incompany leerpad</a></li>
+        <li><a onclick="goToAcademy('aanbod')">EU AI Act conform</a></li>
       </ul>
     </div>
     <div>
@@ -971,10 +951,10 @@
     <div>
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
-        <li><a onclick="navTraining()">Online basistraining kopen</a></li>
-        <li><a onclick="nav('academy')">AI-trainingen voor teams</a></li>
-        <li><a onclick="nav('academy')">Incompany leerpad</a></li>
-        <li><a onclick="nav('academy')">EU AI Act conform</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Online basistraining kopen</a></li>
+        <li><a onclick="goToAcademy('aanbod')">AI-trainingen voor teams</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Incompany leerpad</a></li>
+        <li><a onclick="goToAcademy('aanbod')">EU AI Act conform</a></li>
       </ul>
     </div>
     <div>
@@ -1126,10 +1106,10 @@
     <div>
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
-        <li><a onclick="navTraining()">Online basistraining kopen</a></li>
-        <li><a onclick="nav('academy')">AI-trainingen voor teams</a></li>
-        <li><a onclick="nav('academy')">Incompany leerpad</a></li>
-        <li><a onclick="nav('academy')">EU AI Act conform</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Online basistraining kopen</a></li>
+        <li><a onclick="goToAcademy('aanbod')">AI-trainingen voor teams</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Incompany leerpad</a></li>
+        <li><a onclick="goToAcademy('aanbod')">EU AI Act conform</a></li>
       </ul>
     </div>
     <div>
@@ -1306,10 +1286,10 @@
     <div>
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
-        <li><a onclick="navTraining()">Online basistraining kopen</a></li>
-        <li><a onclick="nav('academy')">AI-trainingen voor teams</a></li>
-        <li><a onclick="nav('academy')">Incompany leerpad</a></li>
-        <li><a onclick="nav('academy')">EU AI Act conform</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Online basistraining kopen</a></li>
+        <li><a onclick="goToAcademy('aanbod')">AI-trainingen voor teams</a></li>
+        <li><a onclick="goToAcademy('aanbod')">Incompany leerpad</a></li>
+        <li><a onclick="goToAcademy('aanbod')">EU AI Act conform</a></li>
       </ul>
     </div>
     <div>
@@ -1363,6 +1343,16 @@ const pagePaths={
   organisatie:'/organisatie',
   company:'/company'
 };
+const academyLinks={
+  home:'https://www.morgenacademy.nl',
+  aanbod:'https://www.morgenacademy.nl/aanbod',
+  quickscan:'https://www.morgenacademy.nl/quickscan'
+};
+
+function goToAcademy(destination='home'){
+  const url=academyLinks[destination] || academyLinks.home;
+  window.location.href=url;
+}
 
 function nav(page,anchor,options={}){
   const {updateHistory=true,replaceHistory=false,customPath=null,activeNav=null}=options;
@@ -1402,7 +1392,7 @@ const trainingData={
     ],
     quote:'\u201cEr kwam iemand de workshop binnen die amper wist waar zijn browser zat. Wij zeiden: ga maar spelen, je kunt niks verkeerd doen. Binnen twee uur had hij zelf een spraakassistent gebouwd die zijn trapmaten omzet in een strak meetverslag. Wat dat bewijst: het draait niet om technische skills, maar om mindset en het vertrouwen dat je het z\u00e9lf kunt.\u201d',
     includes:['Praktisch en direct toepasbaar','Eigen tempo, altijd online beschikbaar','Ook incompany beschikbaar','Duur: circa 2 uur','Conform de EU AI Act','Bewijs van deelname na afronding'],
-    cta:'Start met basistraining'
+    cta:'Bekijk op Morgen Academy'
   },
   workflows:{
     badge:'Automatisering \u00b7 Incompany',
@@ -1415,7 +1405,7 @@ const trainingData={
     ],
     quote:'\u201cEen supportmail komt binnen. De agent analyseert, categoriseert, haalt klantdata op uit het CRM, schrijft een conceptantwoord en zet het klaar voor goedkeuring. Vijf stappen, geen copy-paste, 24 uur per dag beschikbaar.\u201d',
     includes:['Hands-on werken met Make, Zapier of N8N','Eigen workflow bouwen tijdens de training','Duur: 2 uur incompany','Geschikt voor teams van 4\u201315 personen'],
-    cta:'Training aanvragen'
+    cta:'Bekijk op Morgen Academy'
   },
   toolbuilding:{
     badge:'Bouwen \u00b7 Incompany',
@@ -1428,7 +1418,7 @@ const trainingData={
     ],
     quote:'\u201cNeem Gijs, een render-assistent voor interieurbouwers. Je uploadt een tekening, Gijs koppelt kleuren aan materialen en genereert binnen seconden een fotorealistische visualisatie. Wat vroeger dagen duurde, kost nu een minuut.\u201d',
     includes:['Zelf een werkende tool bouwen tijdens de sessie','Werken met Lovable, Cursor of Replit','Duur: 2 uur incompany','Geen programmeerervaring nodig'],
-    cta:'Training aanvragen'
+    cta:'Bekijk op Morgen Academy'
   },
   teamworkshop:{
     badge:'Strategie & proces \u00b7 Incompany',
@@ -1441,7 +1431,7 @@ const trainingData={
     ],
     quote:'\u201cEen team optimaliseert hun e-mailcategorisatie, doorvragen en beantwoorden. Maar de echte vraag is: waarom krijgen we zoveel van dit type vragen? Soms kun je de bron aanpakken in plaats van de symptomen.\u201d',
     includes:['Procesinventarisatie en verbeterplan','Hands-on met het hele team','Duur: halve dag incompany','Concreet actieplan om mee naar huis te nemen'],
-    cta:'Workshop aanvragen'
+    cta:'Bekijk op Morgen Academy'
   }
 };
 
@@ -1477,11 +1467,7 @@ function openTrainingPopup(key){
   document.getElementById('tp-incl').innerHTML=inclHtml;
   const cta=document.getElementById('tp-cta');
   cta.textContent=d.cta;
-  if(key==='basis'){
-    cta.onclick=function(){closeTrainingPopup();nav('academy','ac-aanvraag');};
-  } else {
-    cta.onclick=function(){closeTrainingPopup();nav('academy','ac-aanvraag');};
-  }
+  cta.onclick=function(){closeTrainingPopup();goToAcademy('aanbod');};
   document.getElementById('training-popup').classList.add('open');
   document.body.style.overflow='hidden';
 }
@@ -1491,8 +1477,7 @@ function closeTrainingPopup(){
 }
 
 function navTraining(){
-  nav('academy');
-  setTimeout(function(){openTrainingPopup('basis');},350);
+  goToAcademy('aanbod');
 }
 
 const assistantShowcase=[
