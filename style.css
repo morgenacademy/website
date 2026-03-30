@@ -1585,7 +1585,7 @@ footer {
 }
 .academy-online-body {
   display: grid;
-  grid-template-columns: minmax(0, 1.9fr) minmax(320px, .95fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
   align-items: stretch;
 }
@@ -1596,6 +1596,11 @@ footer {
   background: rgba(255,255,255,.08);
   border-color: rgba(182,154,224,.18);
   box-shadow: 0 14px 30px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.08);
+}
+.academy-online-card .form-actions {
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 .academy-online-photo {
   margin: 0;
@@ -1645,6 +1650,12 @@ footer {
   box-shadow: 0 0 20px rgba(155, 111, 207, 0.15);
 }
 .form-field input::placeholder, .da-field input::placeholder { color: var(--text-muted); }
+.form-field input[readonly] {
+  color: var(--pink);
+  font-weight: 600;
+  border-color: rgba(216,254,86,.24);
+  background: rgba(216,254,86,.06);
+}
 .form-field-full, .da-field-full { grid-column: 1/-1; }
 .form-actions { margin-top: 1.5rem; display: flex; justify-content: flex-end; }
 .form-help { font-size: .84rem; color: var(--text-muted); margin-top: 1rem; }
@@ -1921,6 +1932,39 @@ footer {
   .home-photo-strip-grid { grid-template-columns: 1fr; }
   .home-metrics-grid { grid-template-columns: 1fr; }
   .home-metric-label { max-width: none; }
+  .hero-academy {
+    min-height: auto;
+    padding: 6.5rem 1rem 2.5rem;
+  }
+  .hero-academy .hi { max-width: none; }
+  .academy-hero-media {
+    --academy-hero-opacity: .44;
+  }
+  .academy-hero-media::after {
+    background:
+      linear-gradient(90deg, rgba(12,8,24,.985) 0%, rgba(12,8,24,.96) 46%, rgba(12,8,24,.8) 74%, rgba(12,8,24,.44) 100%),
+      radial-gradient(circle at 78% 48%, rgba(155,111,207,.1) 0%, transparent 38%);
+  }
+  .academy-hero-media img {
+    object-position: 66% 42%;
+  }
+  .academy-hero-photo-secondary {
+    object-position: 62% 52%;
+  }
+  #page-academy .scards {
+    grid-template-columns: 1fr;
+  }
+  #page-academy .sc {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+  #page-academy .scn-text {
+    white-space: normal;
+    font-size: 1.55rem;
+  }
+  #page-academy .scd {
+    max-width: none;
+  }
   .ft { grid-template-columns: 1fr; }
   .tnums { grid-template-columns: 1fr 1fr; }
   .form-wrap, .da-form-wrap { padding: 1.5rem; }

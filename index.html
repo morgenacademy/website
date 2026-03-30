@@ -24,7 +24,7 @@
     <div id="tp-sections" class="tp-sections"></div>
     <div id="tp-quote" class="tp-quote"></div>
     <div class="popup-incl" id="tp-incl"></div>
-    <button id="tp-cta" class="popup-btn" onclick="closeTrainingPopup();scrollToId('ac-trainingen')"></button>
+    <button id="tp-cta" class="popup-btn" onclick="closeTrainingPopup();scrollToId('ac-aanvraag')"></button>
     <p class="popup-note">Vragen? Mail naar <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
   </div>
 </div>
@@ -478,16 +478,16 @@
 <section class="home-photo-strip">
   <div class="home-photo-strip-grid reveal">
     <figure class="home-photo-strip-card">
-      <img src="/docs/company/karin-stage-02.jpg" alt="Karin op het podium tijdens een keynote of masterclass." loading="lazy">
-    </figure>
-    <figure class="home-photo-strip-card">
-      <img src="/docs/company/karin-stage-03.jpg" alt="Karin spreekt tijdens een sessie over AI, complexiteit en verandering." loading="lazy">
-    </figure>
-    <figure class="home-photo-strip-card">
       <img src="/docs/company/academy-training-room-01.jpeg" alt="Incompany training met deelnemers rond de tafel." loading="lazy">
     </figure>
     <figure class="home-photo-strip-card">
       <img src="/docs/company/karin-process-01.jpg" alt="Karin begeleidt een sessie met post-its en processtappen." loading="lazy">
+    </figure>
+    <figure class="home-photo-strip-card">
+      <img src="/docs/company/karin-stage-02.jpg" alt="Karin op het podium tijdens een keynote of masterclass." loading="lazy">
+    </figure>
+    <figure class="home-photo-strip-card">
+      <img src="/docs/company/karin-stage-03.jpg" alt="Karin spreekt tijdens een sessie over AI, complexiteit en verandering." loading="lazy">
     </figure>
   </div>
 </section>
@@ -515,22 +515,47 @@
 <section class="sd" id="ac-aanvraag">
   <div class="academy-online-layout reveal">
     <div class="academy-online-copy">
-      <div class="slabel">Individueel online</div>
-      <h2 class="ptitle">Liever eerst zelf beginnen?</h2>
-      <p class="pbody" style="max-width:70ch">Werk je niet voor een teamtraject maar wil je zelf laagdrempelig starten? Dan hebben we ook losse online trainingen waarmee je direct aan de slag kunt. Het teamaanbod, de masterclasses en begeleiding blijven op deze pagina staan.</p>
+      <div class="slabel">Aanvraag</div>
+      <h2 class="ptitle">Vraag dit aanbod aan.</h2>
+      <p class="pbody" style="max-width:70ch">Kies je via de routewijzer of popup een aanbod dat past, dan vullen we het hieronder alvast voor je in. We nemen binnen 24 uur contact op om samen te bepalen wat het beste aansluit bij jullie vraag, team en context.</p>
     </div>
     <div class="academy-online-body">
-      <div class="form-wrap academy-online-card">
-        <p class="pbody" style="max-width:58ch;margin-bottom:1.5rem">Twijfel je nog? Start met de <a onclick="scrollToId('trainingwijzer-app')" style="color:var(--pink);text-decoration:none;cursor:pointer">routewijzer</a>. Weet je al dat je een teamtraining zoekt, bekijk dan de <a onclick="scrollToId('ac-trainingen')" style="color:var(--pink);text-decoration:none;cursor:pointer">losse trainingen</a>. Wil je liever eerst zelf online aan de gang, ga dan door naar <a onclick="goToAcademy('online')" style="color:var(--pink);text-decoration:none;cursor:pointer">ons online aanbod</a>.</p>
-        <div class="form-actions" style="display:flex;gap:1rem;flex-wrap:wrap">
-          <button type="button" class="btn-o" onclick="scrollToId('trainingwijzer-app')">Routewijzer</button>
-          <button type="button" class="btn-p" onclick="goToAcademy('online')">Online aanbod</button>
+      <form class="form-wrap academy-online-card" id="academy-aanvraag-form" name="academy-aanvraag" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/academy/?p=academy&a=ac-aanvraag">
+        <input type="hidden" name="form-name" value="academy-aanvraag">
+        <p style="display:none"><label>Laat dit veld leeg: <input name="bot-field"></label></p>
+        <p class="pbody" style="max-width:58ch;margin-bottom:1.5rem">Gebruik dit formulier vooral om je vraag te schetsen. Ook als je nog twijfelt over teamgrootte of de exacte vorm is dat prima. We gebruiken het gekozen aanbod als startpunt, niet als vast contract.</p>
+        <div class="form-grid">
+          <div class="form-field form-field-full">
+            <label for="ac-aanbod">Gekozen aanbod</label>
+            <input id="ac-aanbod" type="text" name="aanbod" placeholder="Bijvoorbeeld: Basistraining AI" readonly>
+          </div>
+          <div class="form-field">
+            <label for="ac-naam">Naam *</label>
+            <input id="ac-naam" type="text" name="naam" required>
+          </div>
+          <div class="form-field">
+            <label for="ac-email">E-mailadres *</label>
+            <input id="ac-email" type="email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="ac-bedrijf">Bedrijf of organisatie</label>
+            <input id="ac-bedrijf" type="text" name="bedrijf" placeholder="Optioneel">
+          </div>
+          <div class="form-field">
+            <label for="ac-team">Teamgrootte of doelgroep</label>
+            <input id="ac-team" type="text" name="team" placeholder="Bijvoorbeeld: MT, projectgroep of ongeveer 12 mensen">
+          </div>
+          <div class="form-field form-field-full">
+            <label for="ac-vraag">Vraag, context of opmerkingen</label>
+            <textarea id="ac-vraag" name="vraag" placeholder="Vertel kort wat er speelt, waar jullie nu staan, wat je zoekt of welke vragen je nog hebt."></textarea>
+          </div>
         </div>
-        <p class="form-help">Liever mailen? <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
-      </div>
-      <figure class="academy-online-photo academy-online-photo-single" aria-hidden="true">
-        <img src="/docs/company/academy-training-01.jpg" alt="Trainingssessie met deelnemers in de praktijk." loading="lazy">
-      </figure>
+        <div class="form-actions">
+          <button type="submit" class="btn-p">Verstuur aanvraag</button>
+          <button type="button" class="btn-o" onclick="goToAcademy('online')">Liever online starten</button>
+        </div>
+        <p class="form-help">Twijfel je nog? Gebruik eerst de <a onclick="scrollToId('trainingwijzer-app')" style="color:var(--pink);text-decoration:none;cursor:pointer">routewijzer</a>. Liever mailen? <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a>. We reageren meestal binnen 24 uur.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -1598,8 +1623,8 @@ const trainingData={
     ],
     quote:'\u201cEr kwam iemand de workshop binnen die amper wist waar zijn browser zat. Wij zeiden: ga maar spelen, je kunt niks verkeerd doen. Binnen twee uur had hij zelf een spraakassistent gebouwd die zijn trapmaten omzet in een strak meetverslag. Wat dat bewijst: het draait niet om technische skills, maar om mindset en het vertrouwen dat je het z\u00e9lf kunt.\u201d',
     includes:['Praktisch en direct toepasbaar','Eigen tempo, altijd online beschikbaar','Ook incompany beschikbaar','Duur: circa 2 uur','Conform de EU AI Act','Bewijs van deelname na afronding'],
-    cta:'Plan basistraining',
-    mailtoSubject:'Interesse in Basistraining AI',
+    cta:'Vraag basistraining aan',
+    formValue:'Basistraining AI',
     target:'ac-trainingen'
   },
   workflows:{
@@ -1613,8 +1638,8 @@ const trainingData={
     ],
     quote:'\u201cEen supportmail komt binnen. De agent analyseert, categoriseert, haalt klantdata op uit het CRM, schrijft een conceptantwoord en zet het klaar voor goedkeuring. Vijf stappen, geen copy-paste, 24 uur per dag beschikbaar.\u201d',
     includes:['Hands-on werken met Make, Zapier of N8N','Eigen workflow bouwen tijdens de training','Duur: 2 uur incompany','Geschikt voor teams van 4\u201315 personen'],
-    cta:'Plan Workflows & Agents',
-    mailtoSubject:'Interesse in Workflows & Agents',
+    cta:'Vraag Workflows & Agents aan',
+    formValue:'Workflows & Agents',
     target:'ac-trainingen'
   },
   toolbuilding:{
@@ -1628,8 +1653,8 @@ const trainingData={
     ],
     quote:'\u201cNeem Gijs, een render-assistent voor interieurbouwers. Je uploadt een tekening, Gijs koppelt kleuren aan materialen en genereert binnen seconden een fotorealistische visualisatie. Wat vroeger dagen duurde, kost nu een minuut.\u201d',
     includes:['Zelf een werkende tool bouwen tijdens de sessie','Werken met Lovable, Cursor of Replit','Duur: 2 uur incompany','Geen programmeerervaring nodig'],
-    cta:'Plan Tool Building',
-    mailtoSubject:'Interesse in Tool Building',
+    cta:'Vraag Tool Building aan',
+    formValue:'Tool Building',
     target:'ac-trainingen'
   },
   teamworkshop:{
@@ -1643,8 +1668,8 @@ const trainingData={
     ],
     quote:'\u201cEen team optimaliseert hun e-mailcategorisatie, doorvragen en beantwoorden. Maar de echte vraag is: waarom krijgen we zoveel van dit type vragen? Soms kun je de bron aanpakken in plaats van de symptomen.\u201d',
     includes:['Procesinventarisatie en verbeterplan','Hands-on met het hele team','Duur: halve dag incompany','Concreet actieplan om mee naar huis te nemen'],
-    cta:'Plan team-workshop',
-    mailtoSubject:'Interesse in Team-workshop',
+    cta:'Vraag team-workshop aan',
+    formValue:'Team-workshop',
     target:'ac-trainingen'
   },
   managers:{
@@ -1658,8 +1683,8 @@ const trainingData={
     ],
     quote:'\u201cManagement heeft meer aan een sessie waarin je zelf met AI werkt en merkt waar het helpt, dan aan nog een verhaal over wat er ooit misschien mogelijk wordt.\u201d',
     includes:['Voor MT, directie en leidinggevenden','Compact programma van 1 dag','Zelf werken met AI in managementsituaties','Concreet vervolgadvies voor team of organisatie'],
-    cta:'Plan mini masterclass',
-    mailtoSubject:'Interesse in Mini masterclass AI voor managers',
+    cta:'Vraag mini masterclass aan',
+    formValue:'Mini masterclass AI voor managers',
     target:'ac-verdiepen'
   },
   masterclass:{
@@ -1673,8 +1698,8 @@ const trainingData={
     ],
     quote:'\u201cDe deep dive is bedoeld voor de mensen die na een eerste basis niet willen blijven praten, maar iets willen bouwen en verder brengen in de organisatie.\u201d',
     includes:['Voor een kleine groep met basis','4-daagse deep dive','Van case naar implementatie','Geschikt als vervolg op training of managementsessie'],
-    cta:'Plan 4-daagse masterclass',
-    mailtoSubject:'Interesse in Masterclass AI voor kartrekkers',
+    cta:'Vraag 4-daagse masterclass aan',
+    formValue:'Masterclass AI voor kartrekkers',
     target:'ac-verdiepen'
   },
   pmtraining:{
@@ -1688,8 +1713,8 @@ const trainingData={
     ],
     quote:'\u201cDit wordt geen traditionele PM-cursus, maar een rijke training over hoe projectwerk verandert als je technologie serieus meeneemt in je manier van werken.\u201d',
     includes:['Voor projectmanagers en projectwerkers','4-daags programma','Nieuwe kijk op projectmanagement met AI','Praktisch toepasbaar in lopende projecten'],
-    cta:'Plan PM-training',
-    mailtoSubject:'Interesse in Projectmanagement met AI',
+    cta:'Vraag PM-training aan',
+    formValue:'Projectmanagement met AI',
     target:'ac-verdiepen'
   },
   keynote:{
@@ -1704,7 +1729,7 @@ const trainingData={
     quote:'\u201cEen goede keynote geeft niet alleen energie, maar zet ook het gesprek open over wat er daarna echt nodig is.\u201d',
     includes:['Voor events, MT-dagen en kick-offs','45 tot 90 minuten','Inspiratie met praktische vertaalslag','Geschikt als opener voor vervolgtrajecten'],
     cta:'Vraag keynote aan',
-    mailtoSubject:'Interesse in Keynote of kick-off',
+    formValue:'Keynotes & kick-offs',
     target:'ac-verdiepen'
   },
   chancesession:{
@@ -1719,7 +1744,7 @@ const trainingData={
     quote:'\u201cSoms is de slimste eerste stap niet meteen trainen, maar eerst met de juiste mensen om tafel om te bepalen waar de meeste winst zit en wie daar eigenaar van moet zijn.\u201d',
     includes:['Voor MT of projectgroep','90 minuten tot halve dag','Concreet advies: training, masterclass of traject','Op locatie of online mogelijk'],
     cta:'Plan richtingssessie',
-    mailtoSubject:'Interesse in AI-richtingssessie',
+    formValue:'AI-richtingssessie voor MT of projectgroep',
     target:'ac-begeleiding'
   },
   trajectory:{
@@ -1734,10 +1759,32 @@ const trainingData={
     quote:'\u201cWie echt wil doorpakken, heeft vaak niet genoeg aan \u00e9\u00e9n sessie maar aan een slim ritme van leren, kiezen en implementeren.\u201d',
     includes:['3 tot 12 maanden op maat','Combinatie van training en begeleiding','Voor organisaties die willen doorpakken','Aansluiting op processen, team en eigenaarschap'],
     cta:'Plan verkenningstraject',
-    mailtoSubject:'Interesse in Begeleid implementatietraject',
+    formValue:'Begeleid implementatietraject',
     target:'ac-begeleiding'
   }
 };
+
+function startAcademyInquiry(offerValue){
+  const aanbodField=document.getElementById('ac-aanbod');
+  if(aanbodField)aanbodField.value=offerValue||'';
+  closeTrainingPopup();
+  const section=document.getElementById('ac-aanvraag');
+  if(section)section.scrollIntoView({behavior:'smooth',block:'start'});
+  const nameField=document.getElementById('ac-naam');
+  const emailField=document.getElementById('ac-email');
+  const contextField=document.getElementById('ac-vraag');
+  const focusTarget=(nameField && !nameField.value.trim())
+    ? nameField
+    : (emailField && !emailField.value.trim())
+      ? emailField
+      : (contextField || aanbodField || nameField);
+  if(focusTarget){
+    window.setTimeout(()=>{
+      try{focusTarget.focus({preventScroll:true});}
+      catch(err){focusTarget.focus();}
+    },360);
+  }
+}
 
 function openTrainingPopup(key){
   key=key||'basis';
@@ -1758,9 +1805,7 @@ function openTrainingPopup(key){
   const cta=document.getElementById('tp-cta');
   cta.textContent=d.cta;
   cta.onclick=function(){
-    closeTrainingPopup();
-    const subject=encodeURIComponent(d.mailtoSubject || ('Interesse in '+d.title));
-    window.location.href='mailto:totmorgen@morgenacademy.nl?subject='+subject;
+    startAcademyInquiry(d.formValue || d.title);
   };
   document.getElementById('training-popup').classList.add('open');
   document.body.style.overflow='hidden';
