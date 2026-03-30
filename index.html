@@ -516,18 +516,30 @@
   <div class="academy-online-layout reveal">
     <div class="academy-online-copy">
       <div class="slabel">Aanvraag</div>
-      <h2 class="ptitle">Vraag dit aanbod aan.</h2>
-      <p class="pbody" style="max-width:70ch">Kies je via de routewijzer of popup een aanbod dat past, dan vullen we het hieronder alvast voor je in. We nemen binnen 24 uur contact op om samen te bepalen wat het beste aansluit bij jullie vraag, team en context.</p>
+      <h2 class="ptitle">Vertel ons waar je naar zoekt.</h2>
+      <p class="pbody" style="max-width:70ch">Je kunt dit formulier gewoon direct invullen. Kom je via de routewijzer of een aanbodblokje, dan vullen we je interesse hieronder alvast voor je in. We nemen binnen 24 uur contact op om samen te bepalen wat het beste aansluit bij jullie vraag, team en context.</p>
     </div>
     <div class="academy-online-body">
       <form class="form-wrap academy-online-card" id="academy-aanvraag-form" name="academy-aanvraag" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/academy/?p=academy&a=ac-aanvraag">
         <input type="hidden" name="form-name" value="academy-aanvraag">
         <p style="display:none"><label>Laat dit veld leeg: <input name="bot-field"></label></p>
-        <p class="pbody" style="max-width:58ch;margin-bottom:1.5rem">Gebruik dit formulier vooral om je vraag te schetsen. Ook als je nog twijfelt over teamgrootte of de exacte vorm is dat prima. We gebruiken het gekozen aanbod als startpunt, niet als vast contract.</p>
+        <p class="pbody" style="max-width:58ch;margin-bottom:1.5rem">Gebruik dit formulier vooral om je vraag te schetsen. Ook als je nog twijfelt over teamgrootte of de exacte vorm is dat prima. Kies gerust <em>Nog niet zeker / wil sparren</em> als je vooral wilt verkennen wat past.</p>
         <div class="form-grid">
           <div class="form-field form-field-full">
-            <label for="ac-aanbod">Gekozen aanbod</label>
-            <input id="ac-aanbod" type="text" name="aanbod" placeholder="Bijvoorbeeld: Basistraining AI" readonly>
+            <label for="ac-aanbod">Interesse in</label>
+            <select id="ac-aanbod" name="aanbod">
+              <option value="">Nog niet zeker / wil sparren</option>
+              <option value="Basistraining AI">Basistraining AI</option>
+              <option value="Workflows &amp; Agents">Workflows &amp; Agents</option>
+              <option value="Tool Building">Tool Building</option>
+              <option value="Team-workshop">Team-workshop</option>
+              <option value="Mini masterclass AI voor managers">Mini masterclass AI voor managers</option>
+              <option value="Masterclass AI voor kartrekkers">Masterclass AI voor kartrekkers</option>
+              <option value="Projectmanagement met AI">Projectmanagement met AI</option>
+              <option value="Keynotes &amp; kick-offs">Keynotes &amp; kick-offs</option>
+              <option value="AI-richtingssessie voor MT of projectgroep">AI-richtingssessie voor MT of projectgroep</option>
+              <option value="Begeleid implementatietraject">Begeleid implementatietraject</option>
+            </select>
           </div>
           <div class="form-field">
             <label for="ac-naam">Naam *</label>
