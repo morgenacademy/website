@@ -17,7 +17,7 @@
 <div class="cur" id="cur"></div>
 <div class="popup-overlay" id="training-popup">
   <div class="popup-box popup-training-detail">
-    <button class="popup-close" onclick="closeTrainingPopup()">&#x2715; Sluiten</button>
+    <button class="popup-close" type="button" aria-label="Sluiten" onclick="closeTrainingPopup()">&#x2715;</button>
     <div id="tp-badge" class="popup-badge"></div>
     <div id="tp-title" class="popup-title"></div>
     <p id="tp-intro" class="popup-desc"></p>
@@ -361,13 +361,14 @@
 <header class="hero hero-academy">
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="hgrid"></div>
   <div class="academy-hero-media" aria-hidden="true">
-    <img src="/docs/company/academy-hero-01.jpg" alt="" loading="lazy">
+    <img class="academy-hero-photo academy-hero-photo-primary" src="/docs/company/academy-hero-01.jpg" alt="" loading="lazy">
+    <img class="academy-hero-photo academy-hero-photo-secondary" src="/docs/company/academy-hero-02.jpg" alt="" loading="lazy">
   </div>
   <div class="hi">
     <button class="back-btn" onclick="nav('home')">&#x2190; Terug naar home</button>
     <p class="eyebrow">Morgen Academy &#183; Losse trainingen &#183; Masterclasses &#183; Begeleiding &#183; EU AI Act</p>
     <h1 class="h1">Klein<br><span class="ol">beginnen.</span><br><span class="pk">Groot doorpakken.</span></h1>
-    <p class="hbody">De meeste organisaties starten met een losse training. Wie verder wil, stroomt door naar een masterclass, richtingssessie of begeleid traject. Op deze pagina staat het incompany aanbod en ontdek je wat nu de slimste eerste stap is.</p>
+    <p class="hbody">Van losse trainingen tot masterclasses, richtingssessies of een begeleid traject. Ontdek wat voor jullie de slimste eerste stap is.</p>
     <div class="hctas">
       <button class="btn-p" onclick="scrollToId('ac-trainingen')">Bekijk de trainingen</button>
       <button class="btn-g" onclick="scrollToId('trainingwijzer-app')">Start de routewijzer &#x2193;</button>
@@ -389,16 +390,21 @@
       <p class="pbody">Je kunt laagdrempelig starten met een losse training. Wie verder wil, stroomt door naar een masterclass, richtingssessie of begeleid implementatietraject. Altijd praktisch, toepasbaar en opgezet conform de EU AI Act.</p>
     </div>
     <div class="scards">
-      <div class="sc"><div class="scn scn-text">Losse trainingen</div><div class="scd">De laagdrempelige en meest gevraagde instap voor teams die direct slimmer willen werken</div></div>
-      <div class="sc"><div class="scn scn-text">Master&shy;classes</div><div class="scd">Voor managementteams en voorlopersgroepen die dieper willen gaan dan een losse sessie</div></div>
-      <div class="sc"><div class="scn scn-text">Begelei&shy;ding</div><div class="scd">Voor organisaties die eerst scherp willen krijgen waar de meeste winst zit en wat de slimste route is</div></div>
-      <div class="sc"><div class="scn scn-text">EU AI Act</div><div class="scd">AI literacy, veilig gebruik en bewijs van deelname voor dossieropbouw binnen organisaties</div></div>
+      <div class="sc" onclick="scrollToId('ac-trainingen')" style="cursor:pointer"><div class="scn scn-text">Losse trainingen</div><div class="scd">De laagdrempelige en meest gevraagde instap voor teams die direct slimmer willen werken</div></div>
+      <div class="sc" onclick="scrollToId('ac-verdiepen')" style="cursor:pointer"><div class="scn scn-text">Master&shy;classes</div><div class="scd">Voor managementteams en voorlopersgroepen die dieper willen gaan dan een losse sessie</div></div>
+      <div class="sc" onclick="scrollToId('ac-begeleiding')" style="cursor:pointer"><div class="scn scn-text">Begelei&shy;ding</div><div class="scd">Voor organisaties die eerst scherp willen krijgen waar de meeste winst zit en wat de slimste route is</div></div>
+      <div class="sc" onclick="scrollToId('ac-ai-act')" style="cursor:pointer"><div class="scn scn-text">EU AI Act</div><div class="scd">AI literacy, veilig gebruik en bewijs van deelname voor dossieropbouw binnen organisaties</div></div>
     </div>
   </div>
 </section>
 <section style="padding:0">
-  <div class="trainingwijzer-wrapper">
-    <div id="trainingwijzer-app"></div>
+  <div class="academy-route-layout">
+    <div class="trainingwijzer-wrapper">
+      <div id="trainingwijzer-app"></div>
+    </div>
+    <figure class="academy-route-photo">
+      <img src="/docs/company/academy-hero-02.jpg" alt="Incompany training in de praktijk." loading="lazy">
+    </figure>
   </div>
 </section>
 <section class="sl" id="ac-trainingen">
@@ -411,27 +417,27 @@
   <div class="trgrid reveal">
     <div class="tcard" onclick="openTrainingPopup('basis')" style="cursor:pointer;border-color:rgba(200,80,216,.3);box-shadow:0 4px 20px rgba(200,80,216,.1)">
       <span class="tlev tl-s">Kennis &amp; skills</span>
-      <div class="ttitle">Iedereen probeert iets, maar niemand werkt hetzelfde</div>
-      <p class="tdesc">Basistraining AI. Leg in korte tijd dezelfde basis in het team, werk zekerder met AI en bouw direct een eerste assistent die in het werk past.</p>
+      <div class="ttitle">Basistraining AI</div>
+      <p class="tdesc">Iedereen probeert iets, maar niemand werkt hetzelfde. Leg in korte tijd dezelfde basis in het team, werk zekerder met AI en bouw direct een eerste assistent die in het werk past.</p>
       <div class="tmeta"><span>2 uur</span><span>Online of incompany</span></div>
       <div style="margin-top:1rem;font-family:var(--fu);font-size:.75rem;font-weight:700;color:var(--orange)">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('workflows')" style="cursor:pointer">
       <span class="tlev tl-a">Automatisering</span>
-      <div class="ttitle">Er gaat te veel tijd verloren tussen systemen</div>
-      <p class="tdesc">Workflows &amp; Agents. Voor teams die minder willen kopiëren, plakken en overtypen en processen slimmer willen laten doorlopen.</p>
+      <div class="ttitle">Workflows &amp; Agents</div>
+      <p class="tdesc">Er gaat te veel tijd verloren tussen systemen. Voor teams die minder willen kopiëren, plakken en overtypen en processen slimmer willen laten doorlopen.</p>
       <div class="tmeta"><span>2 uur</span><span>Incompany</span></div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('toolbuilding')" style="cursor:pointer">
       <span class="tlev tl-a">Bouwen</span>
-      <div class="ttitle">Jullie werk vraagt om iets dat nog niet bestaat</div>
-      <p class="tdesc">Tool Building. Voor teams die een eigen tool, prototype of assistent willen maken in plaats van zich te blijven aanpassen aan standaardsoftware.</p>
+      <div class="ttitle">Tool Building</div>
+      <p class="tdesc">Jullie werk vraagt om iets dat nog niet bestaat. Voor teams die een eigen tool, prototype of assistent willen maken in plaats van zich te blijven aanpassen aan standaardsoftware.</p>
       <div class="tmeta"><span>2 uur</span><span>Incompany</span></div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('teamworkshop')" style="cursor:pointer">
       <span class="tlev tl-e">Strategie &amp; proces</span>
-      <div class="ttitle">Jullie voelen dat het slimmer kan, maar waar begin je</div>
-      <p class="tdesc">Team-workshop. Voor teams die niet alleen skills missen, maar vooral samen moeten kiezen welk proces slimmer kan en wat daar echt voor nodig is.</p>
+      <div class="ttitle">Team-workshop</div>
+      <p class="tdesc">Jullie voelen dat het slimmer kan, maar waar begin je? Voor teams die niet alleen skills missen, maar vooral samen moeten kiezen welk proces slimmer kan en wat daar echt voor nodig is.</p>
       <div class="tmeta"><span>Halve dag</span><span>Incompany</span></div>
     </div>
   </div>
@@ -523,7 +529,7 @@
         <p class="form-help">Liever mailen? <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
       </div>
       <figure class="academy-online-photo academy-online-photo-single" aria-hidden="true">
-        <img src="/docs/company/academy-hero-02.jpg" alt="" loading="lazy">
+        <img src="/docs/company/academy-training-01.jpg" alt="Trainingssessie met deelnemers in de praktijk." loading="lazy">
       </figure>
     </div>
   </div>
@@ -1592,7 +1598,8 @@ const trainingData={
     ],
     quote:'\u201cEr kwam iemand de workshop binnen die amper wist waar zijn browser zat. Wij zeiden: ga maar spelen, je kunt niks verkeerd doen. Binnen twee uur had hij zelf een spraakassistent gebouwd die zijn trapmaten omzet in een strak meetverslag. Wat dat bewijst: het draait niet om technische skills, maar om mindset en het vertrouwen dat je het z\u00e9lf kunt.\u201d',
     includes:['Praktisch en direct toepasbaar','Eigen tempo, altijd online beschikbaar','Ook incompany beschikbaar','Duur: circa 2 uur','Conform de EU AI Act','Bewijs van deelname na afronding'],
-    cta:'Bekijk losse trainingen',
+    cta:'Plan basistraining',
+    mailtoSubject:'Interesse in Basistraining AI',
     target:'ac-trainingen'
   },
   workflows:{
@@ -1606,7 +1613,8 @@ const trainingData={
     ],
     quote:'\u201cEen supportmail komt binnen. De agent analyseert, categoriseert, haalt klantdata op uit het CRM, schrijft een conceptantwoord en zet het klaar voor goedkeuring. Vijf stappen, geen copy-paste, 24 uur per dag beschikbaar.\u201d',
     includes:['Hands-on werken met Make, Zapier of N8N','Eigen workflow bouwen tijdens de training','Duur: 2 uur incompany','Geschikt voor teams van 4\u201315 personen'],
-    cta:'Bekijk losse trainingen',
+    cta:'Plan Workflows & Agents',
+    mailtoSubject:'Interesse in Workflows & Agents',
     target:'ac-trainingen'
   },
   toolbuilding:{
@@ -1620,7 +1628,8 @@ const trainingData={
     ],
     quote:'\u201cNeem Gijs, een render-assistent voor interieurbouwers. Je uploadt een tekening, Gijs koppelt kleuren aan materialen en genereert binnen seconden een fotorealistische visualisatie. Wat vroeger dagen duurde, kost nu een minuut.\u201d',
     includes:['Zelf een werkende tool bouwen tijdens de sessie','Werken met Lovable, Cursor of Replit','Duur: 2 uur incompany','Geen programmeerervaring nodig'],
-    cta:'Bekijk losse trainingen',
+    cta:'Plan Tool Building',
+    mailtoSubject:'Interesse in Tool Building',
     target:'ac-trainingen'
   },
   teamworkshop:{
@@ -1634,7 +1643,8 @@ const trainingData={
     ],
     quote:'\u201cEen team optimaliseert hun e-mailcategorisatie, doorvragen en beantwoorden. Maar de echte vraag is: waarom krijgen we zoveel van dit type vragen? Soms kun je de bron aanpakken in plaats van de symptomen.\u201d',
     includes:['Procesinventarisatie en verbeterplan','Hands-on met het hele team','Duur: halve dag incompany','Concreet actieplan om mee naar huis te nemen'],
-    cta:'Bekijk losse trainingen',
+    cta:'Plan team-workshop',
+    mailtoSubject:'Interesse in Team-workshop',
     target:'ac-trainingen'
   },
   managers:{
@@ -1648,7 +1658,8 @@ const trainingData={
     ],
     quote:'\u201cManagement heeft meer aan een sessie waarin je zelf met AI werkt en merkt waar het helpt, dan aan nog een verhaal over wat er ooit misschien mogelijk wordt.\u201d',
     includes:['Voor MT, directie en leidinggevenden','Compact programma van 1 dag','Zelf werken met AI in managementsituaties','Concreet vervolgadvies voor team of organisatie'],
-    cta:'Bekijk masterclasses',
+    cta:'Plan mini masterclass',
+    mailtoSubject:'Interesse in Mini masterclass AI voor managers',
     target:'ac-verdiepen'
   },
   masterclass:{
@@ -1662,7 +1673,8 @@ const trainingData={
     ],
     quote:'\u201cDe deep dive is bedoeld voor de mensen die na een eerste basis niet willen blijven praten, maar iets willen bouwen en verder brengen in de organisatie.\u201d',
     includes:['Voor een kleine groep met basis','4-daagse deep dive','Van case naar implementatie','Geschikt als vervolg op training of managementsessie'],
-    cta:'Bekijk masterclasses',
+    cta:'Plan 4-daagse masterclass',
+    mailtoSubject:'Interesse in Masterclass AI voor kartrekkers',
     target:'ac-verdiepen'
   },
   pmtraining:{
@@ -1676,7 +1688,8 @@ const trainingData={
     ],
     quote:'\u201cDit wordt geen traditionele PM-cursus, maar een rijke training over hoe projectwerk verandert als je technologie serieus meeneemt in je manier van werken.\u201d',
     includes:['Voor projectmanagers en projectwerkers','4-daags programma','Nieuwe kijk op projectmanagement met AI','Praktisch toepasbaar in lopende projecten'],
-    cta:'Bekijk masterclasses',
+    cta:'Plan PM-training',
+    mailtoSubject:'Interesse in Projectmanagement met AI',
     target:'ac-verdiepen'
   },
   keynote:{
@@ -1690,7 +1703,8 @@ const trainingData={
     ],
     quote:'\u201cEen goede keynote geeft niet alleen energie, maar zet ook het gesprek open over wat er daarna echt nodig is.\u201d',
     includes:['Voor events, MT-dagen en kick-offs','45 tot 90 minuten','Inspiratie met praktische vertaalslag','Geschikt als opener voor vervolgtrajecten'],
-    cta:'Bekijk masterclasses',
+    cta:'Vraag keynote aan',
+    mailtoSubject:'Interesse in Keynote of kick-off',
     target:'ac-verdiepen'
   },
   chancesession:{
@@ -1704,7 +1718,8 @@ const trainingData={
     ],
     quote:'\u201cSoms is de slimste eerste stap niet meteen trainen, maar eerst met de juiste mensen om tafel om te bepalen waar de meeste winst zit en wie daar eigenaar van moet zijn.\u201d',
     includes:['Voor MT of projectgroep','90 minuten tot halve dag','Concreet advies: training, masterclass of traject','Op locatie of online mogelijk'],
-    cta:'Bekijk begeleiding',
+    cta:'Plan richtingssessie',
+    mailtoSubject:'Interesse in AI-richtingssessie',
     target:'ac-begeleiding'
   },
   trajectory:{
@@ -1718,7 +1733,8 @@ const trainingData={
     ],
     quote:'\u201cWie echt wil doorpakken, heeft vaak niet genoeg aan \u00e9\u00e9n sessie maar aan een slim ritme van leren, kiezen en implementeren.\u201d',
     includes:['3 tot 12 maanden op maat','Combinatie van training en begeleiding','Voor organisaties die willen doorpakken','Aansluiting op processen, team en eigenaarschap'],
-    cta:'Bekijk begeleiding',
+    cta:'Plan verkenningstraject',
+    mailtoSubject:'Interesse in Begeleid implementatietraject',
     target:'ac-begeleiding'
   }
 };
@@ -1743,7 +1759,8 @@ function openTrainingPopup(key){
   cta.textContent=d.cta;
   cta.onclick=function(){
     closeTrainingPopup();
-    scrollToId(d.target || 'ac-trainingen');
+    const subject=encodeURIComponent(d.mailtoSubject || ('Interesse in '+d.title));
+    window.location.href='mailto:totmorgen@morgenacademy.nl?subject='+subject;
   };
   document.getElementById('training-popup').classList.add('open');
   document.body.style.overflow='hidden';
