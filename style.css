@@ -447,7 +447,7 @@ nav.scrolled {
 #page-academy .sc { min-height: 200px; }
 #page-academy .scn { font-size: 2.4rem; color: var(--orange); letter-spacing: .01em; margin-bottom: .6rem; }
 #page-academy .scn-stars { font-size: 2.05rem; letter-spacing: .07em; }
-#page-academy .scn-text { font-size: 2.2rem; line-height: 1.06; }
+#page-academy .scn-text { font-size: 1.8rem; line-height: 1.15; white-space: nowrap; }
 #page-academy .scn-plus { font-size: 1.45rem; line-height: 1; color: var(--purple-light); }
 #page-academy .scd { font-size: .78rem; line-height: 1.55; color: var(--text-secondary); max-width: 24ch; }
 
@@ -794,6 +794,7 @@ nav.scrolled {
   background: var(--white); color: #1a1225; border-color: var(--white);
 }
 .trgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 1.5rem; }
+.trgrid-four { grid-template-columns: repeat(4, 1fr); }
 .trgrid-two { grid-template-columns: repeat(2, 1fr); }
 .academy-section-intro {
   font-family: var(--fb);
@@ -1802,6 +1803,7 @@ footer {
   .adet-hero { grid-template-columns: 1fr; gap: 1.5rem; }
   .adet-two-col { grid-template-columns: 1fr; gap: 1.5rem; }
   .trgrid { grid-template-columns: 1fr; }
+  .trgrid-four { grid-template-columns: 1fr; }
   .trgrid-two { grid-template-columns: 1fr; }
   .wgrid { grid-template-columns: 1fr 1fr; }
   .ft { grid-template-columns: 1fr 1fr; }
