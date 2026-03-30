@@ -46,10 +46,10 @@ function renderWelcome() {
     <div class="screen welcome-screen">
       <div class="welcome-content">
         <div class="welcome-badge">Morgen Academy</div>
-        <h1 class="welcome-title">Ontdek jullie <span class="highlight">AI-route</span></h1>
+        <h1 class="welcome-title">Ontdek jullie <span class="highlight">slimste start</span></h1>
         <p class="welcome-subtitle">
-          Beantwoord een paar korte vragen en ontdek welke training bij jullie team past.
-          Wij kijken waar jullie nu staan en adviseren de juiste route.
+          Beantwoord een paar korte vragen en ontdek wat nu de slimste eerste stap is:
+          een losse training, een masterclass of eerst samen scherpte krijgen.
         </p>
         <button class="btn btn-primary btn-large" data-action="start">
           Start de routewijzer
@@ -67,9 +67,9 @@ function renderWelcome() {
 
 function renderRoutePreview() {
   const stops = [
-    { label: 'Basis', active: true },
-    { label: 'Verdieping', active: false },
-    { label: 'Toepassing', active: false },
+    { label: 'Training', active: true },
+    { label: 'Masterclass', active: false },
+    { label: 'Begeleiding', active: false },
   ];
   return stops
     .map(
