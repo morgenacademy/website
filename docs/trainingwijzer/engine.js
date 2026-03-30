@@ -26,6 +26,7 @@ const OFFERS = {
     duration: '2 uur',
     description: 'De snelste en meest laagdrempelige teamtraining om dezelfde AI-basis te leggen.',
     bullets: [
+      'Geen technische kennis nodig om mee te doen',
       'Begrijp wat AI is, wat het kan en hoe je er veilig mee werkt',
       'Leer effectief prompten voor betere resultaten',
       'Bouw een eerste assistent die direct bruikbaar is in jullie werk',
@@ -99,16 +100,16 @@ const OFFERS = {
   masterclass: {
     key: 'masterclass',
     popupKey: 'masterclass',
-    training: 'Masterclass AI voor kartrekkers',
+    training: 'Masterclass AI voor interne kartrekkers',
     startTypeLabel: 'Masterclass',
     sectionLabel: 'Masterclasses',
     sectionTarget: 'ac-verdiepen',
     duration: '4 dagen',
-    description: 'Voor een kleine groep met basis die cases, processen en implementatie samen wil uitdiepen.',
+    description: 'Voor een kleine interne kartrekkersgroep die AI verder wil trekken in processen, teams en implementatie.',
     bullets: [
-      'Werk van kans en value case naar concrete oplossing',
-      'Combineer procesdenken, tooling en implementatie',
-      'Bouw draagvlak en eigenaarschap voor het vervolg',
+      'Breng mensen uit verschillende teams of afdelingen samen',
+      'Werk van kans en value case naar concrete toepassing',
+      'Bouw draagvlak, eigenaarschap en implementatiekracht op',
     ],
     levelTo: 6,
   },
@@ -133,7 +134,7 @@ const OFFERS = {
 const audienceLabels = {
   team: 'Team of organisatie',
   management: 'Managementteam',
-  pioneers: 'Kleine groep kartrekkers',
+  pioneers: 'Kartrekkersgroep',
   organization: 'Organisatievraagstuk',
   myself: 'Individueel',
 };
@@ -216,7 +217,7 @@ function buildChanceRoute(answers) {
   let nextPaths = [
     makeNextPath('basis', 'Basistraining AI', 'Als er eerst een brede teambasis nodig is'),
     makeNextPath('managers', 'Mini masterclass', 'Als management eerst richting en kaders moet bepalen'),
-    makeNextPath('masterclass', '4-daagse masterclass', 'Als een kleine groep met basis direct wil doorpakken'),
+    makeNextPath('masterclass', '4-daagse masterclass', 'Als een kartrekkersgroep na de basis direct wil doorpakken'),
   ];
 
   if (answers.for_whom === 'team') {
@@ -241,10 +242,10 @@ function buildManagementRoute(answers) {
     why:
       'Management heeft nu vooral richting nodig, maar wil ook zelf ervaren hoe AI helpt in voorbereiding, analyse en besluitvorming. Daarom is een compacte masterclass hier slimmer dan meteen een losse vaardigheidstraining.',
     followUp:
-      'Vanuit deze sessie kun je gericht kiezen voor een teamtraining, een richtingssessie of een verdiepend programma voor een kleine groep.',
+      'Vanuit deze sessie kun je gericht kiezen voor een teamtraining, een richtingssessie of een verdiepend programma voor een kartrekkersgroep.',
     nextPaths: [
       makeNextPath('chancesession', 'AI-richtingssessie', 'Breng organisatiebrede kansen en prioriteiten scherp in kaart'),
-      makeNextPath('masterclass', '4-daagse masterclass', 'Ga met een kleine groep verdiepend aan de slag'),
+      makeNextPath('masterclass', '4-daagse masterclass', 'Ga met een kartrekkersgroep verdiepend aan de slag'),
       makeNextPath('basis', 'Basistraining AI', 'Zet daarna de brede teambasis neer'),
     ],
   });
@@ -253,9 +254,9 @@ function buildManagementRoute(answers) {
 function buildMasterclassRoute(answers) {
   return cloneOffer('masterclass', answers, {
     why:
-      'Jullie willen niet alleen iets leren, maar met een kleine groep die al een basis heeft echt doorpakken op case, proces, implementatie en draagvlak. Dan past een masterclass beter dan een losse training.',
+      'Niet iedereen hoeft in jullie organisatie alles te kunnen bouwen of automatiseren. Jullie willen juist een kleine kartrekkersgroep vormen van mensen die al een basis hebben en dit verder trekken in processen, teams en implementatie. Dan past een masterclass beter dan een losse training.',
     followUp:
-      'Na de masterclass is vaak een begeleid implementatietraject of een gerichte vervolgtraining logisch om het verder te laten landen.',
+      'Na de masterclass is vaak een begeleid implementatietraject of een gerichte vervolgtraining logisch om het verder te laten landen buiten de kartrekkersgroep zelf.',
     nextPaths: [
       makeNextPath('chancesession', 'AI-richtingssessie', 'Koppel de inzichten aan een bredere organisatiekeuze'),
       makeNextPath('workflows', 'Workflows & Agents', 'Verdiep op procesautomatisering'),
@@ -298,7 +299,7 @@ function buildWorkflowRoute(answers) {
       'Na deze training kun je het automatiseringswerk verder uitbouwen of koppelen aan begeleiding voor implementatie en borging.',
     nextPaths: [
       makeNextPath('teamworkshop', 'Team-workshop', 'Breng ook teamafspraken en proceskeuzes in lijn'),
-      makeNextPath('masterclass', '4-daagse masterclass', 'Verdiep met een kleine groep met basis op implementatie'),
+      makeNextPath('masterclass', '4-daagse masterclass', 'Verdiep met een kartrekkersgroep op implementatie'),
     ],
   });
 }

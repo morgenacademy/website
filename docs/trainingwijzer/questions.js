@@ -5,7 +5,7 @@ export const questions = [
     options: [
       { id: 'team', label: 'Voor een team dat praktisch aan de slag wil' },
       { id: 'management', label: 'Voor management dat koers en kaders wil bepalen' },
-      { id: 'pioneers', label: 'Voor een kleine groep kartrekkers die al een basis heeft en wil doorpakken' },
+      { id: 'pioneers', label: 'Voor een kleine kartrekkersgroep die AI verder wil trekken in de organisatie' },
       { id: 'organization', label: 'Voor een organisatievraagstuk dat we eerst scherp moeten krijgen' },
       { id: 'myself', label: 'Voor mezelf' },
     ],
