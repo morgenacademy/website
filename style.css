@@ -865,6 +865,9 @@ nav.scrolled {
   padding: 1.8rem;
   transition: var(--transition);
   cursor: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .tcard:hover {
   background: var(--card-bg-hover);
@@ -883,7 +886,14 @@ nav.scrolled {
 .tl-e { background: rgba(216,254,86,.18); border: 1px solid rgba(216,254,86,.4); color: var(--orange); }
 .ttitle { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: .5rem; line-height: 1.3; }
 .tdesc { font-size: .85rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem; }
-.tmeta { display: flex; gap: 1rem; font-size: .72rem; color: var(--text-secondary); font-weight: 500; }
+.tmeta { display: flex; gap: 1rem; font-size: .72rem; color: var(--text-secondary); font-weight: 500; margin-top: auto; }
+.tcard-hint {
+  margin-top: 1rem;
+  font-family: var(--fu);
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--orange);
+}
 
 /* ── 16. Situatiekaarten ── */
 .sgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 2.75rem; }
@@ -1868,6 +1878,11 @@ footer {
 .popup-desc { font-size: .9rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.8rem; }
 .popup-incl { font-size: .72rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: .4rem; }
 .popup-incl span::before { content: '✓  '; color: var(--green); }
+.popup-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .85rem;
+}
 .popup-btn {
   display: block; width: 100%;
   font-weight: 700; font-size: 1rem;
@@ -1878,7 +1893,34 @@ footer {
   box-shadow: 0 4px 24px rgba(216,254,86,.35), inset 0 1px 0 rgba(255,255,255,.25);
 }
 .popup-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 36px rgba(216,254,86,.5); }
+.popup-btn-secondary {
+  background: rgba(255,255,255,.08);
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+}
+.popup-btn-secondary:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.12);
+}
+.popup-btn[disabled],
+.popup-btn[aria-disabled="true"] {
+  cursor: default;
+  opacity: .68;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+  transform: none;
+}
+.popup-btn[disabled]:hover,
+.popup-btn[aria-disabled="true"]:hover {
+  transform: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+}
 .popup-note { font-size: .74rem; color: var(--text-muted); text-align: center; margin-top: .9rem; }
+
+@media (max-width: 720px) {
+  .popup-actions {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ── 29. Keyframes ── */
 @keyframes up   { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }

@@ -24,7 +24,10 @@
     <div id="tp-sections" class="tp-sections"></div>
     <div id="tp-quote" class="tp-quote"></div>
     <div class="popup-incl" id="tp-incl"></div>
-    <button id="tp-cta" class="popup-btn" onclick="closeTrainingPopup();scrollToId('ac-aanvraag')"></button>
+    <div class="popup-actions">
+      <button id="tp-cta" class="popup-btn" onclick="closeTrainingPopup();scrollToId('ac-aanvraag')"></button>
+      <button id="tp-cta-online" class="popup-btn popup-btn-secondary" type="button" onclick="goToAcademy('online')" hidden>Direct online volgen</button>
+    </div>
     <p class="popup-note">Vragen? Mail naar <a href="mailto:totmorgen@morgenacademy.nl" style="color:var(--pink);text-decoration:none">totmorgen@morgenacademy.nl</a></p>
   </div>
 </div>
@@ -372,6 +375,7 @@
     <div class="hctas">
       <button class="btn-p" onclick="scrollToId('ac-trainingen')">Bekijk de trainingen</button>
       <button class="btn-g" onclick="scrollToId('trainingwijzer-app')">Start de routewijzer &#x2193;</button>
+      <button class="btn-o" onclick="goToAcademy('online')">Direct naar online aanbod</button>
     </div>
     <div class="hstats">
       <div><div class="hsn">9.8<em>/10</em></div><div class="hsl">Gemiddelde trainings&shy;beoordeling</div></div>
@@ -423,25 +427,28 @@
       <div class="ttitle">Basistraining AI</div>
       <p class="tdesc">Iedereen probeert iets, maar niemand werkt hetzelfde. Leg in korte tijd dezelfde basis in het team, werk zekerder met AI en bouw direct een eerste assistent die in het werk past, zonder dat technische kennis nodig is.</p>
       <div class="tmeta"><span>2 uur</span><span>Online of incompany</span></div>
-      <div style="margin-top:1rem;font-family:var(--fu);font-size:.75rem;font-weight:700;color:var(--orange)">Meer info en opties</div>
+      <div class="tcard-hint">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('workflows')" style="cursor:pointer">
       <span class="tlev tl-a">Automatisering</span>
       <div class="ttitle">Workflows &amp; Agents</div>
       <p class="tdesc">Er gaat te veel tijd verloren tussen systemen. Voor teams die minder willen kopiëren, plakken en overtypen en processen slimmer willen laten doorlopen.</p>
       <div class="tmeta"><span>2 uur</span><span>Incompany</span></div>
+      <div class="tcard-hint">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('toolbuilding')" style="cursor:pointer">
       <span class="tlev tl-a">Bouwen</span>
       <div class="ttitle">Tool Building</div>
       <p class="tdesc">Jullie werk vraagt om iets dat nog niet bestaat. Voor teams die een eigen tool, prototype of assistent willen maken in plaats van zich te blijven aanpassen aan standaardsoftware.</p>
       <div class="tmeta"><span>2 uur</span><span>Incompany</span></div>
+      <div class="tcard-hint">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('teamworkshop')" style="cursor:pointer">
       <span class="tlev tl-e">Strategie &amp; proces</span>
       <div class="ttitle">Team-workshop</div>
       <p class="tdesc">Jullie voelen dat het slimmer kan, maar waar begin je? Voor teams die niet alleen skills missen, maar vooral samen moeten kiezen welk proces slimmer kan en wat daar echt voor nodig is.</p>
       <div class="tmeta"><span>Halve dag</span><span>Incompany</span></div>
+      <div class="tcard-hint">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="startAcademyInquiry('Maatwerk / eigen vraag')" style="cursor:pointer;border-color:rgba(216,254,86,.28);box-shadow:0 4px 20px rgba(216,254,86,.08)">
       <span class="tlev" style="background:var(--orange);color:#0C0818">Maatwerk</span>
@@ -463,24 +470,28 @@
       <div class="ttitle">Mini masterclass AI voor managers</div>
       <p class="tdesc">Voor managers die AI niet alleen willen begrijpen, maar er zelf slimmer mee willen werken in voorbereiding, sturing, besluitvorming en dagelijkse praktijk.</p>
       <div class="tmeta"><span>1 dag</span><span>MT, directie, leidinggevenden</span></div>
+      <div class="tcard-hint">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('masterclass')" style="cursor:pointer;border-color:rgba(216,254,86,.35);box-shadow:0 4px 20px rgba(216,254,86,.08)">
       <span class="tlev" style="background:var(--orange);color:#0C0818">4-daagse deep dive</span>
       <div class="ttitle">Masterclass AI voor interne kartrekkers</div>
       <p class="tdesc">Voor de groep in je organisatie die hier echt verder mee wil: mensen die al een basis hebben en AI willen helpen bouwen, integreren en laten landen in team, proces en afdeling.</p>
       <div class="tmeta"><span>4 dagen</span><span>Kleine kartrekkersgroep</span></div>
+      <div class="tcard-hint">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('pmtraining')" style="cursor:pointer">
       <span class="tlev tl-a">Nieuwe kijk op PM</span>
       <div class="ttitle">Projectmanagement met AI</div>
       <p class="tdesc">Voor projectmanagers en projectwerkers die AI willen verwerken in hoe ze projecten voorbereiden, aansturen, organiseren en laten slagen.</p>
       <div class="tmeta"><span>4 dagen</span><span>PM's en projectwerkers</span></div>
+      <div class="tcard-hint">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('keynote')" style="cursor:pointer">
       <span class="tlev tl-s">Inspiratie</span>
       <div class="ttitle">Keynotes &amp; kick-offs</div>
       <p class="tdesc">Voor events, MT-dagen en interne kick-offs die energie, richting en urgentie moeten losmaken voordat je verder verdiept of implementeert.</p>
       <div class="tmeta"><span>45 - 90 min</span><span>Event, teamdag, kick-off</span></div>
+      <div class="tcard-hint">Meer info en opties</div>
     </div>
   </div>
 </section>
@@ -512,12 +523,14 @@
       <div class="ttitle">AI-richtingssessie voor MT of projectgroep</div>
       <p class="tdesc">We kijken mee naar processen, pijnpunten en ambitie en bepalen welke route logisch is: teamtraining, masterclass of een begeleid traject.</p>
       <div class="tmeta"><span>90 min - halve dag</span><span>MT of projectgroep</span></div>
+      <div class="tcard-hint">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('trajectory')" style="cursor:pointer">
       <span class="tlev tl-a">Implementatie</span>
       <div class="ttitle">Begeleid implementatietraject</div>
       <p class="tdesc">Voor organisaties die niet alleen willen leren, maar ook echt willen neerzetten, borgen en opschalen. Van eerste sessie tot werkende aanpak.</p>
       <div class="tmeta"><span>3 - 12 maanden</span><span>Incompany</span></div>
+      <div class="tcard-hint">Meer info en opties</div>
     </div>
   </div>
 </section>
@@ -1601,7 +1614,8 @@ const academyLinks={
 function goToAcademy(destination='home'){
   const target=academyLinks[destination] || academyLinks.home;
   if(typeof target==='string'){
-    window.location.href=target;
+    const newTab=window.open(target,'_blank','noopener,noreferrer');
+    if(!newTab)window.location.href=target;
     return;
   }
   nav(target.page,target.anchor);
@@ -1645,7 +1659,8 @@ const trainingData={
     ],
     quote:'\u201cEr kwam iemand de workshop binnen die amper wist waar zijn browser zat. Wij zeiden: ga maar spelen, je kunt niks verkeerd doen. Binnen twee uur had hij zelf een spraakassistent gebouwd die zijn trapmaten omzet in een strak meetverslag. Wat dat bewijst: het draait niet om technische skills, maar om mindset en het vertrouwen dat je het z\u00e9lf kunt.\u201d',
     includes:['Geen technische kennis nodig','Praktisch en direct toepasbaar','Eigen tempo, altijd online beschikbaar','Ook incompany beschikbaar','Duur: circa 2 uur','Conform de EU AI Act','Bewijs van deelname na afronding'],
-    cta:'Vraag basistraining aan',
+    cta:'Vraag incompany training aan',
+    onlineCta:'Direct online volgen',
     formValue:'Basistraining AI',
     target:'ac-trainingen'
   },
@@ -1661,6 +1676,8 @@ const trainingData={
     quote:'\u201cEen supportmail komt binnen. De agent analyseert, categoriseert, haalt klantdata op uit het CRM, schrijft een conceptantwoord en zet het klaar voor goedkeuring. Vijf stappen, geen copy-paste, 24 uur per dag beschikbaar.\u201d',
     includes:['Hands-on werken met Make, Zapier of N8N','Eigen workflow bouwen tijdens de training','Duur: 2 uur incompany','Geschikt voor teams van 4\u201315 personen'],
     cta:'Vraag Workflows & Agents aan',
+    onlineCta:'Online coming soon',
+    onlineCtaDisabled:true,
     formValue:'Workflows & Agents',
     target:'ac-trainingen'
   },
@@ -1676,6 +1693,8 @@ const trainingData={
     quote:'\u201cNeem Gijs, een render-assistent voor interieurbouwers. Je uploadt een tekening, Gijs koppelt kleuren aan materialen en genereert binnen seconden een fotorealistische visualisatie. Wat vroeger dagen duurde, kost nu een minuut.\u201d',
     includes:['Zelf een werkende tool bouwen tijdens de sessie','Werken met Lovable, Cursor of Replit','Duur: 2 uur incompany','Geen programmeerervaring nodig'],
     cta:'Vraag Tool Building aan',
+    onlineCta:'Online coming soon',
+    onlineCtaDisabled:true,
     formValue:'Tool Building',
     target:'ac-trainingen'
   },
@@ -1829,6 +1848,18 @@ function openTrainingPopup(key){
   cta.onclick=function(){
     startAcademyInquiry(d.formValue || d.title);
   };
+  const onlineCta=document.getElementById('tp-cta-online');
+  if(d.onlineCta){
+    onlineCta.hidden=false;
+    onlineCta.textContent=d.onlineCta;
+    onlineCta.disabled=!!d.onlineCtaDisabled;
+    onlineCta.setAttribute('aria-disabled', d.onlineCtaDisabled ? 'true' : 'false');
+    onlineCta.onclick=d.onlineCtaDisabled ? function(){} : function(){ goToAcademy('online'); };
+  }else{
+    onlineCta.hidden=true;
+    onlineCta.disabled=false;
+    onlineCta.setAttribute('aria-disabled','false');
+  }
   document.getElementById('training-popup').classList.add('open');
   document.body.style.overflow='hidden';
 }
