@@ -353,11 +353,17 @@ nav.scrolled {
   display: flex; align-items: center; gap: 1.2rem;
   opacity: 0; animation: up .8s 1s forwards; flex-wrap: wrap;
 }
-.academy-hero-cta-group {
+.academy-hero-actions {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: .7rem;
+}
+.academy-hero-button-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
 }
 .academy-online-link {
   appearance: none;
@@ -2065,7 +2071,8 @@ footer {
   .form-grid, .da-form-grid { grid-template-columns: 1fr; }
   .agents-head-cta .btn-p, .agents-head-cta .btn-o { width: 100%; }
   .btn-p, .btn-w, .btn-o, .btn-g { width: 100%; justify-content: center; }
-  .academy-hero-cta-group { width: 100%; }
+  .academy-hero-actions { width: 100%; }
+  .academy-hero-button-row { width: 100%; flex-direction: column; }
   .academy-online-link { width: auto; }
   .glass-card { padding: 1.4rem; }
   .home-hero-media video { object-position: 76% center; opacity: .46; }
