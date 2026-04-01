@@ -353,6 +353,31 @@ nav.scrolled {
   display: flex; align-items: center; gap: 1.2rem;
   opacity: 0; animation: up .8s 1s forwards; flex-wrap: wrap;
 }
+.academy-hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .7rem;
+}
+.academy-online-link {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: .92rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.78);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: .18em;
+  text-decoration-color: rgba(255,255,255,.24);
+  transition: var(--transition);
+}
+.academy-online-link:hover {
+  color: var(--white);
+  text-decoration-color: rgba(255,255,255,.52);
+}
 
 .hstats {
   display: flex; gap: 2.4rem;
@@ -2040,6 +2065,8 @@ footer {
   .form-grid, .da-form-grid { grid-template-columns: 1fr; }
   .agents-head-cta .btn-p, .agents-head-cta .btn-o { width: 100%; }
   .btn-p, .btn-w, .btn-o, .btn-g { width: 100%; justify-content: center; }
+  .academy-hero-cta-group { width: 100%; }
+  .academy-online-link { width: auto; }
   .glass-card { padding: 1.4rem; }
   .home-hero-media video { object-position: 76% center; opacity: .46; }
   .home-hero-media::after {
