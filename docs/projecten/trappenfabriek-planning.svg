@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Abstracte placeholder voor AI-planning in transport</title>
+  <desc id="desc">Een abstracte visual met routes, planning en transportbeweging.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#101624"/>
+      <stop offset=".55" stop-color="#1d4c5a"/>
+      <stop offset="1" stop-color="#d8fe56"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="820" fill="url(#bg)"/>
+  <circle cx="960" cy="165" r="210" fill="#d8fe56" opacity=".16" filter="url(#soft)"/>
+  <circle cx="250" cy="660" r="260" fill="#5b2d8e" opacity=".32" filter="url(#soft)"/>
+  <g fill="none" stroke="#fff" stroke-linecap="round">
+    <path d="M120 560C300 290 470 690 650 400S930 250 1080 330" stroke-width="11" opacity=".8"/>
+    <path d="M120 560C300 290 470 690 650 400S930 250 1080 330" stroke-width="28" opacity=".12"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="120" cy="560" r="24"/>
+    <circle cx="420" cy="520" r="24"/>
+    <circle cx="650" cy="400" r="24"/>
+    <circle cx="910" cy="292" r="24"/>
+    <circle cx="1080" cy="330" r="24"/>
+  </g>
+  <g transform="translate(420 245)">
+    <rect x="0" y="0" width="310" height="210" rx="30" fill="#fff" opacity=".9"/>
+    <rect x="38" y="42" width="230" height="16" rx="8" fill="#10202c" opacity=".65"/>
+    <rect x="38" y="82" width="172" height="16" rx="8" fill="#10202c" opacity=".28"/>
+    <rect x="38" y="122" width="92" height="44" rx="14" fill="#d8fe56"/>
+    <rect x="150" y="122" width="118" height="44" rx="14" fill="#5b2d8e" opacity=".85"/>
+  </g>
+  <path d="M765 530h210l62 58v58H727v-78c0-21 17-38 38-38Z" fill="#fff" opacity=".86"/>
+  <circle cx="790" cy="660" r="32" fill="#111827"/>
+  <circle cx="988" cy="660" r="32" fill="#111827"/>
+  <text x="82" y="744" fill="#fff" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="6" opacity=".78">AI PLANNING</text>
+</svg>
