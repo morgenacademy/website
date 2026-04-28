@@ -1049,28 +1049,21 @@ nav.scrolled {
 }
 .why-morgen-points {
   display: grid;
-  counter-reset: whyMorgen;
-  border-top: 1px solid rgba(255,255,255,.16);
+  border-top: 1px solid rgba(255,255,255,.14);
 }
 .why-morgen-point {
-  counter-increment: whyMorgen;
   position: relative;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 1.6rem;
-  padding: 2rem 0;
-  border-bottom: 1px solid rgba(255,255,255,.16);
+  grid-template-columns: minmax(11rem, .48fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3.2vw, 3rem);
+  align-items: start;
+  padding: clamp(1.55rem, 2.4vw, 2.2rem) 0;
+  border-bottom: 1px solid rgba(255,255,255,.14);
   isolation: isolate;
   transition: padding var(--transition), border-color var(--transition);
 }
 .why-morgen-point::before {
-  content: '0' counter(whyMorgen);
-  color: var(--orange);
-  font-family: var(--fu);
-  font-size: .76rem;
-  font-weight: 900;
-  letter-spacing: .14em;
-  padding-top: .25rem;
+  display: none;
 }
 .why-morgen-point::after {
   content: '';
@@ -1093,18 +1086,19 @@ nav.scrolled {
   transform: scaleX(1);
 }
 .why-morgen-point h3 {
-  font-size: clamp(1.55rem, 2.2vw, 2.65rem);
-  line-height: .96;
+  font-size: clamp(1.45rem, 2vw, 2.35rem);
+  line-height: 1;
   letter-spacing: -.04em;
   font-weight: 800;
   color: var(--white);
-  margin-bottom: .65rem;
+  margin: 0;
 }
 .why-morgen-point p {
-  max-width: 58ch;
+  max-width: 52ch;
   font-size: .96rem;
   line-height: 1.65;
   color: var(--text-secondary);
+  margin: .15rem 0 0;
 }
 
 .home-photo-strip {
@@ -1140,7 +1134,7 @@ nav.scrolled {
 }
 .academy-photo-grid {
   grid-template-columns: 1.2fr .95fr 1.08fr;
-  grid-auto-rows: 180px;
+  grid-auto-rows: 170px;
   gap: 1.25rem;
   align-items: start;
 }
@@ -1175,6 +1169,11 @@ nav.scrolled {
   grid-row: 3 / span 2;
   transform: translateX(2.8rem) rotate(.9deg);
 }
+.academy-photo-card-karin {
+  grid-column: 3 / 4;
+  grid-row: 3 / span 2;
+  transform: translateX(-1rem) translateY(2rem) rotate(1.1deg);
+}
 .academy-photo-card-wide img {
   object-position: center 54%;
 }
@@ -1186,6 +1185,9 @@ nav.scrolled {
 }
 .academy-photo-card-detail img {
   object-position: center 38%;
+}
+.academy-photo-card-karin img {
+  object-position: center 30%;
 }
 
 @media (max-width: 1024px) {
@@ -1202,7 +1204,8 @@ nav.scrolled {
   .academy-photo-card-wide,
   .academy-photo-card-tall,
   .academy-photo-card-stage,
-  .academy-photo-card-detail {
+  .academy-photo-card-detail,
+  .academy-photo-card-karin {
     grid-column: auto;
     grid-row: auto;
     transform: none;
@@ -2478,6 +2481,13 @@ footer {
   .wgrid, .trgrid { grid-template-columns: 1fr; }
   .home-photo-strip { padding: 1.25rem 2rem 2.75rem; }
   .home-photo-strip-grid { grid-template-columns: 1fr; }
+  .why-morgen-point {
+    grid-template-columns: 1fr;
+    gap: .75rem;
+  }
+  .why-morgen-point h3 {
+    max-width: none;
+  }
   .academy-photo-grid {
     grid-auto-rows: auto;
     gap: 1rem;
