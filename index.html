@@ -90,43 +90,45 @@
 </div>
 </div>
 
-<section class="sl" id="aanbod">
-  <div class="lbintro reveal">
+<section class="sl action-showcase" id="aanbod">
+  <div class="action-showcase-intro reveal">
     <div>
-      <div class="slabel dk">Voor MKB-beslissers</div>
-      <h2 class="stitle" style="color:var(--black)">Van ontwikkeling<br>naar<br><span style="color:var(--purple-light)">uitvoering.</span></h2>
+      <div class="slabel">TRAIN &#183; IMPLEMENT &#183; BUILD &#183; GET INSPIRED</div>
+      <h2 class="stitle">Van ontwikkeling<br>naar uitvoering.</h2>
     </div>
-    <p class="lbintro-p">Voor directeuren, MT's, HR, projectleiders en AI-kartrekkers die moeten bepalen wat technologie concreet betekent voor het bedrijf. Soms begint dat met leren, soms met richting, soms met bouwen.</p>
   </div>
-  <div class="lg4 reveal">
-    <article class="lcard" onclick="nav('academy')" style="cursor:pointer">
-      <div class="lcard-label">TRAIN</div>
-      <h3 class="lname">Maak je team AI-vaardig</h3>
-      <div class="ltag">Workshop &#183; Leerpad &#183; Online &#183; Incompany</div>
-      <p class="ldesc">Voor teams en leidinggevenden die AI veilig, praktisch en relevant willen gebruiken in het dagelijkse werk.</p>
-      <button class="llink ll-b" onclick="event.stopPropagation();nav('academy','ac-trainingen')">Bekijk trainingen</button>
-      <button class="llink ll-k" onclick="event.stopPropagation();nav('academy','trainingwijzer-app')" style="font-size:.8rem;margin-top:.5rem">&#x2192; Start de routewijzer</button>
+  <div class="action-list reveal">
+    <article class="action-row" onclick="nav('academy')" tabindex="0" role="link" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('academy');}">
+      <div class="action-copy">
+        <h3>TRAIN</h3>
+        <p>AI-vaardigheid, workshops, leerpaden en incompany training.</p>
+      </div>
+      <div class="action-meta"><span>Workshop</span><span>Leerpad</span><span>Online</span></div>
+      <img class="action-image" src="/docs/company/academy-hero-01.jpg" alt="" loading="lazy">
     </article>
-    <article class="lcard" onclick="nav('consultancy')" style="cursor:pointer">
-      <div class="lcard-label">IMPLEMENT</div>
-      <h3 class="lname">Breng strategie naar de praktijk</h3>
-      <div class="ltag">Strategie &#183; Uitvoering &#183; Veranderkunde</div>
-      <p class="ldesc">Voor organisaties waar technologie wel op de agenda staat, maar nog niet landt in keuzes, processen en gedrag.</p>
-      <button class="llink ll-k" onclick="event.stopPropagation();nav('consultancy')">Bekijk implementatie-aanpak</button>
+    <article class="action-row" onclick="nav('consultancy')" tabindex="0" role="link" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('consultancy');}">
+      <div class="action-copy">
+        <h3>IMPLEMENT</h3>
+        <p>Strategie vertalen naar prioriteit, eigenaarschap en ritme.</p>
+      </div>
+      <div class="action-meta"><span>Strategie</span><span>Uitvoering</span><span>Borging</span></div>
+      <img class="action-image" src="/docs/company/academy-hero-02.jpg" alt="" loading="lazy">
     </article>
-    <article class="lcard" onclick="nav('technology')" style="cursor:pointer">
-      <div class="lcard-label">BUILD</div>
-      <h3 class="lname">Bouw wat echt nodig is</h3>
-      <div class="ltag">Maatwerk &#183; AI-workflows &#183; Automatisering</div>
-      <p class="ldesc">Voor concrete processen waar minder handwerk, betere informatie of een digitale assistent het verschil maakt.</p>
-      <button class="llink ll-p" onclick="event.stopPropagation();nav('technology')">Bekijk wat we bouwen</button>
+    <article class="action-row" onclick="nav('technology')" tabindex="0" role="link" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('technology');}">
+      <div class="action-copy">
+        <h3>BUILD</h3>
+        <p>Workflows, automatisering en digitale oplossingen op maat.</p>
+      </div>
+      <div class="action-meta"><span>AI-workflows</span><span>Maatwerk</span><span>Automatisering</span></div>
+      <img class="action-image" src="/docs/company/harmen-stage-01.jpg" alt="" loading="lazy">
     </article>
-    <article class="lcard" onclick="nav('company')" style="cursor:pointer">
-      <div class="lcard-label">GET INSPIRED</div>
-      <h3 class="lname">Zet het gesprek open</h3>
-      <div class="ltag">Keynotes &#183; Boek &#183; Podcast</div>
-      <p class="ldesc">Voor directie, events en teams die helder willen begrijpen wat AI nu vraagt van het MKB.</p>
-      <button class="llink ll-g" onclick="event.stopPropagation();nav('company')">Bekijk kennis en keynotes</button>
+    <article class="action-row" onclick="nav('company')" tabindex="0" role="link" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('company');}">
+      <div class="action-copy">
+        <h3>GET INSPIRED</h3>
+        <p>Keynotes, boek en podcast die het gesprek op scherp zetten.</p>
+      </div>
+      <div class="action-meta"><span>Keynote</span><span>Boek</span><span>Podcast</span></div>
+      <img class="action-image" src="/docs/company/karin-speaking-01.jpg" alt="" loading="lazy">
     </article>
   </div>
   <div class="home-metrics-strip reveal">
@@ -147,22 +149,6 @@
   </div>
 </section>
 
-<section class="sd home-knowledge">
-  <div class="lbintro reveal">
-    <div>
-      <div class="slabel">Kennis over wat er verandert</div>
-      <h2 class="ptitle">Eerst begrijpen.<br>Dan pas kiezen.</h2>
-    </div>
-    <p class="lbintro-p">Morgen onderzoekt, schrijft en spreekt over technologische ontwikkelingen die het MKB raken. AI is nu het grootste voorbeeld. Die kennis vertalen we naar keuzes die directies en teams kunnen uitvoeren.</p>
-  </div>
-  <div class="wgrid reveal" style="margin-top:0">
-    <div class="wstep"><div class="wnum">01</div><div class="wtitle">Boek</div><p class="wbody">De Digitale Collega geeft leiders taal en houvast om AI niet als tooltje, maar als onderdeel van de organisatie te zien.</p><button class="llink ll-k" onclick="nav('company','cp-boek')">Bekijk het boek</button></div>
-    <div class="wstep"><div class="wnum">02</div><div class="wtitle">Podcast</div><p class="wbody">Gesprekken over wat technologie betekent voor werk, mensen en organisaties. Praktisch genoeg om het maandag te gebruiken.</p><a class="llink ll-k" href="https://www.youtube.com/@OptinexYT1NL" target="_blank" rel="noopener noreferrer">Luister mee</a></div>
-    <div class="wstep"><div class="wnum">03</div><div class="wtitle">Keynotes</div><p class="wbody">Een scherpe start voor directiedagen, events en interne programma's waar AI geen hype mag blijven, maar richting moet geven.</p><button class="llink ll-k" onclick="nav('company','cp-keynote')">Bekijk keynotes</button></div>
-    <div class="wstep"><div class="wnum">04</div><div class="wtitle">Programma's</div><p class="wbody">Trainingen, masterclasses en leergangen voor wie na inspiratie ook echt nieuwe werkwijzen wil opbouwen.</p><button class="llink ll-k" onclick="nav('academy')">Bekijk academy</button></div>
-  </div>
-</section>
-
 <section class="tw-banner reveal">
   <div class="tw-banner-inner">
     <div class="tw-banner-text">
@@ -178,7 +164,6 @@
 <section class="sd" id="situaties">
   <div class="reveal" style="max-width:56rem">
     <h2 class="stitle">Waar zit<br><span style="color:var(--pink)">de vraag?</span></h2>
-    <p style="font-family:var(--fb);color:var(--lgrey);max-width:52ch;margin:1.2rem 0 0;font-size:.93rem;line-height:1.75">Voor MKB-leiders is AI zelden alleen een toolvraag. Het gaat meestal om richting, mensen, processen of uitvoering.</p>
   </div>
   <div class="sgrid reveal">
     <div class="spath">
@@ -188,13 +173,13 @@
         <p class="ssub">Dan begint het met training, taal en praktische toepassing in het eigen werk.</p>
       </div>
       <div class="sarrow"><svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 0v18M1 12l6 8 6-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="sres sr-p" role="link" tabindex="0" onclick="nav('academy','ac-trainingen')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('academy','ac-trainingen');}"><div class="srl srl-p">TRAIN</div><div class="srn">AI-training voor teams</div><div class="srs">Praktisch, direct toepasbaar, EU AI Act-conform</div><button class="slink slink-p" onclick="event.stopPropagation();nav('academy','ac-trainingen')">Bekijk trainingen</button></div>
+      <div class="sres sr-p" role="link" tabindex="0" onclick="nav('academy','ac-trainingen')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('academy','ac-trainingen');}"><div class="srl srl-p">TRAIN</div><div class="srn">AI-training</div><div class="srs">Praktisch, direct toepasbaar, EU AI Act-conform</div><button class="slink slink-p" onclick="event.stopPropagation();nav('academy','ac-trainingen')">Bekijk trainingen</button></div>
     </div>
     <div class="spath">
       <div class="sscen ss-b">
         <div class="stag stag-b">Proces</div>
         <div class="sq">"Er zit te veel handwerk in processen die slimmer kunnen."</div>
-        <p class="ssub">Dan moet je niet zomaar een tool kiezen, maar eerst het werk goed begrijpen.</p>
+        <p class="ssub">Dan begint het met procesinzicht, keuzes en automatisering die het werk ontlast.</p>
       </div>
       <div class="sarrow"><svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 0v18M1 12l6 8 6-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       <div class="sres sr-b" role="link" tabindex="0" onclick="nav('technology')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('technology');}"><div class="srl srl-b">BUILD</div><div class="srn">Digitale oplossingen op maat</div><div class="srs">Automatisering gebouwd op de eigen processen</div><button class="slink slink-b" onclick="event.stopPropagation();nav('technology')">Bekijk wat we bouwen</button></div>
@@ -215,7 +200,7 @@
         <p class="ssub">Dan helpt een keynote, boek of podcast die taal geeft aan wat er verandert.</p>
       </div>
       <div class="sarrow"><svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 0v18M1 12l6 8 6-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="sres sr-g" role="link" tabindex="0" onclick="nav('company','cp-keynote')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('company','cp-keynote');}"><div class="srl srl-g">GET INSPIRED</div><div class="srn">Keynote, boek of podcast</div><div class="srs">Voor leiders en teams die richting zoeken</div><button class="slink slink-g" onclick="event.stopPropagation();nav('company','cp-keynote')">Bekijk keynotes</button></div>
+      <div class="sres sr-g" role="link" tabindex="0" onclick="nav('company','cp-keynote')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('company','cp-keynote');}"><div class="srl srl-g">GET INSPIRED</div><div class="srn">Keynote, boek of podcast</div><div class="srs">Richting voor het eerste gesprek</div><button class="slink slink-g" onclick="event.stopPropagation();nav('company','cp-keynote')">Bekijk keynotes</button></div>
     </div>
   </div>
   <div style="text-align:center;margin-top:3rem" class="reveal">
@@ -227,10 +212,9 @@
   <div class="trgst reveal why-morgen">
     <div class="why-morgen-copy">
       <div class="slabel">Waarom Morgen</div>
-      <h2 class="ptitle">Niet starten bij tooling. Starten bij het bedrijf.</h2>
+      <h2 class="ptitle">Technologie als bedrijfskeuze.</h2>
       <p class="pbody">Morgen kijkt naar technologische ontwikkeling vanuit het perspectief van het MKB: wat betekent dit voor klanten, medewerkers, processen, sturing en groei?</p>
-      <p class="pbody">Daarom schakelen we tussen directie en operatie. Komt de vraag vanuit strategie, dan maken we hem concreet. Komt de vraag vanuit een tool of proces, dan zoomen we eerst uit naar het doel.</p>
-      <div class="callout">De vraag is niet alleen wat AI kan automatiseren, maar welk werk je als MKB-bedrijf anders wilt organiseren.</div>
+      <p class="pbody">We schakelen tussen directie en operatie: strategie wordt concreet, processen krijgen richting en technologie sluit aan op het werk.</p>
     </div>
     <div class="why-morgen-points">
       <div class="why-morgen-point">
@@ -239,7 +223,7 @@
       </div>
       <div class="why-morgen-point">
         <h3>MKB-praktijk</h3>
-        <p>Geen abstract innovatietraject, maar keuzes die passen bij beperkte tijd, mensen en capaciteit.</p>
+        <p>Keuzes die passen bij beperkte tijd, mensen en capaciteit.</p>
       </div>
       <div class="why-morgen-point">
         <h3>Van strategie naar operatie</h3>
@@ -261,7 +245,7 @@
     <div class="home-company-band-copy">
       <div class="slabel">GET INSPIRED</div>
       <h2 class="home-company-band-title">Boek, podcast en keynotes over technologie in het MKB.</h2>
-      <p class="home-company-band-body">Voor leiders die AI en andere technologische ontwikkelingen niet als hype willen volgen, maar willen begrijpen wat het vraagt van hun bedrijf.</p>
+      <p class="home-company-band-body">Verhalen, voorbeelden en scherpe taal voor wat er verandert in werk en organisatie.</p>
       <div class="home-company-band-actions">
         <button class="btn-p" onclick="event.stopPropagation();nav('company')">Bekijk kennis en keynotes</button>
         <button class="btn-o" onclick="event.stopPropagation();nav('company','cp-keynote')">Bekijk keynotes</button>
@@ -345,7 +329,7 @@
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
         <li><a onclick="goToAcademy('online')">Online trainingen</a></li>
-        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen voor teams</a></li>
+        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen</a></li>
         <li><a onclick="nav('academy','trainingwijzer-app')">Trainingwijzer</a></li>
         <li><a onclick="nav('academy','ac-ai-act')">EU AI Act conform</a></li>
       </ul>
@@ -400,19 +384,19 @@
     </div>
   </div>
 </header>
-<div class="ticker"><div class="ticker-t"><span>Losse trainingen voor teams</span><span class="ts">&#10022;</span><span>Mini masterclass voor managers</span><span class="ts">&#10022;</span><span>4-daagse deep dive voor kartrekkersgroepen</span><span class="ts">&#10022;</span><span>AI-richtingssessie en begeleiding</span><span class="ts">&#10022;</span><span>EU AI Act conform</span><span class="ts">&#10022;</span><span>Losse trainingen voor teams</span><span class="ts">&#10022;</span><span>Mini masterclass voor managers</span><span class="ts">&#10022;</span><span>4-daagse deep dive voor kartrekkersgroepen</span><span class="ts">&#10022;</span><span>AI-richtingssessie en begeleiding</span><span class="ts">&#10022;</span><span>EU AI Act conform</span><span class="ts">&#10022;</span></div></div>
+<div class="ticker"><div class="ticker-t"><span>Losse trainingen</span><span class="ts">&#10022;</span><span>Mini masterclass management</span><span class="ts">&#10022;</span><span>4-daagse deep dive</span><span class="ts">&#10022;</span><span>AI-richtingssessie en begeleiding</span><span class="ts">&#10022;</span><span>EU AI Act conform</span><span class="ts">&#10022;</span><span>Losse trainingen</span><span class="ts">&#10022;</span><span>Mini masterclass management</span><span class="ts">&#10022;</span><span>4-daagse deep dive</span><span class="ts">&#10022;</span><span>AI-richtingssessie en begeleiding</span><span class="ts">&#10022;</span><span>EU AI Act conform</span><span class="ts">&#10022;</span></div></div>
 <section class="sd" id="ac-routes">
   <div class="pgrid reveal">
     <div>
       <div class="slabel">Over Morgen Academy</div>
-      <h2 class="ptitle">Niet meteen het grootste traject. Wel de juiste stap.</h2>
-      <p class="pbody">Veel teams gebruiken AI nu vooral als slimme zoekmachine. Dat is een begin. Maar de echte winst zit in slimmere processen, herbruikbare assistenten, automatisering en beter leiderschap rond AI. Daarom verkopen we niet alleen trainingen, maar helpen we ook kiezen wat nú het meeste effect heeft.</p>
-      <p class="pbody">Je kunt laagdrempelig starten met een losse training. Wie verder wil, stroomt door naar een masterclass, richtingssessie of begeleid implementatietraject. Altijd praktisch, toepasbaar en opgezet conform de EU AI Act.</p>
+      <h2 class="ptitle">De juiste eerste stap.</h2>
+      <p class="pbody">AI-vaardigheid groeit van basiskennis naar betere processen, herbruikbare assistenten, automatisering en sterker leiderschap rond AI.</p>
+      <p class="pbody">Je kunt laagdrempelig starten met een losse training. Van daaruit groeit toepassing in processen, samenwerking en keuzes over AI in de organisatie. Altijd praktisch, toepasbaar en opgezet conform de EU AI Act.</p>
     </div>
     <div class="scards">
-      <div class="sc" onclick="scrollToId('ac-trainingen')" style="cursor:pointer"><div class="scn scn-text">Losse trainingen</div><div class="scd">De laagdrempelige en meest gevraagde instap voor teams die direct slimmer willen werken</div></div>
-      <div class="sc" onclick="scrollToId('ac-verdiepen')" style="cursor:pointer"><div class="scn scn-text">Master&shy;classes</div><div class="scd">Voor managementteams en kartrekkersgroepen die dieper willen gaan dan een losse sessie</div></div>
-      <div class="sc" onclick="scrollToId('ac-begeleiding')" style="cursor:pointer"><div class="scn scn-text">Begelei&shy;ding</div><div class="scd">Voor organisaties die eerst scherp willen krijgen waar de meeste winst zit en wat de slimste route is</div></div>
+      <div class="sc" onclick="scrollToId('ac-trainingen')" style="cursor:pointer"><div class="scn scn-text">Losse trainingen</div><div class="scd">De laagdrempelige en meest gevraagde instap om direct slimmer te werken.</div></div>
+      <div class="sc" onclick="scrollToId('ac-verdiepen')" style="cursor:pointer"><div class="scn scn-text">Master&shy;classes</div><div class="scd">Dieper dan een losse sessie. Meer richting, meer toepassing, meer eigenaarschap.</div></div>
+      <div class="sc" onclick="scrollToId('ac-begeleiding')" style="cursor:pointer"><div class="scn scn-text">Begelei&shy;ding</div><div class="scd">Scherp krijgen waar de meeste winst zit en wat de slimste route is.</div></div>
       <div class="sc" onclick="scrollToId('ac-ai-act')" style="cursor:pointer"><div class="scn scn-text">EU AI Act</div><div class="scd">AI literacy, veilig gebruik en bewijs van deelname voor dossieropbouw binnen organisaties</div></div>
     </div>
   </div>
@@ -430,9 +414,9 @@
 <section class="sl" id="ac-trainingen">
   <div class="reveal">
       <div class="slabel dk">Start laagdrempelig</div>
-      <h2 class="stitle" style="color:var(--black)">Trainingen<br>voor teams die<br><span style="color:var(--purple-light)">direct willen starten.</span></h2>
-      <p class="academy-section-intro">Dit is nog steeds onze meest gekozen instap. Praktisch, compact en direct toepasbaar. Voor teams die niet eerst een groot traject willen, maar gewoon een slimme eerste stap zoeken. Alle trainingen zijn in-company beschikbaar, of bekijk ons <a onclick="goToAcademy('online')" style="color:var(--orange);font-weight:700;text-decoration:none;cursor:pointer">online aanbod</a>.</p>
-      <div class="academy-section-note">Laagdrempelig, praktisch en meteen toepasbaar</div>
+      <h2 class="stitle" style="color:var(--black)">Trainingen<br>die direct<br><span style="color:var(--purple-light)">starten.</span></h2>
+      <p class="academy-section-intro">Onze meest gekozen instap. Praktisch, compact en direct toepasbaar. Alle trainingen zijn in-company beschikbaar, of bekijk ons <a onclick="goToAcademy('online')" style="color:var(--orange);font-weight:700;text-decoration:none;cursor:pointer">online aanbod</a>.</p>
+      <div class="academy-section-note">Van skills naar toepassing in het werk</div>
     </div>
   <div class="trgrid reveal">
     <div class="tcard" onclick="openTrainingPopup('basis')" style="cursor:pointer;border-color:rgba(200,80,216,.3);box-shadow:0 4px 20px rgba(200,80,216,.1)">
@@ -445,21 +429,21 @@
     <div class="tcard" onclick="openTrainingPopup('workflows')" style="cursor:pointer">
       <span class="tlev tl-a">Automatisering</span>
       <div class="ttitle">Workflows &amp; Agents</div>
-      <p class="tdesc">Er gaat te veel tijd verloren tussen systemen. Voor teams die minder willen kopiëren, plakken en overtypen en processen slimmer willen laten doorlopen.</p>
+      <p class="tdesc">Er gaat te veel tijd verloren tussen systemen. Minder kopiëren, plakken en overtypen. Processen slimmer laten doorlopen.</p>
       <div class="tmeta"><span>2 uur</span><span>Incompany</span></div>
       <div class="tcard-hint">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('toolbuilding')" style="cursor:pointer">
       <span class="tlev tl-a">Bouwen</span>
       <div class="ttitle">Tool Building</div>
-      <p class="tdesc">Jullie werk vraagt om iets dat nog niet bestaat. Voor teams die een eigen tool, prototype of assistent willen maken in plaats van zich te blijven aanpassen aan standaardsoftware.</p>
+      <p class="tdesc">Jullie werk vraagt om iets dat nog niet bestaat. Een eigen tool, prototype of assistent in plaats van blijven aanpassen aan standaardsoftware.</p>
       <div class="tmeta"><span>2 uur</span><span>Incompany</span></div>
       <div class="tcard-hint">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('teamworkshop')" style="cursor:pointer">
       <span class="tlev tl-e">Strategie &amp; proces</span>
       <div class="ttitle">Team-workshop</div>
-      <p class="tdesc">Jullie voelen dat het slimmer kan, maar waar begin je? Voor teams die niet alleen skills missen, maar vooral samen moeten kiezen welk proces slimmer kan en wat daar echt voor nodig is.</p>
+      <p class="tdesc">Jullie voelen dat het slimmer kan, maar waar begin je? Eerst kiezen welk proces slimmer kan en wat daar echt voor nodig is.</p>
       <div class="tmeta"><span>Halve dag</span><span>Incompany</span></div>
       <div class="tcard-hint">Meer info en opties</div>
     </div>
@@ -473,36 +457,36 @@
 </section>
 <section class="sd" id="ac-verdiepen">
   <div class="reveal">
-    <div class="slabel">Voor wie verder wil</div>
-    <h2 class="stitle">Masterclasses en<br>verdieping voor<br><span style="color:var(--pink)">managers en kartrekkers.</span></h2>
-    <p class="academy-section-intro">Niet iedereen in de organisatie hoeft alles te kunnen bouwen of automatiseren. Vaak leg je eerst een brede basis in het team, en blijft daarna een kleine kartrekkersgroep over die hier echt verder mee wil. Mensen uit verschillende teams of afdelingen die AI helpen landen in processen, keuzes en implementatie. Voor die groep is deze verdieping bedoeld.</p>
+    <div class="slabel">Verdieping</div>
+    <h2 class="stitle">Masterclasses en<br>verdieping met<br><span style="color:var(--pink)">richting.</span></h2>
+      <p class="academy-section-intro">Eerst een brede basis, daarna verdieping op processen, keuzes en implementatie.</p>
   </div>
   <div class="trgrid trgrid-four reveal">
     <div class="tcard" onclick="openTrainingPopup('managers')" style="cursor:pointer">
-      <span class="tlev tl-e">Voor management</span>
-      <div class="ttitle">Mini masterclass AI voor managers</div>
-      <p class="tdesc">Voor managers die AI niet alleen willen begrijpen, maar er zelf slimmer mee willen werken in voorbereiding, sturing, besluitvorming en dagelijkse praktijk.</p>
+      <span class="tlev tl-e">Management</span>
+      <div class="ttitle">Mini masterclass AI in management</div>
+      <p class="tdesc">AI toepassen in voorbereiding, sturing, besluitvorming en dagelijkse praktijk.</p>
       <div class="tmeta"><span>1 dag</span><span>MT, directie, leidinggevenden</span></div>
       <div class="tcard-hint">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('masterclass')" style="cursor:pointer;border-color:rgba(216,254,86,.35);box-shadow:0 4px 20px rgba(216,254,86,.08)">
       <span class="tlev" style="background:var(--orange);color:#0C0818">4-daagse deep dive</span>
-      <div class="ttitle">Masterclass AI voor interne kartrekkers</div>
-      <p class="tdesc">Voor de groep in je organisatie die hier echt verder mee wil: mensen die al een basis hebben en AI willen helpen bouwen, integreren en laten landen in team, proces en afdeling.</p>
+      <div class="ttitle">AI Implementatie Masterclass</div>
+      <p class="tdesc">Van basiskennis naar bouwen, integreren en laten landen in team, proces en afdeling.</p>
       <div class="tmeta"><span>4 dagen</span><span>Kleine kartrekkersgroep</span></div>
       <div class="tcard-hint">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('pmtraining')" style="cursor:pointer">
       <span class="tlev tl-a">Nieuwe kijk op PM</span>
       <div class="ttitle">Projectmanagement met AI</div>
-      <p class="tdesc">Voor projectmanagers en projectwerkers die AI willen verwerken in hoe ze projecten voorbereiden, aansturen, organiseren en laten slagen.</p>
+      <p class="tdesc">AI verwerken in hoe projecten worden voorbereid, aangestuurd, georganiseerd en afgerond.</p>
       <div class="tmeta"><span>4 dagen</span><span>PM's en projectwerkers</span></div>
       <div class="tcard-hint">Meer info en opties</div>
     </div>
     <div class="tcard" onclick="openTrainingPopup('keynote')" style="cursor:pointer">
       <span class="tlev tl-s">Inspiratie</span>
       <div class="ttitle">Keynotes &amp; kick-offs</div>
-      <p class="tdesc">Voor events, MT-dagen en interne kick-offs die energie, richting en urgentie moeten losmaken voordat je verder verdiept of implementeert.</p>
+      <p class="tdesc">Energie, richting en urgentie losmaken voordat verdieping of implementatie begint.</p>
       <div class="tmeta"><span>45 - 90 min</span><span>Event, teamdag, kick-off</span></div>
       <div class="tcard-hint">Meer info en opties</div>
     </div>
@@ -527,13 +511,13 @@
 <section class="sm" id="ac-begeleiding">
   <div class="reveal">
     <div class="slabel">Eerst samen kijken</div>
-    <h2 class="stitle">Begeleiding voor<br>organisaties die eerst<br><span style="color:var(--orange)">scherpte willen.</span></h2>
-    <p class="academy-section-intro">Niet elk vraagstuk begint met een training. Soms is de slimste eerste stap eerst samen bepalen waar de meeste winst zit, wie aan zet is en welke vorm daarbij past.</p>
+    <h2 class="stitle">Eerst<br>scherpte.<br><span style="color:var(--orange)">Dan beweging.</span></h2>
+    <p class="academy-section-intro">Soms begint beweging met samen bepalen waar de meeste winst zit, wie aan zet is en welke vorm daarbij past.</p>
   </div>
   <div class="trgrid trgrid-two reveal">
     <div class="tcard" onclick="openTrainingPopup('chancesession')" style="cursor:pointer">
       <span class="tlev tl-e">Consultancy</span>
-      <div class="ttitle">AI-richtingssessie voor MT of projectgroep</div>
+      <div class="ttitle">AI-richtingssessie</div>
       <p class="tdesc">We kijken mee naar processen, pijnpunten en ambitie en bepalen welke route logisch is: teamtraining, masterclass of een begeleid traject.</p>
       <div class="tmeta"><span>90 min - halve dag</span><span>MT of projectgroep</span></div>
       <div class="tcard-hint">Meer info en opties</div>
@@ -541,7 +525,7 @@
     <div class="tcard" onclick="openTrainingPopup('trajectory')" style="cursor:pointer">
       <span class="tlev tl-a">Implementatie</span>
       <div class="ttitle">Begeleid implementatietraject</div>
-      <p class="tdesc">Voor organisaties die niet alleen willen leren, maar ook echt willen neerzetten, borgen en opschalen. Van eerste sessie tot werkende aanpak.</p>
+      <p class="tdesc">Van eerste sessie naar werkende aanpak, borging en opschaling.</p>
       <div class="tmeta"><span>3 - 12 maanden</span><span>Incompany</span></div>
       <div class="tcard-hint">Meer info en opties</div>
     </div>
@@ -568,11 +552,11 @@
               <option value="Workflows &amp; Agents">Workflows &amp; Agents</option>
               <option value="Tool Building">Tool Building</option>
               <option value="Team-workshop">Team-workshop</option>
-              <option value="Mini masterclass AI voor managers">Mini masterclass AI voor managers</option>
-              <option value="Masterclass AI voor interne kartrekkers">Masterclass AI voor interne kartrekkers</option>
+              <option value="Mini masterclass AI in management">Mini masterclass AI in management</option>
+              <option value="AI Implementatie Masterclass">AI Implementatie Masterclass</option>
               <option value="Projectmanagement met AI">Projectmanagement met AI</option>
               <option value="Keynotes &amp; kick-offs">Keynotes &amp; kick-offs</option>
-              <option value="AI-richtingssessie voor MT of projectgroep">AI-richtingssessie voor MT of projectgroep</option>
+              <option value="AI-richtingssessie">AI-richtingssessie</option>
               <option value="Begeleid implementatietraject">Begeleid implementatietraject</option>
               <option value="Maatwerk / eigen vraag">Maatwerk / eigen vraag</option>
             </select>
@@ -590,7 +574,7 @@
             <input id="ac-bedrijf" type="text" name="bedrijf" placeholder="Optioneel">
           </div>
           <div class="form-field">
-            <label for="ac-team">Teamgrootte of doelgroep</label>
+            <label for="ac-team">Teamgrootte of situatie</label>
             <input id="ac-team" type="text" name="team" placeholder="Bijvoorbeeld: MT, projectgroep of ongeveer 12 mensen">
           </div>
           <div class="form-field form-field-full">
@@ -611,7 +595,7 @@
   <div class="reveal"><div class="slabel">AI compliant</div><h2 class="stitle">Klaar voor<br>de EU<br><span style="color:var(--pink)">AI Act.</span></h2></div>
   <div class="wgrid reveal">
     <div class="wstep"><div class="wnum">01</div><div class="wtitle">Wat is de EU AI Act?</div><p class="wbody">De Europese wet die regels stelt aan het gebruik van AI. Organisaties zijn verplicht medewerkers die met AI werken op te leiden. Morgen Academy is volledig op de AI Act afgestemd.</p></div>
-    <div class="wstep"><div class="wnum">02</div><div class="wtitle">AI literacy voor iedereen</div><p class="wbody">De AI Act vereist basiskennis van AI voor alle medewerkers die met AI-systemen werken. Morgen Academy verzorgt precies deze kennis, praktisch en goed gedocumenteerd.</p></div>
+    <div class="wstep"><div class="wnum">02</div><div class="wtitle">AI literacy op orde</div><p class="wbody">De AI Act vereist basiskennis zodra mensen met AI-systemen werken. Morgen Academy verzorgt precies deze kennis, praktisch en goed gedocumenteerd.</p></div>
     <div class="wstep"><div class="wnum">03</div><div class="wtitle">Aantoonbaar voldaan</div><p class="wbody">Deelnemers ontvangen een bewijs van deelname. Organisaties kunnen aantonen dat medewerkers zijn opgeleid conform de AI Act.</p></div>
     <div class="wstep"><div class="wnum">04</div><div class="wtitle">Blijf actueel</div><p class="wbody">De AI Act evolueert. Morgen houdt de trainingsinhoud actueel en informeert deelnemers over relevante wijzigingen.</p></div>
   </div>
@@ -635,7 +619,7 @@
 <section class="cta-s" id="ac-contact"><div class="corb1"></div><div class="corb2"></div><div class="cta-in reveal">
   <div class="cta-ey">Losse training, masterclass of begeleiding</div>
   <h2 class="cta-h">Klein<br><span class="ol">beginnen.</span><br>Groot doorpakken.</h2>
-  <p class="cta-sub">Start met een losse training, kies voor een masterclass of laat ons eerst meekijken in een AI-richtingssessie. Zo kies je niet de grootste vorm, maar de slimste eerste stap.</p>
+  <p class="cta-sub">Start met een losse training, kies voor een masterclass of laat ons meekijken in een AI-richtingssessie.</p>
   <div class="cta-btns">
     <button class="btn-w" onclick="scrollToId('ac-trainingen')">Bekijk losse trainingen</button>
     <button class="btn-o" onclick="scrollToId('ac-begeleiding')">Bekijk begeleiding</button>
@@ -656,7 +640,7 @@
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
         <li><a onclick="goToAcademy('online')">Online trainingen</a></li>
-        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen voor teams</a></li>
+        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen</a></li>
         <li><a onclick="nav('academy','trainingwijzer-app')">Trainingwijzer</a></li>
         <li><a onclick="nav('academy','ac-ai-act')">EU AI Act conform</a></li>
       </ul>
@@ -692,40 +676,38 @@
   <div class="hi">
     <button class="back-btn" onclick="nav('home')">&#x2190; Terug naar home</button>
     <p class="eyebrow">Morgen Technology &#183; Maatwerk &#183; AI-workflows &#183; Procesautomatisering</p>
-    <h1 class="h1">Minder<br><span class="ol">handwerk.</span><br><span class="pk">Meer resultaat.</span></h1>
-    <p class="hbody">Morgen Technology bouwt de digitale oplossingen die een organisatie slimmer maken. Altijd op maat. Altijd vertrekkend vanuit de bedrijfsprocessen, niet vanuit tools.</p>
+    <h1 class="h1">Werk<br><span class="ol">slimmer</span><br><span class="pk">georganiseerd.</span></h1>
+    <p class="hbody">Morgen Technology bouwt digitale oplossingen op maat, vanuit bedrijfsprocessen, systemen en het dagelijkse werk.</p>
     <div class="hctas">
       <button class="btn-p" onclick="scrollToId('te-aanpak')">Bekijk wat we bouwen</button>
       <button class="btn-g" onclick="scrollToId('te-aanvraag')">Plan een kennismaking &#x2193;</button>
     </div>
   </div>
 </header>
-<div class="ticker"><div class="ticker-t"><span>Maatwerk digitale oplossingen</span><span class="ts">&#10022;</span><span>AI-workflows</span><span class="ts">&#10022;</span><span>Procesautomatisering</span><span class="ts">&#10022;</span><span>Systemen koppelen</span><span class="ts">&#10022;</span><span>Geen code, wel slimmer</span><span class="ts">&#10022;</span><span>Maatwerk digitale oplossingen</span><span class="ts">&#10022;</span><span>AI-workflows</span><span class="ts">&#10022;</span><span>Procesautomatisering</span><span class="ts">&#10022;</span><span>Systemen koppelen</span><span class="ts">&#10022;</span><span>Geen code, wel slimmer</span><span class="ts">&#10022;</span></div></div>
+<div class="ticker"><div class="ticker-t"><span>Maatwerk digitale oplossingen</span><span class="ts">&#10022;</span><span>AI-workflows</span><span class="ts">&#10022;</span><span>Procesautomatisering</span><span class="ts">&#10022;</span><span>Systemen koppelen</span><span class="ts">&#10022;</span><span>Slimmer werken</span><span class="ts">&#10022;</span><span>Maatwerk digitale oplossingen</span><span class="ts">&#10022;</span><span>AI-workflows</span><span class="ts">&#10022;</span><span>Procesautomatisering</span><span class="ts">&#10022;</span><span>Systemen koppelen</span><span class="ts">&#10022;</span><span>Slimmer werken</span><span class="ts">&#10022;</span></div></div>
 <section class="sd">
   <div class="pgrid reveal">
     <div>
       <div class="slabel">Over Morgen Technology</div>
-      <h2 class="ptitle">Niet in tools denken. In uitkomsten.</h2>
-      <p class="pbody">Welk werk kost het team de meeste tijd? Wat kan weg? Wat kan sneller? Morgen Technology start niet met een tool, maar met die vragen. Daarna bouwen we de oplossing die het team ontlast en de organisatie schaalbaarder maakt.</p>
-      <p class="pbody">Van AI-workflows en procesautomatisering tot complete digitale systemen en koppelingen tussen bestaande applicaties. Alles op maat voor de organisatie, niet als standaardpakket.</p>
-      <div class="callout">Automatisering werkt alleen als het aansluit op hoe een organisatie echt werkt. Daarom begint elk traject met luisteren en analyseren, niet met bouwen.</div>
+      <h2 class="ptitle">Uitkomsten.</h2>
+      <p class="pbody">Welk werk kost het team de meeste tijd? Wat kan weg? Wat kan sneller? Daarna bouwen we de oplossing die het team ontlast en de organisatie schaalbaarder maakt.</p>
+      <p class="pbody">AI-workflows, procesautomatisering, digitale systemen en koppelingen tussen bestaande applicaties. Op maat voor de organisatie.</p>
     </div>
     <div class="scards">
       <div class="sc"><div class="scn">3u</div><div class="scd">Gemiddeld tijdverlies per medewerker per dag aan automatiseerbaar werk</div></div>
       <div class="sc"><div class="scn">2&#215;</div><div class="scd">Sneller groeien organisaties die actief automatiseren versus organisaties die afwachten</div></div>
-      <div class="sc"><div class="scn scn-text">Op<br>maat</div><div class="scd">Geen standaardpakket, maar workflows, koppelingen en systemen rond jullie echte proces</div></div>
-      <div class="sc"><div class="scn scn-text">Met<br>implementatie</div><div class="scd">We bouwen niet alleen, maar helpen ook zorgen dat de oplossing landt in team en werkwijze</div></div>
+      <div class="sc"><div class="scn scn-text">Op<br>maat</div><div class="scd">Workflows, koppelingen en systemen rond het echte proces</div></div>
+      <div class="sc"><div class="scn scn-text">Met<br>implementatie</div><div class="scd">De oplossing landt in team, proces en werkwijze</div></div>
     </div>
   </div>
 </section>
 <section class="sl" id="te-aanpak">
   <div class="lbintro reveal">
     <div><div class="slabel dk">Werkwijze</div><h2 class="stitle" style="color:var(--black)">Van analyse<br>tot werkende<br><span style="color:var(--purple-light)">oplossing.</span></h2></div>
-    <p class="lbintro-p">Morgen Technology werkt in vier stappen: analyseren, bouwen, implementeren en doorontwikkelen. Niet alleen de tech, ook de mensen.</p>
   </div>
   <div class="wgrid reveal" style="margin-top:0">
     <div class="wstep"><div class="wnum">01</div><div class="wtitle">Procesanalyse</div><p class="wbody">We brengen in kaart welk werk handmatig is, welke systemen niet praten en waar de grootste tijdverspilling zit. Concreet en meetbaar.</p></div>
-    <div class="wstep"><div class="wnum">02</div><div class="wtitle">Bouwen op maat</div><p class="wbody">AI-workflows, procesautomatisering en systeemkoppelingen op maat voor de processen van de organisatie. Geen standaardpakket.</p></div>
+    <div class="wstep"><div class="wnum">02</div><div class="wtitle">Bouwen op maat</div><p class="wbody">AI-workflows, procesautomatisering en systeemkoppelingen op maat voor de processen van de organisatie.</p></div>
     <div class="wstep"><div class="wnum">03</div><div class="wtitle">Implementatie met veranderkunde</div><p class="wbody">Techniek werkt alleen als mensen het omarmen. Morgen begeleidt de implementatie met kennis van veranderkunde zodat de oplossing ook in de praktijk landt.</p></div>
     <div class="wstep"><div class="wnum">04</div><div class="wtitle">Doorontwikkeling</div><p class="wbody">Na implementatie begeleidt Morgen de doorontwikkeling. Naarmate de organisatie groeit, groeit de oplossing mee.</p></div>
   </div>
@@ -792,7 +774,7 @@
 <section class="trust-section">
   <div class="trgst reveal">
     <div>
-      <div class="tquote">De grootste winst zit meestal niet in nieuwe software, maar in slimmer inrichten van bestaand werk.</div>
+      <div class="tquote">De grootste winst zit meestal in slimmer ingericht werk.</div>
       <div class="tauthor">Ervaring uit projecten bij MKB-organisaties</div>
     </div>
     <div>
@@ -829,7 +811,7 @@
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
         <li><a onclick="goToAcademy('online')">Online trainingen</a></li>
-        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen voor teams</a></li>
+        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen</a></li>
         <li><a onclick="nav('academy','trainingwijzer-app')">Trainingwijzer</a></li>
         <li><a onclick="nav('academy','ac-ai-act')">EU AI Act conform</a></li>
       </ul>
@@ -865,8 +847,8 @@
   <div class="hi">
     <button class="back-btn" onclick="nav('home')">&#x2190; Terug naar home</button>
     <p class="eyebrow">Morgen Consultancy &#183; Strategie &#183; Uitvoering &#183; Veranderkunde</p>
-    <h1 class="h1">Digitalisering<br><span class="ol">slaagt niet</span><br><span class="pk">met tech alleen.</span></h1>
-    <p class="hbody">Morgen Consultancy begeleidt de hele digitaliseringstransitie. Van strategie tot uitvoering, met kennis van veranderkunde. Techniek en mensen tegelijk.</p>
+    <h1 class="h1">Digitalisering<br><span class="ol">die landt</span><br><span class="pk">in het werk.</span></h1>
+    <p class="hbody">Morgen Consultancy begeleidt digitalisering van strategie tot uitvoering, met aandacht voor techniek, mensen en eigenaarschap.</p>
     <div class="hctas">
       <button class="btn-p" onclick="scrollToId('co-aanpak')">Bekijk onze aanpak</button>
       <button class="btn-g" onclick="scrollToId('co-aanvraag')">Gratis digitale scan &#x2193;</button>
@@ -883,14 +865,13 @@
   <div class="pgrid reveal">
     <div>
       <div class="slabel">Over Morgen Consultancy</div>
-      <h2 class="ptitle">Niet alleen bouwen. Ook implementeren.</h2>
-      <p class="pbody">Veel digitaliseringstrajecten stranden omdat de techniek wel klopt maar de mensen niet meegaan. Morgen Consultancy werkt anders: naast het bestaande team, met oog voor zowel de systemen als de mensen die ermee werken.</p>
-      <p class="pbody">Dat is precies waar Morgen sterk in is: veranderkunde. Hoe neem je een team mee? Hoe zorg je dat nieuwe werkwijzen landen? Dat is niet iets wat er bij komt, dat is de kern van elk traject.</p>
-      <div class="callout">De dagelijkse operatie wint het altijd van de lange termijn, tenzij er iemand is die dat doorbreekt. Morgen is die externe aanjager.</div>
+      <h2 class="ptitle">Strategie naar uitvoering.</h2>
+      <p class="pbody">Morgen Consultancy werkt naast het bestaande team, met oog voor systemen, mensen en de werkwijze die moet landen.</p>
+      <p class="pbody">Veranderkunde, ritme en eigenaarschap vormen de kern van elk traject.</p>
     </div>
     <div class="scards">
       <div class="sc"><div class="scn scn-text">Samen<br>optrekken</div><div class="scd">We zitten met teams aan tafel, stellen de vragen van buiten en maken het concreet in de dagelijkse praktijk</div></div>
-      <div class="sc"><div class="scn scn-text">Proces<br>eerst</div><div class="scd">Niet beginnen bij tooling, maar bij doelen, knelpunten en werk dat nu vastloopt</div></div>
+      <div class="sc"><div class="scn scn-text">Proces<br>eerst</div><div class="scd">Doelen, knelpunten en werk dat nu vastloopt scherp in beeld</div></div>
       <div class="sc"><div class="scn scn-text">Value<br>case</div><div class="scd">We kijken naar burgerwaarde, medewerkerwaarde, ethiek en pas daarna naar kosten of capaciteit</div></div>
       <div class="sc"><div class="scn scn-text">Landen<br>in team</div><div class="scd">Draagvlak, guardrails, implementatie en eigenaarschap horen vanaf dag een bij het traject</div></div>
     </div>
@@ -900,17 +881,16 @@
   <div class="lbintro reveal">
     <div>
       <div class="slabel">Meedoen in de praktijk</div>
-      <h2 class="stitle">Niet vanaf<br>de zijlijn.<br><span style="color:var(--pink)">Maar in het werk.</span></h2>
+      <h2 class="stitle">In het werk.</h2>
     </div>
-    <p class="lbintro-p">Bij Gemeente Tilburg begeleiden we een AI Voorlopersprogramma waarin deelnemers niet alleen inspiratie krijgen, maar een echt proces kiezen, onderbouwen en voorbereiden op implementatie. Dat laat goed zien hoe Morgen Consultancy werkt: samen met de organisatie, niet erboven.</p>
+    <p class="lbintro-p">Bij Gemeente Tilburg begeleiden we een AI Voorlopersprogramma waarin deelnemers een proces kiezen, onderbouwen en voorbereiden op implementatie.</p>
   </div>
   <div class="wgrid reveal" style="margin-top:0">
-    <div class="wstep"><div class="wnum">01</div><div class="wtitle">Proces op tafel</div><p class="wbody">We starten niet met tooling, maar met afdelingsdoelen, processen en waar het nu lekt in tijd, energie of kwaliteit. Soms is de beste automatisering het schrappen van een stap.</p></div>
-    <div class="wstep"><div class="wnum">02</div><div class="wtitle">Value case bouwen</div><p class="wbody">Niet alleen euro&rsquo;s of uren. We brengen per proces in kaart wat het betekent voor burgerwaarde, medewerkerwaarde, ethiek en pas daarna voor kosten.</p></div>
+    <div class="wstep"><div class="wnum">01</div><div class="wtitle">Proces op tafel</div><p class="wbody">Afdelingsdoelen, processen en lekkage in tijd, energie of kwaliteit worden concreet gemaakt.</p></div>
+    <div class="wstep"><div class="wnum">02</div><div class="wtitle">Value case bouwen</div><p class="wbody">Per proces brengen we burgerwaarde, medewerkerwaarde, ethiek, kosten en capaciteit in kaart.</p></div>
     <div class="wstep"><div class="wnum">03</div><div class="wtitle">Guardrails en draagvlak</div><p class="wbody">We bepalen waar een mens moet meekijken, welke kaders nodig zijn en hoe je collega&rsquo;s en management meeneemt in de verandering.</p></div>
-    <div class="wstep"><div class="wnum">04</div><div class="wtitle">Van pilot naar werkwijze</div><p class="wbody">Het doel is niet een los tooltje, maar een aanpak die landt in het team, eigenaarschap krijgt en later kan opschalen.</p></div>
+    <div class="wstep"><div class="wnum">04</div><div class="wtitle">Van pilot naar werkwijze</div><p class="wbody">De aanpak landt in het team, krijgt eigenaarschap en kan later opschalen.</p></div>
   </div>
-  <div class="callout reveal" style="max-width:72ch;margin-top:2rem">Dit is precies de rol die Morgen pakt: de buitenstaander die de juiste vragen stelt, tempo maakt en tegelijk meebouwt aan wat er in de praktijk moet werken.</div>
 </section>
 <section class="sm" id="co-aanpak">
   <div class="reveal"><div class="slabel">Werkwijze</div><h2 class="stitle">Van scan<br>tot borging.<br><span style="color:var(--pink)">Stap voor stap.</span></h2></div>
@@ -998,7 +978,7 @@
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
         <li><a onclick="goToAcademy('online')">Online trainingen</a></li>
-        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen voor teams</a></li>
+        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen</a></li>
         <li><a onclick="nav('academy','trainingwijzer-app')">Trainingwijzer</a></li>
         <li><a onclick="nav('academy','ac-ai-act')">EU AI Act conform</a></li>
       </ul>
@@ -1035,36 +1015,21 @@
     <button class="back-btn" onclick="nav('home')">&#x2190; Terug naar home</button>
     <p class="eyebrow">Morgen Technology &#183; Projecten &#183; Procesautomatisering &#183; AI in de praktijk</p>
     <h1 class="h1" style="animation:none;opacity:1">Zij gingen<br><span class="ol">je voor.</span></h1>
-    <p class="hbody" style="animation:none;opacity:1">Een paar projecten waar technologie niet als losse tool is gebouwd, maar als nieuwe werkwijze in de organisatie is geland. Van procesanalyse tot automatisering, platformbouw en AI-apps.</p>
     <div class="hctas" style="animation:none;opacity:1">
       <button class="btn-p" onclick="scrollToId('projecten-overzicht')">Bekijk projecten</button>
-      <button class="btn-g" onclick="scrollToId('project-aanpak')">Onze manier van werken &#x2193;</button>
     </div>
   </div>
 </div>
 <div class="ticker"><div class="ticker-t"><span>Procesoptimalisatie</span><span class="ts">&#10022;</span><span>AI-planning</span><span class="ts">&#10022;</span><span>Platformbouw</span><span class="ts">&#10022;</span><span>Implementatie in het team</span><span class="ts">&#10022;</span><span>Van MVP naar klantfeedback</span><span class="ts">&#10022;</span><span>Procesoptimalisatie</span><span class="ts">&#10022;</span><span>AI-planning</span><span class="ts">&#10022;</span><span>Platformbouw</span><span class="ts">&#10022;</span><span>Implementatie in het team</span><span class="ts">&#10022;</span><span>Van MVP naar klantfeedback</span><span class="ts">&#10022;</span></div></div>
 
 <section class="project-overview" id="projecten-overzicht">
-  <div class="agents-head project-head reveal">
-    <div class="agents-head-copy">
-      <div class="slabel">Portfolio</div>
-      <h2 class="stitle">Minder losse tools.<br><span style="color:var(--pink)">Meer werkende</span><br>projecten.</h2>
-      <p class="agents-lead">Voor MKB-bedrijven en grotere organisaties die niet alleen iets willen bouwen, maar een proces echt beter willen laten werken. We starten bij het werk, bouwen wat nodig is en zorgen dat mensen ermee gaan werken.</p>
-    </div>
-    <div class="project-proof-card">
-      <span>Best practice</span>
-      <strong>Niet over de schutting.</strong>
-      <p>Elk project is opgezet met de mensen die het proces dagelijks gebruiken. Daardoor wordt technologie onderdeel van de operatie, niet een losse demo naast het werk.</p>
-    </div>
-  </div>
-
   <div class="project-list">
     <article class="project-card project-card-large reveal">
       <div class="project-image"><img src="/docs/projecten/hogeschool-bpm.svg" alt="Abstracte placeholder voor business process management bij een hogeschool"></div>
       <div class="project-copy">
         <div class="project-meta">Onderwijs &#183; Business process management</div>
         <h3>Alle processen van een hogeschoolafdeling scherp in beeld.</h3>
-        <p>Voor een afdeling van een grote hogeschool hebben we processen opgehaald, geordend en geanalyseerd. Niet als papieren exercitie, maar om te zien waar dubbel werk, afhankelijkheden en optimalisatiekansen zaten.</p>
+        <p>Bij een afdeling van een grote hogeschool hebben we processen opgehaald, geordend en geanalyseerd. Dat gaf zicht op dubbel werk, afhankelijkheden en optimalisatiekansen.</p>
         <div class="project-facts">
           <div><span>Vraag</span>Waar liggen schaalvoordelen en procesoptimalisaties?</div>
           <div><span>Aanpak</span>Procesinterviews, procesmapping en scherpe prioritering.</div>
@@ -1092,7 +1057,7 @@
       <div class="project-copy">
         <div class="project-meta">Groothandel &#183; Orderflow en klantinteractie</div>
         <h3>Van 40+ handmatige stappen naar maximaal 6 controles.</h3>
-        <p>Voor een van de grootste zonnebrillengroothandels van Europa automatiseerden we het proces rond bedrukte producten: logo ophalen, kleuren checken, bestanden op de juiste plek krijgen, proef maken en goedkeuring organiseren.</p>
+        <p>Bij een van de grootste zonnebrillengroothandels van Europa automatiseerden we het proces rond bedrukte producten: logo ophalen, kleuren checken, bestanden op de juiste plek krijgen, proef maken en goedkeuring organiseren.</p>
         <ul class="project-wins">
           <li>Klantinteractie geautomatiseerd zonder controle te verliezen.</li>
           <li>Doorlooptijd significant omlaag, kwaliteit omhoog.</li>
@@ -1106,11 +1071,11 @@
       <div class="project-copy">
         <div class="project-meta">Online retail &#183; Platform en interface</div>
         <h3>Een complex retailplatform bestuurbaar in gewone taal.</h3>
-        <p>Voor een grote online retailer in accessoires ontwikkelden we een platform dat bijna als voorraadbeheersysteem functioneert. Daarbovenop bouwden we een natuurlijke interface waarmee teams via spraak en gewone taal kunnen aanpassen, vertalen en optimaliseren.</p>
+        <p>Bij een grote online retailer in accessoires ontwikkelden we een platform dat bijna als voorraadbeheersysteem functioneert. Daarbovenop bouwden we een natuurlijke interface waarmee teams via spraak en gewone taal kunnen aanpassen, vertalen en optimaliseren.</p>
         <ul class="project-wins">
           <li>Minder afhankelijkheid van complexe achterkant en specialistische kennis.</li>
           <li>API's en integraties vertaald naar simpele menselijke interactie.</li>
-          <li>Sneller content, taal en doelgroepoptimalisatie aanpassen.</li>
+          <li>Sneller content, taal en publieksoptimalisatie aanpassen.</li>
         </ul>
       </div>
     </article>
@@ -1120,11 +1085,67 @@
       <div class="project-copy">
         <div class="project-meta">Health &amp; lifestyle &#183; AI-app en MVP</div>
         <h3>Een AI Personal Coach die gedragsverandering ondersteunt.</h3>
-        <p>Voor een personal trainer ontwikkelden we een app waarin AI de rol van personal coach pakt. De app gebruikt gedragswetenschap om niet alleen schema's te maken, maar duurzame verandering te begeleiden.</p>
+        <p>Bij een personal trainer ontwikkelden we een app waarin AI de rol van personal coach pakt. De app gebruikt gedragswetenschap om schema's te maken en duurzame verandering te begeleiden.</p>
         <div class="project-facts">
           <div><span>Methode</span>Lean Startup: snel een MVP live, meten en doorbouwen.</div>
           <div><span>Validatie</span>Betalende deelnemers in een echt 12-wekenprogramma.</div>
-          <div><span>Resultaat</span>Een app die groeit vanuit klantfeedback, niet vanuit technologie.</div>
+          <div><span>Resultaat</span>Een app die groeit vanuit klantfeedback en gedrag in de praktijk.</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card project-card-large reveal">
+      <div class="project-image project-image-contain"><img src="/docs/logos/pinkroccade.png" alt="PinkRoccade Local Government logo"></div>
+      <div class="project-copy">
+        <div class="project-meta">Training &#183; n8n en agentic workflows</div>
+        <h3>Automatiseren met AI bij PinkRoccade Local Government.</h3>
+        <p>Bij PinkRoccade Local Government verzorgden we een reeks workshops over n8n, automatiseren met AI en agentic workflows. Deelnemers bouwden praktische automatiseringen en onderzochten tegelijk wat dat betekent voor processen, samenwerking en de plek van AI in de organisatie.</p>
+        <div class="project-facts">
+          <div><span>Ingang</span>Hands-on training met concrete workflows en automatiseringen.</div>
+          <div><span>Beweging</span>Ideeën, energie en nieuwsgierigheid rond slimmer werken.</div>
+          <div><span>Verdieping</span>Gesprekken over proceskeuzes, teamritme, overzicht en innovatie.</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-image project-image-contain"><img src="/docs/assistenten/screenshots/joris-screenshot.png" alt="Screenshot van een geautomatiseerd leadkwalificatieproces"></div>
+      <div class="project-copy">
+        <div class="project-meta">Sales &#183; Leadkwalificatie en opvolging</div>
+        <h3>Nieuwe leads direct bellen, kwalificeren en inplannen.</h3>
+        <p>Inkomende leads worden automatisch opgevolgd met een telefonisch intakegesprek. De antwoorden worden vastgelegd, samengevat en beoordeeld op relevantie. Als de lead past, wordt meteen een afspraak ingepland met de juiste specialist.</p>
+        <ul class="project-wins">
+          <li>Snellere opvolging zonder handmatig nabellen.</li>
+          <li>Consistente intake en betere voorbereiding van salesgesprekken.</li>
+          <li>Warme leads direct door naar de juiste agenda.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-image project-image-contain"><img src="/docs/assistenten/screenshots/corne-screenshot.png" alt="Screenshot van een digitaal onderhoudsadvies op basis van documentatie"></div>
+      <div class="project-copy">
+        <div class="project-meta">Maakbedrijf &#183; Support en productdocumentatie</div>
+        <h3>Onderhoudsadvies op basis van echte handleidingen.</h3>
+        <p>Bij een trappenfabriek zijn productinformatie en onderhoudsmanuals omgezet naar een digitale onderhoudsexpert. Klanten stellen vragen of uploaden foto's en krijgen direct advies op basis van gevalideerde fabrieksdocumentatie.</p>
+        <ul class="project-wins">
+          <li>Minder standaardvragen bij support en verkoop.</li>
+          <li>Betrouwbaar advies zonder zoeken in losse PDF's.</li>
+          <li>Nette doorverwijzing wanneer menselijke hulp nodig is.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project-card project-card-large reveal">
+      <div class="project-image project-image-contain"><img src="/docs/assistenten/screenshots/bernard-screenshot-1.png" alt="Screenshot van een AI-examentrainer met oefenvragen en feedback"></div>
+      <div class="project-copy">
+        <div class="project-meta">Opleiding &#183; Examentraining en kennisvalidatie</div>
+        <h3>Oefenexamens genereren uit eigen lesmateriaal.</h3>
+        <p>Lesboeken en oefenexamens zijn omgezet naar een examentrainer die vragen stelt in de officiële stijl, feedback geeft en per antwoord terugverwijst naar de juiste bron. Zo blijft de inhoud controleerbaar en sluit oefenen aan op het echte examen.</p>
+        <div class="project-facts">
+          <div><span>Bronnen</span>Alleen werken met gevalideerde PDF's en trainingsdocumenten.</div>
+          <div><span>Gebruik</span>Oefenmodus met directe feedback of examenvorm met score achteraf.</div>
+          <div><span>Resultaat</span>Gericht oefenen, sneller herhalen en beter zicht op kennishiaten.</div>
         </div>
       </div>
     </article>
@@ -1134,35 +1155,18 @@
 <section class="sl project-method" id="project-aanpak">
   <div class="lbintro reveal">
     <div>
-      <div class="slabel dk">Onze manier van werken</div>
-      <h2 class="stitle" style="color:var(--black)">Eerst het werk.<br>Dan de techniek.</h2>
+      <div class="slabel dk">Aanpak</div>
+      <h2 class="stitle" style="color:var(--black)">Proces.<br>Waarde.<br>Gebruik.</h2>
     </div>
-    <p class="lbintro-p">We bouwen niet eerst maanden aan techniek om het daarna in een organisatie te droppen. We halen het proces op, bepalen waar waarde zit, bouwen de kleinste werkende versie en verbeteren met echte gebruikers.</p>
   </div>
   <div class="wgrid reveal" style="margin-top:0">
     <div class="wstep"><div class="wnum">01</div><div class="wtitle">Proces scherp</div><p class="wbody">We brengen het huidige werk in kaart: stappen, uitzonderingen, mensen, systemen en waar fouten of vertraging ontstaan.</p></div>
-    <div class="wstep"><div class="wnum">02</div><div class="wtitle">Waarde kiezen</div><p class="wbody">Niet alles automatiseren. We kiezen waar snelheid, kwaliteit, klantbeleving of schaalbaarheid echt verbetert.</p></div>
+    <div class="wstep"><div class="wnum">02</div><div class="wtitle">Waarde kiezen</div><p class="wbody">We kiezen waar snelheid, kwaliteit, klantbeleving of schaalbaarheid echt verbetert.</p></div>
     <div class="wstep"><div class="wnum">03</div><div class="wtitle">Klein live</div><p class="wbody">We bouwen een MVP of eerste workflow die snel getest kan worden in het echte werk, met echte gebruikers.</p></div>
     <div class="wstep"><div class="wnum">04</div><div class="wtitle">Borgen en opschalen</div><p class="wbody">Daarna verbeteren we door op feedback en zorgen we dat de werkwijze landt in team, proces en sturing.</p></div>
   </div>
 </section>
 
-<section class="trust-section">
-  <div class="trgst reveal">
-    <div>
-      <div class="tquote">De overeenkomst tussen deze projecten: technologie werd pas waardevol toen het proces, de mensen en de uitvoering mee veranderden.</div>
-      <div class="tauthor">Projecten uit onderwijs, maakbedrijf, groothandel, retail en health</div>
-    </div>
-    <div>
-      <div class="tlogos-label">Projectfocus</div>
-      <div class="tnums">
-        <div><div class="tn tn-word">Proces</div><div class="tnl">Starten bij het werk dat vastloopt</div></div>
-        <div><div class="tn tn-word">AI</div><div class="tnl">Alleen waar het echt waarde toevoegt</div></div>
-        <div><div class="tn tn-word">Landing</div><div class="tnl">Gebruikers meenemen tot het werkt</div></div>
-      </div>
-    </div>
-  </div>
-</section>
 <section class="cta-s"><div class="corb1"></div><div class="corb2"></div><div class="cta-in reveal">
   <div class="cta-ey">Project bespreken &#183; proces, platform of AI-oplossing</div>
   <h2 class="cta-h">Welk proces<br><span class="ol">moet beter</span><br>werken?</h2>
@@ -1187,7 +1191,7 @@
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
         <li><a onclick="goToAcademy('online')">Online trainingen</a></li>
-        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen voor teams</a></li>
+        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen</a></li>
         <li><a onclick="nav('academy','trainingwijzer-app')">Trainingwijzer</a></li>
         <li><a onclick="nav('academy','ac-ai-act')">EU AI Act conform</a></li>
       </ul>
@@ -1287,7 +1291,7 @@
     <button class="back-btn" onclick="nav('assistenten')">&#x2190; Terug naar assistenten</button>
     <p class="eyebrow">Morgen Technology &#183; AI organisatie &#183; Digitale teams</p>
     <h1 class="h1">Onze<br><span class="ol">AI</span><br><span class="pk">organisatie.</span></h1>
-    <p class="hbody">Geen losse tools, maar een samenwerkend digitaal team. Elke assistent heeft een rol in het proces: van intake en sales tot operatie, content en opvolging.</p>
+    <p class="hbody">Een samenwerkend digitaal team. Elke assistent heeft een rol in het proces: van intake en sales tot operatie, content en opvolging.</p>
     <div class="hctas">
       <button class="btn-p" onclick="nav('assistenten')">Terug naar assistenten</button>
       <button class="btn-g" onclick="scrollToId('org-structuur')">Bekijk de structuur &#x2193;</button>
@@ -1300,7 +1304,7 @@
   <div class="reveal" style="margin-bottom:2rem">
     <div class="slabel">Structuur</div>
     <h2 class="ptitle">Van lead tot oplevering<br>in &#201;&#201;n digitale keten.</h2>
-    <p class="pbody" style="max-width:70ch">Dit is hoe de assistenten als team samenwerken. Niet als gimmick, maar als vaste operationele laag onder de organisatie.</p>
+    <p class="pbody" style="max-width:70ch">Assistenten werken samen als vaste operationele laag onder de organisatie.</p>
   </div>
   <div class="org-map reveal">
     <div class="org-node primary" id="org-executive"></div>
@@ -1342,7 +1346,7 @@
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
         <li><a onclick="goToAcademy('online')">Online trainingen</a></li>
-        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen voor teams</a></li>
+        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen</a></li>
         <li><a onclick="nav('academy','trainingwijzer-app')">Trainingwijzer</a></li>
         <li><a onclick="nav('academy','ac-ai-act')">EU AI Act conform</a></li>
       </ul>
@@ -1384,7 +1388,7 @@
     <button class="back-btn" onclick="nav('home')">&#x2190; Terug naar home</button>
     <p class="eyebrow">Morgen Company &#183; Keynotes &#183; Boek &#183; Podcast</p>
     <h1 class="h1">Inspiratie<br><span class="ol">die schuurt</span><br><span class="pk">en beklijft.</span></h1>
-    <p class="hbody">Morgen deelt kennis over technologische ontwikkelingen die het MKB raken. Via keynotes, het boek en de podcast maken we AI concreet voor leiders, teams en organisaties.</p>
+    <p class="hbody">Morgen deelt kennis over technologische ontwikkelingen die het MKB raken. Via keynotes, het boek en de podcast wordt AI concreet in keuzes, werk, processen en organisatie.</p>
     <div class="hctas">
       <button class="btn-p" onclick="scrollToId('cp-keynote')">Keynote boeken</button>
       <button class="btn-g" onclick="scrollToId('cp-boek')">Het boek bekijken &#x2193;</button>
@@ -1410,7 +1414,7 @@
       </div>
       <div class="sp-body">
         <div class="sp-kn">"AI geeft je de vrijheid om te werken &#233;n te leven zoals jij wilt."</div>
-        <p class="sp-kd">De helft van het jaar werkt Danielle vanaf inspirerende plekken wereldwijd. Niet als hobby, maar als bewuste keuze. In haar keynote laat ze zien hoe AI de vrijheid geeft om anders te werken. Praktisch, energiek en vol voorbeelden die direct toepasbaar zijn.</p>
+        <p class="sp-kd">De helft van het jaar werkt Danielle vanaf inspirerende plekken wereldwijd. In haar keynote laat ze zien hoe AI de vrijheid geeft om anders te werken. Praktisch, energiek en vol voorbeelden die direct toepasbaar zijn.</p>
         <div class="sp-tags">
           <span class="sp-tag">Slimmer werken met AI</span>
           <span class="sp-tag">Vrijheid en productiviteit</span>
@@ -1429,7 +1433,7 @@
         <div class="sp-role">Technologie en menselijkheid</div>
       </div>
       <div class="sp-body">
-        <div class="sp-kn">"AI draait niet om m&#233;&#233;r doen, maar om beter leven."</div>
+        <div class="sp-kn">"AI geeft ruimte om beter te leven."</div>
         <p class="sp-kd">Karin verbindt technologie met menselijkheid. In haar keynote laat ze zien hoe AI tijd teruggeeft, ruimte maakt voor wat er echt toe doet en zorgt voor meer rust in een wereld die nooit stilstaat. Want het leven is te kort voor later.</p>
         <div class="sp-tags">
           <span class="sp-tag">Tijd terugwinnen</span>
@@ -1464,7 +1468,7 @@
     <div>
       <div style="font-family:var(--fu);font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:.5rem">Praktisch</div>
       <div style="font-family:var(--fd);font-size:1.4rem;font-weight:900;text-transform:uppercase;color:var(--white);line-height:1.1">20 tot 60 minuten &#183; incl. Q&amp;A &#183; maatwerk op aanvraag</div>
-      <p style="font-family:var(--fb);font-size:.84rem;color:var(--lgrey);margin-top:.6rem">Geschikt voor bedrijfsevents, congressen, inspiratiedagen en netwerksessies. Eén spreker of een combinatie van twee of drie.</p>
+      <p style="font-family:var(--fb);font-size:.84rem;color:var(--lgrey);margin-top:.6rem">Bedrijfsevents, congressen, inspiratiedagen en netwerksessies. Eén spreker of een combinatie van twee of drie.</p>
     </div>
     <a href="mailto:totmorgen@morgenacademy.nl?subject=Keynote boeken" class="btn-p">Keynote boeken</a>
   </div>
@@ -1475,7 +1479,7 @@
     <div class="company-inspiration-text">
       <div class="slabel">Morgen Company</div>
       <h3>Keynotes die blijven hangen.</h3>
-      <p>Drie sprekers, drie invalshoeken op AI. Voor events, leiders en teams die een verhaal zoeken dat scherp is, richting geeft en bijblijft.</p>
+      <p>Drie sprekers, drie invalshoeken op AI. Scherp, richtinggevend en gemaakt om het gesprek in beweging te zetten.</p>
     </div>
     <div class="company-inspiration-grid">
       <div class="company-inspiration-card">
@@ -1493,9 +1497,8 @@
     <div>
       <div class="slabel dk">Het boek</div>
       <h2 class="stitle" style="color:var(--black)">De Digitale<br><span style="color:var(--purple-light)">Collega.</span></h2>
-      <p style="font-family:var(--fb);color:var(--text-secondary);margin-top:1.2rem;font-size:.95rem;line-height:1.8;max-width:45ch"><em>De Digitale Collega</em> neemt een duidelijke en frisse invalshoek: AI wordt niet neergezet als losse tool, maar als een digitale collega — een teamlid. Dat vraagt om een fundamentele mindset-shift: benader AI als volwaardige medewerker binnen je organisatie, niet als gadget die je "erbij" gebruikt.</p>
-      <p style="font-family:var(--fb);color:var(--text-secondary);margin-top:.8rem;font-size:.95rem;line-height:1.8;max-width:45ch">Het centrale inzicht: het gaat niet om sneller hetzelfde doen, maar om werk radicaal anders organiseren. Het boek maakt concreet wat er van je verwacht wordt (skills of the future), doorbreekt de chaos van losse tools en geeft leidinggevenden taal en houvast.</p>
-      <p style="font-family:var(--fb);color:var(--text-secondary);margin-top:.8rem;font-size:.95rem;line-height:1.8;max-width:45ch">Voor professionals die relevant willen blijven. Voor teams die AI werkbaar willen maken. Voor leidinggevenden die richting willen geven zonder te verdwalen in techniek.</p>
+      <p style="font-family:var(--fb);color:var(--text-secondary);margin-top:1.2rem;font-size:.95rem;line-height:1.8;max-width:45ch"><em>De Digitale Collega</em> benadert AI als teamlid in de organisatie. Dat vraagt om taal, routines en afspraken waarmee mensen AI bewust inzetten in het werk.</p>
+      <p style="font-family:var(--fb);color:var(--text-secondary);margin-top:.8rem;font-size:.95rem;line-height:1.8;max-width:45ch">Het boek maakt concreet welke vaardigheden, keuzes en gewoontes nodig zijn om werk anders te organiseren met AI.</p>
       <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
         <a href="mailto:totmorgen@morgenacademy.nl?subject=Boek bestellen" class="btn-p">Boek bestellen</a>
         <a href="mailto:totmorgen@morgenacademy.nl?subject=Boek voor het team" class="btn-o">Boek voor het team</a>
@@ -1556,7 +1559,7 @@
       <div class="fcol-t">Academy</div>
       <ul class="flinks">
         <li><a onclick="goToAcademy('online')">Online trainingen</a></li>
-        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen voor teams</a></li>
+        <li><a onclick="nav('academy','ac-trainingen')">AI-trainingen</a></li>
         <li><a onclick="nav('academy','trainingwijzer-app')">Trainingwijzer</a></li>
         <li><a onclick="nav('academy','ac-ai-act')">EU AI Act conform</a></li>
       </ul>
@@ -1591,7 +1594,7 @@
 const cur=document.getElementById('cur');
 document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
 document.addEventListener('mouseover',e=>{
-  if(e.target.closest('a,button,.lcard,.sc,.tcard,.wstep,.spath,.speaker-card,.da-card,.agent-show-card,.project-card,.project-proof-card,.home-company-band-card,.logo-band'))cur.classList.add('big');
+  if(e.target.closest('a,button,.action-row,.sc,.tcard,.wstep,.spath,.speaker-card,.da-card,.agent-show-card,.project-card,.home-company-band-card,.logo-band'))cur.classList.add('big');
   else cur.classList.remove('big');
 });
 
@@ -1673,13 +1676,13 @@ const trainingData={
   basis:{
     badge:'Kennis & skills \u00b7 Online & incompany',
     title:'Basistraining AI',
-    intro:'De laagdrempelige start voor teams die snel slimmer willen werken met AI. In twee uur begrijp je het AI-landschap, leer je effectief prompten en bouw je je eerste assistent \u2014 zonder technische voorkennis.',
+    intro:'De laagdrempelige start om snel slimmer te werken met AI. In twee uur begrijp je het AI-landschap, leer je effectief prompten en bouw je je eerste assistent \u2014 zonder technische voorkennis.',
     sections:[
       {heading:'Wat is AI eigenlijk?',text:'We starten met het grote plaatje. Wat is AI, hoe past het in andere ontwikkelingen die het werkveld op z\'n kop zetten? We bespreken veiligheid, mogelijkheden en hoe je AI moet zien als gereedschap.'},
       {heading:'Effectief prompten',text:'Vervolgens ga je zelf aan de slag. Je leert hoe je AI de juiste vragen stelt zodat je echt bruikbare output krijgt. Geen theorie \u2014 je gaat het direct doen en zien dat het verschil maakt.'},
       {heading:'Je eerste assistent bouwen',text:'Je bouwt een eigen Custom GPT, Gem of Copilot-assistent. Iets dat echt werkt, dat je daarna direct kunt gebruiken in je werk. Daar heb je geen technische kennis voor nodig \u2014 je leert het juist door te doen.'}
     ],
-    quote:'\u201cEr kwam iemand de workshop binnen die amper wist waar zijn browser zat. Wij zeiden: ga maar spelen, je kunt niks verkeerd doen. Binnen twee uur had hij zelf een spraakassistent gebouwd die zijn trapmaten omzet in een strak meetverslag. Wat dat bewijst: het draait niet om technische skills, maar om mindset en het vertrouwen dat je het z\u00e9lf kunt.\u201d',
+    quote:'\u201cEr kwam iemand de workshop binnen die amper wist waar zijn browser zat. Wij zeiden: ga maar spelen, je kunt niks verkeerd doen. Binnen twee uur had hij zelf een spraakassistent gebouwd die zijn trapmaten omzet in een strak meetverslag. Dat geeft vertrouwen dat je het z\u00e9lf kunt.\u201d',
     includes:['Geen technische kennis nodig','Praktisch en direct toepasbaar','Eigen tempo, altijd online beschikbaar','Ook incompany beschikbaar','Duur: circa 2 uur','Conform de EU AI Act','Bewijs van deelname na afronding'],
     cta:'Vraag incompany training aan',
     onlineCta:'Direct online volgen',
@@ -1689,14 +1692,14 @@ const trainingData={
   workflows:{
     badge:'Automatisering \u00b7 Incompany',
     title:'Workflows & Agents',
-    intro:'Voor teams die al een basis hebben en minder handwerk tussen systemen willen. Je leert wanneer automatisering slim is, wanneer agentic AI helpt en hoe je daar veilig mee start.',
+    intro:'Minder handwerk tussen systemen. Je leert wanneer automatisering slim is, wanneer agentic AI helpt en hoe je daar veilig mee start.',
     sections:[
-      {heading:'Van assistent naar agent',text:'Met tools als Make, Zapier of N8N bouw je iets van een andere orde. Geen assistent die wacht tot jij iets vraagt, maar een systeem dat zelf in actie komt. Een mail komt binnen: het systeem analyseert, categoriseert, haalt klantdata op en schrijft een conceptantwoord. Jij hoeft pas bij de laatste stap in actie te komen.'},
-      {heading:'Echt integreren in je werk',text:'Je leert processen digitaliseren en koppelen aan je bestaande tools en data. Workflows die automatisch draaien op basis van triggers of tijdsintervallen \u2014 niet alleen als jij ertegen praat.'},
+      {heading:'Van assistent naar agent',text:'Met tools als Make, Zapier of N8N bouw je systemen die zelf in actie komen. Een mail komt binnen: het systeem analyseert, categoriseert, haalt klantdata op en schrijft een conceptantwoord. Jij hoeft pas bij de laatste stap in actie te komen.'},
+      {heading:'Echt integreren in je werk',text:'Je leert processen digitaliseren en koppelen aan je bestaande tools en data. Workflows draaien automatisch op basis van triggers of tijdsintervallen.'},
       {heading:'Guardrails en controle',text:'Elke agent heeft momenten waarop hij moet stoppen en een mens inschakelt. Je leert waar die momenten liggen en hoe je ze inbouwt. Zo houd je controle over wat er automatisch gebeurt.'}
     ],
     quote:'\u201cEen supportmail komt binnen. De agent analyseert, categoriseert, haalt klantdata op uit het CRM, schrijft een conceptantwoord en zet het klaar voor goedkeuring. Vijf stappen, geen copy-paste, 24 uur per dag beschikbaar.\u201d',
-    includes:['Hands-on werken met Make, Zapier of N8N','Eigen workflow bouwen tijdens de training','Duur: 2 uur incompany','Geschikt voor teams van 4\u201315 personen'],
+    includes:['Hands-on werken met Make, Zapier of N8N','Eigen workflow bouwen tijdens de training','Duur: 2 uur incompany','Praktisch werken in kleine groep'],
     cta:'Vraag Workflows & Agents aan',
     onlineCta:'Binnenkort online beschikbaar',
     onlineCtaDisabled:true,
@@ -1706,11 +1709,11 @@ const trainingData={
   toolbuilding:{
     badge:'Bouwen \u00b7 Incompany',
     title:'Tool Building',
-    intro:'Voor teams die een eigen tool, prototype of interne assistent willen maken. Geen losse inspiratie, maar zelf bouwen aan iets wat je direct kunt laten zien en testen.',
+    intro:'Een eigen tool, prototype of interne assistent maken. Zelf bouwen aan iets wat je direct kunt laten zien en testen.',
     sections:[
       {heading:'Van idee naar werkend prototype',text:'Met tools als Lovable, Cursor en Replit beschrijf je wat je wilt en krijg je werkende code terug. Geen schets \u2014 een applicatie die je kunt gebruiken, delen en doorontwikkelen. Wat vroeger maanden development kostte, kan nu in een middag.'},
       {heading:'Zelf bouwen, geen code nodig',text:'Je leert hoe je met vibe coding een eigen tool maakt. Een dashboard, een calculator, een klantportaal \u2014 je beschrijft het en de AI bouwt. Sommige tools werken zelfs vanaf je telefoon.'},
-      {heading:'Prototype vs. productie',text:'Een prototype is niet hetzelfde als een productiesysteem. Je leert het verschil en wanneer je w\u00e9l een developer inschakelt \u2014 maar dan met een bewezen concept en precies weten wat je nodig hebt.'}
+      {heading:'Prototype vs. productie',text:'Je leert wanneer een prototype genoeg is en wanneer een developer nodig is, met een bewezen concept en precies weten wat je nodig hebt.'}
     ],
     quote:'\u201cNeem Gijs, een render-assistent voor interieurbouwers. Je uploadt een tekening, Gijs koppelt kleuren aan materialen en genereert binnen seconden een fotorealistische visualisatie. Wat vroeger dagen duurde, kost nu een minuut.\u201d',
     includes:['Zelf een werkende tool bouwen tijdens de sessie','Werken met Lovable, Cursor of Replit','Duur: 2 uur incompany','Geen programmeerervaring nodig'],
@@ -1725,8 +1728,8 @@ const trainingData={
     title:'Team-workshop',
     intro:'Iedereen optimaliseert z\u2019n eigen hoekje. Maar kijkt iemand naar het grotere plaatje? De team-workshop helpt jullie samen het werkproces te bekijken, te vereenvoudigen en slim te automatiseren.',
     sections:[
-      {heading:'De waarom-vraag',text:'We starten niet met \u201choe automatiseren we dit?\u201d maar met \u201cwaarom is dit proces er eigenlijk?\u201d Soms is de beste automatisering het elimineren van een stap. Dat zie je alleen als je als team het hele proces bekijkt.'},
-      {heading:'Samen het proces in kaart brengen',text:'Jullie tekenen het proces uit. Wie doet wat? Waar zit de pijn? Waar gaat tijd verloren? Niet de pijn van \u00e9\u00e9n persoon, maar van het proces als geheel. Vervolgens werken we terug vanuit het gewenste eindresultaat.'},
+      {heading:'De waarom-vraag',text:'We kijken waarom het proces bestaat en waar stappen kunnen verdwijnen. Dat zie je als je als team het hele proces bekijkt.'},
+      {heading:'Samen het proces in kaart brengen',text:'Jullie tekenen het proces uit. Wie doet wat? Waar zit de pijn? Waar gaat tijd verloren? Vervolgens werken we terug vanuit het gewenste eindresultaat.'},
       {heading:'Van hulpmiddel naar systeem',text:'Een hulpmiddel is iets dat jij gebruikt. Een systeem is iets dat het team gebruikt om samen te werken. Die verschuiving maken jullie in deze workshop \u2014 met gedeeld eigenaarschap, zodat het blijft werken als de bouwer op vakantie is.'}
     ],
     quote:'\u201cEen team optimaliseert hun e-mailcategorisatie, doorvragen en beantwoorden. Maar de echte vraag is: waarom krijgen we zoveel van dit type vragen? Soms kun je de bron aanpakken in plaats van de symptomen.\u201d',
@@ -1737,45 +1740,45 @@ const trainingData={
   },
   managers:{
     badge:'Masterclass \u00b7 Managementteam',
-    title:'Mini masterclass AI voor managers',
-    intro:'Een compacte deep dive voor MT\u2019s, directie en leidinggevenden die AI niet alleen willen begrijpen, maar er zelf slimmer mee willen werken in voorbereiding, sturing en besluitvorming.',
+    title:'Mini masterclass AI in management',
+    intro:'Een compacte deep dive in voorbereiding, sturing en besluitvorming met AI.',
     sections:[
-      {heading:'Zelf werken met AI in managementwerk',text:'Je gebruikt AI in de sessie direct voor voorbereiding, analyse, samenvatting, prioritering en besluitvorming. Niet alleen praten over AI, maar ervaren hoe het je managementwerk ondersteunt.'},
+      {heading:'Zelf werken met AI in managementwerk',text:'Je gebruikt AI in de sessie direct voor voorbereiding, analyse, samenvatting, prioritering en besluitvorming.'},
       {heading:'Van losse toepassing naar betere sturing',text:'We vertalen AI naar concrete situaties uit management en aansturing: van overlegvoorbereiding en terugblik tot besluitvorming en teamcommunicatie.'},
       {heading:'Kaders en slimme vervolgstap',text:'We bespreken verantwoord gebruik, eigenaarschap en welke vervolgstap logisch is: een teamtraining, een richtingssessie of een verdiepend programma.'}
     ],
     quote:'\u201cManagement heeft meer aan een sessie waarin je zelf met AI werkt en merkt waar het helpt, dan aan nog een verhaal over wat er ooit misschien mogelijk wordt.\u201d',
-    includes:['Voor MT, directie en leidinggevenden','Compact programma van 1 dag','Zelf werken met AI in managementsituaties','Concreet vervolgadvies voor team of organisatie'],
+    includes:['Compact programma van 1 dag','Zelf werken met AI in managementsituaties','Concreet vervolgadvies voor team of organisatie'],
     cta:'Vraag mini masterclass aan',
-    formValue:'Mini masterclass AI voor managers',
+    formValue:'Mini masterclass AI in management',
     target:'ac-verdiepen'
   },
   masterclass:{
     badge:'Masterclass \u00b7 Kartrekkersgroep',
-    title:'Masterclass AI voor interne kartrekkers',
-    intro:'Voor de groep in een organisatie die hier echt verder mee wil. Niet voor iedereen, maar voor mensen uit verschillende teams of afdelingen die al een basis hebben en AI willen helpen bouwen, integreren en laten landen in de praktijk.',
+    title:'AI Implementatie Masterclass',
+    intro:'Van basiskennis naar bouwen, integreren en laten landen in de praktijk.',
     sections:[
       {heading:'Van brede basis naar kartrekkersgroep',text:'Na een basistraining of eerste verkenning blijft vaak een kleine groep over die hier echt meer mee wil. Die mensen trek je samen in deze masterclass naar een volgend niveau.'},
-      {heading:'Van idee naar werkende toepassing',text:'Je werkt aan cases, processen, assistenten, workflows en prototypes die passen bij jullie organisatie. Niet om zomaar te bouwen, maar om iets neer te zetten dat echt bruikbaar is.'},
+      {heading:'Van idee naar werkende toepassing',text:'Je werkt aan cases, processen, assistenten, workflows en prototypes die passen bij jullie organisatie en direct bruikbaar zijn.'},
       {heading:'Landen in team en organisatie',text:'Je kijkt hoe je dit laat landen buiten het clubje zelf: draagvlak, eigenaarschap, implementatie en de volgende stap per team of afdeling.'}
     ],
-    quote:'\u201cNiet iedereen hoeft alles te kunnen bouwen. Je wilt juist een kleine interne groep die dit verder trekt, verdiept en helpt landen in de organisatie.\u201d',
-    includes:['Voor een kleine interne kartrekkersgroep','4-daagse deep dive','Van case naar implementatie','Geschikt na basistraining of managementsessie'],
+    quote:'\u201cEen kleine interne groep kan dit verder trekken, verdiepen en helpen landen in de organisatie.\u201d',
+    includes:['4-daagse deep dive','Van case naar implementatie','Geschikt na basistraining of managementsessie'],
     cta:'Vraag 4-daagse masterclass aan',
-    formValue:'Masterclass AI voor interne kartrekkers',
+    formValue:'AI Implementatie Masterclass',
     target:'ac-verdiepen'
   },
   pmtraining:{
     badge:'Training \u00b7 Projectmanagement',
     title:'Projectmanagement met AI',
-    intro:'Een 4-daagse training voor projectmanagers en projectwerkers die AI willen verwerken in hoe ze projecten voorbereiden, aansturen en laten slagen. Geen ouderwets Prince-programma, maar een nieuwe kijk op projectmanagement met technologie.',
+    intro:'Een 4-daagse training over projecten voorbereiden, aansturen en laten slagen met AI. Een nieuwe kijk op projectmanagement met technologie.',
     sections:[
       {heading:'Projectwerk opnieuw bekeken',text:'We kijken naar projectmanagement vanuit de praktijk van nu: sneller schakelen, slimmer voorbereiden, beter afstemmen en minder overhead.'},
       {heading:'AI in het echte projectwerk',text:'Je werkt met AI voor planning, opdrachtformulering, stakeholdercommunicatie, voortgang, samenvatting, risico-inschatting en besluitvoorbereiding.'},
       {heading:'Geen klassiek model, wel stevige basis',text:'Je leert projectmatig werken zonder te vervallen in een traditioneel, zwaar raamwerk. Praktisch, modern en direct bruikbaar in je dagelijkse projecten.'}
     ],
-    quote:'\u201cDit wordt geen traditionele PM-cursus, maar een rijke training over hoe projectwerk verandert als je technologie serieus meeneemt in je manier van werken.\u201d',
-    includes:['Voor projectmanagers en projectwerkers','4-daags programma','Nieuwe kijk op projectmanagement met AI','Praktisch toepasbaar in lopende projecten'],
+    quote:'\u201cEen rijke training over hoe projectwerk verandert als je technologie serieus meeneemt in je manier van werken.\u201d',
+    includes:['4-daags programma','Nieuwe kijk op projectmanagement met AI','Praktisch toepasbaar in lopende projecten'],
     cta:'Vraag PM-training aan',
     formValue:'Projectmanagement met AI',
     target:'ac-verdiepen'
@@ -1783,44 +1786,44 @@ const trainingData={
   keynote:{
     badge:'Inspiratie \u00b7 Keynote',
     title:'Keynotes & kick-offs',
-    intro:'Voor events, teamdagen en kick-offs die energie, urgentie en richting moeten losmaken. Niet alleen inspirerend, maar altijd vertaald naar de praktijk van jullie organisatie.',
+    intro:'Energie, urgentie en richting losmaken, vertaald naar de praktijk van de organisatie.',
     sections:[
       {heading:'Scherp verhaal, geen luchtfietserij',text:'We laten zien wat AI nu verandert in werk, teams en processen \u2014 zonder te vervallen in hype of oppervlakkige toolpraat.'},
-      {heading:'Van wow naar vertaalslag',text:'De keynote helpt deelnemers niet alleen begrijpen wat er kan, maar ook nadenken over wat dat concreet betekent voor hun eigen werk.'},
+      {heading:'Van wow naar vertaalslag',text:'De keynote helpt deelnemers begrijpen wat AI concreet betekent voor hun eigen werk.'},
       {heading:'Sterke start voor vervolg',text:'Ideaal als aftrap van een programma, teamdag of verandertraject waarin daarna training, masterclass of begeleiding volgt.'}
     ],
-    quote:'\u201cEen goede keynote geeft niet alleen energie, maar zet ook het gesprek open over wat er daarna echt nodig is.\u201d',
-    includes:['Voor events, MT-dagen en kick-offs','45 tot 90 minuten','Inspiratie met praktische vertaalslag','Geschikt als opener voor vervolgtrajecten'],
+    quote:'\u201cEen goede keynote geeft energie en zet het gesprek open over wat er daarna nodig is.\u201d',
+    includes:['45 tot 90 minuten','Inspiratie met praktische vertaalslag','Geschikt als opener voor vervolgtrajecten'],
     cta:'Vraag keynote aan',
     formValue:'Keynotes & kick-offs',
     target:'ac-verdiepen'
   },
   chancesession:{
     badge:'Begeleiding \u00b7 Consultancy',
-    title:'AI-richtingssessie voor MT of projectgroep',
-    intro:'Niet beginnen met de vraag welke training je nodig hebt, maar met de vraag waar in jullie werk de meeste winst zit. Deze sessie is bedoeld voor MT of projectgroep die eerst de slimste route wil bepalen.',
+    title:'AI-richtingssessie',
+    intro:'Eerst scherp krijgen waar in het werk de meeste winst zit. Daarna de slimste route bepalen.',
     sections:[
       {heading:'Proces, ambitie en knelpunten',text:'We brengen scherp in kaart waar tijd verloren gaat, waar kansen liggen en wat er al speelt in het team of de organisatie.'},
       {heading:'Niet meteen bouwen, eerst kiezen',text:'We bepalen of jullie vraag vraagt om een teamtraining, managementmasterclass, verdiepend programma of juist een begeleid traject.'},
       {heading:'Concreet vervolgadvies',text:'Jullie gaan weg met een helder advies over de beste eerste stap en welke vervolgroutes logisch zijn.'}
     ],
-    quote:'\u201cSoms is de slimste eerste stap niet meteen trainen, maar eerst met de juiste mensen om tafel om te bepalen waar de meeste winst zit en wie daar eigenaar van moet zijn.\u201d',
-    includes:['Voor MT of projectgroep','90 minuten tot halve dag','Concreet advies: training, masterclass of traject','Op locatie of online mogelijk'],
+    quote:'\u201cSoms is de slimste eerste stap met de juiste mensen bepalen waar de meeste winst zit en wie daar eigenaar van moet zijn.\u201d',
+    includes:['90 minuten tot halve dag','Concreet advies: training, masterclass of traject','Op locatie of online mogelijk'],
     cta:'Plan richtingssessie',
-    formValue:'AI-richtingssessie voor MT of projectgroep',
+    formValue:'AI-richtingssessie',
     target:'ac-begeleiding'
   },
   trajectory:{
     badge:'Begeleiding \u00b7 Implementatie',
     title:'Begeleid implementatietraject',
-    intro:'Voor organisaties die niet alleen willen leren, maar ook echt iets willen neerzetten, borgen en opschalen. Van eerste sessie tot werkende aanpak.',
+    intro:'Van eerste sessie naar werkende aanpak, borging en opschaling.',
     sections:[
       {heading:'Van training naar toepassing',text:'We combineren training, keuzesessies en begeleiding zodat kennis niet los blijft staan van uitvoering.'},
       {heading:'Eigenaarschap en ritme',text:'Samen bepalen we wie trekt, hoe je voortgang bewaakt en hoe je voorkomt dat initiatieven losse eilandjes worden.'},
       {heading:'Borgen en opschalen',text:'We helpen bij vervolgkeuzes, implementatie en het slimmer maken van volgende processen, teams of afdelingen.'}
     ],
-    quote:'\u201cWie echt wil doorpakken, heeft vaak niet genoeg aan \u00e9\u00e9n sessie maar aan een slim ritme van leren, kiezen en implementeren.\u201d',
-    includes:['3 tot 12 maanden op maat','Combinatie van training en begeleiding','Voor organisaties die willen doorpakken','Aansluiting op processen, team en eigenaarschap'],
+    quote:'\u201cDoorpakken vraagt om een slim ritme van leren, kiezen en implementeren.\u201d',
+    includes:['3 tot 12 maanden op maat','Combinatie van training en begeleiding','Ritme van leren, kiezen en implementeren','Aansluiting op processen, team en eigenaarschap'],
     cta:'Plan verkenningstraject',
     formValue:'Begeleid implementatietraject',
     target:'ac-begeleiding'
@@ -1903,7 +1906,7 @@ const assistantShowcase=[
     features:['Automatische telefoonverbinding met nieuwe leads','Slimme doorvraag-logica tijdens gesprekken','Directe agenda-integratie voor vervolgafspraken','Kwalificatie op basis van jouw criteria'],
     howItWorks:'Wanneer een potentiële klant een formulier invult, belt Joris binnen enkele minuten terug. Tijdens het gesprek stelt hij op maat gemaakte vragen om de behoefte van de klant te begrijpen en te bepalen of de lead geschikt is. Joris zorgt dat jouw klant zich gehoord voelt en jij duidelijk samengevat krijgt waar de behoefte van deze potentiële klant liggen.\n\nDe antwoorden worden automatisch vastgelegd en samengevat volgens de criteria. Als de lead relevant is, plant Joris direct een afspraak in met de juiste specialist (bijvoorbeeld via Calandly).\n\nZo verloopt het eerste klantcontact snel, persoonlijk en volledig geautomatiseerd.',
     benefits:['Tijdwinst: geen handmatig nabellen of afspraken plannen','Hogere conversie: directe opvolging zorgt voor meer warme leads','Consistente ervaring: elke lead krijgt dezelfde professionele intake','Betere inzichten: je weet meteen wat de klant zoekt en waar de behoefte ligt'],
-    useCases:['Ideaal voor teams in sales, marketing en service die veel inkomende leads of vragen ontvangen. Joris haalt deze direct voor je op en presenteert ze in een werkbaar format. Ook wordt direct een afspraak ingepland, wanneer de lead relevant is.','Bedrijven gebruiken Joris om hun opvolging te versnellen, de kwaliteit van gesprekken te verhogen en klanten meteen het gevoel te geven dat ze gehoord worden.'],
+    useCases:['Veel inkomende leads of vragen worden direct opgehaald en gepresenteerd in een werkbaar format. Ook wordt direct een afspraak ingepland, wanneer de lead relevant is.','Bedrijven gebruiken Joris om hun opvolging te versnellen, de kwaliteit van gesprekken te verhogen en klanten meteen het gevoel te geven dat ze gehoord worden.'],
     readMoreLink:'https://www.morgenacademy.nl/post/hoe-joris-met-ai-leads-kwalificeert-en-sales-versnelt',
     screenshots:['/docs/assistenten/screenshots/joris-screenshot.png'],
     demoUrl:null,ctaLabel:'Vraag aan'
@@ -1914,7 +1917,7 @@ const assistantShowcase=[
     features:['Voert een slim gesprek met projectleider en opdrachtgever','Gestructureerde vragenflows voor projectdefinitie','Bouwt stap voor stap een volledige, gecontracteerde projectopdracht','Houdt het gesprek scherp, concreet en resultaatgericht','Levert direct een nette, exporteerbare opdrachtbrief op','Stakeholder alignment'],
     howItWorks:'Tom leidt jullie door een gestructureerd gesprek, digitaal maar persoonlijk. Hij stelt de juiste vragen over doelen, resultaten, verantwoordelijkheden en randvoorwaarden. Terwijl jullie praten, zet hij de antwoorden om in een duidelijke projectopdracht. Aan het eind van het uur ligt er een concept klaar dat beide partijen kunnen goedkeuren en gebruiken als contract of startdocument.',
     benefits:['Van vaag idee naar concreet plan in één uur','Minder tijd kwijt aan tekstgedoe en revisies','Draagvlak en duidelijkheid vanaf dag één'],
-    useCases:['Tom is gemaakt voor projectleiders, opdrachtgevers en adviseurs die regelmatig samen projecten starten. Bij een grote publieke organisatie hielp Tom een team om in één middag een projectopdracht op te stellen waar normaal weken overheen gingen. De sessie gaf niet alleen snelheid, maar ook rust en wederzijds begrip, een vliegende start voor het hele project.'],
+    useCases:['Bij een grote publieke organisatie hielp Tom een team om in één middag een projectopdracht op te stellen waar normaal weken overheen gingen. De sessie gaf snelheid, rust en wederzijds begrip, een vliegende start voor het hele project.'],
     screenshots:[],demoUrl:null,ctaLabel:'Vraag aan'
   },
   {
@@ -1923,7 +1926,7 @@ const assistantShowcase=[
     features:['Voortgang bewaken – Noël leest je projectplannen en takenlijsten, signaleert vertragingen en stuurt tijdig reminders.','Communicatie automatiseren – Regelt follow-ups, samenvattingen en reminders rond meetings en deadlines.','Project op koers houden – Analyseert voortgang, scope en risico\'s, en maakt automatische statusupdates.','Inhoudelijke ondersteuning – Helpt bij plannen van aanpak, rapportages en analyses van feedback.','Lerende assistent – Past zich aan jouw werkstijl aan en wordt slimmer na elk project.'],
     howItWorks:'Je koppelt Noël aan je projecttools, zoals Asana, Notion, Trello of Excel. Hij leest automatisch de taken, deadlines en afhankelijkheden in en vergelijkt ze met de planning. Als iets dreigt te vertragen, stuurt Noël een vriendelijk seintje naar de verantwoordelijke — of een korte samenvatting naar het team. Wekelijks krijg je een helder overzicht van de voortgang, bottlenecks en verbeterpunten. En omdat Noël leert van eerdere projecten, wordt hij elke keer proactiever en persoonlijker.',
     benefits:['Minder tijd kwijt aan opvolgen en najagen','Altijd zicht op voortgang en risico\'s','Betere communicatie en minder verrassingen','Continu leren en verbeteren op basis van eerdere projecten'],
-    useCases:['Voor projectleiders, consultants en teams die met meerdere projecten tegelijk werken. Noël neemt de projectbewaking en communicatie uit handen, zodat jij kunt focussen op inhoud en resultaat. Teams merken snel minder stress, meer overzicht en een veel consistenter ritme in hun samenwerking.'],
+    useCases:['Noël neemt projectbewaking en communicatie uit handen bij meerdere projecten tegelijk. Teams merken snel minder stress, meer overzicht en een consistenter ritme in hun samenwerking.'],
     screenshots:[],demoUrl:null,ctaLabel:'Vraag aan'
   },
   {
@@ -1932,12 +1935,12 @@ const assistantShowcase=[
     features:['Maakt automatisch social posts uit meetings, notities of ruwe ideeën','Stelt complete contentkalenders op voor meerdere platforms','Schrijft en redigeert blogs in jouw tone of voice','Ontwerpt visuals die passen bij je merkstijl'],
     howItWorks:'Je neemt een meeting op — dat kan een brainstorm, teamoverleg of klantgesprek zijn. Lora luistert mee, haalt de belangrijkste inzichten eruit en zet ze om in concrete content: kant-en-klare posts, visuals en een overzichtelijke kalender. Jij hoeft alleen nog maar te kiezen wat je wilt publiceren.',
     benefits:['Bespaar uren aan planning en schrijven','Houd je socials altijd actueel en consistent','Werk slimmer samen tussen marketing en copywriters'],
-    useCases:['Lora is gebouwd voor marketingteams en copywriters die geen tijd willen verliezen aan herhaling. Ze vervangt geen creatieve professionals — ze versterkt ze. Door het voorwerk uit handen te nemen, houdt de copywriter ruimte over voor strategie, tone of voice en klantimpact.'],
+    useCases:['Lora haalt herhaling uit marketing- en contentwerk. Ze vervangt geen creatieve professionals — ze versterkt ze. Door het voorwerk uit handen te nemen, blijft er ruimte over voor strategie, tone of voice en klantimpact.'],
     screenshots:[],demoUrl:null,ctaLabel:'Vraag aan'
   },
   {
     name:'Sita',title:'SEO-specialist',bio:'Optimaliseert content automatisch en behoudt je eigen tone-of-voice.',slug:'sita',tags:['seo','content','integratie'],
-    description:'Sita is de AI-assistent die jouw content automatisch SEO-proof maakt. Ze analyseert teksten, behoudt de originele toon en verbetert vindbaarheid met slimme zoekwoorden, metadata en structuur. Perfect voor organisaties met veel artikelen die beter willen scoren in zoekmachines zonder eindeloos handmatig te optimaliseren.',
+    description:'Sita is de AI-assistent die jouw content automatisch SEO-proof maakt. Ze analyseert teksten, behoudt de originele toon en verbetert vindbaarheid met slimme zoekwoorden, metadata en structuur. Veel artikelen worden beter vindbaar zonder eindeloos handmatig optimaliseren.',
     features:['Automatische SEO-analyse per artikel','Slimme suggesties voor zoekwoorden, titels en metadata','Realtime SEO-score en verbeterfeedback','Volledige integratie met bestaande CMS-systemen'],
     howItWorks:'Sita scant elk artikel en beoordeelt de SEO-kwaliteit. Ze ziet waar verbetering mogelijk is en past optimalisaties toe, zonder dat de schrijfstijl verloren gaat. Vervolgens test ze of de aanpassingen de score daadwerkelijk verhogen. Zo wordt content continu beter vindbaar, artikel voor artikel. Failsafe: aanpassingen worden desgewenst per mail met het team gedeeld, zodat het team altijd nog in kan grijpen.',
     benefits:['Meer organisch verkeer zonder extra handwerk','Betere zichtbaarheid in zoekmachines','Consistente, authentieke content die blijft passen bij jouw merk'],
@@ -1947,8 +1950,8 @@ const assistantShowcase=[
   },
   {
     name:'Barry',title:'Projectplan Assistent',bio:'Vertaalt ideeën naar een compleet projectplan in jouw format.',slug:'barry',tags:['planning','workflow','advies'],
-    description:'Barry helpt je om jouw projectidee om te zetten in een helder, compleet en motiverend projectplan. Geen losse notities of half ingevulde documenten meer, maar één duidelijk overzicht dat iedereen begrijpt en waar het team direct mee aan de slag kan. Barry denkt mee, stelt de juiste vragen en zorgt dat alles klopt — van doel tot uitvoering.',
-    features:['Zet ruwe ideeën om in een gestructureerd projectplan','Stelt gerichte vragen om ontbrekende informatie aan te vullen','Past het plan aan jouw eigen format en stijl aan','Maakt het plan deelbaar en bruikbaar voor teams'],
+    description:'Barry helpt je om jouw projectidee om te zetten in een helder, compleet en motiverend projectplan. Eén duidelijk overzicht dat iedereen begrijpt en waar het team direct mee aan de slag kan. Barry denkt mee, stelt de juiste vragen en zorgt dat alles klopt — van doel tot uitvoering.',
+    features:['Zet ruwe ideeën om in een gestructureerd projectplan','Stelt gerichte vragen om ontbrekende informatie aan te vullen','Past het plan aan jouw eigen format en stijl aan','Maakt het plan deelbaar en bruikbaar in teams'],
     howItWorks:'Je vertelt Barry waar je project over gaat en wat je al weet. Dat kan via tekst, gesproken input of gewoon de flarden projectbestanden die je al hebt. Barry analyseert wat er ligt en maakt een projectplan in jouw format. Denk aan doel, kaders, succescriteria, budget, taken en/of planning. Net wat voor jouw projectplannen belangrijk is. Als iets nog onduidelijk is, vraagt hij gericht door. Het resultaat: een helder projectplan dat precies past bij jouw werkwijze en dat iedereen in het team begrijpt en kan uitvoeren.',
     benefits:['Van chaos naar structuur in één gesprek','Je eigen format en toon blijven behouden','Iedereen in het team snapt het plan en kan direct aan de slag'],
     useCases:['Een organisatie in Den Bosch wilde voor Serious Request een inzamelactie opzetten via een veiling en loterij. De initiatiefnemers hadden veel ideeën, maar geen duidelijk plan. Barry hielp om hun gedachten te structureren tot één compleet projectplan dat ze konden delen met partners, vrijwilligers en sponsors. Het resultaat: heldere doelen, betrokken teamleden en een plan dat echt werd uitgevoerd.'],
@@ -1956,11 +1959,11 @@ const assistantShowcase=[
   },
   {
     name:'Connie',title:'Transcriptie in Slack',bio:'Zet audio direct om naar tekst in Slack en archiveert in je drive.',slug:'connie',tags:['slack','audio','documentatie'],
-    description:'Connie zet audio direct om naar tekst – gewoon binnen je Slack-kanaal. Upload een audiobestand, en Connie regelt de rest: een volledig transcript verschijnt in je chat én wordt automatisch opgeslagen in je gedeelde Drive-map. Geen losse tools of handmatig uploaden meer. Alles gebeurt daar waar jij toch al werkt.',
+    description:'Connie zet audio direct om naar tekst – gewoon binnen je Slack-kanaal. Upload een audiobestand, en Connie regelt de rest: een volledig transcript verschijnt in je chat én wordt automatisch opgeslagen in je gedeelde Drive-map. Alles gebeurt daar waar jij toch al werkt.',
     features:['Zet audiobestanden direct om naar tekst in Slack','Slaat automatisch het transcript op in je gedeelde Drive-map','Maakt een deelbare link aan voor snelle toegang','Herkent automatisch sprekers en tijdstippen (optioneel)'],
     howItWorks:'Upload een audiobestand in Slack, bijvoorbeeld van een vergadering of voice note. Connie herkent het bestand, start direct met transcriberen en plaatst het resultaat in dezelfde thread. Tegelijk wordt het transcript opgeslagen in je Drive, netjes in de juiste map. Je krijgt een link terug zodat jij en je team het meteen kunnen gebruiken of delen.',
     benefits:['Geen aparte transcriptietool meer nodig','Alles direct beschikbaar voor het hele team','Bespaart tijd en voorkomt zoekwerk','Volledig geïntegreerd in je bestaande workflow'],
-    useCases:['Teams die veel vergaderingen, interviews of voice-notes delen, houden met Connie automatisch overzicht. Audio\'s worden niet langer vergeten of onvindbaar, maar direct omgezet in bruikbare tekst – klaar voor rapportage, documentatie of analyse.'],
+    useCases:['Teams die veel vergaderingen, interviews of voice-notes delen, houden met Connie automatisch overzicht. Audio\'s worden direct omgezet in bruikbare tekst – klaar voor rapportage, documentatie of analyse.'],
     screenshots:[],demoUrl:null,ctaLabel:'Vraag aan'
   },
   {
@@ -1969,7 +1972,7 @@ const assistantShowcase=[
     features:['Zet gedachten direct om in concrete to-do\'s','Maakt automatische samenvattingen van je notities of spraak','Exporteert taken naar Excel, Notion of een andere plek die jij kiest','Werkt met een sneltoets, zodat je Tina overal kunt oproepen'],
     howItWorks:'Je vertelt Tina waar je aan denkt, wat je bezig houdt of wat je niet wilt vergeten. Dat kan via spraak of tekst. Tina analyseert wat je zegt, pikt de actiepunten eruit en bundelt die in een helder overzicht. Wil je het resultaat ergens anders bewaren? Met één klik stuur je het naar je favoriete tool of exporteer je het als bestand.',
     benefits:['Nooit meer iets vergeten','Altijd overzicht, zonder extra moeite','Meer rust in je hoofd en focus op wat echt telt'],
-    useCases:['Tina is gemaakt voor iedereen die veel aan zijn hoofd heeft — van drukke ondernemers tot creatieve makers. In plaats van eindeloze notities in je telefoon, praat je gewoon met Tina. Zij ordent, filtert en vertaalt jouw chaos in structuur.'],
+    useCases:['In plaats van eindeloze notities in je telefoon, praat je gewoon met Tina. Zij ordent, filtert en vertaalt chaos in structuur.'],
     screenshots:[],demoUrl:'https://pa-tina.assistentenvanmorgen.nl',ctaLabel:'Probeer Tina uit'
   },
   {
@@ -1978,7 +1981,7 @@ const assistantShowcase=[
     features:['Herkent en verwerkt automatisch nieuwe printorders','Voert checks uit op MOQ, aantallen en productvarianten','Stuurt klanten gepersonaliseerde mails (in hun taal) voor aanlevering printdata','Genereert proefdrukverzoeken en bewaakt goedkeuringen','Maakt en deelt automatisch print- en verpakinstructies','Houdt orderstatussen bij in een live dashboard'],
     howItWorks:'Karel scant inkomende orders, filtert op printopdrachten en maakt automatisch een nieuwe tapstructuren aan. Hij controleert of het aantal prints klopt, of de minimale bestelhoeveelheid (MOQ) is behaald en vraagt zo nodig aanvullende informatie aan bij de klant.\n\nAlle communicatie verloopt via e-mail: klanten ontvangen een bericht vanuit de webwinkel met een formulierlink om hun logo en printlocatie aan te leveren.\n\nNa ontvangst genereert Karel een proefdrukverzoek. Zodra de klant de proefdruk goedkeurt, maakt Karel de definitieve print- en verpakinstructies aan.\n\nIntussen houdt hij alles bij in het statusdashboard, inclusief automatische herinneringen als er iets blijft liggen.',
     benefits:['Geen handmatig rekenwerk of ordercontrole meer','Minder fouten, sneller goedgekeurde proefdrukken','Volledig overzicht in één dashboard'],
-    useCases:['Solo Solis gebruikt Karel voor de volledige afhandeling van printorders. Waar het proces vroeger meerdere handmatige stappen kende, verloopt nu alles automatisch: van orderinvoer tot verzending van instructies. Het resultaat: kortere doorlooptijden, minder fouten en een duidelijk overzicht voor iedereen die met printorders werkt.'],
+    useCases:['Solo Solis gebruikt Karel voor de volledige afhandeling van printorders. Waar het proces vroeger meerdere handmatige stappen kende, verloopt nu alles automatisch: van orderinvoer tot verzending van instructies. Het resultaat: kortere doorlooptijden, minder fouten en een duidelijk overzicht in het printproces.'],
     readMoreLink:'https://www.morgenacademy.nl/post/hoe-solo-solis-met-ai-orderkwaliteit-verhoogt-en-fouten-voorkomt',
     screenshots:['/docs/assistenten/screenshots/karel-screenshot-1.png','/docs/assistenten/screenshots/karel-screenshot-2.png'],
     demoUrl:null,ctaLabel:'Vraag aan'
@@ -1989,13 +1992,13 @@ const assistantShowcase=[
     features:['Upload exports uit elk tekenprogramma (PNG/JPG; later uitbreidbaar naar 3D-bestanden)','Automatische kleur-naar-materiaal mapping via je eigen materialenbibliotheek','Combineert modelbeeld, materiaaldata en jouw prompt tot één optimale renderopdracht','Genereert realistische renders + varianten, klaar voor moodboards en klantpresentaties'],
     howItWorks:'Je uploadt een export uit je tekenprogramma. Gijs leest de kleuren in de afbeelding en koppelt die aan jouw materiaalset: hout, lak, steen, apparaten – alles wat jij definieert. Daarna geef je een korte beschrijving mee, zoals "moderne keuken met rustige, Scandinavische sfeer."\n\nGijs combineert automatisch:\n• de geometrie uit jouw afbeelding\n• de ingestelde materiaal-mapping\n• de gewenste stijlprompt\n\n… en maakt daar één superprompt van voor het AI-model. Binnen enkele seconden zie je een realistische render, kun je varianten genereren en het eindbeeld downloaden.',
     benefits:['Werkt met elk tekenprogramma – geen extra conversiewerk','Direct een overtuigend beeld voor klanten, zonder handmatig renderen','Minder revisies doordat verwachtingen vanaf het begin helder zijn'],
-    useCases:['Gijs is ideaal voor interieurbouwers, ontwerpers en studio\'s die snel willen schakelen. Tijdens een klantgesprek een realistische visual tonen? Met Gijs kan dat. Je vertaalt schetsen, exports of grove views direct naar een professionele render, waardoor besluitvorming sneller en makkelijker wordt.'],
+    useCases:['Tijdens een klantgesprek een realistische visual tonen? Met Gijs kan dat. Je vertaalt schetsen, exports of grove views direct naar een professionele render, waardoor besluitvorming sneller en makkelijker wordt.'],
     screenshots:['/docs/assistenten/screenshots/gijs-screenshot-1.png','/docs/assistenten/screenshots/gijs-screenshot-2.jpeg','/docs/assistenten/screenshots/gijs-screenshot-3.jpeg','/docs/assistenten/screenshots/gijs-screenshot-4.jpeg'],
     demoUrl:null,ctaLabel:'Vraag aan'
   },
   {
     name:'Jim',title:'Ontdek-je-Superkrachten',bio:'Haalt talenten bij neurodivergentie naar boven en maakt ze toepasbaar.',slug:'jim',tags:['coaching','spraak','tekst'],
-    description:'Jim is een AI-coach die jongeren met neurodiverse kenmerken – zoals ADHD, dyslexie of autisme – helpt hun talenten te ontdekken en zichtbaar te maken. Niet door te testen of te beoordelen, maar door positieve, reflectieve gesprekken te voeren. Jim ziet neurodiversiteit niet als beperking, maar als kracht. Jongeren ontdekken wat hen energie geeft, waar hun talent ligt en hoe ze dat met trots kunnen delen.',
+    description:'Jim is een AI-coach die jongeren met neurodiverse kenmerken – zoals ADHD, dyslexie of autisme – helpt hun talenten te ontdekken en zichtbaar te maken via positieve, reflectieve gesprekken. Jongeren ontdekken wat hen energie geeft, waar hun talent ligt en hoe ze dat met trots kunnen delen.',
     features:['Talentgesprekken met jongeren op basis van Positieve Psychologie en Storytelling','Herkenning van karaktereigenschappen via het VIA Character Strengths-model','Vertaling naar een Superpower-profiel in de eigen woorden van de jongere','Gebruik van spraak of tekst voor natuurlijke, laagdrempelige gesprekken'],
     howItWorks:'Je praat met Jim zoals jij dat prettig vindt – pratend of typend, onderweg of thuis op de bank. Veel jongeren voeren hun gesprek gewoon terwijl ze door het park lopen. Jim luistert, stelt vragen en helpt je woorden vinden voor wat jou energie geeft en waar je goed in bent.\n\nTijdens het gesprek gebruikt hij bewezen methodieken zoals het PERMA-model en VIA Character Strengths om te spiegelen wat goed gaat. Alles gebeurt in gewone taal, zonder testtaal of oordeel.\n\nLangzaam ontstaat er een persoonlijk "Superpower-profiel": een kort verhaal over wie jij bent, wat jou energie geeft en hoe jouw unieke manier van denken een kracht is. Dat profiel kun je gebruiken voor school, werk of persoonlijke groei.\n\nJim is geen therapeut en stelt geen diagnoses. Alle gesprekken vinden plaats met menselijke begeleiding in de buurt.',
     benefits:['Vergroot zelfinzicht en zelfvertrouwen bij jongeren','Maakt neurodiversiteit zichtbaar als kracht','Ondersteunt begeleiders met een gestructureerde, positieve gespreksmethode'],
@@ -2005,22 +2008,22 @@ const assistantShowcase=[
   },
   {
     name:'Corné',title:'Onderhoudsassistent',bio:'Kent alle manuals en geeft direct advies op jouw vraag of foto.',slug:'corne',tags:['support','rag-docs','afbeelding'],
-    description:'Corné is jouw onderhoudsassistent. Gemaakt voor een trappenfabriek, maar inzetbaar voor elk bedrijf met een scala aan producten of diensten, met onderhoudsinstructies of producthandleidingen. Corné geeft jouw klanten persoonlijk advies op een individuele casus. Klanten kunnen direct vragen stellen, foto\'s uploaden en persoonlijk advies krijgen op basis van de officiële documentatie van de fabrikant. Geen zoekwerk, geen wachttijden – gewoon helder advies dat klopt.',
+    description:'Corné is jouw onderhoudsassistent. Ontstaan bij een trappenfabriek en inzetbaar bij producten of diensten met onderhoudsinstructies of producthandleidingen. Corné geeft klanten persoonlijk advies op een individuele casus. Klanten kunnen direct vragen stellen, foto\'s uploaden en persoonlijk advies krijgen op basis van de officiële documentatie van de fabrikant. Geen zoekwerk, geen wachttijden – gewoon helder advies dat klopt.',
     features:['Geeft onderhoudsadvies op basis van officiële fabrieksdocumentatie','Geeft productadvies op basis van specifieke wensen van klant en officiële fabrieksdocumentatie','Herkent problemen via foto\'s en biedt direct passende oplossingen','Beantwoordt klantvragen over onderhoud of productkeuze','Verwijst door naar de juiste contactpersoon als nodig'],
     howItWorks:'Corné gebruikt de echte onderhoudsmanuals en productinformatie van de fabriek. Een klant kan typen of praten: "Ik heb deze trap, dit onderdeel, en dit probleem." De assistent analyseert de input, checkt de juiste handleiding en geeft exact het juiste advies. Is er iets wat niet digitaal opgelost kan worden? Dan zorgt Corné voor een nette doorverwijzing naar de juiste medewerker.',
     benefits:['Minder telefoontjes en e-mails over standaardvragen','Klanten krijgen 24/7 betrouwbaar advies','Documentatie wordt eindelijk écht gebruikt in plaats van kwijtgeraakt'],
-    useCases:['Ontwikkeld voor een trappenfabriek die klanten snel en correct wil helpen bij onderhoudsvragen. In plaats van losse PDF\'s of handleidingen, praat de klant nu met een digitale onderhoudsexpert. Het resultaat: minder supportwerk, tevredener klanten en een professionelere service.','Ook is Corné ook in ontwikkeling als product-adviseur. Geen chatbot die nooit het antwoord geeft dat de klant zoekt. Corné snapt echt waar de klant naar op zoek is en adviseert op basis van officiële documentatie.'],
+    useCases:['Bij een trappenfabriek verving Corné losse PDF\'s en handleidingen door een digitale onderhoudsexpert. Het resultaat: minder supportwerk, tevredener klanten en een professionelere service.','Ook is Corné ook in ontwikkeling als product-adviseur. Geen chatbot die nooit het antwoord geeft dat de klant zoekt. Corné snapt echt waar de klant naar op zoek is en adviseert op basis van officiële documentatie.'],
     readMoreLink:'https://www.morgenacademy.nl/post/hoe-een-productiebedrijf-met-ai-60-minder-supportvragen-kreeg',
     screenshots:['/docs/assistenten/screenshots/corne-screenshot.png'],
     demoUrl:'https://vermeulen.assistentenvanmorgen.nl',ctaLabel:'Probeer Corné uit'
   },
   {
     name:'Pepijn',title:'Start-Up Business Developer',bio:'Begeleidt van idee tot lancering met tools per fase.',slug:'raketje',tags:['startup','workflow','advies'],
-    description:'Pepijn is jouw AI-launchpad: een slim ecosysteem van negen samenhangende GPT-tools die je van eerste idee tot echte marktvalidatie begeleiden. Geen losse appjes of eindeloze handleidingen, maar een doorlopende, conversatie-gestuurde workflow die voelt als een mentor, 24/7 beschikbaar. Zo lanceer je sneller, slimmer en met meer vertrouwen je onderneming. Pepijn is kritisch, stelt vragen en daagt je uit, maar geeft je ook de nodige suggesties, methodieken en instrumenten om te versnellen.',
+    description:'Pepijn is jouw AI-launchpad: een slim ecosysteem van negen samenhangende GPT-tools die je van eerste idee tot echte marktvalidatie begeleiden. Een doorlopende, conversatie-gestuurde workflow die voelt als een mentor, 24/7 beschikbaar. Zo lanceer je sneller, slimmer en met meer vertrouwen je onderneming. Pepijn is kritisch, stelt vragen en daagt je uit, maar geeft je ook de nodige suggesties, methodieken en instrumenten om te versnellen.',
     features:['Volledig ecosysteem – Negen AI-assistenten, elk met hun eigen rol in jouw startuptraject','Conversatie-gestuurd – Vloeiend doorverwijzen tussen GPTs, zodat je nooit vastloopt','Beproefde methodieken – Maakt volledig gebruik van Lean Startup, Design Thinking, Pretotyping en The MOM Test'],
-    howItWorks:'Pepijn doorloopt acht fases die je stap voor stap langs alle essentiële stappen van je startup leiden:\n\nFase 1: Idee Generator & Propositie Validator. Ontdek kansen vanuit trends of persoonlijke frustraties en scherp je waardevoorstel aan.\n\nFase 2: Interview Assistent. Bereid MOM-geïnspireerde interviews voor en achterhaal de échte behoeften van je doelgroep.\n\nFase 3: Waardepropositie Bouwer & MVP Ontwerper. Bouw een eerste demo of MVP en stel testcards op om in de praktijk te experimenteren.\n\nFase 4: Voer je experimenten uit, verzamel feedback van je doelgroep en pas je MVP direct aan.\n\nFase 5: Werk toe naar product–market fit door een oplossing te ontwikkelen waar je eerste klanten fan van zijn.\n\nFase 6: Iteratie-GPT. Analyseer je testresultaten, bepaal vervolgacties en bouw versie 2.0 van je MVP.\n\nFase 7: BMC Generator. Vul stap voor stap je Business Model Canvas in en krijg overzicht in je organisatie.\n\nFase 8: Impact Scan. Reflecteer op de maatschappelijke en ecologische waarde van jouw idee.',
+    howItWorks:'Pepijn doorloopt acht fases die je stap voor stap langs alle essentiële stappen van je startup leiden:\n\nFase 1: Idee Generator & Propositie Validator. Ontdek kansen vanuit trends of persoonlijke frustraties en scherp je waardevoorstel aan.\n\nFase 2: Interview Assistent. Bereid MOM-geïnspireerde interviews voor en achterhaal de échte behoeften van je markt.\n\nFase 3: Waardepropositie Bouwer & MVP Ontwerper. Bouw een eerste demo of MVP en stel testcards op om in de praktijk te experimenteren.\n\nFase 4: Voer je experimenten uit, verzamel feedback uit de markt en pas je MVP direct aan.\n\nFase 5: Werk toe naar product–market fit door een oplossing te ontwikkelen waar je eerste klanten fan van zijn.\n\nFase 6: Iteratie-GPT. Analyseer je testresultaten, bepaal vervolgacties en bouw versie 2.0 van je MVP.\n\nFase 7: BMC Generator. Vul stap voor stap je Business Model Canvas in en krijg overzicht in je organisatie.\n\nFase 8: Impact Scan. Reflecteer op de maatschappelijke en ecologische waarde van jouw idee.',
     benefits:['Activeert ondernemerschapsdenken bij studenten, starters en professionals','Stimuleert zelfstandig nadenken met scherpe vragen in plaats van kant-en-klare antwoorden','Integreert theorie en praktijk: van whiteboard tot werkvloer in één doorlopende workflow','Sneller tot de kern: eerder testen, bijsturen en impact maken met je idee'],
-    useCases:['Dit ecosysteem van assistenten is een ideaal hulpmiddel voor elke startende onderneming. Natuurlijk ook voor onderwijsinstellingen en incubators: geef studenten en starters tussen workshops door hun eigen AI-coach die ideeën valideert, test en verfijnt. Voor startups: overbrug kennis- en coachgaps en werk uniform volgens bewezen methodes. Resultaat: focus, minder faalkosten en sneller product–market fit.'],
+    useCases:['Dit ecosysteem helpt startende ondernemingen van idee naar validatie. Ook onderwijsinstellingen en incubators gebruiken het om studenten en starters tussen workshops door een eigen AI-coach te geven die ideeën valideert, test en verfijnt. Resultaat: focus, minder faalkosten en sneller product–market fit.'],
     screenshots:[],demoUrl:null,ctaLabel:'Vraag aan'
   },
   {
@@ -2029,13 +2032,13 @@ const assistantShowcase=[
     features:['Live parkeerinformatie van de gemeente \'s-Hertogenbosch','Advies voor zowel parkeergarages als straatparkeren','Loopafstand, kostenindicatie en parkeerbeperkingen in één overzicht','Opties voor P+R en fietsenstalling waar relevant'],
     howItWorks:'1. Je begint met een korte begroeting: "Hallo! Waar wil je heen in Den Bosch?"\n2. Je geeft jouw bestemming op (bijvoorbeeld een restaurant of museum).\n3. Jeroen raadpleegt de officiële gemeentelijke parkeerdata en andere betrouwbare bronnen.\n4. Hij presenteert de drie beste parkeermogelijkheden, inclusief naam, loopafstand, kosten en beperkingen.',
     benefits:['Actueel en betrouwbaar: alleen data van de gemeente of gevalideerde sites','Snel en to the point: drie concrete opties, geen overbodige informatie','Diverse keuzes: van parkeergarages tot straatparkeren en P+R','Kostenbewust: schattingen gebaseerd op de laatste tarieven'],
-    useCases:['Voor toeristen en dagjesmensen in \'s-Hertogenbosch die snel en zorgeloos willen parkeren bij hun bestemming – van lunchafspraak tot museumbezoek. Jeroen heeft al honderden bezoekers geholpen om direct de beste plek te vinden, zonder rondjes door de stad.','Natuurlijk is de opzet van Jeroen ook in vele andere use-cases toe te passen.'],
+    useCases:['Jeroen helpt bezoekers van \'s-Hertogenbosch snel en zorgeloos parkeren bij hun bestemming, van lunchafspraak tot museumbezoek. Honderden bezoekers vonden zo direct de beste plek, zonder rondjes door de stad.','Natuurlijk is de opzet van Jeroen ook in vele andere use-cases toe te passen.'],
     screenshots:[],demoUrl:'https://chatgpt.com/g/g-6824f86f3cac8191ab60b5073685aec3-denboschcity-parkeerhulp',ctaLabel:'Probeer Jeroen uit'
   },
   {
     name:'Sherlock',title:'Slimme Zoekmachine',bio:'Begrijpt context en levert écht relevante content.',slug:'moerasdraak',tags:['semantisch-zoeken','content','advies'],
     description:'Sherlock is de slimme zoekbalk die je website écht begrijpt. In plaats van te vertrouwen op vooraf ingestelde keywords, zoekt Sherlock op basis van context en associaties. Typ je "ik wil een wijn bij vis", dan serveert Sherlock direct relevante opties als Chablis of Pinot Grigio – ook als die termen niet letterlijk in je teksten staan. Zo vinden je bezoekers sneller wat ze nodig hebben, zonder eindeloos bladeren of zoeken.',
-    features:['Contextueel zoeken – Begrijpt de intentie achter je zoekopdracht, niet alleen de woorden','Slimme associaties – Legt verbanden tussen onderwerpen en toont verrassende, relevante content','Non-deterministische matching – Vindt artikelen, blogs of producten op basis van betekenis, niet op basis van exacte trefwoorden','Realtime resultaten – Presenteert direct de beste hits terwijl je typt, voor een razendsnelle gebruikerservaring'],
+    features:['Contextueel zoeken – Begrijpt de intentie achter je zoekopdracht','Slimme associaties – Legt verbanden tussen onderwerpen en toont verrassende, relevante content','Non-deterministische matching – Vindt artikelen, blogs of producten op basis van betekenis','Realtime resultaten – Presenteert direct de beste hits terwijl je typt, voor een razendsnelle gebruikerservaring'],
     howItWorks:'1. Jij typt je vraag in gewone taal.\n2. De AI analyseert de context en zoekt in alle content van je site.\n3. Sherlock rangschikt en toont relevante pagina\'s, ongeacht of je zoekwoorden voorkomen.\n4. Jij klikt door naar precies dat artikel, die blogpost of dat product dat écht bij je past.',
     benefits:['Betere vindbaarheid – Ontdek content die voorheen verborgen bleef achter keyword-limieten','Hogere conversie – Bezoekers vinden sneller wat ze zoeken, waardoor ze langer op je site blijven en vaker converteren','Minder supportverzoeken – Vragen als "Waar vind ik info over vegan opties?" beantwoordt Sherlock direct'],
     useCases:['Op de Den Bosch City-pagina van meer dan 500 artikelen zorgde Sherlock voor een doorbraak. Bezoekers die voorheen vooral de populairste trefwoorden gebruikten, vonden nu ook niche-verhalen over lokale culinaire hotspots en verborgen stadswandelingen. Resultaat: +35% paginaweergaven en een stijging van 20% in nieuwsbriefinschrijvingen.'],
