@@ -1134,6 +1134,59 @@ nav.scrolled {
 .home-photo-strip-card-training img {
   object-position: center 56%;
 }
+.academy-photo-strip {
+  padding-top: 2.5rem;
+  padding-bottom: 5.25rem;
+}
+.academy-photo-grid {
+  grid-template-columns: 1.2fr .95fr 1.08fr;
+  grid-auto-rows: 180px;
+  gap: 1.25rem;
+  align-items: start;
+}
+.academy-photo-card {
+  aspect-ratio: auto;
+  min-height: 100%;
+  position: relative;
+}
+.academy-photo-card img {
+  transition: transform .35s ease;
+}
+.academy-photo-card:hover img {
+  transform: scale(1.03);
+}
+.academy-photo-card-wide {
+  grid-column: 1 / 2;
+  grid-row: 1 / span 2;
+  transform: translateY(.8rem) rotate(-1.2deg);
+}
+.academy-photo-card-tall {
+  grid-column: 2 / 3;
+  grid-row: 1 / span 3;
+  transform: translateY(3.2rem) rotate(1.4deg);
+}
+.academy-photo-card-stage {
+  grid-column: 3 / 4;
+  grid-row: 1 / span 2;
+  transform: translateY(-.6rem) rotate(-.8deg);
+}
+.academy-photo-card-detail {
+  grid-column: 1 / 2;
+  grid-row: 3 / span 2;
+  transform: translateX(2.8rem) rotate(.9deg);
+}
+.academy-photo-card-wide img {
+  object-position: center 54%;
+}
+.academy-photo-card-tall img {
+  object-position: center 42%;
+}
+.academy-photo-card-stage img {
+  object-position: center;
+}
+.academy-photo-card-detail img {
+  object-position: center 38%;
+}
 
 @media (max-width: 1024px) {
   .why-morgen {
@@ -1141,6 +1194,18 @@ nav.scrolled {
   }
   .home-photo-strip-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .academy-photo-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 210px;
+  }
+  .academy-photo-card-wide,
+  .academy-photo-card-tall,
+  .academy-photo-card-stage,
+  .academy-photo-card-detail {
+    grid-column: auto;
+    grid-row: auto;
+    transform: none;
   }
 }
 
@@ -1955,11 +2020,14 @@ footer {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(320px, .8fr);
   gap: 2rem;
-  align-items: stretch;
+  align-items: center;
   padding: 0 4rem;
+  min-height: 680px;
 }
 .academy-route-layout .trainingwijzer-wrapper {
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 .academy-route-photo {
   margin: 0;
@@ -2345,7 +2413,7 @@ footer {
   .action-row:focus-visible .action-image {
     transform: none;
   }
-  .academy-route-layout { grid-template-columns: 1fr; padding: 0 2rem; }
+  .academy-route-layout { grid-template-columns: 1fr; padding: 0 2rem; min-height: auto; }
   .academy-online-body { grid-template-columns: 1fr; }
   .company-hero { min-height: 82vh; }
   .company-hero-media video { object-position: 72% center; opacity: .64; }
@@ -2410,6 +2478,14 @@ footer {
   .wgrid, .trgrid { grid-template-columns: 1fr; }
   .home-photo-strip { padding: 1.25rem 2rem 2.75rem; }
   .home-photo-strip-grid { grid-template-columns: 1fr; }
+  .academy-photo-grid {
+    grid-auto-rows: auto;
+    gap: 1rem;
+  }
+  .academy-photo-card {
+    aspect-ratio: 4 / 3;
+    transform: none !important;
+  }
   .home-metrics-grid { grid-template-columns: 1fr; }
   .home-metric-label { max-width: none; }
   .home-metric-cta {
