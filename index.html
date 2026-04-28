@@ -41,7 +41,7 @@
     <li><a onclick="nav('consultancy')" data-page="consultancy">IMPLEMENT</a></li>
     <li><a onclick="nav('technology')" data-page="technology">BUILD</a></li>
     <li><a onclick="nav('company')" data-page="company">GET INSPIRED</a></li>
-    <li><a onclick="nav('home','home-aanvraag')" class="btn-nav">Gratis kennismaking</a></li>
+    <li><a onclick="nav('home','home-aanvraag')" class="btn-nav">Kennismaking</a></li>
   </ul>
 </nav>
 <div class="page active" id="page-home">
@@ -100,14 +100,22 @@
   <div class="action-list reveal">
     <article class="action-row" onclick="nav('academy')" tabindex="0" role="link" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('academy');}">
       <div class="action-copy">
+        <div class="action-question">
+          <span>Mensen</span>
+          <strong>"Ons team moet AI begrijpen en veilig leren gebruiken."</strong>
+        </div>
         <h3>TRAIN</h3>
-        <p>AI-vaardigheid, workshops, leerpaden en incompany training.</p>
+        <p>Training, taal en praktische toepassing in het eigen werk.</p>
       </div>
       <div class="action-meta"><span>Workshop</span><span>Leerpad</span><span>Online</span></div>
       <img class="action-image" src="/docs/company/academy-hero-01.jpg" alt="" loading="lazy">
     </article>
     <article class="action-row" onclick="nav('consultancy')" tabindex="0" role="link" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('consultancy');}">
       <div class="action-copy">
+        <div class="action-question">
+          <span>Richting</span>
+          <strong>"We weten dat we iets moeten met AI, maar niet wat eerst."</strong>
+        </div>
         <h3>IMPLEMENT</h3>
         <p>Strategie vertalen naar prioriteit, eigenaarschap en ritme.</p>
       </div>
@@ -116,16 +124,24 @@
     </article>
     <article class="action-row" onclick="nav('technology')" tabindex="0" role="link" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('technology');}">
       <div class="action-copy">
+        <div class="action-question">
+          <span>Proces</span>
+          <strong>"Er zit te veel handwerk in processen die slimmer kunnen."</strong>
+        </div>
         <h3>BUILD</h3>
-        <p>Workflows, automatisering en digitale oplossingen op maat.</p>
+        <p>Procesinzicht, keuzes en automatisering die het werk ontlast.</p>
       </div>
       <div class="action-meta"><span>AI-workflows</span><span>Maatwerk</span><span>Automatisering</span></div>
       <img class="action-image" src="/docs/company/harmen-stage-01.jpg" alt="" loading="lazy">
     </article>
     <article class="action-row" onclick="nav('company')" tabindex="0" role="link" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('company');}">
       <div class="action-copy">
+        <div class="action-question">
+          <span>Beweging</span>
+          <strong>"We willen het gesprek over technologie goed openen."</strong>
+        </div>
         <h3>GET INSPIRED</h3>
-        <p>Keynotes, boek en podcast die het gesprek op scherp zetten.</p>
+        <p>Keynotes, boek en podcast die taal geven aan wat er verandert.</p>
       </div>
       <div class="action-meta"><span>Keynote</span><span>Boek</span><span>Podcast</span></div>
       <img class="action-image" src="/docs/company/karin-speaking-01.jpg" alt="" loading="lazy">
@@ -161,53 +177,6 @@
   </div>
 </section>
 
-<section class="sd" id="situaties">
-  <div class="reveal" style="max-width:56rem">
-    <h2 class="stitle">Waar zit<br><span style="color:var(--pink)">de vraag?</span></h2>
-  </div>
-  <div class="sgrid reveal">
-    <div class="spath">
-      <div class="sscen ss-p">
-        <div class="stag stag-p">Mensen</div>
-        <div class="sq">"Ons team moet AI begrijpen en veilig leren gebruiken."</div>
-        <p class="ssub">Dan begint het met training, taal en praktische toepassing in het eigen werk.</p>
-      </div>
-      <div class="sarrow"><svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 0v18M1 12l6 8 6-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="sres sr-p" role="link" tabindex="0" onclick="nav('academy','ac-trainingen')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('academy','ac-trainingen');}"><div class="srl srl-p">TRAIN</div><div class="srn">AI-training</div><div class="srs">Praktisch, direct toepasbaar, EU AI Act-conform</div><button class="slink slink-p" onclick="event.stopPropagation();nav('academy','ac-trainingen')">Bekijk trainingen</button></div>
-    </div>
-    <div class="spath">
-      <div class="sscen ss-b">
-        <div class="stag stag-b">Proces</div>
-        <div class="sq">"Er zit te veel handwerk in processen die slimmer kunnen."</div>
-        <p class="ssub">Dan begint het met procesinzicht, keuzes en automatisering die het werk ontlast.</p>
-      </div>
-      <div class="sarrow"><svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 0v18M1 12l6 8 6-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="sres sr-b" role="link" tabindex="0" onclick="nav('technology')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('technology');}"><div class="srl srl-b">BUILD</div><div class="srn">Digitale oplossingen op maat</div><div class="srs">Automatisering gebouwd op de eigen processen</div><button class="slink slink-b" onclick="event.stopPropagation();nav('technology')">Bekijk wat we bouwen</button></div>
-    </div>
-    <div class="spath">
-      <div class="sscen ss-k">
-        <div class="stag stag-k">Richting</div>
-        <div class="sq">"We weten dat we iets moeten met AI, maar niet wat eerst."</div>
-        <p class="ssub">Dan helpt een partner die strategie en uitvoering tegelijk kan lezen.</p>
-      </div>
-      <div class="sarrow"><svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 0v18M1 12l6 8 6-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="sres sr-k" role="link" tabindex="0" onclick="nav('consultancy')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('consultancy');}"><div class="srl srl-k">IMPLEMENT</div><div class="srn">Van strategie naar operatie</div><div class="srs">Richting, prioriteit, draagvlak en borging</div><button class="slink slink-k" onclick="event.stopPropagation();nav('consultancy')">Bekijk aanpak</button></div>
-    </div>
-    <div class="spath">
-      <div class="sscen ss-g">
-        <div class="stag stag-g">Beweging</div>
-        <div class="sq">"We willen het gesprek over technologie goed openen."</div>
-        <p class="ssub">Dan helpt een keynote, boek of podcast die taal geeft aan wat er verandert.</p>
-      </div>
-      <div class="sarrow"><svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 0v18M1 12l6 8 6-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      <div class="sres sr-g" role="link" tabindex="0" onclick="nav('company','cp-keynote')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();nav('company','cp-keynote');}"><div class="srl srl-g">GET INSPIRED</div><div class="srn">Keynote, boek of podcast</div><div class="srs">Richting voor het eerste gesprek</div><button class="slink slink-g" onclick="event.stopPropagation();nav('company','cp-keynote')">Bekijk keynotes</button></div>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:3rem" class="reveal">
-    <p style="font-family:var(--fb);color:var(--grey);margin-bottom:1rem;font-size:.88rem">Meerdere situaties herkenbaar? Plan een gratis gesprek in en we kijken samen wat de beste eerste stap is.</p>
-    <button class="btn-o" onclick="scrollToId('home-aanvraag')">Plan een kennismakingsgesprek</button>
-  </div>
-</section>
 <section class="trust-section">
   <div class="trgst reveal why-morgen">
     <div class="why-morgen-copy">
@@ -269,11 +238,11 @@
 <section class="cta-s" id="contact">
   <div class="corb1"></div><div class="corb2"></div>
   <div class="cta-in reveal">
-    <div class="cta-ey">Gratis kennismakingsgesprek &#183; 45 minuten &#183; zonder verplichtingen</div>
+    <div class="cta-ey">Kennismakingsgesprek &#183; 45 minuten</div>
     <h2 class="cta-h">Wat betekent AI<br><span class="ol">voor jouw</span><br>MKB-bedrijf?</h2>
-    <p class="cta-sub">Plan een gratis gesprek in. We kijken waar de technologische ontwikkeling jullie bedrijf nu raakt en welke eerste stap logisch is.</p>
+    <p class="cta-sub">Plan een gesprek in. We kijken waar de technologische ontwikkeling jullie bedrijf nu raakt en welke eerste stap logisch is.</p>
     <div class="cta-btns">
-      <button class="btn-w" onclick="scrollToId('home-aanvraag')">Plan gratis kennismakingsgesprek</button>
+      <button class="btn-w" onclick="scrollToId('home-aanvraag')">Plan kennismakingsgesprek</button>
     </div>
   </div>
 </section>
@@ -788,11 +757,11 @@
   </div>
 </section>
 <section class="cta-s" id="te-contact"><div class="corb1"></div><div class="corb2"></div><div class="cta-in reveal">
-  <div class="cta-ey">Gratis procesanalyse &#183; 45 minuten &#183; geen verplichtingen</div>
+  <div class="cta-ey">Procesanalyse &#183; 45 minuten</div>
   <h2 class="cta-h">Wat kan<br><span class="ol">worden</span><br>geautomatiseerd?</h2>
-  <p class="cta-sub">Plan een gratis gesprek in. We analyseren samen welke processen het meeste opleveren als ze geautomatiseerd worden.</p>
+  <p class="cta-sub">Plan een gesprek in. We analyseren samen welke processen het meeste opleveren als ze geautomatiseerd worden.</p>
   <div class="cta-btns">
-    <button class="btn-w" onclick="scrollToId('te-aanvraag')">Plan gratis procesanalyse</button>
+    <button class="btn-w" onclick="scrollToId('te-aanvraag')">Plan procesanalyse</button>
     <button class="btn-o" onclick="nav('assistenten')">Bekijk projecten</button>
   </div>
 </div></section>
@@ -851,7 +820,7 @@
     <p class="hbody">Morgen Consultancy begeleidt digitalisering van strategie tot uitvoering, met aandacht voor techniek, mensen en eigenaarschap.</p>
     <div class="hctas">
       <button class="btn-p" onclick="scrollToId('co-aanpak')">Bekijk onze aanpak</button>
-      <button class="btn-g" onclick="scrollToId('co-aanvraag')">Gratis digitale scan &#x2193;</button>
+      <button class="btn-g" onclick="scrollToId('co-aanvraag')">Digitale scan &#x2193;</button>
     </div>
     <div class="hstats">
       <div><div class="hsn hsn-word">Samen</div><div class="hsl">We werken in de organisatie, niet vanaf de zijlijn</div></div>
@@ -860,7 +829,7 @@
     </div>
   </div>
 </header>
-<div class="ticker"><div class="ticker-t"><span>Digitale strategie voor MKB</span><span class="ts">&#10022;</span><span>Veranderkunde</span><span class="ts">&#10022;</span><span>Van plan tot uitvoering</span><span class="ts">&#10022;</span><span>Gratis digitale scan</span><span class="ts">&#10022;</span><span>10 tot 250 medewerkers</span><span class="ts">&#10022;</span><span>Digitale strategie voor MKB</span><span class="ts">&#10022;</span><span>Veranderkunde</span><span class="ts">&#10022;</span><span>Van plan tot uitvoering</span><span class="ts">&#10022;</span><span>Gratis digitale scan</span><span class="ts">&#10022;</span><span>10 tot 250 medewerkers</span><span class="ts">&#10022;</span></div></div>
+<div class="ticker"><div class="ticker-t"><span>Digitale strategie voor MKB</span><span class="ts">&#10022;</span><span>Veranderkunde</span><span class="ts">&#10022;</span><span>Van plan tot uitvoering</span><span class="ts">&#10022;</span><span>Digitale scan</span><span class="ts">&#10022;</span><span>10 tot 250 medewerkers</span><span class="ts">&#10022;</span><span>Digitale strategie voor MKB</span><span class="ts">&#10022;</span><span>Veranderkunde</span><span class="ts">&#10022;</span><span>Van plan tot uitvoering</span><span class="ts">&#10022;</span><span>Digitale scan</span><span class="ts">&#10022;</span><span>10 tot 250 medewerkers</span><span class="ts">&#10022;</span></div></div>
 <section class="sd">
   <div class="pgrid reveal">
     <div>
@@ -895,7 +864,7 @@
 <section class="sm" id="co-aanpak">
   <div class="reveal"><div class="slabel">Werkwijze</div><h2 class="stitle">Van scan<br>tot borging.<br><span style="color:var(--pink)">Stap voor stap.</span></h2></div>
   <div class="wgrid reveal">
-    <div class="wstep"><div class="wnum">01</div><div class="wtitle">Gratis digitale scan</div><p class="wbody">We starten met een gratis gesprek van 45 minuten. Luisteren, de situatie in kaart brengen en direct de grootste kansen benoemen. Geen verplichtingen.</p></div>
+    <div class="wstep"><div class="wnum">01</div><div class="wtitle">Digitale scan</div><p class="wbody">We starten met een gesprek van 45 minuten. Luisteren, de situatie in kaart brengen en direct de grootste kansen benoemen.</p></div>
     <div class="wstep"><div class="wnum">02</div><div class="wtitle">Strategie en plan</div><p class="wbody">Een helder actieplan in gewone taal: wat doen we, in welke volgorde, wat kost het en wat levert het op. Geen rapport dat in een la verdwijnt.</p></div>
     <div class="wstep"><div class="wnum">03</div><div class="wtitle">Uitvoering naast het team</div><p class="wbody">We werken in de organisatie, niet ernaast. Met kennis van veranderkunde. Digitalisering is ook mensen meenemen, dat is de kern van elk traject bij Morgen.</p></div>
     <div class="wstep"><div class="wnum">04</div><div class="wtitle">Borging en doorgroei</div><p class="wbody">Het doel: kennis en werkwijze beklijven in de organisatie. Morgen is beschikbaar als de volgende stap gezet wordt, maar de organisatie staat op eigen benen.</p></div>
@@ -947,7 +916,7 @@
     <div>
       <div class="tlogos-label">Werkt samen met</div>
       <div class="tnums">
-        <div><div class="tn">45<em>m</em></div><div class="tnl">Gratis digitale scan</div></div>
+        <div><div class="tn">45<em>m</em></div><div class="tnl">Digitale scan</div></div>
         <div><div class="tn">10&#8211;250</div><div class="tnl">Typische organisatiegrootte</div></div>
         <div><div class="tn">4</div><div class="tnl">Stappen van scan tot borging</div></div>
       </div>
@@ -955,11 +924,11 @@
   </div>
 </section>
 <section class="cta-s" id="co-contact"><div class="corb1"></div><div class="corb2"></div><div class="cta-in reveal">
-  <div class="cta-ey">Gratis digitale scan &#183; 45 minuten &#183; geen verplichtingen</div>
+  <div class="cta-ey">Digitale scan &#183; 45 minuten</div>
   <h2 class="cta-h">Waar begint<br><span class="ol">de digitale</span><br>agenda?</h2>
-  <p class="cta-sub">Plan een gratis scan in. We brengen samen de situatie in kaart en benoemen direct de eerste concrete stap. Eerlijk en zonder verkoopverhaal.</p>
+  <p class="cta-sub">Plan een scan in. We brengen samen de situatie in kaart en benoemen direct de eerste concrete stap.</p>
   <div class="cta-btns">
-    <button class="btn-w" onclick="scrollToId('co-aanvraag')">Plan gratis digitale scan</button>
+    <button class="btn-w" onclick="scrollToId('co-aanvraag')">Plan digitale scan</button>
     <button class="btn-o" onclick="nav('assistenten')">Bekijk projecten</button>
   </div>
 </div></section>
@@ -1594,7 +1563,7 @@
 const cur=document.getElementById('cur');
 document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
 document.addEventListener('mouseover',e=>{
-  if(e.target.closest('a,button,.action-row,.sc,.tcard,.wstep,.spath,.speaker-card,.da-card,.agent-show-card,.project-card,.home-company-band-card,.logo-band'))cur.classList.add('big');
+  if(e.target.closest('a,button,.action-row,.sc,.tcard,.wstep,.speaker-card,.da-card,.agent-show-card,.project-card,.home-company-band-card,.logo-band'))cur.classList.add('big');
   else cur.classList.remove('big');
 });
 

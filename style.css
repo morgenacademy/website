@@ -660,6 +660,26 @@ nav.scrolled {
 .action-copy {
   max-width: 46rem;
 }
+.action-question {
+  max-width: 38rem;
+  margin-bottom: 1rem;
+}
+.action-question span {
+  display: block;
+  margin-bottom: .35rem;
+  color: var(--orange);
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.action-question strong {
+  display: block;
+  color: rgba(240,236,245,.9);
+  font-size: clamp(1rem, 1.4vw, 1.28rem);
+  line-height: 1.25;
+  font-weight: 700;
+}
 .action-copy h3 {
   font-weight: 900;
   font-size: clamp(3rem, 5.8vw, 6.8rem);
@@ -979,67 +999,6 @@ nav.scrolled {
   font-weight: 700;
   color: var(--orange);
 }
-
-/* ── 16. Situatiekaarten ── */
-.sgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 2.75rem; }
-.spath { display: flex; flex-direction: column; }
-.sscen,
-.sres {
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-}
-.sscen {
-  padding: 1.6rem;
-  border-radius: var(--radius) var(--radius) 0 0;
-  flex: 1;
-}
-.ss-b, .ss-p, .ss-k, .ss-g {
-  background: linear-gradient(180deg, rgba(52,33,84,.28), rgba(18,12,34,.38));
-  border: 1px solid rgba(182,154,224,.16);
-  border-bottom: none;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
-}
-.stag { font-size: .62rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; margin-bottom: .6rem; }
-.stag-b, .stag-p, .stag-k, .stag-g { color: rgba(195,175,228,.88); }
-.sq { font-size: .9rem; font-weight: 700; color: var(--white); line-height: 1.45; margin-bottom: .4rem; }
-.ssub { font-size: .8rem; color: var(--text-secondary); line-height: 1.55; }
-.sarrow {
-  height: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: .28;
-}
-.sarrow svg path { stroke: rgba(255,255,255,.62); stroke-width: 1.2; }
-.sres {
-  padding: 1.2rem 1.35rem 1.3rem;
-  text-align: left;
-  border-radius: 0 0 var(--radius) var(--radius);
-  transition: var(--transition);
-  cursor: pointer;
-}
-.sr-b, .sr-p, .sr-k, .sr-g {
-  background: linear-gradient(180deg, rgba(66,42,105,.34), rgba(26,18,42,.48));
-  border: 1px solid rgba(182,154,224,.18);
-  border-top: none;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
-}
-.sres:hover {
-  border-color: rgba(195,175,228,.34);
-  box-shadow: 0 14px 28px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.12);
-  transform: translateY(-2px);
-}
-.sres:focus-visible {
-  outline: 2px solid rgba(216,254,86,.9);
-  outline-offset: 3px;
-}
-.srl { font-size: .58rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .45rem; }
-.srl-b, .srl-p, .srl-k, .srl-g { color: rgba(195,175,228,.84); }
-.srn { font-weight: 800; font-size: 1rem; letter-spacing: .01em; color: var(--white); line-height: 1.25; margin-bottom: .45rem; }
-.srs { font-size: .78rem; color: var(--text-secondary); margin-bottom: .75rem; line-height: 1.55; }
-.slink { font-size: .77rem; font-weight: 700; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: .3rem; transition: gap .2s; border: none; background: none; }
-.slink:hover { gap: .6rem; color: var(--white); }
-.slink-b, .slink-p, .slink-k, .slink-g { color: rgba(195,175,228,.92); }
 
 .why-morgen {
   display: grid;
@@ -2191,7 +2150,6 @@ footer {
 /* ── 30. Responsive ── */
 @media (max-width: 1280px) {
   .action-image { right: 2rem; width: clamp(230px, 28vw, 340px); }
-  .sgrid { grid-template-columns: repeat(2, 1fr); }
   .speaker-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 1024px) {
@@ -2277,7 +2235,7 @@ footer {
   body.nav-open .nav-links { display: flex; }
   .nav-links li { width: 100%; }
   .nav-links a { display: inline-flex; width: 100%; }
-  .sgrid, .speaker-grid, .agent-show-grid, .project-list, .org-managers, .org-departments, .org-stats, .assistant-detail-grid { grid-template-columns: 1fr; }
+  .speaker-grid, .agent-show-grid, .project-list, .org-managers, .org-departments, .org-stats, .assistant-detail-grid { grid-template-columns: 1fr; }
   .action-showcase { background-size: 5.5rem 100%, auto, auto; }
   .action-copy h3 { font-size: clamp(2.6rem, 14vw, 4.8rem); }
   .action-copy p { font-size: .98rem; }
