@@ -1649,6 +1649,24 @@ footer {
   min-height: 72vh;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 9rem;
+}
+.project-logo-band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3.5rem;
+  background: rgba(255,255,255,.045);
+}
+.project-logo-band .logo-track {
+  gap: 4.5rem;
+  animation-duration: 34s;
+}
+.project-logo-band .clogo {
+  height: 44px;
+  opacity: .58;
 }
 .project-overview {
   padding: 6rem 4rem;
@@ -2380,7 +2398,8 @@ footer {
   .action-copy h3 { font-size: clamp(2.6rem, 14vw, 4.8rem); }
   .action-copy p { font-size: .98rem; }
   .action-meta span { font-size: .66rem; }
-  .project-hero { min-height: auto; }
+  .project-hero { display: block; min-height: auto; padding-bottom: 4rem; }
+  .project-logo-band { position: relative; bottom: auto; margin-top: 2.5rem; }
   .project-image { height: 220px; }
   .project-copy { padding: 1.45rem; }
   .project-copy h3 { max-width: none; }
