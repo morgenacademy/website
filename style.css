@@ -400,15 +400,6 @@ nav.scrolled {
 .hsn-word { font-size: 1.7rem; line-height: 1.05; letter-spacing: .01em; }
 .hsl { font-size: .73rem; color: var(--text-muted); margin-top: .3rem; max-width: 16ch; line-height: 1.4; }
 
-/* ── 8. Ticker ── */
-.ticker {
-  background: linear-gradient(90deg, var(--purple), rgba(155, 111, 207, .8));
-  padding: .8rem 0; overflow: hidden; white-space: nowrap;
-  position: relative; z-index: 1;
-}
-.ticker-t { display: inline-flex; gap: 2.5rem; animation: tick 35s linear infinite; }
-.ticker-t span { font-size: .74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--white); }
-.ts { opacity: .5; }
 /* ── 9. Logo band ── */
 .logo-band {
   background: rgba(255, 255, 255, 0.03);
@@ -2140,7 +2131,6 @@ footer {
 /* ── 29. Keyframes ── */
 @keyframes up   { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fi   { from { opacity: 0; } to { opacity: 1; } }
-@keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes fl1  { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-28px) scale(1.04); } }
 @keyframes fl2  { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(22px); } }
 @keyframes fl3  { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-18px); } }
