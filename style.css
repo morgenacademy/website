@@ -130,11 +130,12 @@ nav.scrolled {
 }
 .logo-btn em { color: var(--orange); font-style: normal; }
 
-.nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+.nav-links { display: flex; align-items: center; gap: 1.35rem; list-style: none; }
 .nav-links a {
   font-family: 'Barlow', sans-serif;
-  font-size: .88rem; font-weight: 500;
-  letter-spacing: .04em;
+  font-size: .82rem; font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
   color: var(--text-secondary);
   text-decoration: none; transition: color .2s;
   cursor: pointer; border: none; background: none; padding: 0;
@@ -145,6 +146,9 @@ nav.scrolled {
 .btn-nav {
   background: linear-gradient(135deg, var(--orange), #b8e040) !important;
   color: #1A1A2E !important;
+  font-size: .88rem !important;
+  letter-spacing: .02em !important;
+  text-transform: none !important;
   padding: .55rem 1.3rem !important;
   border-radius: var(--radius) !important;
   font-weight: 700 !important;
@@ -843,6 +847,7 @@ nav.scrolled {
 .wstep:hover .wnum { color: rgba(216, 254, 86, 0.25); }
 .wtitle { font-size: .95rem; font-weight: 700; color: var(--white); margin-bottom: .6rem; }
 .wbody { font-size: .85rem; color: var(--text-secondary); line-height: 1.7; }
+.wstep .llink { margin-top: 1rem; }
 
 /* ── 15. Trainingskaarten (.tcard) ── */
 .tr-filter {
