@@ -1051,21 +1051,43 @@ nav.scrolled {
 
 /* ── 16b. Trainingswijzer banner ── */
 .tw-banner {
-  padding: 4rem 4rem;
+  padding: 0 4rem 4.5rem;
   position: relative;
   z-index: 1;
 }
 .tw-banner-inner {
-  max-width: 640px;
+  display: grid;
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+  max-width: 980px;
   margin: 0 auto;
-  text-align: center;
   background: linear-gradient(180deg, rgba(102,61,153,.36), rgba(26,18,42,.52));
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-radius: 1.5rem;
-  padding: 3.5rem 3rem;
+  padding: 1rem;
   border: 1px solid rgba(182,154,224,.2);
   box-shadow: 0 22px 52px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.1);
+  overflow: hidden;
+}
+.tw-banner-photo {
+  min-height: 300px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(255,255,255,.06);
+}
+.tw-banner-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.tw-banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.2rem 2rem 2.2rem 0;
 }
 .tw-banner-title {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
@@ -1080,7 +1102,7 @@ nav.scrolled {
   line-height: 1.7;
   color: rgba(255, 255, 255, .75);
   max-width: 44ch;
-  margin: 0 auto;
+  margin: 0;
 }
 .tw-banner-time {
   display: inline-block;
@@ -1544,11 +1566,13 @@ footer {
 .project-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.3rem;
+  gap: 1.1rem;
+  max-width: 1240px;
+  margin: 0 auto;
 }
 .project-card {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 240px 1fr;
   overflow: hidden;
   border-radius: var(--radius-lg);
   background: var(--card-bg-strong);
@@ -1562,23 +1586,23 @@ footer {
   background: var(--card-bg-hover);
   box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255,255,255,.16);
 }
-.project-card-large {
-  grid-column: 1 / -1;
-  grid-template-columns: minmax(340px, .95fr) minmax(0, 1.05fr);
-  grid-template-rows: auto;
-}
 .project-image {
-  min-height: 310px;
+  min-height: 0;
+  height: 240px;
   background: rgba(255,255,255,.04);
-}
-.project-card:not(.project-card-large) .project-image {
-  min-height: 260px;
 }
 .project-image img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
+}
+.project-image-soft-focus {
+  overflow: hidden;
+}
+.project-image-soft-focus img {
+  filter: blur(5px) saturate(.96);
+  transform: scale(1.06);
 }
 .project-image-slider {
   position: relative;
@@ -1599,9 +1623,9 @@ footer {
   display: block;
 }
 .project-image-slider.project-image-contain .project-slide {
-  inset: 1.15rem;
+  inset: .85rem;
   overflow: hidden;
-  border-radius: calc(var(--radius-lg) - .85rem);
+  border-radius: calc(var(--radius-lg) - 1rem);
   background: rgba(12,8,24,.62);
 }
 .project-slider-dots {
@@ -1628,18 +1652,18 @@ footer {
   transform: scale(1.05);
 }
 .project-image-contain {
-  padding: 1.15rem;
+  padding: .85rem;
   background:
     radial-gradient(circle at 70% 30%, rgba(216,254,86,.12), transparent 34%),
     rgba(255,255,255,.045);
 }
 .project-image-contain img {
   object-fit: contain;
-  border-radius: calc(var(--radius-lg) - .85rem);
+  border-radius: calc(var(--radius-lg) - 1rem);
   background: rgba(12,8,24,.62);
 }
 .project-copy {
-  padding: 2rem;
+  padding: 1.45rem;
 }
 .project-meta {
   margin-bottom: .75rem;
@@ -1650,37 +1674,33 @@ footer {
   text-transform: uppercase;
 }
 .project-copy h3 {
-  max-width: 13ch;
+  max-width: 19ch;
   color: var(--white);
-  font-size: clamp(1.65rem, 3vw, 3.4rem);
-  line-height: .95;
+  font-size: clamp(1.45rem, 2.1vw, 2.25rem);
+  line-height: 1.02;
   letter-spacing: -.04em;
   margin-bottom: 1rem;
 }
-.project-card:not(.project-card-large) .project-copy h3 {
-  max-width: 16ch;
-  font-size: clamp(1.55rem, 2.2vw, 2.5rem);
-}
 .project-copy p {
   color: var(--text-secondary);
-  font-size: .96rem;
-  line-height: 1.78;
+  font-size: .92rem;
+  line-height: 1.65;
   max-width: 62ch;
 }
 .project-facts {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: .8rem;
-  margin-top: 1.6rem;
+  grid-template-columns: 1fr;
+  gap: .55rem;
+  margin-top: 1.15rem;
 }
 .project-facts div {
-  padding: 1rem;
+  padding: .8rem .9rem;
   border-radius: var(--radius);
   background: rgba(255,255,255,.06);
   border: 1px solid rgba(255,255,255,.08);
   color: var(--text-primary);
-  font-size: .86rem;
-  line-height: 1.55;
+  font-size: .83rem;
+  line-height: 1.48;
 }
 .project-facts span {
   display: block;
@@ -2173,7 +2193,10 @@ footer {
 @media (max-width: 1024px) {
   nav { padding: 1.2rem 2rem; }
   .sd, .sl, .sm, .trust-section, .tw-banner, .da-hero, .agents-overview, .project-overview, .assistant-detail-page { padding: 4rem 2rem; }
-  .tw-banner-inner { padding: 2.5rem 1.5rem; }
+  .tw-banner { padding: 0 2rem 4rem; }
+  .tw-banner-inner { grid-template-columns: 1fr; gap: 0; padding: 1rem; }
+  .tw-banner-photo { min-height: 260px; }
+  .tw-banner-text { padding: 1.6rem .7rem .9rem; }
   .hero { padding: 7rem 2rem 3rem; }
   .hero-home-layout { min-height: auto; }
   .hero-home .hi { max-width: none; }
@@ -2232,7 +2255,6 @@ footer {
   .da-card-grid { grid-template-columns: 1fr; }
   .agent-show-grid { grid-template-columns: 1fr 1fr; }
   .project-list { grid-template-columns: 1fr; }
-  .project-card-large { grid-template-columns: 1fr; }
   .project-facts { grid-template-columns: 1fr; }
   .agents-head { flex-direction: column; }
   .agents-head-copy { max-width: none; }
@@ -2259,9 +2281,9 @@ footer {
   .action-copy p { font-size: .98rem; }
   .action-meta span { font-size: .66rem; }
   .project-hero { min-height: auto; }
-  .project-image, .project-card:not(.project-card-large) .project-image { min-height: 220px; }
+  .project-image { height: 220px; }
   .project-copy { padding: 1.45rem; }
-  .project-copy h3, .project-card:not(.project-card-large) .project-copy h3 { max-width: none; }
+  .project-copy h3 { max-width: none; }
   .adet-hero { grid-template-columns: 1fr; }
   .adet-hero-left { flex-direction: column; align-items: center; text-align: center; }
   .adet-ctas { justify-content: center; }
