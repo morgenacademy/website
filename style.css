@@ -2672,7 +2672,11 @@ footer {
   .action-copy h3 { font-size: clamp(2.6rem, 14vw, 4.8rem); }
   .action-copy p { font-size: .98rem; }
   .action-meta span { font-size: .66rem; }
-  .project-hero { display: block; min-height: auto; padding-bottom: 4rem; }
+  .project-hero { display: block; min-height: auto; padding: 8rem 1.6rem 4rem; }
+  .project-hero .h1 {
+    font-size: clamp(4rem, 18vw, 5.6rem);
+    padding-left: .18em;
+  }
   .project-logo-band { position: relative; bottom: auto; margin-top: 2.5rem; }
   .project-image { height: 220px; }
   .project-copy { padding: 1.45rem; }
@@ -2693,6 +2697,11 @@ footer {
   .about-journey-intro,
   .about-stage {
     margin-left: 0;
+    max-width: none;
+    width: 100%;
+  }
+  .about-journey-intro .about-journey-title-wide {
+    white-space: normal;
   }
   .about-stage {
     min-height: auto;
