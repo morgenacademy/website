@@ -1645,7 +1645,7 @@ footer {
   background: linear-gradient(145deg, rgba(91,45,142,.3), rgba(155,111,207,.1));
   text-align: center;
   border-bottom: 1px solid var(--glass-border);
-  min-height: 206px;
+  min-height: 228px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1728,6 +1728,7 @@ footer {
 .sp-cta:hover { gap: .7rem; }
 .footer-accent-dot {
   color: var(--orange);
+  font-weight: 900;
 }
 .keynote-options {
   margin-top: 0;
