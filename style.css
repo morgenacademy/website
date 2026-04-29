@@ -75,6 +75,13 @@ body {
   -webkit-font-smoothing: antialiased;
   cursor: none;
 }
+body.blog-body {
+  cursor: auto;
+}
+body.blog-body a,
+body.blog-body button {
+  cursor: pointer;
+}
 a,
 a:visited {
   color: inherit;
