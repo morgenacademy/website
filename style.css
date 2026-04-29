@@ -1144,6 +1144,143 @@ nav.scrolled {
   margin: .15rem 0 0;
 }
 
+.about-journey {
+  --about-progress: 0;
+  position: relative;
+  padding: clamp(5rem, 8vw, 8rem) 4rem;
+  overflow: hidden;
+}
+.about-journey::before {
+  content: '';
+  position: absolute;
+  inset: 6% 0 auto auto;
+  width: 42vw;
+  height: 42vw;
+  min-width: 420px;
+  min-height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(216,254,86,.12), rgba(155,111,207,.08) 42%, transparent 70%);
+  filter: blur(8px);
+  pointer-events: none;
+}
+.about-journey-rail {
+  position: absolute;
+  top: clamp(7rem, 12vw, 10rem);
+  bottom: clamp(7rem, 12vw, 10rem);
+  left: clamp(2rem, 7vw, 7rem);
+  width: 2.5rem;
+  z-index: 1;
+}
+.about-journey-track {
+  position: relative;
+  width: 2px;
+  height: 100%;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(216,254,86,.18), rgba(155,111,207,.34), rgba(216,254,86,.16));
+}
+.about-journey-ball {
+  position: absolute;
+  top: calc(var(--about-progress) * 100%);
+  left: 50%;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 0 .6rem rgba(216,254,86,.12), 0 0 34px rgba(216,254,86,.42);
+  transform: translate(-50%, -50%);
+  transition: top .12s linear;
+}
+.about-journey-intro,
+.about-stage {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  margin-left: clamp(5.5rem, 16vw, 18rem);
+}
+.about-journey-intro {
+  margin-bottom: clamp(3rem, 7vw, 7rem);
+}
+.about-journey-intro h2 {
+  font-size: clamp(3rem, 7vw, 7.5rem);
+  line-height: .9;
+  letter-spacing: -.07em;
+  color: var(--white);
+  max-width: 10ch;
+}
+.about-journey-intro p {
+  max-width: 66ch;
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.3vw, 1.16rem);
+  line-height: 1.8;
+  margin-top: 1.4rem;
+}
+.about-journey-intro a {
+  color: var(--orange);
+  text-decoration: none;
+}
+.about-stage {
+  min-height: 58vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: clamp(2.5rem, 5vw, 5rem);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: clamp(1.4rem, 3vw, 2.4rem);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.06), rgba(155,111,207,.08)),
+    rgba(20,13,34,.42);
+  box-shadow: 0 24px 70px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.08);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+.about-stage:nth-of-type(even) {
+  transform: translateX(clamp(0rem, 4vw, 4rem));
+}
+.about-stage-mark {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 0 .55rem rgba(216,254,86,.1);
+  margin-bottom: 1.35rem;
+}
+.about-stage h3 {
+  font-size: clamp(2.4rem, 5.4vw, 5.9rem);
+  line-height: .92;
+  letter-spacing: -.07em;
+  color: var(--white);
+  max-width: 11ch;
+  margin-bottom: 1.4rem;
+}
+.about-stage p {
+  max-width: 68ch;
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.18vw, 1.12rem);
+  line-height: 1.8;
+}
+.about-stage p + p {
+  margin-top: 1rem;
+}
+.about-stage-list {
+  max-width: 62ch;
+}
+.about-stage-note {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 1.4rem;
+  padding: .7rem 1rem;
+  border-radius: 999px;
+  background: rgba(216,254,86,.08);
+  border: 1px solid rgba(216,254,86,.22);
+  color: var(--orange);
+  font-family: var(--fu);
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
 .home-photo-strip {
   padding: 1.75rem 4rem 4rem;
 }
@@ -1236,6 +1373,16 @@ nav.scrolled {
 @media (max-width: 1024px) {
   .why-morgen {
     grid-template-columns: 1fr;
+  }
+  .about-journey-rail {
+    left: 2rem;
+  }
+  .about-journey-intro,
+  .about-stage {
+    margin-left: 4.5rem;
+  }
+  .about-stage:nth-of-type(even) {
+    transform: none;
   }
   .home-photo-strip-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2514,6 +2661,20 @@ footer {
   .wgrid, .trgrid { grid-template-columns: 1fr; }
   .home-photo-strip { padding: 1.25rem 2rem 2.75rem; }
   .home-photo-strip-grid { grid-template-columns: 1fr; }
+  .about-journey {
+    padding: 4rem 1.25rem;
+  }
+  .about-journey-rail {
+    display: none;
+  }
+  .about-journey-intro,
+  .about-stage {
+    margin-left: 0;
+  }
+  .about-stage {
+    min-height: auto;
+    padding: 1.5rem;
+  }
   .why-morgen-point {
     grid-template-columns: 1fr;
     gap: .75rem;
