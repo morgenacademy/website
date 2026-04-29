@@ -1730,6 +1730,9 @@ footer {
 .keynote-options li {
   align-items: flex-start;
 }
+.keynote-options li:first-child > strong {
+  margin-top: -0.1rem;
+}
 .keynote-options li > strong,
 .keynote-options li > span {
   display: block;
