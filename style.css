@@ -245,6 +245,20 @@ nav.scrolled {
   object-position: 62% 52%;
   animation: academyHeroSecondary 14s ease-in-out infinite;
 }
+.about-hero .academy-hero-media {
+  --academy-hero-opacity: .64;
+}
+.about-hero .academy-hero-media::after {
+  background:
+    linear-gradient(90deg, rgba(12,8,24,.98) 0%, rgba(12,8,24,.96) 28%, rgba(12,8,24,.78) 54%, rgba(12,8,24,.34) 78%, rgba(12,8,24,.16) 100%),
+    radial-gradient(circle at 74% 50%, rgba(155,111,207,.14) 0%, transparent 40%);
+}
+.about-hero .academy-hero-photo-primary {
+  object-position: 58% 42%;
+}
+.about-hero .academy-hero-photo-secondary {
+  object-position: 58% 44%;
+}
 @keyframes academyHeroPrimary {
   0%, 42% { opacity: var(--academy-hero-opacity); }
   50%, 92% { opacity: 0; }
@@ -279,6 +293,13 @@ nav.scrolled {
   }
   .academy-hero-photo-secondary {
     object-position: 62% 52%;
+  }
+  .about-hero .academy-hero-media {
+    --academy-hero-opacity: .48;
+  }
+  .about-hero .academy-hero-photo-primary,
+  .about-hero .academy-hero-photo-secondary {
+    object-position: 66% 42%;
   }
 }
 /* Orbs in hero (retained for animation, updated colors) */
