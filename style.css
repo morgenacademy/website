@@ -1645,6 +1645,10 @@ footer {
   background: linear-gradient(145deg, rgba(91,45,142,.3), rgba(155,111,207,.1));
   text-align: center;
   border-bottom: 1px solid var(--glass-border);
+  min-height: 206px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .sp-avatar {
   width: 88px; height: 88px; border-radius: 50%;
@@ -1722,6 +1726,9 @@ footer {
 }
 .sp-cta { font-weight: 700; font-size: .84rem; color: var(--orange); cursor: pointer; border: none; background: none; display: inline-flex; align-items: center; gap: .4rem; transition: gap .2s; text-decoration: none; }
 .sp-cta:hover { gap: .7rem; }
+.footer-accent-dot {
+  color: var(--orange);
+}
 .keynote-options {
   margin-top: 0;
   margin-bottom: 0;
