@@ -2301,6 +2301,11 @@ footer {
   gap: .6rem;
   margin: 1.3rem 0 0;
 }
+.project-wins.keynote-options {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
 .project-wins li {
   list-style: none;
   position: relative;
