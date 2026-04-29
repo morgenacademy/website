@@ -1795,10 +1795,6 @@ footer {
   font-weight: 900;
   margin-bottom: 1rem;
 }
-.blog-date {
-  margin-top: 1.25rem;
-  margin-bottom: 0;
-}
 .blog-hero h1 {
   font-family: var(--fd);
   color: var(--white);
