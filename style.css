@@ -1729,25 +1729,7 @@ footer {
   margin-top: .45rem;
 }
 .keynote-option-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .45rem;
   margin-top: .75rem;
-}
-.keynote-option-tags em {
-  display: inline-flex;
-  align-items: center;
-  padding: .35rem .65rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.16);
-  background: rgba(255,255,255,.05);
-  color: var(--lime);
-  font-family: var(--fu);
-  font-style: normal;
-  font-size: .66rem;
-  font-weight: 900;
-  letter-spacing: .08em;
-  text-transform: uppercase;
 }
 
 /* ── Blog detail ── */
