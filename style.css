@@ -246,12 +246,12 @@ nav.scrolled {
   animation: academyHeroSecondary 14s ease-in-out infinite;
 }
 .about-hero .academy-hero-media {
-  --academy-hero-opacity: .64;
+  --academy-hero-opacity: .76;
 }
 .about-hero .academy-hero-media::after {
   background:
-    linear-gradient(90deg, rgba(12,8,24,.98) 0%, rgba(12,8,24,.96) 28%, rgba(12,8,24,.78) 54%, rgba(12,8,24,.34) 78%, rgba(12,8,24,.16) 100%),
-    radial-gradient(circle at 74% 50%, rgba(155,111,207,.14) 0%, transparent 40%);
+    linear-gradient(90deg, rgba(12,8,24,.88) 0%, rgba(12,8,24,.78) 30%, rgba(12,8,24,.5) 58%, rgba(12,8,24,.18) 82%, rgba(12,8,24,.08) 100%),
+    radial-gradient(circle at 74% 50%, rgba(155,111,207,.1) 0%, transparent 42%);
 }
 .about-hero .academy-hero-photo-primary {
   object-position: 58% 42%;
@@ -1218,6 +1218,10 @@ nav.scrolled {
   letter-spacing: -.07em;
   color: var(--white);
   max-width: 10ch;
+}
+.about-journey-intro .about-journey-title-wide {
+  max-width: none;
+  white-space: nowrap;
 }
 .about-journey-intro p {
   max-width: 66ch;
