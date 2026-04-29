@@ -1718,11 +1718,11 @@ footer {
 .keynote-options li {
   align-items: flex-start;
 }
-.keynote-options strong,
-.keynote-options span {
+.keynote-options li > strong,
+.keynote-options li > span {
   display: block;
 }
-.keynote-options span {
+.keynote-options li > span {
   color: var(--text-secondary);
   font-size: .9rem;
   line-height: 1.65;
