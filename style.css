@@ -642,6 +642,18 @@ nav.scrolled {
   font-size: clamp(1rem, 1.45vw, 1.28rem);
   line-height: 1.55;
 }
+.action-showcase-copy {
+  max-width: 64rem;
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  font-size: clamp(.98rem, 1.08vw, 1.08rem);
+  line-height: 1.75;
+}
+.action-showcase-copy a {
+  color: var(--orange);
+  font-weight: 800;
+  text-decoration: none;
+}
 .action-list {
   position: relative;
   border-top: 1px solid rgba(255,255,255,.14);
@@ -1194,14 +1206,14 @@ nav.scrolled {
 .about-stage {
   position: relative;
   z-index: 2;
-  max-width: 860px;
-  margin-left: clamp(5.5rem, 16vw, 18rem);
+  max-width: min(1120px, 74vw);
+  margin-left: clamp(4.75rem, 12vw, 12rem);
 }
 .about-journey-intro {
   margin-bottom: clamp(3rem, 7vw, 7rem);
 }
 .about-journey-intro h2 {
-  font-size: clamp(3rem, 7vw, 7.5rem);
+  font-size: clamp(2.7rem, 6vw, 6.6rem);
   line-height: .9;
   letter-spacing: -.07em;
   color: var(--white);
@@ -1246,15 +1258,15 @@ nav.scrolled {
   margin-bottom: 1.35rem;
 }
 .about-stage h3 {
-  font-size: clamp(2.4rem, 5.4vw, 5.9rem);
-  line-height: .92;
-  letter-spacing: -.07em;
+  font-size: clamp(2.1rem, 4.6vw, 5rem);
+  line-height: .96;
+  letter-spacing: -.06em;
   color: var(--white);
-  max-width: 11ch;
+  max-width: 13ch;
   margin-bottom: 1.4rem;
 }
 .about-stage p {
-  max-width: 68ch;
+  max-width: 78ch;
   color: var(--text-secondary);
   font-size: clamp(1rem, 1.18vw, 1.12rem);
   line-height: 1.8;
@@ -1263,7 +1275,7 @@ nav.scrolled {
   margin-top: 1rem;
 }
 .about-stage-list {
-  max-width: 62ch;
+  max-width: 76ch;
 }
 .about-stage-note {
   display: inline-flex;
@@ -1910,6 +1922,9 @@ footer {
   position: relative;
   overflow: hidden;
   padding-bottom: 9rem;
+}
+.project-hero-actions {
+  margin-top: clamp(1.4rem, 3vw, 2.7rem);
 }
 .project-logo-band {
   position: absolute;
