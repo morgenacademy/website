@@ -1617,6 +1617,7 @@ footer {
 
 /* ── 21. Sprekers ── */
 .speaker-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; }
+.keynote-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 980px; margin-left: auto; margin-right: auto; }
 .speaker-card {
   background: var(--card-bg-strong);
   backdrop-filter: var(--glass-blur);
@@ -1714,6 +1715,120 @@ footer {
 }
 .sp-cta { font-weight: 700; font-size: .84rem; color: var(--orange); cursor: pointer; border: none; background: none; display: inline-flex; align-items: center; gap: .4rem; transition: gap .2s; text-decoration: none; }
 .sp-cta:hover { gap: .7rem; }
+
+/* ── Blog detail ── */
+.blog-page {
+  background:
+    radial-gradient(circle at 78% 12%, rgba(91,45,142,.34) 0%, transparent 28%),
+    radial-gradient(circle at 12% 48%, rgba(200,80,216,.16) 0%, transparent 28%),
+    var(--bg);
+  min-height: 100vh;
+}
+.blog-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 11rem 5vw 5rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+.blog-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 84px 84px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.9), transparent);
+  pointer-events: none;
+}
+.blog-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.blog-eyebrow {
+  font-family: var(--fu);
+  color: var(--lime);
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: .72rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+.blog-hero h1 {
+  font-family: var(--fd);
+  color: var(--white);
+  font-size: clamp(3.5rem, 9vw, 8.8rem);
+  line-height: .86;
+  letter-spacing: -.07em;
+  max-width: 980px;
+}
+.blog-subtitle {
+  font-family: var(--fd);
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,255,255,.52);
+  font-size: clamp(2.2rem, 5vw, 5.4rem);
+  font-weight: 900;
+  line-height: .92;
+  letter-spacing: -.06em;
+  margin-top: 1rem;
+}
+.blog-article {
+  width: min(920px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 5rem 0 4rem;
+  color: var(--text-secondary);
+  font-family: var(--fb);
+  font-size: clamp(1.02rem, 1.4vw, 1.18rem);
+  line-height: 1.85;
+}
+.blog-article .blog-lead {
+  color: var(--text-primary);
+  font-size: clamp(1.18rem, 1.7vw, 1.45rem);
+  line-height: 1.65;
+  margin-bottom: 3.5rem;
+}
+.blog-article h2 {
+  font-family: var(--fd);
+  color: var(--white);
+  font-size: clamp(2.1rem, 4vw, 4.4rem);
+  line-height: .94;
+  letter-spacing: -.06em;
+  margin: 4.5rem 0 1.4rem;
+}
+.blog-article p + p { margin-top: 1.2rem; }
+.blog-article strong { color: var(--white); }
+.blog-article em { color: var(--text-primary); }
+.blog-cta {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto 6rem;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid rgba(216,255,74,.22);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 85% 22%, rgba(216,255,74,.14), transparent 28%),
+    var(--card-bg-strong);
+  box-shadow: var(--shadow);
+}
+.blog-cta h2 {
+  font-family: var(--fd);
+  color: var(--white);
+  font-size: clamp(2.4rem, 5vw, 5.2rem);
+  line-height: .9;
+  letter-spacing: -.06em;
+}
+.blog-cta p:not(.blog-eyebrow) {
+  font-family: var(--fb);
+  color: var(--text-secondary);
+  max-width: 55ch;
+  margin-top: 1rem;
+  line-height: 1.7;
+}
 
 /* ── 22. Company / Boek ── */
 .company-hero { min-height: 92vh; }
@@ -2793,5 +2908,19 @@ footer {
     background:
       linear-gradient(90deg, rgba(12,8,24,.98) 0%, rgba(12,8,24,.95) 42%, rgba(12,8,24,.74) 72%, rgba(12,8,24,.34) 100%),
       radial-gradient(circle at 80% 45%, rgba(155,111,207,.12) 0%, transparent 38%);
+  }
+  .blog-hero { padding: 7rem 1.5rem 3.5rem; }
+  .blog-hero h1 { font-size: clamp(3.2rem, 16vw, 5.2rem); }
+  .blog-subtitle { font-size: clamp(2rem, 11vw, 3.8rem); }
+  .blog-article {
+    width: calc(100% - 2rem);
+    padding: 3rem 0;
+    font-size: 1rem;
+  }
+  .blog-article h2 { margin-top: 3rem; }
+  .blog-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 4rem;
   }
 }
