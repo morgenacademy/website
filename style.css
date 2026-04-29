@@ -1068,6 +1068,28 @@ nav.scrolled {
 .why-morgen-copy .callout {
   margin-top: 1.5rem;
 }
+.about-intro-copy {
+  max-width: min(100%, 1180px);
+}
+.about-intro-copy .pbody {
+  max-width: none;
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+.about-intro-heading {
+  margin-top: 2.35rem;
+  font-family: var(--fd);
+  font-size: 1.7rem;
+  line-height: 1.08;
+  color: var(--white);
+}
+.about-intro-list {
+  max-width: none;
+}
+.about-intro-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+}
 .why-morgen-points {
   display: grid;
   border-top: 1px solid rgba(255,255,255,.14);
