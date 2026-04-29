@@ -75,6 +75,10 @@ body {
   -webkit-font-smoothing: antialiased;
   cursor: none;
 }
+a,
+a:visited {
+  color: inherit;
+}
 
 /* ── 3. Achtergrond Blobs ── */
 body::before {
