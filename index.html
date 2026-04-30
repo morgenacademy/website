@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Morgen Company - technologiepartner voor bedrijven</title>
-<meta name="description" content="Morgen Company helpt bedrijven met AI-training, implementatie, projecten en inspiratie.">
+<meta id="meta-description" name="description" content="Morgen Company helpt teams slimmer werken met AI-training, implementatie, automatisering en digitale projecten die landen in de praktijk.">
 <meta name="theme-color" content="#000000">
+<link id="canonical-link" rel="canonical" href="https://morgencompany.com/">
 <link rel="icon" href="/favicon-company.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -326,7 +327,7 @@
     <img class="academy-hero-photo academy-hero-photo-secondary" src="/docs/company/academy-hero-02.jpg" alt="" loading="lazy">
   </div>
   <div class="hi">
-    <h1 class="h1">Klein<br><span class="ol">beginnen.</span><br><span class="pk">Groot doorpakken.</span></h1>
+    <h2 class="h1">Klein<br><span class="ol">beginnen.</span><br><span class="pk">Groot doorpakken.</span></h2>
     <div class="hctas academy-hero-actions">
       <div class="academy-hero-button-row">
         <button class="btn-p" onclick="scrollToId('ac-trainingen')">Bekijk de trainingen</button>
@@ -638,7 +639,7 @@
   </div>
   <div class="hi">
     <p class="eyebrow">Maatwerk &#183; AI-workflows &#183; Procesautomatisering</p>
-    <h1 class="h1">Werk<br><span class="ol">slimmer</span><br><span class="pk">georganiseerd.</span></h1>
+    <h2 class="h1">Werk<br><span class="ol">slimmer</span><br><span class="pk">georganiseerd.</span></h2>
     <div class="hctas">
       <button class="btn-p" onclick="nav('assistenten')">Bekijk projecten</button>
       <button class="btn-g" onclick="scrollToId('te-aanvraag')">Plan een kennismaking &#x2193;</button>
@@ -808,7 +809,7 @@
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="hgrid"></div>
   <div class="hi">
     <p class="eyebrow">Strategie &#183; Uitvoering &#183; Borging</p>
-    <h1 class="h1">Digitalisering<br><span class="ol">die landt</span><br><span class="pk">in het werk.</span></h1>
+    <h2 class="h1">Digitalisering<br><span class="ol">die landt</span><br><span class="pk">in het werk.</span></h2>
     <div class="hctas">
       <button class="btn-p" onclick="scrollToId('co-aanpak')">Bekijk onze aanpak</button>
       <button class="btn-g" onclick="scrollToId('co-aanvraag')">Kennismakingsgesprek &#x2193;</button>
@@ -980,7 +981,7 @@
 <div class="da-hero project-hero">
   <div class="orb o1" style="opacity:.3"></div><div class="orb o2" style="opacity:.25"></div>
   <div class="hi">
-    <h1 class="h1" style="animation:none;opacity:1">Zij gingen<br><span class="ol">je voor.</span></h1>
+    <h2 class="h1" style="animation:none;opacity:1">Zij gingen<br><span class="ol">je voor.</span></h2>
     <div class="hctas project-hero-actions">
       <button class="btn-o" onclick="scrollToId('project-bespreken')">Bespreek jouw project</button>
     </div>
@@ -1329,7 +1330,7 @@
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="hgrid"></div>
   <div class="hi">
     <p class="eyebrow">AI organisatie &#183; Digitale teams</p>
-    <h1 class="h1">Onze<br><span class="ol">AI</span><br><span class="pk">organisatie.</span></h1>
+    <h2 class="h1">Onze<br><span class="ol">AI</span><br><span class="pk">organisatie.</span></h2>
     <div class="hctas">
       <button class="btn-g" onclick="scrollToId('org-structuur')">Bekijk de structuur &#x2193;</button>
     </div>
@@ -1422,7 +1423,7 @@
   </div>
   <div class="hi">
     <p class="eyebrow">AAANPAK &#183; TECHNOLOGIE &#183; MENSEN</p>
-    <h1 class="h1">Over<br><span class="pk">Morgen.</span></h1>
+    <h2 class="h1">Over<br><span class="pk">Morgen.</span></h2>
     <div class="hctas">
       <button class="btn-o" onclick="scrollToId('about-aanpak')">Filosofie &amp; Aanpak</button>
       <button class="btn-o" onclick="scrollToId('about-inspiratie')">Meet the Humans</button>
@@ -1605,7 +1606,7 @@
   </div>
   <div class="hi">
     <p class="eyebrow">Keynotes &#183; Podcast &#183; Boek</p>
-    <h1 class="h1">Technologie verandert<br><span class="ol">hoe we werken</span><br><span class="pk">en leven.</span></h1>
+    <h2 class="h1">Technologie verandert<br><span class="ol">hoe we werken</span><br><span class="pk">en leven.</span></h2>
     <div class="hctas">
       <button class="btn-p" onclick="scrollToId('cp-keynote')">Keynote boeken</button>
       <button class="btn-g" onclick="scrollToId('cp-boek')">Het boek bekijken &#x2193;</button>
@@ -1861,6 +1862,43 @@ const pagePaths={
   about:'/about',
   company:'/company'
 };
+const routeMeta={
+  home:{
+    title:'Morgen Company - technologiepartner voor bedrijven',
+    description:'Morgen Company helpt teams slimmer werken met AI-training, implementatie, automatisering en digitale projecten die landen in de praktijk.',
+    canonical:'https://morgencompany.com/'
+  },
+  academy:{
+    title:'AI-training en academy voor teams | Morgen Company',
+    description:'Praktische AI-trainingen, workshops en academietrajecten voor teams die slimmer willen werken met technologie, automatisering en AI.',
+    canonical:'https://morgencompany.com/academy'
+  },
+  technology:{
+    title:'AI-implementatie en technologieprojecten | Morgen Company',
+    description:'Morgen Company bouwt AI-assistenten, automatiseringen en digitale oplossingen die aansluiten op je werkprocessen en dagelijks gebruik.',
+    canonical:'https://morgencompany.com/technology'
+  },
+  consultancy:{
+    title:'AI-consultancy en implementatiebegeleiding | Morgen Company',
+    description:'Van strategie tot werkende implementatie: begeleiding voor organisaties die AI verantwoord, praktisch en zichtbaar waardevol willen inzetten.',
+    canonical:'https://morgencompany.com/consultancy'
+  },
+  assistenten:{
+    title:'AI-assistenten en praktijkvoorbeelden | Morgen Company',
+    description:'Bekijk AI-assistenten, automatiseringen en klantcases die laten zien hoe technologie concreet werk uit handen neemt in echte organisaties.',
+    canonical:'https://morgencompany.com/projecten'
+  },
+  about:{
+    title:'Over Morgen Company | Team en aanpak',
+    description:'Maak kennis met Morgen Company, het team en onze aanpak voor technologie, AI-adoptie en digitale verandering die blijft werken.',
+    canonical:'https://morgencompany.com/about'
+  },
+  company:{
+    title:'Inspiratie, keynotes en programma’s | Morgen Company',
+    description:'Inspiratie, keynotes en programma’s over AI, technologie, adoptie en de impact op werk, leiderschap en organisaties.',
+    canonical:'https://morgencompany.com/company'
+  }
+};
 const academyLinks={
   home:{page:'academy'},
   aanbod:{page:'academy',anchor:'ac-trainingen'},
@@ -1881,6 +1919,7 @@ function goToAcademy(destination='home'){
 
 function nav(page,anchor,options={}){
   const {updateHistory=true,replaceHistory=false,customPath=null,activeNav=null}=options;
+  updateRouteMeta(page);
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   const t=document.getElementById('page-'+page);
   if(t)t.classList.add('active');
@@ -1901,6 +1940,15 @@ function nav(page,anchor,options={}){
   if(anchor){setTimeout(()=>{const el=document.getElementById(anchor);if(el)el.scrollIntoView({behavior:'smooth'});},80);}
   closeNav();
   setTimeout(()=>{initReveal();updateAboutJourney();},100);
+}
+
+function updateRouteMeta(page){
+  const meta=routeMeta[page] || routeMeta.home;
+  document.title=meta.title;
+  const description=document.getElementById('meta-description');
+  if(description)description.setAttribute('content',meta.description);
+  const canonical=document.getElementById('canonical-link');
+  if(canonical)canonical.setAttribute('href',meta.canonical);
 }
 
 function scrollToId(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});}
