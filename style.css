@@ -1514,6 +1514,17 @@ nav.scrolled {
 .tn em { color: var(--orange); font-style: normal; }
 .tn-word { font-size: 1.45rem; line-height: 1.05; letter-spacing: .01em; }
 .tnl { font-size: .78rem; color: var(--text-muted); margin-top: .25rem; line-height: 1.4; }
+.company-review-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: rgba(255,255,255,.02);
+  border-top: 1px solid rgba(255,255,255,.05);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+.company-review {
+  display: block;
+  max-width: 980px;
+}
 
 /* ── 18. Knoppen ── */
 .btn-p, .btn-w {
@@ -2072,20 +2083,13 @@ footer {
   margin-bottom: .8rem;
 }
 .depth-panel p,
-.article-row em {
+.article-row em,
+.episode-row em {
   color: var(--text-secondary);
   font-family: var(--fb);
   font-size: .88rem;
   font-style: normal;
   line-height: 1.65;
-}
-.spotify-embed {
-  display: block;
-  border: 0;
-  border-radius: 12px;
-  margin-top: 1.25rem;
-  background: rgba(0, 0, 0, .24);
-  min-height: 480px;
 }
 .depth-link {
   display: inline-flex;
@@ -2103,12 +2107,14 @@ footer {
 .depth-link:hover {
   color: var(--orange);
 }
-.article-list {
+.article-list,
+.episode-list {
   display: grid;
   gap: .8rem;
   margin-top: 1rem;
 }
-.article-row {
+.article-row,
+.episode-row {
   display: grid;
   gap: .35rem;
   padding: 1rem;
@@ -2117,11 +2123,13 @@ footer {
   background: rgba(255,255,255,.045);
   text-decoration: none;
 }
-.article-row:hover {
+.article-row:hover,
+.episode-row:hover {
   border-color: rgba(216,254,86,.34);
   background: rgba(255,255,255,.075);
 }
-.article-row span {
+.article-row span,
+.episode-row span {
   color: var(--purple-light);
   font-family: var(--fu);
   font-size: .64rem;
@@ -2129,7 +2137,8 @@ footer {
   letter-spacing: .12em;
   text-transform: uppercase;
 }
-.article-row strong {
+.article-row strong,
+.episode-row strong {
   color: var(--white);
   font-family: var(--fd);
   font-size: 1rem;
