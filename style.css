@@ -2146,6 +2146,101 @@ footer {
   line-height: 1.18;
   text-transform: uppercase;
 }
+/* Spotify-style episode rows */
+.episode-row {
+  grid-template-columns: 64px 1fr;
+  gap: .9rem;
+  align-items: center;
+  padding: .7rem;
+}
+.episode-row .episode-body {
+  display: grid;
+  gap: .3rem;
+  min-width: 0;
+}
+.episode-cover {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 6px 14px rgba(0,0,0,.35);
+}
+.episode-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.episode-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #1db954;
+  box-shadow: 0 2px 8px rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s ease, background .2s ease;
+}
+.episode-play::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  border-style: solid;
+  border-width: 6px 0 6px 9px;
+  border-color: transparent transparent transparent #000;
+}
+.episode-row:hover .episode-play {
+  transform: translate(-50%, -50%) scale(1.12);
+  background: #1ed760;
+}
+.depth-panel-label-spotify {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  color: #1db954;
+}
+.spotify-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1db954;
+  box-shadow: 0 0 0 3px rgba(29,185,84,.18);
+}
+.depth-link-spotify {
+  color: #1db954;
+}
+.depth-link-spotify:hover {
+  color: #1ed760;
+}
+/* Article rows with thumbnail */
+.article-row {
+  grid-template-columns: 64px 1fr;
+  gap: .9rem;
+  align-items: center;
+  padding: .7rem;
+}
+.article-row .article-body {
+  display: grid;
+  gap: .3rem;
+  min-width: 0;
+}
+.article-thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 6px 14px rgba(0,0,0,.3);
+}
 .depth-book-mini {
   position: relative;
   overflow: hidden;
