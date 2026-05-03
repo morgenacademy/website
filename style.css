@@ -2091,6 +2091,7 @@ footer {
   font-style: normal;
   line-height: 1.65;
 }
+.depth-panel p + p { margin-top: 1rem; }
 .depth-link {
   display: inline-flex;
   align-items: center;
