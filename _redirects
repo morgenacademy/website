@@ -9,4 +9,16 @@ https://www.morgencompany.com/* https://morgencompany.com/:splat 301!
 /organisatie /index.html 200
 /organisatie/ /index.html 200
 /organisatie/* /index.html 200
+/academy /academy/index.html 200
+/academy/ /academy/index.html 200
+/technology /technology/index.html 200
+/technology/ /technology/index.html 200
+/consultancy /consultancy/index.html 200
+/consultancy/ /consultancy/index.html 200
+/projecten /projecten/index.html 200
+/projecten/ /projecten/index.html 200
+/about /about/index.html 200
+/about/ /about/index.html 200
+/company /company/index.html 200
+/company/ /company/index.html 200
 /* /index.html 200

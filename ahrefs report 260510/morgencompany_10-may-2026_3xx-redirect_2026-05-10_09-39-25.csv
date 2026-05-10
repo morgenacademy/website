@@ -1,0 +1,6 @@
+PR,URL,Title,Content type,Is rendered page,HTTP status code,Organic traffic,Redirect URL,Redirect URL code,Redirect URL patch,Redirect URL patch status,Redirect chain URLs,Redirect chain URLs codes,Is redirect loop,No. of all inlinks,No. of redirect inlinks,First found at
+1,https://www.morgencompany.com/,,text/plain; charset=utf-8,false,301,0,https://morgencompany.com/,200,,,https://morgencompany.com/,200,false,1,1,
+0,http://www.morgencompany.com/,,text/plain; charset=utf-8,false,301,0,https://www.morgencompany.com/,301,,,"https://www.morgencompany.com/
+https://morgencompany.com/","301
+200",false,0,0,
+0,http://morgencompany.com/,,text/plain; charset=utf-8,false,301,0,https://morgencompany.com/,200,,,https://morgencompany.com/,200,false,0,0,
