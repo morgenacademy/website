@@ -1908,6 +1908,7 @@ footer {
 }
 .blog-table tbody td a {
   color: var(--white);
+  font-weight: 700;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
