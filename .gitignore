@@ -2,3 +2,6 @@
 .env.local
 ahrefs report 260430/
 Ahfres report 30 april 2026/
+
+downloads/spraaktool/*.dmg
+downloads/spraaktool/*.exe

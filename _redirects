@@ -21,4 +21,6 @@ https://www.morgencompany.com/* https://morgencompany.com/:splat 301!
 /about/ /about/index.html 200
 /company /company/index.html 200
 /company/ /company/index.html 200
+/spraaktool /spraaktool/index.html 200
+/spraaktool/ /spraaktool/index.html 200
 /* /index.html 200
