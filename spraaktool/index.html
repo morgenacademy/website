@@ -147,6 +147,100 @@
   .spraaktool-panel a:hover {
     color: var(--white);
   }
+  .spraaktool-inline-button {
+    color: var(--orange);
+    border: 0;
+    background: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .spraaktool-inline-button:hover,
+  .spraaktool-inline-button:focus-visible {
+    color: var(--white);
+    outline: none;
+  }
+  .spraaktool-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    background: rgba(12,8,24,.78);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+  }
+  body.spraaktool-modal-open .spraaktool-modal {
+    display: flex;
+  }
+  .spraaktool-modal-card {
+    width: min(100%, 680px);
+    max-height: min(86vh, 760px);
+    overflow: auto;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    background: rgba(16,10,30,.96);
+    box-shadow: 0 30px 90px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.12);
+    padding: 2rem;
+    position: relative;
+  }
+  .spraaktool-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--glass-border);
+    background: rgba(255,255,255,.08);
+    color: var(--white);
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  .spraaktool-modal-card h2 {
+    color: var(--white);
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    line-height: .98;
+    letter-spacing: 0;
+    margin: .5rem 3rem 1.1rem 0;
+  }
+  .spraaktool-modal-card p,
+  .spraaktool-modal-card li {
+    color: var(--text-secondary);
+    line-height: 1.65;
+    font-size: 1rem;
+  }
+  .spraaktool-modal-warning {
+    margin: 1.2rem 0;
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: 1px solid rgba(216,254,86,.28);
+    background: rgba(216,254,86,.08);
+    color: var(--white);
+    font-weight: 800;
+  }
+  .spraaktool-mac-alert {
+    margin: 1.4rem 0;
+    padding: 1.15rem;
+    border-radius: var(--radius);
+    background: rgba(255,255,255,.08);
+    border: 1px solid var(--glass-border);
+  }
+  .spraaktool-mac-alert strong {
+    display: block;
+    color: var(--white);
+    margin-bottom: .55rem;
+  }
+  .spraaktool-modal-card ol {
+    padding-left: 1.25rem;
+    margin-top: 1rem;
+  }
+  .spraaktool-modal-card li + li {
+    margin-top: .7rem;
+  }
   .spraaktool-contact {
     max-width: 1080px;
     margin: 1.4rem auto 0;
@@ -196,6 +290,9 @@
       align-items: stretch;
       flex-direction: column;
     }
+    .spraaktool-modal-card {
+      padding: 1.4rem;
+    }
   }
 </style>
 </head>
@@ -235,7 +332,7 @@
         <ol>
           <li>Download de versie voor jouw computer.</li>
           <li>Open het bestand en volg de stappen op het scherm.</li>
-          <li>Op Mac kan de eerste start een extra bevestiging vragen: klik met rechts op de app en kies Open.</li>
+          <li>Op Mac kan de eerste start een extra bevestiging vragen: <button class="spraaktool-inline-button" type="button" onclick="openMacHelp()">volg deze stappen</button>.</li>
         </ol>
       </article>
       <article class="spraaktool-panel">
@@ -253,6 +350,29 @@
     </div>
   </section>
 </main>
+
+<div class="spraaktool-modal" id="mac-help-modal" role="dialog" aria-modal="true" aria-labelledby="mac-help-title" onclick="closeMacHelpOnBackdrop(event)">
+  <div class="spraaktool-modal-card">
+    <button class="spraaktool-modal-close" type="button" aria-label="Sluiten" onclick="closeMacHelp()">&#x2715;</button>
+    <h2 id="mac-help-title">Een Mac-app openen van een onbekende ontwikkelaar</h2>
+    <p>Als je een app opent die niet bij Apple is geregistreerd door een bekende ontwikkelaar, krijg je een waarschuwing. De app is dan niet door Apple gecontroleerd en macOS kan niet controleren of de app sinds publicatie is aangepast.</p>
+    <p>Het handmatig openen van zo'n app is een bewuste keuze. Doe dit alleen als je de bron vertrouwt. NL-spraak is gemaakt door Morgen Academy en nog niet door Apple gecertificeerd.</p>
+    <div class="spraaktool-mac-alert">
+      <strong>Bij dubbelklik kan macOS melden:</strong>
+      <p>Apple could not verify "NL-spraak" is free of malware that may harm your Mac or compromise your privacy.</p>
+    </div>
+    <div class="spraaktool-modal-warning">Klik niet op "Move to Bin" als je NL-spraak wilt gebruiken.</div>
+    <ol>
+      <li>Klik in de waarschuwing op "Done".</li>
+      <li>Open het Apple-menu &rarr; Systeeminstellingen.</li>
+      <li>Klik in de zijbalk op Privacy en beveiliging. Mogelijk moet je omlaag scrollen.</li>
+      <li>Ga naar Beveiliging en klik op "Open Anyway" bij NL-spraak. Deze knop is ongeveer een uur beschikbaar nadat je de app probeerde te openen.</li>
+      <li>Voer je wachtwoord in of bevestig met Touch ID.</li>
+      <li>Er verschijnt een nieuwe waarschuwing. Klik op "Open".</li>
+    </ol>
+    <p style="margin-top:1.2rem">Daarna start NL-spraak voortaan gewoon met dubbelklik.</p>
+  </div>
+</div>
 
 <footer>
   <div class="ft">
@@ -325,6 +445,22 @@ function trackDownload(platform){
     });
   }
 }
+
+function openMacHelp(){
+  document.body.classList.add('spraaktool-modal-open');
+}
+
+function closeMacHelp(){
+  document.body.classList.remove('spraaktool-modal-open');
+}
+
+function closeMacHelpOnBackdrop(event){
+  if (event.target.id === 'mac-help-modal') closeMacHelp();
+}
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeMacHelp();
+});
 
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => document.body.classList.remove('nav-open'));
