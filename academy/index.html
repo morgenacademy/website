@@ -2584,7 +2584,7 @@ function openAssistant(slug,options={}){
   nav('assistent-detail',undefined,{
     ...options,
     activeNav:'assistenten',
-    customPath:`/assistenten/${slug}`
+    customPath:'/projecten/'
   });
   return true;
 }
@@ -2661,7 +2661,7 @@ function renderAssistantShowcase(){
       <div class="agent-show-tags">
         ${a.tags.map(tag=>`<span class="agent-show-tag">${tag}</span>`).join('')}
       </div>
-      <a class="agent-show-link" href="/assistenten/${a.slug}/" onclick="event.preventDefault();event.stopPropagation();openAssistant('${a.slug}')">Ontdek ${a.name}</a>
+      <a class="agent-show-link" href="/projecten/" onclick="event.preventDefault();event.stopPropagation();openAssistant('${a.slug}')">Ontdek ${a.name}</a>
     </article>
   `).join('');
 }
@@ -2700,7 +2700,7 @@ function renderOrganizationMap(){
       </div>
       <div class="org-dept-body">
         ${d.members.map(m=>`
-          <a class="org-member" href="/assistenten/${m.slug}/" onclick="event.preventDefault();openAssistant('${m.slug}')">
+          <a class="org-member" href="/projecten/" onclick="event.preventDefault();openAssistant('${m.slug}')">
             <img src="/docs/assistenten/avatars/${m.slug}.png" alt="${m.name}">
             <div>
               <div class="org-member-name">${m.name}</div>
